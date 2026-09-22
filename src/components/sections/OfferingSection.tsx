@@ -87,7 +87,7 @@ function OfferCard({ tone, title, desc, items, ctaLabel, onCta, icon }: OfferCar
           </span>
         ))}
       </div>
-      <p className="text-[15px] text-white/90">{desc}</p>
+      <p className="whitespace-pre-line text-[15px] text-white/90">{desc}</p>
       <button
         onClick={onCta}
         className="mt-auto inline-flex items-center gap-2 self-start rounded-full bg-white px-6 py-3 font-display text-sm font-extrabold transition hover:-translate-y-0.5"
