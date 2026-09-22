@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
@@ -90,23 +91,15 @@ function StatCard({ target, suffix = "", label, triggerRef }: StatCardProps) {
 
 function AboutIllustration() {
   return (
-    <div className="overflow-hidden rounded-xl shadow">
-      <svg viewBox="0 0 520 440" role="img" aria-label="ALOHA school illustration" className="block h-auto w-full">
-        <defs>
-          <linearGradient id="ab-panel" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="#eaf6ef" />
-            <stop offset="1" stopColor="#dcecf7" />
-          </linearGradient>
-        </defs>
-        <rect width="520" height="440" rx="36" fill="url(#ab-panel)" />
-        <circle cx="445" cy="82" r="34" fill="#e1ba23" />
-        <rect x="150" y="168" width="235" height="205" rx="16" fill="#fff" />
-        <rect x="140" y="150" width="255" height="34" rx="10" fill="#295326" />
-        <rect x="212" y="196" width="112" height="34" rx="8" fill="#469142" />
-        <text x="268" y="220" textAnchor="middle" fontFamily="Montserrat" fontWeight="800" fontSize="19" fill="#fff">
-          ALOHA
-        </text>
-      </svg>
+    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl shadow-lg">
+      <Image
+        src="/images/homepage/aloha.jpg"
+        alt="ALOHA Language School"
+        fill
+        sizes="(min-width:768px) 45vw, 90vw"
+        className="object-cover"
+        priority={false}
+      />
     </div>
   );
 }

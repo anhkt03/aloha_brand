@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { Container } from "@/components/common/Container";
@@ -28,6 +29,8 @@ export function OfferingSection() {
             items={training}
             ctaLabel={t("training.cta")}
             onCta={() => router.push("/ngoaingu")}
+            image="/images/homepage/class.jpg"
+            imageAlt="Lớp học ALOHA"
             icon={
               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
             }
@@ -39,6 +42,8 @@ export function OfferingSection() {
             items={global}
             ctaLabel={t("global.cta")}
             onCta={() => router.push("/duhocquocte")}
+            image="/images/homepage/studyaboad.jpg"
+            imageAlt="Du học cùng ALOHA"
             icon={
               <>
                 <path d="M2 12a10 10 0 1 0 20 0A10 10 0 0 0 2 12z" />
@@ -59,45 +64,71 @@ interface OfferCardProps {
   items: string[];
   ctaLabel: string;
   onCta: () => void;
+  image: string;
+  imageAlt: string;
   icon: React.ReactNode;
 }
 
-function OfferCard({ tone, title, desc, items, ctaLabel, onCta, icon }: OfferCardProps) {
+function OfferCard({ tone, title, desc, items, ctaLabel, onCta, image, imageAlt, icon }: OfferCardProps) {
   const bg =
     tone === "lang"
       ? "linear-gradient(145deg,#469142 0%,#295326 100%)"
       : "linear-gradient(145deg,#28b4d2 0%,#1b6d80 100%)";
   return (
     <article
-      className="relative isolate flex flex-col gap-5 overflow-hidden rounded-lg p-9 text-white shadow transition hover:-translate-y-1.5 hover:shadow-lg"
+      className="flex flex-col overflow-hidden rounded-lg text-white shadow transition hover:-translate-y-1.5 hover:shadow-lg"
       style={{ background: bg }}
     >
-      <span className="absolute -right-16 -top-24 -z-[1] h-[230px] w-[230px] rounded-full bg-white/10" />
-      <span className="absolute -bottom-20 -left-12 -z-[1] h-[150px] w-[150px] rounded-full bg-white/[.08]" />
-      <div className="grid h-[66px] w-[66px] place-items-center rounded-[20px] bg-white/20">
-        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-          {icon}
-        </svg>
+      {/* Image banner — aspect-video keeps both cards the same height */}
+      <div className="relative aspect-[16/10] w-full overflow-hidden">
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          sizes="(min-width:768px) 50vw, 100vw"
+          className="object-cover transition duration-500 hover:scale-105"
+          priority={false}
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background:
+              tone === "lang"
+                ? "linear-gradient(180deg, rgba(41,83,38,0) 55%, rgba(41,83,38,0.75) 100%)"
+                : "linear-gradient(180deg, rgba(27,109,128,0) 55%, rgba(27,109,128,0.75) 100%)",
+          }}
+        />
+        <div className="absolute left-6 top-6 grid h-[54px] w-[54px] place-items-center rounded-[16px] bg-white/25 backdrop-blur">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            {icon}
+          </svg>
+        </div>
       </div>
-      <h3 className="font-display text-[clamp(24px,3vw,33px)] font-black">{title}</h3>
-      <div className="flex flex-wrap gap-2">
-        {items.map((item) => (
-          <span key={item} className="rounded-full bg-white/[0.18] px-3.5 py-1.5 font-display text-[13px] font-semibold">
-            {item}
-          </span>
-        ))}
+
+      {/* Content */}
+      <div className="relative isolate flex flex-1 flex-col gap-4 p-8">
+        <span className="absolute -right-16 -top-16 -z-[1] h-[200px] w-[200px] rounded-full bg-white/10" aria-hidden />
+        <h3 className="font-display text-[clamp(22px,2.8vw,30px)] font-black">{title}</h3>
+        <div className="flex flex-wrap gap-2">
+          {items.map((item) => (
+            <span key={item} className="rounded-full bg-white/[0.18] px-3.5 py-1.5 font-display text-[13px] font-semibold">
+              {item}
+            </span>
+          ))}
+        </div>
+        <p className="whitespace-pre-line text-[15px] text-white/90">{desc}</p>
+        <button
+          onClick={onCta}
+          className="mt-auto inline-flex items-center gap-2 self-start rounded-full bg-white px-6 py-3 font-display text-sm font-extrabold transition hover:-translate-y-0.5"
+          style={{ color: tone === "lang" ? "#235c22" : "#12566a" }}
+        >
+          {ctaLabel}
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </button>
       </div>
-      <p className="whitespace-pre-line text-[15px] text-white/90">{desc}</p>
-      <button
-        onClick={onCta}
-        className="mt-auto inline-flex items-center gap-2 self-start rounded-full bg-white px-6 py-3 font-display text-sm font-extrabold transition hover:-translate-y-0.5"
-        style={{ color: tone === "lang" ? "#235c22" : "#12566a" }}
-      >
-        {ctaLabel}
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
-          <path d="M5 12h14M13 6l6 6-6 6" />
-        </svg>
-      </button>
     </article>
   );
 }
