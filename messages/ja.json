@@ -1,19 +1,20 @@
 {
   "nav": {
     "home": "ホーム",
-    "training": "語学コース",
+    "training": "語学",
     "global": "留学",
     "about": "ALOHAについて",
-    "branches": "教室一覧",
+    "branches": "教室",
     "news": "ニュース",
     "contact": "お問い合わせ",
     "cta": "無料体験",
     "hotline": "ホットライン"
   },
+  "common": { "learnMore": "詳しく", "readMore": "続きを読む", "back": "戻る" },
   "languages": { "vi": "ベトナム語", "en": "英語", "ja": "日本語", "ko": "韓国語" },
   "hero": {
     "tagline": "More Languages, A Brighter You",
-    "titleA": "外国語を学び、",
+    "titleA": "外国語を学び",
     "titleB": "未来を広げよう",
     "lead": "ALOHAはあなたの語学学習の旅に寄り添い、目標達成と学び・キャリアの可能性を広げます。",
     "ctaTrial": "無料体験レッスン",
@@ -24,7 +25,7 @@
     "title": "ALOHA Language School",
     "pillars": { "quality": "品質", "experience": "体験", "growth": "総合的な成長" },
     "quote": "ALOHAは「品質・体験・総合的な成長」の3本柱を軸にした多言語スクールです。",
-    "body": "現代的な学習環境、体系的なカリキュラム、目標に沿った個別ロードマップを提供します。",
+    "body": "<b>現代的な学習環境、体系的なカリキュラム、目標に沿った個別ロードマップ</b>を提供します。",
     "cta": "ALOHAを詳しく",
     "stats": { "years": "年の経験", "branches": "教室", "students": "受講生" }
   },
@@ -73,12 +74,7 @@
     "title": "語学から新しいチャンスへ",
     "closing": "最初のひとことから、未来の学びとキャリアまでALOHAが伴走します。",
     "cta": "ALOHAの旅を見る",
-    "steps": {
-      "learn": "語学を学ぶ",
-      "certificate": "資格を取得",
-      "direction": "進路を選ぶ",
-      "future": "留学 / キャリア"
-    }
+    "steps": { "learn": "語学を学ぶ", "certificate": "資格を取得", "direction": "進路を選ぶ", "future": "留学 / キャリア" }
   },
   "testimonials": {
     "eyebrow": "受講生の声",
@@ -86,7 +82,7 @@
     "viewMore": "もっと見る",
     "trustBadge": "10,000名以上に選ばれています"
   },
-  "branches": {
+  "branchesSection": {
     "eyebrow": "教室ネットワーク",
     "title": "ALOHAはあなたと一緒に",
     "sub": "ハノイと北部エリアに広がる教室網 — きっと近くにALOHAがあります。",
@@ -109,12 +105,91 @@
     "primary": "無料体験を予約",
     "secondary": "1900 9309 に電話"
   },
+  "pages": {
+    "training": {
+      "eyebrow": "語学コース",
+      "title": "語学教育",
+      "lead": "英語・中国語・韓国語・日本語 — レベル別の明確な体系。募集期ごとに更新。",
+      "tabs": { "all": "すべて", "en": "英語", "zh": "中国語", "ko": "韓国語", "ja": "日本語" },
+      "recruiting": "募集中",
+      "register": "申し込む",
+      "durationLine": "期間: {months}ヶ月 ({sessions}回)",
+      "outcomeLine": "到達目標: {outcome}"
+    },
+    "global": {
+      "eyebrow": "ALOHAで留学",
+      "title": "グローバルな夢へ",
+      "lead": "学校選び、書類、奨学金、ビザ、現地サポートまで — 中国・韓国・日本と英語圏まで対応。",
+      "destinationsTitle": "どこへ行きたい?",
+      "destinations": {
+        "china": { "name": "中国", "desc": "CSC・孔子学院奨学金、自費。" },
+        "korea": { "name": "韓国", "desc": "TOPIK 3+でD-2、学士・修士プログラム。" },
+        "japan": { "name": "日本", "desc": "JLPT N3+、日本語学校・専門学校・大学。" },
+        "uk": { "name": "英国 & IELTS", "desc": "Foundation、学士、修士 — トップUK校。" }
+      },
+      "journeyTitle": "ALOHAで留学するまでの7ステップ",
+      "journeySub": "透明なプロセス — 今どこにいるか常に把握できます。",
+      "steps": [
+        { "title": "オリエンテーション相談", "desc": "レベルと希望を評価し、国と専攻を提案。" },
+        { "title": "語学学習", "desc": "学校の入学条件を満たす(TOPIK・JLPT・HSK・IELTS等)。" },
+        { "title": "学校・専攻選び", "desc": "学校リスト、学費・奨学金・キャリアを比較。" },
+        { "title": "書類作成", "desc": "成績・学習計画・推薦状・ポートフォリオ。" },
+        { "title": "出願", "desc": "学校と奨学金へ出願し、進捗を管理。" },
+        { "title": "面接・ビザ", "desc": "面接練習、ビザ書類、財務資料。" },
+        { "title": "出発・現地サポート", "desc": "住居手配、空港ピックアップ、環境への適応。" }
+      ],
+      "cta": "留学相談を受ける"
+    },
+    "about": {
+      "eyebrow": "私たちについて",
+      "title": "ALOHA Language Schoolについて",
+      "lead": "教育の質、学習体験、そして学生の総合的な成長を大切にする語学スクール。",
+      "vmvTitle": "ビジョン・ミッション・バリュー",
+      "vmv": {
+        "vision": { "title": "ビジョン", "desc": "北部で最も選ばれる語学教育ネットワークを目指す。" },
+        "mission": { "title": "ミッション", "desc": "学習者の目標達成と世界への機会拡大に寄り添う。" },
+        "values": { "title": "コアバリュー", "desc": "品質・誠実・忍耐・革新・コミュニティ。" }
+      },
+      "timelineTitle": "ALOHAの歩み",
+      "timeline": [
+        { "year": "2014", "title": "ALOHA設立", "desc": "ハノイで最初の教室を開講(2クラス)。" },
+        { "year": "2017", "title": "北部へ拡大", "desc": "ハイズオンに3拠点目を開設、HSKプログラム開始。" },
+        { "year": "2020", "title": "デジタル化", "desc": "オンライン授業と受講生管理アプリを導入。" },
+        { "year": "2023", "title": "10,000名以上", "desc": "累計10,000名以上の受講生・卒業生。" },
+        { "year": "2025", "title": "11教室", "desc": "ハイフォン11校目を開校、北部全域をカバー。" }
+      ]
+    },
+    "branches": {
+      "eyebrow": "教室ネットワーク",
+      "title": "北部全域のALOHA",
+      "lead": "ハノイと北部各省に10以上の教室 — 最寄りをお選びください。",
+      "branchWord": "教室"
+    },
+    "news": {
+      "eyebrow": "ニュース & イベント",
+      "title": "ALOHAニュース",
+      "lead": "募集情報・受講生ストーリー・イベントをお届け。"
+    },
+    "contact": {
+      "eyebrow": "お問い合わせ",
+      "title": "ALOHAへどうぞ",
+      "lead": "メッセージまたはホットラインでお気軽にご相談ください(無料)。"
+    },
+    "notFound": {
+      "eyebrow": "404",
+      "title": "ページが見つかりません",
+      "sub": "お探しのページは存在しません。ホームへ戻りましょう。",
+      "cta": "ホームへ"
+    }
+  },
   "footer": {
     "training": "語学コース",
     "global": "留学",
     "about": "ALOHAについて",
     "contact": "お問い合わせ",
     "aboutLinks": { "intro": "会社紹介", "team": "講師陣", "branches": "教室一覧", "news": "ニュース", "contact": "お問い合わせ" },
+    "trainingLinks": ["中国語", "英語", "韓国語", "日本語"],
+    "globalLinks": ["台湾留学", "韓国留学", "日本留学", "ヨーロッパ留学", "シンガポール留学"],
     "email": "メール",
     "address": "住所",
     "policy": "プライバシーポリシー",

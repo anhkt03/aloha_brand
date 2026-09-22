@@ -7,22 +7,22 @@ import { news } from "@/data/news";
 import { formatDate } from "@/lib/utils";
 
 export default async function NewsPage() {
-  const t = await getTranslations("nav");
+  const t = await getTranslations();
   const locale = await getLocale();
 
   return (
     <>
       <PageHero
-        eyebrow="Tin tức & Sự kiện"
-        title="Tin tức ALOHA"
-        lead="Cập nhật tuyển sinh, câu chuyện học viên và sự kiện tại ALOHA."
+        eyebrow={t("pages.news.eyebrow")}
+        title={t("pages.news.title")}
+        lead={t("pages.news.lead")}
         breadcrumb={
           <>
             <Link href="/" className="hover:text-brand">
-              {t("home")}
+              {t("nav.home")}
             </Link>
             <span>/</span>
-            <span>{t("news")}</span>
+            <span>{t("nav.news")}</span>
           </>
         }
       />

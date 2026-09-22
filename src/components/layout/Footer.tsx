@@ -4,23 +4,12 @@ import { Link } from "@/i18n/routing";
 import { siteConfig } from "@/config/site";
 import { Container } from "@/components/common/Container";
 
-const TRAINING_LINKS = [
-  { label: "Tiếng Trung", href: "/training" as const },
-  { label: "Tiếng Anh", href: "/training" as const },
-  { label: "Tiếng Hàn", href: "/training" as const },
-  { label: "Tiếng Nhật", href: "/training" as const },
-];
-
-const GLOBAL_LINKS = [
-  { label: "Du học Đài Loan", href: "/global" as const },
-  { label: "Du học Hàn Quốc", href: "/global" as const },
-  { label: "Du học Nhật Bản", href: "/global" as const },
-  { label: "Du học Châu Âu", href: "/global" as const },
-  { label: "Du học Singapore", href: "/global" as const },
-];
-
 export function Footer() {
   const t = useTranslations();
+  const trainingLabels = t.raw("footer.trainingLinks") as string[];
+  const globalLabels = t.raw("footer.globalLinks") as string[];
+  const trainingLinks = trainingLabels.map((label) => ({ label, href: "/training" as const }));
+  const globalLinks = globalLabels.map((label) => ({ label, href: "/global" as const }));
 
   const aboutLinks = [
     { key: "intro", href: "/about" as const },
@@ -63,8 +52,8 @@ export function Footer() {
             </div>
           </div>
 
-          <FooterList title={t("footer.training")} items={TRAINING_LINKS.map((l) => ({ label: l.label, href: l.href }))} />
-          <FooterList title={t("footer.global")} items={GLOBAL_LINKS.map((l) => ({ label: l.label, href: l.href }))} />
+          <FooterList title={t("footer.training")} items={trainingLinks} />
+          <FooterList title={t("footer.global")} items={globalLinks} />
           <FooterList
             title={t("footer.about")}
             items={aboutLinks.map((l) => ({ label: t(`footer.aboutLinks.${l.key}`), href: l.href }))}
