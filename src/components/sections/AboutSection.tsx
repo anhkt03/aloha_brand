@@ -1,9 +1,11 @@
 "use client";
 
+import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/common/Button";
 import { Section } from "@/components/common/Section";
+import { useCountUp } from "@/hooks/useCountUp";
 
 /**
  * Section 2 — general introduction to ALOHA, built around 3 pillars:
@@ -31,7 +33,11 @@ export function AboutSection() {
               </span>
             ))}
           </div>
-          <p className="mt-6 text-[15px] text-ink-soft">{t("body")}</p>
+          <p className="mt-6 text-[15px] text-ink-soft">
+            {t.rich("body", {
+              b: (chunks) => <strong className="font-semibold text-ink">{chunks}</strong>,
+            })}
+          </p>
           <Button variant="primary" className="mt-6" onClick={() => router.push("/about")}>
             {t("cta")}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
@@ -40,30 +46,44 @@ export function AboutSection() {
           </Button>
         </div>
       </div>
-      <div className="mt-11 grid gap-5 md:grid-cols-3">
-        <StatCard onBrand value="10+" label={t("stats.years")} />
-        <StatCard value="10+" label={t("stats.branches")} />
-        <StatCard value="10.000+" label={t("stats.students")} />
-      </div>
+      <StatsRow t={t} />
     </Section>
   );
 }
 
-function StatCard({ value, label, onBrand }: { value: string; label: string; onBrand?: boolean }) {
-  const parts = value.match(/^([\d.]+)(\D*)$/);
+function StatsRow({ t }: { t: (key: string) => string }) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  return (
+    <div ref={ref} className="mt-11 grid gap-5 md:grid-cols-3">
+      <StatCard target={10} suffix="+" label={t("stats.years")} triggerRef={ref} />
+      <StatCard target={10} suffix="+" label={t("stats.branches")} triggerRef={ref} />
+      <StatCard target={10000} suffix="+" label={t("stats.students")} triggerRef={ref} />
+    </div>
+  );
+}
+
+interface StatCardProps {
+  target: number;
+  suffix?: string;
+  label: string;
+  triggerRef: React.RefObject<HTMLElement | null>;
+}
+
+function StatCard({ target, suffix = "", label, triggerRef }: StatCardProps) {
+  const value = useCountUp({ end: target, duration: 3000, triggerRef });
+  const formatted = value.toLocaleString("de-DE"); // 10.000 style (dot thousands)
   return (
     <div
-      className={`relative overflow-hidden rounded-lg border p-7 ${
-        onBrand ? "border-transparent text-white" : "border-line bg-surface"
-      }`}
-      style={onBrand ? { background: "var(--grad)" } : undefined}
+      className="relative overflow-hidden rounded-lg border border-transparent p-7 text-white"
+      style={{ background: "var(--grad)" }}
     >
-      {!onBrand && <span className="absolute inset-y-0 left-0 w-[5px]" style={{ background: "var(--grad)" }} />}
-      <div className={`font-display text-[clamp(34px,5vw,52px)] font-black leading-none tabular-nums ${onBrand ? "text-white" : "text-brand"}`}>
-        {parts ? parts[1] : value}
-        {parts?.[2] && <span className={onBrand ? "text-white" : "text-accent"}>{parts[2]}</span>}
+      <span className="pointer-events-none absolute -right-10 -top-16 h-40 w-40 rounded-full bg-white/10" aria-hidden />
+      <span className="pointer-events-none absolute -bottom-14 -left-8 h-32 w-32 rounded-full bg-white/[.08]" aria-hidden />
+      <div className="relative font-display text-[clamp(34px,5vw,52px)] font-black leading-none tabular-nums text-white">
+        {formatted}
+        <span className="text-white/95">{suffix}</span>
       </div>
-      <div className={`mt-2 font-semibold ${onBrand ? "text-white/90" : "text-ink-soft"}`}>{label}</div>
+      <div className="relative mt-2 font-semibold text-white/90">{label}</div>
     </div>
   );
 }

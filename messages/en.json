@@ -23,8 +23,8 @@
   },
   "hero": {
     "tagline": "More Languages, A Brighter You",
-    "titleA": "Learn languages,",
-    "titleB": "open your future",
+    "titleA": "Learn languages",
+    "titleB": "Open your future",
     "lead": "ALOHA walks with you through every language milestone — from the first word to your international certificate and beyond.",
     "ctaTrial": "Free trial class",
     "ctaCourses": "See courses"
@@ -33,8 +33,8 @@
     "eyebrow": "About us",
     "title": "ALOHA Language School",
     "pillars": { "quality": "Quality", "experience": "Experience", "growth": "Well-rounded growth" },
-    "quote": "ALOHA is a multi-language school built around three pillars: Quality — Experience — Well-rounded growth.",
-    "body": "We deliver a modern learning environment, a rigorous curriculum, and a personalized path for every student's goal.",
+    "quote": "ALOHA is a multi-language school built around three pillars",
+    "body": "We deliver <b>a modern learning environment, a rigorous curriculum, and a personalized path</b> for every student's goal.",
     "cta": "Learn about ALOHA",
     "stats": { "years": "Years of experience", "branches": "Branches", "students": "Students" }
   },

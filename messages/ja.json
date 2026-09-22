@@ -14,7 +14,7 @@
   "languages": { "vi": "ベトナム語", "en": "英語", "ja": "日本語", "ko": "韓国語" },
   "hero": {
     "tagline": "More Languages, A Brighter You",
-    "titleA": "外国語を学び、",
+    "titleA": "外国語を学び",
     "titleB": "未来を広げよう",
     "lead": "ALOHAはあなたの語学学習の旅に寄り添い、目標達成と学び・キャリアの可能性を広げます。",
     "ctaTrial": "無料体験レッスン",
@@ -25,7 +25,7 @@
     "title": "ALOHA Language School",
     "pillars": { "quality": "品質", "experience": "体験", "growth": "総合的な成長" },
     "quote": "ALOHAは「品質・体験・総合的な成長」の3本柱を軸にした多言語スクールです。",
-    "body": "現代的な学習環境、体系的なカリキュラム、目標に沿った個別ロードマップを提供します。",
+    "body": "<b>現代的な学習環境、体系的なカリキュラム、目標に沿った個別ロードマップ</b>を提供します。",
     "cta": "ALOHAを詳しく",
     "stats": { "years": "年の経験", "branches": "教室", "students": "受講生" }
   },
