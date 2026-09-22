@@ -23,7 +23,7 @@ const BRANCHES = [
  * scrollable branch list on the right, linking to the /branches page.
  */
 export function BranchesTeaserSection() {
-  const t = useTranslations("branches");
+  const t = useTranslations("branchesSection");
   const router = useRouter();
   return (
     <Section>

@@ -10,6 +10,11 @@
     "cta": "Book a trial",
     "hotline": "Hotline"
   },
+  "common": {
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "back": "Back"
+  },
   "languages": {
     "vi": "Vietnamese",
     "en": "English",
@@ -18,8 +23,8 @@
   },
   "hero": {
     "tagline": "More Languages, A Brighter You",
-    "titleA": "Learn languages,",
-    "titleB": "open your future",
+    "titleA": "Learn languages",
+    "titleB": "Open your future",
     "lead": "ALOHA walks with you through every language milestone — from the first word to your international certificate and beyond.",
     "ctaTrial": "Free trial class",
     "ctaCourses": "See courses"
@@ -27,13 +32,9 @@
   "about": {
     "eyebrow": "About us",
     "title": "ALOHA Language School",
-    "pillars": {
-      "quality": "Quality",
-      "experience": "Experience",
-      "growth": "Well-rounded growth"
-    },
-    "quote": "ALOHA is a multi-language school built around three pillars: Quality — Experience — Well-rounded growth.",
-    "body": "We deliver a modern learning environment, a rigorous curriculum, and a personalized path for every student's goal.",
+    "pillars": { "quality": "Quality", "experience": "Experience", "growth": "Well-rounded growth" },
+    "quote": "ALOHA is a multi-language school built around three pillars",
+    "body": "We deliver <b>a modern learning environment, a rigorous curriculum, and a personalized path</b> for every student's goal.",
     "cta": "Learn about ALOHA",
     "stats": { "years": "Years of experience", "branches": "Branches", "students": "Students" }
   },
@@ -95,7 +96,7 @@
     "viewMore": "More student stories",
     "trustBadge": "Trusted by 10,000+ students"
   },
-  "branches": {
+  "branchesSection": {
     "eyebrow": "Our branches",
     "title": "ALOHA is with you",
     "sub": "A branch network across Hanoi and North Vietnam — there is always an ALOHA close by.",
@@ -118,6 +119,83 @@
     "primary": "Book a trial",
     "secondary": "Call 1900 9309"
   },
+  "pages": {
+    "training": {
+      "eyebrow": "Training programs",
+      "title": "Language training",
+      "lead": "English – Chinese – Korean – Japanese with a clear band/level system. The course list is refreshed every enrollment cycle.",
+      "tabs": { "all": "All", "en": "English", "zh": "Chinese", "ko": "Korean", "ja": "Japanese" },
+      "recruiting": "Enrolling",
+      "register": "Register",
+      "durationLine": "Duration: {months} months ({sessions} sessions)",
+      "outcomeLine": "Outcome: {outcome}"
+    },
+    "global": {
+      "eyebrow": "Study abroad with ALOHA",
+      "title": "Reach your global dream",
+      "lead": "End-to-end support — from school choice, application, scholarships and visa to settling in — for China, Korea, Japan and English-speaking countries.",
+      "destinationsTitle": "Where do you want to go?",
+      "destinations": {
+        "china": { "name": "China", "desc": "CSC & Confucius Institute scholarships, or self-funded." },
+        "korea": { "name": "Korea", "desc": "TOPIK 3+ for a D-2 visa; bachelor and master programs." },
+        "japan": { "name": "Japan", "desc": "JLPT N3+, Japanese language schools, Senmon and universities." },
+        "uk": { "name": "UK & IELTS", "desc": "Foundation, bachelor and master programs — top UK schools." }
+      },
+      "journeyTitle": "7 steps to study abroad with ALOHA",
+      "journeySub": "A transparent process — you always know where you are on the journey.",
+      "steps": [
+        { "title": "Advisory & orientation", "desc": "Assess your ability and goal, then suggest countries and majors that fit." },
+        { "title": "Language study", "desc": "Reach the school's language requirement (TOPIK, JLPT, HSK, IELTS...)." },
+        { "title": "Choose school & major", "desc": "Curate a school list, compare tuition, scholarships and career outcomes." },
+        { "title": "Application dossier", "desc": "Transcripts, study plan, recommendation letters, portfolio if needed." },
+        { "title": "Submit applications", "desc": "Apply to schools and matched scholarship funds; track responses." },
+        { "title": "Interview & Visa", "desc": "Interview coaching, visa dossier and financial proof." },
+        { "title": "Departure & support", "desc": "Housing setup, airport pickup, and settling into your new environment." }
+      ],
+      "cta": "Get study-abroad advice"
+    },
+    "about": {
+      "eyebrow": "About us",
+      "title": "About ALOHA Language School",
+      "lead": "A language school committed to real teaching quality, a joyful learning experience and each student's well-rounded growth.",
+      "vmvTitle": "Vision · Mission · Values",
+      "vmv": {
+        "vision": { "title": "Vision", "desc": "Become the leading language education network in North Vietnam." },
+        "mission": { "title": "Mission", "desc": "Walk with every learner toward their language goal and broader global opportunities." },
+        "values": { "title": "Core values", "desc": "Quality · Sincerity · Perseverance · Innovation · Community." }
+      },
+      "timelineTitle": "ALOHA journey",
+      "timeline": [
+        { "year": "2014", "title": "ALOHA is founded", "desc": "First branch in Hanoi with the first two classes." },
+        { "year": "2017", "title": "Expanding North Vietnam", "desc": "Third branch in Hai Duong; launched the HSK program." },
+        { "year": "2020", "title": "Digital transformation", "desc": "Launched online classes and a student-management app." },
+        { "year": "2023", "title": "10,000+ students", "desc": "Reached 10,000 students studied and graduated at ALOHA." },
+        { "year": "2025", "title": "11 branches", "desc": "Opened the 11th branch in Hai Phong, covering all of North Vietnam." }
+      ]
+    },
+    "branches": {
+      "eyebrow": "Branch network",
+      "title": "ALOHA across North Vietnam",
+      "lead": "10+ branches in Hanoi and northern provinces — pick the one nearest to you.",
+      "branchWord": "Branch"
+    },
+    "news": {
+      "eyebrow": "News & events",
+      "title": "ALOHA News",
+      "lead": "Enrollment updates, student stories and events at ALOHA."
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "ALOHA is listening",
+      "lead": "Send us a message or call our hotline for a free consultation on the study path that fits you."
+    },
+    "notFound": {
+      "eyebrow": "404",
+      "title": "Page not found",
+      "sub": "The page you're looking for isn't here. Let's head home.",
+      "cta": "Back home"
+    }
+  },
   "footer": {
     "training": "Language training",
     "global": "Study abroad",
@@ -130,6 +208,8 @@
       "news": "News",
       "contact": "Contact"
     },
+    "trainingLinks": ["Chinese", "English", "Korean", "Japanese"],
+    "globalLinks": ["Study in Taiwan", "Study in Korea", "Study in Japan", "Study in Europe", "Study in Singapore"],
     "email": "Email",
     "address": "Address",
     "policy": "Privacy policy",

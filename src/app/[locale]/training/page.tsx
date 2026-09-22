@@ -10,40 +10,41 @@ import { useRegisterModal } from "@/components/layout/register-context";
 import { courses } from "@/data/products";
 import type { Course, CourseLanguage } from "@/types/product";
 
-const LANGUAGE_TABS: { key: "all" | CourseLanguage; label: string; glyph: string }[] = [
-  { key: "all", label: "Tất cả", glyph: "★" },
-  { key: "en", label: "Tiếng Anh", glyph: "EN" },
-  { key: "zh", label: "Tiếng Trung", glyph: "中" },
-  { key: "ko", label: "Tiếng Hàn", glyph: "한" },
-  { key: "ja", label: "Tiếng Nhật", glyph: "日" },
+type TabKey = "all" | CourseLanguage;
+const TABS: { key: TabKey; glyph: string }[] = [
+  { key: "all", glyph: "★" },
+  { key: "en", glyph: "EN" },
+  { key: "zh", glyph: "中" },
+  { key: "ko", glyph: "한" },
+  { key: "ja", glyph: "日" },
 ];
 
 export default function TrainingPage() {
-  const t = useTranslations("nav");
-  const [tab, setTab] = useState<"all" | CourseLanguage>("all");
+  const t = useTranslations();
+  const [tab, setTab] = useState<TabKey>("all");
   const { open } = useRegisterModal();
   const filtered = tab === "all" ? courses : courses.filter((c) => c.language === tab);
 
   return (
     <>
       <PageHero
-        eyebrow="Chương trình đào tạo"
-        title="Đào tạo ngoại ngữ"
-        lead="Anh – Trung – Hàn – Nhật với hệ thống band/level rõ ràng. Danh sách khóa học cập nhật liên tục theo từng kỳ tuyển sinh."
+        eyebrow={t("pages.training.eyebrow")}
+        title={t("pages.training.title")}
+        lead={t("pages.training.lead")}
         breadcrumb={
           <>
             <Link href="/" className="hover:text-brand">
-              {t("home")}
+              {t("nav.home")}
             </Link>
             <span>/</span>
-            <span>{t("training")}</span>
+            <span>{t("nav.training")}</span>
           </>
         }
       />
       <Container>
         <div className="section">
           <div className="mb-8 flex flex-wrap gap-2.5">
-            {LANGUAGE_TABS.map((item) => (
+            {TABS.map((item) => (
               <button
                 key={item.key}
                 onClick={() => setTab(item.key)}
@@ -60,7 +61,7 @@ export default function TrainingPage() {
                 >
                   {item.glyph}
                 </span>
-                {item.label}
+                {t(`pages.training.tabs.${item.key}`)}
               </button>
             ))}
           </div>
@@ -76,7 +77,13 @@ export default function TrainingPage() {
   );
 }
 
-function CoursePreview({ course, onRegister }: { course: Course; onRegister: () => void }) {
+interface CoursePreviewProps {
+  course: Course;
+  onRegister: () => void;
+}
+
+function CoursePreview({ course, onRegister }: CoursePreviewProps) {
+  const t = useTranslations("pages.training");
   return (
     <article className="flex flex-col overflow-hidden rounded-lg border border-line bg-surface transition hover:-translate-y-1 hover:shadow">
       <div className="px-6 py-5 text-white" style={{ background: course.gradient }}>
@@ -87,13 +94,13 @@ function CoursePreview({ course, onRegister }: { course: Course; onRegister: () 
         <h3 className="text-[17px] font-extrabold">{course.title}</h3>
         <p className="text-[14px] text-ink-soft">{course.target}</p>
         <ul className="ml-4 list-disc space-y-1 text-[13.5px] text-ink-soft">
-          <li>Thời lượng: {course.durationMonths} tháng ({course.totalSessions} buổi)</li>
-          <li>Đầu ra: {course.outcome}</li>
+          <li>{t("durationLine", { months: course.durationMonths, sessions: course.totalSessions })}</li>
+          <li>{t("outcomeLine", { outcome: course.outcome })}</li>
         </ul>
         <div className="mt-auto flex items-center justify-between pt-2">
-          <span className="pill brand">Tuyển sinh</span>
+          <span className="pill brand">{t("recruiting")}</span>
           <Button variant="primary" size="sm" onClick={onRegister}>
-            Đăng ký
+            {t("register")}
           </Button>
         </div>
       </div>

@@ -22,11 +22,12 @@ export function HeroSection({ onOpenRegister, onGoToCourses }: HeroSectionProps)
       <Container className="relative z-[1]">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
           <div className="rise">
-            <span className="inline-block font-display text-[clamp(15px,1.9vw,20px)] font-semibold italic text-teal">
+            <span className="inline-block font-display text-[clamp(15px,1.9vw,20px)] font-semibold italic text-brand">
               {t("tagline")}
             </span>
-            <h1 className="mt-3 text-[clamp(34px,6vw,66px)] font-display font-black leading-[1.05] tracking-tight">
-              {t("titleA")} <span className="grad-text">{t("titleB")}</span>
+            <h1 className="mt-3 text-[clamp(26px,4.4vw,48px)] font-display font-black leading-[1.1] tracking-tight">
+              <span className="block">{t("titleA")}</span>
+              <span className="grad-text mt-1 block">{t("titleB")}</span>
             </h1>
             <p className="mt-6 max-w-[36ch] text-[clamp(16px,1.9vw,20px)] text-ink-soft">{t("lead")}</p>
             <div className="mt-8 flex flex-wrap items-center gap-3.5">
