@@ -3,13 +3,16 @@ export function cn(...classes: Array<string | false | null | undefined>): string
 }
 
 /**
- * Deterministic date formatter — same output on Node and browser to avoid
- * hydration mismatches. Falls back to ISO-style `DD/MM/YYYY`.
+ * Deterministic date formatter — same output on Node and browser
+ * to avoid hydration mismatches.
  */
-export function formatDate(iso: string): string {
+export function formatDate(iso: string, locale: string = "vi"): string {
   const d = new Date(iso);
-  const dd = String(d.getUTCDate()).padStart(2, "0");
-  const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
-  const yyyy = d.getUTCFullYear();
-  return `${dd}/${mm}/${yyyy}`;
+
+  return new Intl.DateTimeFormat(locale, {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(d);
 }
