@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { createSession, clearSession } from "@/lib/session";
 import { verifyPassword } from "@/lib/password";
+import { writeAuditLog } from "@/lib/audit";
 
 const loginSchema = z.object({
   username: z.string().trim().min(3).max(64),
@@ -22,6 +23,7 @@ export async function login(_previousState: LoginState, formData: FormData): Pro
   const profile = await prisma.user.findFirst({ where: { username: parsed.data.username, active: true } });
   if (!profile || !(await verifyPassword(parsed.data.password, profile.passwordHash))) return { message: "Tên đăng nhập hoặc mật khẩu không hợp lệ." };
   await createSession(profile.id);
+  await writeAuditLog({ actorUserId: profile.id, action: "LOGIN", entity: "User", entityId: profile.id });
 
   redirect("/admin");
 }

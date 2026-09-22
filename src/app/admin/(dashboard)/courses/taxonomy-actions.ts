@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { requireAdminUser } from "@/lib/auth";
+import { deleteManagedImages } from "@/lib/storage";
 import { courseLevelSchema, courseTypeSchema, translationsFromForm } from "@/lib/validation/course-taxonomy";
 
 function invalidate() { revalidatePath("/admin/courses"); revalidatePath("/admin/courses/types"); }
@@ -12,13 +13,20 @@ export async function saveCourseType(formData: FormData) {
   const parsed = courseTypeSchema.safeParse({ id: formData.get("id") || undefined, iconUrl: formData.get("iconUrl"), sortOrder: formData.get("sortOrder"), translations: translationsFromForm(formData) });
   if (!parsed.success) throw new Error("Dữ liệu loại khóa học không hợp lệ.");
   const { id, iconUrl, sortOrder, translations } = parsed.data;
-  if (id) await prisma.courseType.update({ where: { id }, data: { iconUrl: iconUrl || null, sortOrder, translations: { upsert: translations.map((item) => ({ where: { courseTypeId_locale: { courseTypeId: id, locale: item.locale } }, create: item, update: { name: item.name } })) } } });
-  else await prisma.courseType.create({ data: { iconUrl: iconUrl || null, sortOrder, translations: { create: translations } } });
+  const previous = id ? await prisma.courseType.findUnique({ where: { id }, select: { iconUrl: true } }) : null;
+  try {
+    if (id) await prisma.courseType.update({ where: { id }, data: { iconUrl: iconUrl || null, sortOrder, translations: { upsert: translations.map((item) => ({ where: { courseTypeId_locale: { courseTypeId: id, locale: item.locale } }, create: item, update: { name: item.name } })) } } });
+    else await prisma.courseType.create({ data: { iconUrl: iconUrl || null, sortOrder, translations: { create: translations } } });
+  } catch (error) {
+    if (iconUrl && iconUrl !== previous?.iconUrl) await deleteManagedImages([iconUrl]);
+    throw error;
+  }
+  if (previous?.iconUrl && previous.iconUrl !== iconUrl) await deleteManagedImages([previous.iconUrl]);
   invalidate();
 }
 
 export async function toggleCourseType(id: number) { await requireAdminUser(); const item = await prisma.courseType.findUniqueOrThrow({ where: { id } }); await prisma.courseType.update({ where: { id }, data: { active: !item.active } }); invalidate(); }
-export async function deleteCourseType(id: number) { await requireAdminUser(); const item = await prisma.courseType.findUniqueOrThrow({ where: { id }, include: { _count: { select: { levels: true, courses: true } } } }); if (item._count.levels || item._count.courses) throw new Error("Không thể xóa loại khóa học đang có cấp độ hoặc khóa học."); await prisma.courseType.delete({ where: { id } }); invalidate(); }
+export async function deleteCourseType(id: number) { await requireAdminUser(); const item = await prisma.courseType.findUniqueOrThrow({ where: { id }, include: { _count: { select: { levels: true, courses: true } } } }); if (item._count.levels || item._count.courses) throw new Error("Không thể xóa loại khóa học đang có cấp độ hoặc khóa học."); await prisma.courseType.delete({ where: { id } }); if (item.iconUrl) await deleteManagedImages([item.iconUrl]); invalidate(); }
 
 export async function saveCourseLevel(formData: FormData) {
   await requireAdminUser();
