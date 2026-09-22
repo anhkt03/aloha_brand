@@ -1,0 +1,7 @@
+"use server";
+import { revalidatePath } from "next/cache";
+import { prisma } from "@/lib/prisma";
+import { requireRole } from "@/lib/auth";
+import { hashPassword } from "@/lib/password";
+import { userSchema } from "@/lib/validation/administration";
+export async function saveUser(formData: FormData) { const current = await requireRole("ADMIN"); const p = userSchema.safeParse({ id: formData.get("id") || undefined, username: formData.get("username"), name: formData.get("name"), email: formData.get("email"), role: formData.get("role"), active: formData.get("active") === "on", password: formData.get("password") }); if (!p.success) throw new Error("Thông tin tài khoản không hợp lệ."); const { id, password, email, ...data } = p.data; if (!id && !password) throw new Error("Mật khẩu là bắt buộc khi tạo tài khoản."); if (id === current.id && (!data.active || data.role !== "ADMIN")) throw new Error("Bạn không thể tự vô hiệu hóa hoặc hạ quyền tài khoản."); if (id) { const old = await prisma.user.findUniqueOrThrow({ where: { id } }); if (old.role === "ADMIN" && (data.role !== "ADMIN" || !data.active) && await prisma.user.count({ where: { role: "ADMIN", active: true } }) <= 1) throw new Error("Không thể vô hiệu hóa ADMIN cuối cùng."); await prisma.user.update({ where: { id }, data: { ...data, email: email || null, ...(password ? { passwordHash: await hashPassword(password) } : {}) } }); } else await prisma.user.create({ data: { ...data, email: email || null, passwordHash: await hashPassword(password!) } }); revalidatePath("/admin/users"); }
