@@ -1,27 +1,5 @@
 "use client";
-
 import { useActionState } from "react";
 import { login, type LoginState } from "../actions";
-
 const initialState: LoginState = {};
-
-export function LoginForm() {
-  const [state, formAction, pending] = useActionState(login, initialState);
-
-  return (
-    <form action={formAction} className="grid gap-4">
-      <label className="grid gap-1 text-sm font-medium text-slate-700">
-        Tên đăng nhập
-        <input name="username" autoComplete="username" required className="rounded border border-slate-300 px-3 py-2" />
-      </label>
-      <label className="grid gap-1 text-sm font-medium text-slate-700">
-        Mật khẩu
-        <input name="password" type="password" autoComplete="current-password" required className="rounded border border-slate-300 px-3 py-2" />
-      </label>
-      {state.message ? <p role="alert" className="text-sm text-red-600">{state.message}</p> : null}
-      <button type="submit" disabled={pending} className="rounded bg-emerald-700 px-4 py-2 font-semibold text-white disabled:opacity-60">
-        {pending ? "Đang đăng nhập..." : "Đăng nhập"}
-      </button>
-    </form>
-  );
-}
+export function LoginForm() { const [state, formAction, pending] = useActionState(login, initialState); return <form action={formAction} className="grid gap-5"><label className="grid gap-2 text-sm font-bold text-ink-soft">Tên đăng nhập<input name="username" autoComplete="username" required className="rounded-xl border border-line bg-[var(--bg)] px-4 py-3 text-ink outline-none transition focus:border-teal focus:bg-surface" /></label><label className="grid gap-2 text-sm font-bold text-ink-soft">Mật khẩu<input name="password" type="password" autoComplete="current-password" required className="rounded-xl border border-line bg-[var(--bg)] px-4 py-3 text-ink outline-none transition focus:border-teal focus:bg-surface" /></label>{state.message ? <p role="alert" className="rounded-xl bg-red-50 px-3 py-2 text-sm font-medium text-red-700">{state.message}</p> : null}<button type="submit" disabled={pending} className="btn btn-primary mt-1 w-full disabled:cursor-not-allowed disabled:opacity-60">{pending ? "Đang đăng nhập..." : "Đăng nhập vào hệ thống →"}</button></form>; }
