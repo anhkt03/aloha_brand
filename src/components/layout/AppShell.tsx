@@ -5,6 +5,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { RegisterModal } from "./RegisterModal";
 import { RegisterModalContext } from "./register-context";
+import { BackToTop } from "./BackToTop";
 
 /**
  * Wraps every locale page with the shared header/footer and the register
@@ -18,6 +19,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <Header onOpenRegister={() => setOpen(true)} />
       <main id="app">{children}</main>
       <Footer />
+      <BackToTop />
       <RegisterModal open={open} onClose={() => setOpen(false)} />
     </RegisterModalContext.Provider>
   );

@@ -21,8 +21,8 @@ export function Footer() {
 
   return (
     <footer
-      className="mt-5 py-14 text-[#dfeeda]"
-      style={{ background: "#295326" }}
+      className="mt-5 py-14 text-[#eaf6ef]"
+      style={{ background: "linear-gradient(135deg, #469142 0%, #28b4d2 100%)" }}
     >
       <Container>
         <div className="grid gap-10 border-b border-white/10 pb-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.1fr]">

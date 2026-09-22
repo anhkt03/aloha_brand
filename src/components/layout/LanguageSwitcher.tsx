@@ -56,9 +56,9 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label="Change language"
-        className="inline-flex h-[42px] items-center gap-2 rounded-[12px] border-[1.5px] border-line-2 bg-surface px-3 font-display text-sm font-extrabold text-ink transition-colors hover:border-brand hover:text-brand"
+        className="inline-flex h-[42px] items-center gap-1.5 rounded-[12px] border-[1.5px] border-line-2 bg-surface px-2.5 font-display text-sm font-extrabold text-ink transition-colors hover:border-brand hover:text-brand sm:gap-2 sm:px-3"
       >
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden className="hidden sm:block">
           <circle cx="12" cy="12" r="9" />
           <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
         </svg>

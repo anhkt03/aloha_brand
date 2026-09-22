@@ -14,7 +14,13 @@ export const metadata: Metadata = {
     template: `%s · ${siteConfig.shortName}`,
   },
   description: siteConfig.tagline,
-  icons: { icon: "/favicon.ico" },
+  icons: {
+    icon: [
+      { url: "/images/brand/logo-icon.png", type: "image/png" },
+    ],
+    shortcut: "/images/brand/logo-icon.png",
+    apple: "/images/brand/logo-icon.png",
+  },
 };
 
 export function generateStaticParams() {
