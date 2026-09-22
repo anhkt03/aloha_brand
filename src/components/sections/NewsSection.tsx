@@ -5,9 +5,8 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Container } from "@/components/common/Container";
 import { SectionHead } from "@/components/common/Section";
-import { news } from "@/data/news";
 import { formatDate } from "@/lib/utils";
-import type { NewsArticle } from "@/types/product";
+type NewsArticle = { id: number; slug: string; title: string; excerpt: string; coverImage: string; category: string; publishedAt: string };
 
 type CategoryKey = "language" | "abroad" | "activity";
 
@@ -30,7 +29,7 @@ const CATEGORY_GRADIENTS: Record<CategoryKey, string> = {
  * Each column shows the latest article for its category (or the top-N of
  * that category) with title, cover and date.
  */
-export function NewsSection() {
+export function NewsSection({ news }: { news: NewsArticle[] }) {
   const t = useTranslations("news");
   const locale = useLocale();
   const grouped = groupByCategory(news);
@@ -77,7 +76,8 @@ interface CategoryColumnProps {
 }
 
 function CategoryColumn({ categoryKey, title, desc, articles, locale }: CategoryColumnProps) {
-  const featured = articles[0] ?? news[0];
+  const featured = articles[0];
+  if (!featured) return <article className="card text-sm text-muted">Chưa có bài viết trong danh mục này.</article>;
   return (
     <article className="flex flex-col overflow-hidden rounded-lg border border-line bg-surface transition hover:-translate-y-1 hover:shadow">
       <div className="px-6 py-5 text-white" style={{ background: CATEGORY_GRADIENTS[categoryKey] }}>
@@ -97,7 +97,7 @@ function CategoryColumn({ categoryKey, title, desc, articles, locale }: Category
       </Link>
       <div className="flex flex-1 flex-col gap-2 p-5">
         <div className="text-[12.5px] font-semibold text-muted">
-          {formatDate(featured.publishedAt, locale)}
+          {formatDate(new Date(featured.publishedAt), locale)}
         </div>
         <Link href={`/news/${featured.slug}`} className="font-display text-[16px] font-extrabold leading-tight hover:text-brand">
           {featured.title}
