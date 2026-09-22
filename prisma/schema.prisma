@@ -1,0 +1,222 @@
+// ============================================================
+// ALOHA Language School — database schema (Prisma)
+// Single Next.js project. Backend lives under src/app/api/*
+// and consumes these models. Frontend types in src/types/*.ts
+// mirror this shape.
+// ============================================================
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// =========================================================
+//  COURSES
+// =========================================================
+
+/// Ngôn ngữ đào tạo. Ánh xạ với UI code "en/zh/ko/ja".
+enum CourseLanguage {
+  EN  // Tiếng Anh
+  ZH  // Tiếng Trung
+  KO  // Tiếng Hàn
+  JA  // Tiếng Nhật
+}
+
+/// Cấp độ / chứng chỉ mà khóa học hướng tới.
+enum CourseLevel {
+  HSK1
+  HSK2
+  HSK3
+  HSK4
+  HSK5
+  HSK6
+  IELTS
+  TOEIC
+  TOPIK1
+  TOPIK2
+  JLPT_N5
+  JLPT_N4
+  JLPT_N3
+  JLPT_N2
+  JLPT_N1
+}
+
+enum CourseStatus {
+  OPEN         // Đang tuyển sinh
+  COMING_SOON  // Sắp mở
+  CLOSED       // Đã đóng
+}
+
+/// Một khóa học mà học viên có thể đăng ký.
+/// Các trường được cập nhật liên tục theo từng đợt tuyển sinh.
+model Course {
+  id              String         @id @default(cuid())
+  slug            String         @unique                    // dùng cho URL
+  title           String                                     // "HSK 1–3 (chuẩn HSK 3.0)"
+  language        CourseLanguage
+  level           CourseLevel
+  levelLabel      String                                     // hiển thị: "HSK 3", "IELTS 6.5+"
+  band            String                                     // "Tiếng Trung · Sơ – Trung cấp"
+
+  // Thời lượng
+  durationMonths  Int                                        // 8
+  totalSessions   Int                                        // 78
+
+  // Nội dung
+  target          String                                     // Đối tượng: "Người mới bắt đầu"
+  outcome         String                                     // Đầu ra: "HSK 3, HSKK sơ cấp..."
+  syllabus        String[]                                   // Nội dung học (bullet list)
+
+  // Trạng thái & hiển thị
+  status          CourseStatus   @default(OPEN)
+  featured        Boolean        @default(false)             // hiển thị ưu tiên
+  gradient        String                                     // gradient CSS cho card
+  glyph           String                                     // ký tự ngôn ngữ: EN, 中, 한, 日
+
+  // Giá & khai giảng (optional, dành cho tuyển sinh)
+  priceVnd        Int?                                       // học phí (VND)
+  discountPercent Int?                                       // % ưu đãi
+  startsAt        DateTime?                                  // ngày khai giảng gần nhất
+  schedule        String?                                    // "T2-T4-T6 · 18:00 – 20:00"
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  enrollments     Enrollment[]
+
+  @@index([language, status])
+  @@index([featured, status])
+}
+
+// =========================================================
+//  NEWS
+// =========================================================
+
+/// Chuyên mục tin tức — khớp với 3 cột trên homepage.
+enum NewsCategory {
+  LANGUAGE   // Ngoại ngữ
+  ABROAD     // Du học
+  ACTIVITY   // Hoạt động ALOHA
+}
+
+enum NewsStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+/// Bài viết / tin tức.
+/// Cover image lưu URL public (S3/CDN hoặc /public).
+model NewsArticle {
+  id           String       @id @default(cuid())
+  slug         String       @unique
+  title        String
+  excerpt      String                                        // đoạn tóm tắt hiển thị ở card
+  content      String       @db.Text                         // Markdown / rich-text
+  coverImage   String                                        // URL ảnh bìa
+  gallery      String[]     @default([])                     // các ảnh khác trong bài
+
+  category     NewsCategory
+  tags         String[]     @default([])                     // ["hsk", "học bổng", ...]
+  author       String                                        // "ALOHA Team"
+  status       NewsStatus   @default(PUBLISHED)
+  featured     Boolean      @default(false)                  // bài nổi bật
+  viewCount    Int          @default(0)
+
+  publishedAt  DateTime                                      // ngày đăng
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  @@index([category, publishedAt(sort: Desc)])
+  @@index([status, publishedAt(sort: Desc)])
+}
+
+// =========================================================
+//  TESTIMONIALS
+// =========================================================
+
+/// Cảm nhận / bảng điểm của học viên thật.
+/// `scoresJson`:
+///   HSK/HSKK  → { total, max, parts:[{label,score,max}] }
+///   IELTS     → { overall, bands:[{label,score}] }
+model Testimonial {
+  id           String   @id @default(cuid())
+  name         String
+  course       String                                        // "HSK3", "IELTS 6.5+", ...
+  quote        String
+  image        String                                        // URL ảnh score-card
+  scoresJson   Json?
+  featured     Boolean  @default(false)
+  publishedAt  DateTime @default(now())
+  createdAt    DateTime @default(now())
+}
+
+// =========================================================
+//  CONTACT LEADS + ENROLLMENTS
+// =========================================================
+
+/// Lead từ modal "Học thử miễn phí" hoặc form Liên hệ.
+model Lead {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String?
+  language  String?
+  message   String?
+  source    String?                                          // "modal" | "contact-page" | "hero"
+  handled   Boolean  @default(false)                         // đã tư vấn xong
+  handledAt DateTime?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt(sort: Desc)])
+  @@index([handled, createdAt(sort: Desc)])
+}
+
+enum EnrollmentStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
+
+/// Học viên đăng ký một khóa cụ thể.
+model Enrollment {
+  id        String           @id @default(cuid())
+  courseId  String
+  name      String
+  phone     String
+  email     String?
+  note      String?
+  status    EnrollmentStatus @default(PENDING)
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+
+  course    Course           @relation(fields: [courseId], references: [id])
+
+  @@index([courseId, status])
+  @@index([createdAt(sort: Desc)])
+}
+
+// =========================================================
+//  BRANCHES
+// =========================================================
+
+/// Cơ sở ALOHA — hiển thị ở section Hệ thống cơ sở.
+model Branch {
+  id          String   @id @default(cuid())
+  code        String   @unique                               // "CS1"
+  name        String                                          // "Cầu Giấy"
+  address     String
+  phone       String?
+  mapUrl      String?
+  lat         Float?
+  lng         Float?
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
