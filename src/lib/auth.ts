@@ -1,24 +1,23 @@
 import { UserRole } from "@prisma/client";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { createClient } from "@/lib/supabase/server";
+import { getSessionUserId } from "@/lib/session";
 
 export type CurrentAdmin = {
   id: number;
-  authUserId: string;
+  username: string;
   name: string;
-  email: string;
+  email: string | null;
   role: UserRole;
 };
 
 export async function getCurrentAdmin(): Promise<CurrentAdmin | null> {
-  const supabase = await createClient();
-  const { data: { user }, error } = await supabase.auth.getUser();
-  if (error || !user) return null;
+  const id = await getSessionUserId();
+  if (!id) return null;
 
   return prisma.user.findFirst({
-    where: { authUserId: user.id, active: true },
-    select: { id: true, authUserId: true, name: true, email: true, role: true },
+    where: { id, active: true },
+    select: { id: true, username: true, name: true, email: true, role: true },
   });
 }
 

@@ -11,8 +11,8 @@ export function LoginForm() {
   return (
     <form action={formAction} className="grid gap-4">
       <label className="grid gap-1 text-sm font-medium text-slate-700">
-        Email
-        <input name="email" type="email" autoComplete="email" required className="rounded border border-slate-300 px-3 py-2" />
+        Tên đăng nhập
+        <input name="username" autoComplete="username" required className="rounded border border-slate-300 px-3 py-2" />
       </label>
       <label className="grid gap-1 text-sm font-medium text-slate-700">
         Mật khẩu

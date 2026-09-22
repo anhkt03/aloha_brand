@@ -3,10 +3,11 @@
 import { z } from "zod";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { createClient } from "@/lib/supabase/server";
+import { createSession, clearSession } from "@/lib/session";
+import { verifyPassword } from "@/lib/password";
 
 const loginSchema = z.object({
-  email: z.string().trim().email(),
+  username: z.string().trim().min(3).max(64),
   password: z.string().min(1),
 });
 
@@ -14,29 +15,18 @@ export type LoginState = { message?: string };
 
 export async function login(_previousState: LoginState, formData: FormData): Promise<LoginState> {
   const parsed = loginSchema.safeParse({
-    email: formData.get("email"),
+    username: formData.get("username"),
     password: formData.get("password"),
   });
-  if (!parsed.success) return { message: "Email hoặc mật khẩu không hợp lệ." };
-
-  const supabase = await createClient();
-  const { data, error } = await supabase.auth.signInWithPassword(parsed.data);
-  if (error || !data.user) return { message: "Email hoặc mật khẩu không hợp lệ." };
-
-  const profile = await prisma.user.findFirst({
-    where: { authUserId: data.user.id, active: true },
-    select: { id: true },
-  });
-  if (!profile) {
-    await supabase.auth.signOut();
-    return { message: "Tài khoản không có quyền truy cập quản trị." };
-  }
+  if (!parsed.success) return { message: "Tên đăng nhập hoặc mật khẩu không hợp lệ." };
+  const profile = await prisma.user.findFirst({ where: { username: parsed.data.username, active: true } });
+  if (!profile || !(await verifyPassword(parsed.data.password, profile.passwordHash))) return { message: "Tên đăng nhập hoặc mật khẩu không hợp lệ." };
+  await createSession(profile.id);
 
   redirect("/admin");
 }
 
 export async function logout() {
-  const supabase = await createClient();
-  await supabase.auth.signOut();
+  await clearSession();
   redirect("/admin/login");
 }
