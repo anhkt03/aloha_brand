@@ -131,24 +131,65 @@
       "eyebrow": "与ALOHA一起留学",
       "title": "触及全球梦想",
       "lead": "从择校、申请、奖学金到签证与安置——中国、韩国、日本和英语国家的全程支持。",
-      "destinationsTitle": "你想去哪里?",
-      "destinations": {
-        "china": { "name": "中国", "desc": "CSC与孔子学院奖学金,或自费。" },
-        "korea": { "name": "韩国", "desc": "TOPIK 3+可申请D-2签证;本科与硕士课程。" },
-        "japan": { "name": "日本", "desc": "JLPT N3+,日语学校、专门学校与大学。" },
-        "uk": { "name": "英国", "desc": "Foundation、本科、硕士 —— 英国顶级院校。" }
+      "hero": {
+        "badge": "2026年秋季申请开放",
+        "ctaPrimary": "免费咨询",
+        "ctaSecondary": "查看示例路径"
       },
-      "journeyTitle": "与ALOHA留学的7个步骤",
-      "journeySub": "流程透明——你始终清楚自己在哪一步。",
-      "steps": [
-        { "title": "咨询与方向", "desc": "评估能力与目标,推荐合适的国家与专业。" },
-        { "title": "语言学习", "desc": "达到学校的语言要求(TOPIK、JLPT、HSK、IELTS等)。" },
-        { "title": "选校与专业", "desc": "定制学校清单,比较学费、奖学金和职业前景。" },
-        { "title": "申请材料", "desc": "成绩单、学习计划、推荐信,如需还有作品集。" },
-        { "title": "提交申请", "desc": "向学校和匹配的奖学金基金申请,并跟进反馈。" },
-        { "title": "面试与签证", "desc": "面试辅导、签证材料与财务证明。" },
-        { "title": "出发与安置", "desc": "住宿安排、接机与融入新环境的支持。" }
-      ],
+      "countries": {
+        "eyebrow": "留学国家",
+        "title": "选择你的目的地",
+        "sub": "每个国家都是一扇门 —— ALOHA帮你找到最适合能力、专业和预算的一扇。",
+        "labels": {
+          "tuition": "学费",
+          "language": "语言要求",
+          "majors": "热门专业",
+          "scholarship": "奖学金"
+        },
+        "yearUnit": "/年",
+        "explore": "查看详情"
+      },
+      "destinations": {
+        "china": { "name": "中国" },
+        "korea": { "name": "韩国" },
+        "japan": { "name": "日本" },
+        "uk": { "name": "英国" },
+        "singapore": { "name": "新加坡" },
+        "europe": { "name": "欧洲" }
+      },
+      "timeline": {
+        "eyebrow": "申请路径",
+        "title": "12个月抵达校园",
+        "sub": "面向9月入学的示例时间线 —— 根据国家和学生情况调整。"
+      },
+      "scholarships": {
+        "eyebrow": "奖学金",
+        "title": "与ALOHA一起冲奖学金",
+        "sub": "我们协助你申请全球公立与私立奖学金。",
+        "audienceLabel": "面向",
+        "valueLabel": "金额"
+      },
+      "stories": {
+        "eyebrow": "学员故事",
+        "title": "ALOHA学员的去向",
+        "sub": "已在国际大学学习的ALOHA毕业生。",
+        "yearLabel": "入学"
+      },
+      "faq": {
+        "eyebrow": "常见问题",
+        "title": "常见问题",
+        "sub": "关于留学的常见问题快速解答。"
+      },
+      "form": {
+        "eyebrow": "预约咨询",
+        "title": "免费1对1留学咨询",
+        "sub": "留下你的信息 —— ALOHA将在24小时内回电,并为你制定个性化方案。",
+        "destination": "意向国家",
+        "note": "其他说明(可选)",
+        "submit": "发送咨询请求",
+        "success": "感谢!ALOHA将在24小时内联系你。",
+        "trust": "10,000+ 学员的信赖之选"
+      },
       "cta": "获取留学咨询"
     },
     "about": {

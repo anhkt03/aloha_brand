@@ -120,24 +120,65 @@
       "eyebrow": "ALOHA와 함께 유학",
       "title": "글로벌 꿈에 손을 뻗어보세요",
       "lead": "학교 선택, 서류, 장학금, 비자, 정착까지 — 중국·한국·일본과 영어권 국가.",
-      "destinationsTitle": "어디로 가고 싶으세요?",
-      "destinations": {
-        "china": { "name": "중국", "desc": "CSC·공자학원 장학금 또는 자비." },
-        "korea": { "name": "한국", "desc": "TOPIK 3+ D-2, 학사·석사 과정." },
-        "japan": { "name": "일본", "desc": "JLPT N3+, 일본어학교·전문학교·대학." },
-        "uk": { "name": "영국", "desc": "Foundation, 학사, 석사 — 영국 상위권." }
+      "hero": {
+        "badge": "2026년 신입생 모집 중",
+        "ctaPrimary": "무료 상담 신청",
+        "ctaSecondary": "샘플 로드맵 보기"
       },
-      "journeyTitle": "ALOHA와 함께하는 유학 7단계",
-      "journeySub": "투명한 프로세스 — 지금 어디에 있는지 언제나 확인 가능합니다.",
-      "steps": [
-        { "title": "상담 & 방향 설정", "desc": "역량과 희망을 평가하고 국가/전공을 추천합니다." },
-        { "title": "언어 학습", "desc": "학교 입학 조건 달성(TOPIK, JLPT, HSK, IELTS 등)." },
-        { "title": "학교/전공 선택", "desc": "학교 리스트, 학비·장학금·진로 비교." },
-        { "title": "서류 준비", "desc": "성적표, 학업 계획, 추천서, 포트폴리오." },
-        { "title": "지원 제출", "desc": "학교 및 장학금에 지원하고 진행 상황 관리." },
-        { "title": "인터뷰 & 비자", "desc": "인터뷰 준비, 비자 서류, 재정 증명." },
-        { "title": "출국 & 정착", "desc": "숙소, 공항 픽업, 현지 적응 지원." }
-      ],
+      "countries": {
+        "eyebrow": "유학 국가",
+        "title": "가고 싶은 나라를 선택하세요",
+        "sub": "나라는 곧 기회의 문 — ALOHA가 역량·전공·예산에 맞는 문을 열어드립니다.",
+        "labels": {
+          "tuition": "학비",
+          "language": "언어 요건",
+          "majors": "인기 전공",
+          "scholarship": "장학금"
+        },
+        "yearUnit": "/년",
+        "explore": "자세히 보기"
+      },
+      "destinations": {
+        "china": { "name": "중국" },
+        "korea": { "name": "한국" },
+        "japan": { "name": "일본" },
+        "uk": { "name": "영국" },
+        "singapore": { "name": "싱가포르" },
+        "europe": { "name": "유럽" }
+      },
+      "timeline": {
+        "eyebrow": "지원 로드맵",
+        "title": "12개월이면 캠퍼스로",
+        "sub": "9월 학기 지원 샘플 타임라인 — 국가·개인 상황에 따라 조정됩니다."
+      },
+      "scholarships": {
+        "eyebrow": "장학금",
+        "title": "ALOHA와 함께 도전하는 장학금",
+        "sub": "세계 각국의 공공·민간 장학금을 함께 준비해 드립니다.",
+        "audienceLabel": "대상",
+        "valueLabel": "혜택"
+      },
+      "stories": {
+        "eyebrow": "수강생 이야기",
+        "title": "ALOHA 수강생의 진로",
+        "sub": "국제 대학에서 공부 중인 ALOHA 출신 학생들.",
+        "yearLabel": "입학"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "자주 묻는 질문",
+        "sub": "유학 관련 자주 묻는 질문에 빠르게 답변합니다."
+      },
+      "form": {
+        "eyebrow": "상담 신청",
+        "title": "무료 1:1 유학 상담",
+        "sub": "정보를 입력해 주세요 — ALOHA가 24시간 내 개인 맞춤 로드맵을 안내합니다.",
+        "destination": "희망 국가",
+        "note": "추가 내용 (선택)",
+        "submit": "상담 신청 보내기",
+        "success": "감사합니다! ALOHA가 24시간 내 연락드립니다.",
+        "trust": "10,000명 이상의 수강생이 선택"
+      },
       "cta": "유학 상담 받기"
     },
     "about": {
