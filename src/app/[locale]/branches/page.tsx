@@ -1,21 +1,18 @@
+"use client";
+
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Container } from "@/components/common/Container";
 import { PageHero } from "@/components/layout/PageHero";
-
-/** Fake list — replace with DB-backed `Branch` records. */
-const BRANCHES = [
-  { code: "CS1", name: "Cầu Giấy", address: "123 Trần Duy Hưng, Cầu Giấy, Hà Nội" },
-  { code: "CS2", name: "Hải Dương", address: "56 Trần Hưng Đạo, TP. Hải Dương" },
-  { code: "CS3", name: "Long Biên", address: "88 Nguyễn Văn Cừ, Long Biên, Hà Nội" },
-  { code: "CS4", name: "Đống Đa", address: "12 Xã Đàn, Đống Đa, Hà Nội" },
-  { code: "CS5", name: "Bắc Ninh", address: "45 Nguyễn Trãi, TP. Bắc Ninh" },
-  { code: "CS6", name: "Hải Phòng", address: "22 Lạch Tray, Ngô Quyền, Hải Phòng" },
-];
+import { VietnamMap } from "@/components/branches/VietnamMap";
+import { branches, branchMapUrl, type Branch } from "@/data/branches";
 
 export default function BranchesPage() {
   const t = useTranslations();
   const branchWord = t("pages.branches.branchWord");
+  const [selected, setSelected] = useState<Branch | null>(null);
+  const activeCode = selected?.code;
 
   return (
     <>
@@ -33,37 +30,96 @@ export default function BranchesPage() {
           </>
         }
       />
+
       <Container>
-        <div className="section">
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {BRANCHES.map((b) => (
-              <article key={b.code} className="flex flex-col gap-3 rounded-lg border border-line bg-surface p-6 transition hover:-translate-y-1 hover:shadow">
-                <header className="flex items-center gap-3">
-                  <div
-                    className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-[13px] text-white font-display font-black"
-                    style={{ background: "var(--grad)" }}
-                  >
-                    {b.code}
-                  </div>
-                  <div>
-                    <div className="font-display text-lg font-extrabold">{b.name}</div>
-                    <div className="text-[13px] text-muted">
-                      {branchWord} {b.code}
-                    </div>
-                  </div>
-                </header>
-                <p className="flex gap-2 text-[14.5px] text-ink-soft">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" strokeWidth="2" className="mt-[3px] flex-shrink-0">
-                    <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  {b.address}
-                </p>
-              </article>
+        <div className="section grid gap-8 lg:grid-cols-[minmax(320px,420px)_1fr]">
+          {/* Map column */}
+          <div className="lg:sticky lg:top-24 lg:h-fit">
+            <VietnamMap selectedCode={activeCode} onSelect={setSelected} />
+            <p className="mt-4 text-center text-[13px] text-muted">
+              Nhấn vào pin để mở Google Maps hoặc chọn cơ sở bên phải.
+            </p>
+          </div>
+
+          {/* Branch list */}
+          <div className="grid gap-4 sm:grid-cols-2">
+            {branches.map((branch) => (
+              <BranchCard
+                key={branch.code}
+                branch={branch}
+                branchWord={branchWord}
+                active={activeCode === branch.code}
+                onFocus={() => setSelected(branch)}
+              />
             ))}
           </div>
         </div>
       </Container>
     </>
+  );
+}
+
+interface BranchCardProps {
+  branch: Branch;
+  branchWord: string;
+  active?: boolean;
+  onFocus?: () => void;
+}
+
+function BranchCard({ branch, branchWord, active, onFocus }: BranchCardProps) {
+  return (
+    <article
+      onMouseEnter={onFocus}
+      onFocus={onFocus}
+      className={`group flex flex-col gap-3 rounded-lg border bg-surface p-6 transition ${
+        active ? "border-brand shadow-lg" : "border-line hover:-translate-y-1 hover:shadow"
+      }`}
+    >
+      <header className="flex items-center gap-3">
+        <div
+          className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-[13px] font-display font-black text-white"
+          style={{ background: "var(--grad)" }}
+        >
+          {branch.code}
+        </div>
+        <div>
+          <div className="font-display text-lg font-extrabold">{branch.name}</div>
+          <div className="text-[13px] text-muted">
+            {branchWord} {branch.code} · {branch.city}
+          </div>
+        </div>
+      </header>
+
+      <p className="flex gap-2 text-[14px] text-ink-soft">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--teal)" strokeWidth="2" className="mt-[3px] flex-shrink-0">
+          <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        {branch.address}
+      </p>
+
+      {branch.phone && (
+        <p className="flex items-center gap-2 text-[14px] text-ink-soft">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--brand)" strokeWidth="2" className="flex-shrink-0">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.15 1 .38 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          <a href={`tel:${branch.phone.replace(/\s/g, "")}`} className="hover:text-brand">
+            {branch.phone}
+          </a>
+        </p>
+      )}
+
+      <a
+        href={branchMapUrl(branch)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-surface-2 px-4 py-2 font-display text-[13px] font-extrabold text-brand transition hover:bg-brand hover:text-white"
+      >
+        Chỉ đường
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </a>
+    </article>
   );
 }
