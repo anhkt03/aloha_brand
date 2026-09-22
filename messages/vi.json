@@ -44,7 +44,7 @@
     "title": "Bạn đang tìm kiếm điều gì?",
     "training": {
       "title": "Đào tạo ngoại ngữ",
-      "desc": "Lộ trình đào tạo bài bản từ nền tảng đến chứng chỉ và ứng dụng thực tế.",
+      "desc": "Lộ trình đào tạo bài bản từ nền tảng đến chứng chỉ và\nứng dụng thực tế.",
       "cta": "Khám phá ngay",
       "items": ["Tiếng Trung", "Tiếng Anh", "Tiếng Hàn", "Tiếng Nhật"]
     },
@@ -140,7 +140,7 @@
         "china": { "name": "Trung Quốc", "desc": "Học bổng chính phủ CSC, Khổng Tử, tự túc." },
         "korea": { "name": "Hàn Quốc", "desc": "TOPIK 3+ vào D-2, chương trình cử nhân · thạc sĩ." },
         "japan": { "name": "Nhật Bản", "desc": "JLPT N3+, trường Nhật ngữ · Senmon · Đại học." },
-        "uk": { "name": "Anh quốc & IELTS", "desc": "Foundation, cử nhân, thạc sĩ – các trường Top UK." }
+        "uk": { "name": "Anh quốc", "desc": "Foundation, cử nhân, thạc sĩ – các trường Top UK." }
       },
       "journeyTitle": "7 bước du học cùng ALOHA",
       "journeySub": "Quy trình minh bạch — bạn luôn biết mình đang ở đâu trên hành trình.",

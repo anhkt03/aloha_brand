@@ -8,8 +8,8 @@ export function Footer() {
   const t = useTranslations();
   const trainingLabels = t.raw("footer.trainingLinks") as string[];
   const globalLabels = t.raw("footer.globalLinks") as string[];
-  const trainingLinks = trainingLabels.map((label) => ({ label, href: "/training" as const }));
-  const globalLinks = globalLabels.map((label) => ({ label, href: "/global" as const }));
+  const trainingLinks = trainingLabels.map((label) => ({ label, href: "/ngoaingu" as const }));
+  const globalLinks = globalLabels.map((label) => ({ label, href: "/duhocquocte" as const }));
 
   const aboutLinks = [
     { key: "intro", href: "/about" as const },
@@ -21,8 +21,8 @@ export function Footer() {
 
   return (
     <footer
-      className="mt-5 py-14 text-[#dfeeda]"
-      style={{ background: "#295326" }}
+      className="mt-5 py-14 text-[#eaf6ef]"
+      style={{ background: "linear-gradient(135deg, #469142 0%, #28b4d2 100%)" }}
     >
       <Container>
         <div className="grid gap-10 border-b border-white/10 pb-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.1fr]">
@@ -100,7 +100,7 @@ export function Footer() {
 
 interface FooterListProps {
   title: string;
-  items: Array<{ label: string; href: "/" | "/training" | "/global" | "/about" | "/branches" | "/news" | "/contact" }>;
+  items: Array<{ label: string; href: "/" | "/ngoaingu" | "/duhocquocte" | "/about" | "/branches" | "/news" | "/contact" }>;
 }
 
 function FooterList({ title, items }: FooterListProps) {

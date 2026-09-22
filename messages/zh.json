@@ -40,7 +40,7 @@
     "title": "你在寻找什么?",
     "training": {
       "title": "语言培训",
-      "desc": "从基础到国际证书再到实际应用的系统化学习路径。",
+      "desc": "从基础到国际证书再到\n实际应用的系统化学习路径。",
       "cta": "立即探索",
       "items": ["中文", "英语", "韩语", "日语"]
     },
@@ -136,7 +136,7 @@
         "china": { "name": "中国", "desc": "CSC与孔子学院奖学金,或自费。" },
         "korea": { "name": "韩国", "desc": "TOPIK 3+可申请D-2签证;本科与硕士课程。" },
         "japan": { "name": "日本", "desc": "JLPT N3+,日语学校、专门学校与大学。" },
-        "uk": { "name": "英国 & IELTS", "desc": "Foundation、本科、硕士 —— 英国顶级院校。" }
+        "uk": { "name": "英国", "desc": "Foundation、本科、硕士 —— 英国顶级院校。" }
       },
       "journeyTitle": "与ALOHA留学的7个步骤",
       "journeySub": "流程透明——你始终清楚自己在哪一步。",
