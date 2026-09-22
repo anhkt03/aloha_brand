@@ -35,7 +35,7 @@ export default function BranchesPage() {
         <div className="section grid gap-8 lg:grid-cols-[minmax(320px,420px)_1fr]">
           {/* Map column */}
           <div className="lg:sticky lg:top-24 lg:h-fit">
-            <VietnamMap selectedCode={activeCode} onSelect={setSelected} />
+            <VietnamMap selectedCode={activeCode} />
             <p className="mt-4 text-center text-[13px] text-muted">
               Nhấn vào pin để mở Google Maps hoặc chọn cơ sở bên phải.
             </p>
@@ -49,7 +49,8 @@ export default function BranchesPage() {
                 branch={branch}
                 branchWord={branchWord}
                 active={activeCode === branch.code}
-                onFocus={() => setSelected(branch)}
+                onHoverStart={() => setSelected(branch)}
+                onHoverEnd={() => setSelected(null)}
               />
             ))}
           </div>
@@ -63,14 +64,17 @@ interface BranchCardProps {
   branch: Branch;
   branchWord: string;
   active?: boolean;
-  onFocus?: () => void;
+  onHoverStart?: () => void;
+  onHoverEnd?: () => void;
 }
 
-function BranchCard({ branch, branchWord, active, onFocus }: BranchCardProps) {
+function BranchCard({ branch, branchWord, active, onHoverStart, onHoverEnd }: BranchCardProps) {
   return (
     <article
-      onMouseEnter={onFocus}
-      onFocus={onFocus}
+      onMouseEnter={onHoverStart}
+      onMouseLeave={onHoverEnd}
+      onFocus={onHoverStart}
+      onBlur={onHoverEnd}
       className={`group flex flex-col gap-3 rounded-lg border bg-surface p-6 transition ${
         active ? "border-brand shadow-lg" : "border-line hover:-translate-y-1 hover:shadow"
       }`}
