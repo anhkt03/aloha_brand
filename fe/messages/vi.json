@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "training": "Đào tạo",
+    "global": "Du học",
+    "about": "Về ALOHA",
+    "branches": "Hệ thống cơ sở",
+    "news": "Tin tức",
+    "contact": "Liên hệ",
+    "cta": "Đăng ký học thử",
+    "hotline": "Hotline"
+  },
+  "languages": {
+    "vi": "Tiếng Việt",
+    "en": "English",
+    "ja": "日本語",
+    "ko": "한국어"
+  },
+  "hero": {
+    "tagline": "More Languages, A Brighter You",
+    "titleA": "Học ngoại ngữ",
+    "titleB": "rộng mở tương lai",
+    "lead": "ALOHA đồng hành cùng bạn trên hành trình học ngoại ngữ, chinh phục mục tiêu và mở rộng cơ hội học tập – nghề nghiệp.",
+    "ctaTrial": "Học thử miễn phí",
+    "ctaCourses": "Xem khóa học"
+  },
+  "about": {
+    "eyebrow": "Về chúng tôi",
+    "title": "ALOHA Language School",
+    "pillars": {
+      "quality": "Chất lượng",
+      "experience": "Trải nghiệm",
+      "growth": "Phát triển toàn diện"
+    },
+    "quote": "ALOHA là hệ thống đào tạo đa ngôn ngữ với định hướng xây dựng hành trình học tập dựa trên 3 trụ cột: Chất lượng — Trải nghiệm — Phát triển toàn diện.",
+    "body": "ALOHA hướng tới mang đến môi trường học tập hiện đại, chương trình đào tạo bài bản và lộ trình phù hợp với mục tiêu của từng học viên.",
+    "cta": "Tìm hiểu về ALOHA",
+    "stats": {
+      "years": "Năm kinh nghiệm",
+      "branches": "Cơ sở",
+      "students": "Học viên"
+    }
+  },
+  "offering": {
+    "eyebrow": "ALOHA có gì dành cho bạn",
+    "title": "Bạn đang tìm kiếm điều gì?",
+    "training": {
+      "title": "Đào tạo ngoại ngữ",
+      "desc": "Lộ trình đào tạo bài bản từ nền tảng đến chứng chỉ và ứng dụng thực tế.",
+      "cta": "Khám phá ngay",
+      "items": ["Tiếng Trung", "Tiếng Anh", "Tiếng Hàn", "Tiếng Nhật"]
+    },
+    "global": {
+      "title": "Du học",
+      "desc": "Đồng hành cùng học viên trên hành trình lựa chọn chương trình, trường học, học bổng và hoàn thiện hồ sơ du học.",
+      "cta": "Khám phá ngay",
+      "items": ["Đài Loan", "Nhật Bản", "Hàn Quốc", "Singapore", "Châu Âu"]
+    }
+  },
+  "why": {
+    "eyebrow": "Vì sao chọn ALOHA",
+    "title": "Vì sao chọn ALOHA?",
+    "trust": "Hơn 10.000+ học viên đã tin tưởng lựa chọn ALOHA",
+    "items": {
+      "roadmap": {
+        "title": "Lộ trình bài bản",
+        "desc": "Rõ ràng, cá nhân hóa theo trình độ & mục tiêu."
+      },
+      "classSize": {
+        "title": "Sĩ số lớp vừa & nhỏ",
+        "desc": "Tăng tương tác và theo sát từng học viên."
+      },
+      "commitment": {
+        "title": "Cam kết đầu ra",
+        "desc": "Cam kết đầu ra bằng văn bản, học lại MIỄN PHÍ."
+      },
+      "flexible": {
+        "title": "Học tập linh hoạt",
+        "desc": "Nhiều cơ sở với đa dạng hình thức học và khung thời gian học."
+      },
+      "teachers": {
+        "title": "Đội ngũ giảng viên",
+        "desc": "Đội ngũ giảng viên giàu kinh nghiệm, chuyên môn cao."
+      },
+      "facility": {
+        "title": "Cơ sở vật chất hiện đại",
+        "desc": "Không gian học tập hiện đại, trẻ trung với đầy đủ tiện ích."
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Trải nghiệm học tập",
+    "title": "Trải nghiệm học tập tại ALOHA",
+    "closing": "Không chỉ đến lớp để học, học viên được theo sát trong suốt quá trình từ học kiến thức, thực hành, làm bài đến đánh giá kết quả.",
+    "items": {
+      "small": {
+        "title": "Lớp học quy mô nhỏ",
+        "desc": "Giáo viên có thời gian tương tác, sửa lỗi và hỗ trợ từng học viên."
+      },
+      "cycle": {
+        "title": "Học – Luyện – Kiểm tra",
+        "desc": "Ngoài việc học trên lớp, học viên được giao bài, luyện tập và kiểm tra định kỳ để đánh giá mức độ tiến bộ."
+      },
+      "practice": {
+        "title": "Thực hành ngôn ngữ thực tế",
+        "desc": "Tăng cường giao tiếp, phản xạ và xử lý các tình huống sử dụng ngôn ngữ trong đời sống, học tập và công việc."
+      },
+      "support": {
+        "title": "Hỗ trợ ngoài giờ học",
+        "desc": "Học viên được hỗ trợ thêm thông qua tài liệu, video và các công cụ học tập trong quá trình tự học."
+      }
+    }
+  },
+  "journey": {
+    "eyebrow": "Hành trình cùng ALOHA",
+    "title": "Từ ngoại ngữ đến những cơ hội mới",
+    "closing": "ALOHA đồng hành cùng người học từ những bước đầu tiên với ngoại ngữ đến hành trình học tập và phát triển trong tương lai.",
+    "cta": "Khám phá hành trình cùng ALOHA",
+    "steps": {
+      "learn": "Học ngoại ngữ",
+      "certificate": "Chinh phục chứng chỉ",
+      "direction": "Định hướng tương lai",
+      "future": "Du học / Phát triển nghề nghiệp"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Học viên nói gì",
+    "title": "Học viên nói gì về ALOHA?",
+    "viewMore": "Xem thêm câu chuyện học viên",
+    "trustBadge": "Được tin yêu bởi 10.000+ học viên"
+  },
+  "branches": {
+    "eyebrow": "Hệ thống cơ sở",
+    "title": "ALOHA đồng hành cùng bạn",
+    "sub": "Hệ thống cơ sở phủ khắp Hà Nội và các tỉnh miền Bắc — luôn có một ALOHA gần bạn.",
+    "cta": "Xem hệ thống các cơ sở"
+  },
+  "news": {
+    "eyebrow": "Tin tức ALOHA",
+    "title": "Tin tức ALOHA",
+    "cta": "Xem thêm tin tức",
+    "categories": {
+      "language": {
+        "title": "Ngoại ngữ",
+        "desc": "Kiến thức học ngoại ngữ, chứng chỉ và phương pháp học tập hiệu quả."
+      },
+      "abroad": {
+        "title": "Du học",
+        "desc": "Thông tin du học, học bổng và cơ hội học tập quốc tế."
+      },
+      "activity": {
+        "title": "Hoạt động ALOHA",
+        "desc": "Các hoạt động, sự kiện và câu chuyện ALOHA."
+      }
+    }
+  },
+  "cta": {
+    "badge": "Sẵn sàng bắt đầu?",
+    "title": "Bắt đầu hành trình ALOHA ngay hôm nay",
+    "sub": "Đăng ký học thử miễn phí hoặc gọi hotline để được tư vấn lộ trình phù hợp nhất với bạn.",
+    "primary": "Đăng ký học thử",
+    "secondary": "Gọi 1900 9309"
+  },
+  "footer": {
+    "training": "Đào tạo ngoại ngữ",
+    "global": "Du học",
+    "about": "Về ALOHA",
+    "contact": "Liên hệ",
+    "aboutLinks": {
+      "intro": "Giới thiệu",
+      "team": "Đội ngũ",
+      "branches": "Hệ thống cơ sở",
+      "news": "Tin tức",
+      "contact": "Liên hệ"
+    },
+    "email": "Email",
+    "address": "Địa chỉ",
+    "policy": "Chính sách bảo mật",
+    "terms": "Điều khoản sử dụng",
+    "copyright": "© 2025 ALOHA Language School. All rights reserved."
+  },
+  "form": {
+    "name": "Họ và tên",
+    "phone": "Số điện thoại",
+    "email": "Email",
+    "language": "Ngôn ngữ quan tâm",
+    "message": "Lời nhắn",
+    "submit": "Gửi đăng ký",
+    "success": "Cảm ơn bạn! ALOHA sẽ liên hệ lại sớm nhất."
+  }
+}
