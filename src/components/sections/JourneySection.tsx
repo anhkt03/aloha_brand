@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/common/Button";
-import { Section, SectionHead } from "@/components/common/Section";
+import { Section } from "@/components/common/Section";
 
 type StepKey = "learn" | "certificate" | "direction" | "future";
 const STEPS: StepKey[] = ["learn", "certificate", "direction", "future"];
