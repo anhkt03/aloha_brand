@@ -4,11 +4,16 @@
     "training": "Đào tạo",
     "global": "Du học",
     "about": "Về ALOHA",
-    "branches": "Hệ thống cơ sở",
+    "branches": "Cơ sở",
     "news": "Tin tức",
     "contact": "Liên hệ",
     "cta": "Đăng ký học thử",
     "hotline": "Hotline"
+  },
+  "common": {
+    "learnMore": "Tìm hiểu thêm",
+    "readMore": "Đọc tiếp",
+    "back": "Quay lại"
   },
   "languages": {
     "vi": "Tiếng Việt",
@@ -27,19 +32,11 @@
   "about": {
     "eyebrow": "Về chúng tôi",
     "title": "ALOHA Language School",
-    "pillars": {
-      "quality": "Chất lượng",
-      "experience": "Trải nghiệm",
-      "growth": "Phát triển toàn diện"
-    },
+    "pillars": { "quality": "Chất lượng", "experience": "Trải nghiệm", "growth": "Phát triển toàn diện" },
     "quote": "ALOHA là hệ thống đào tạo đa ngôn ngữ với định hướng xây dựng hành trình học tập dựa trên 3 trụ cột: Chất lượng — Trải nghiệm — Phát triển toàn diện.",
     "body": "ALOHA hướng tới mang đến môi trường học tập hiện đại, chương trình đào tạo bài bản và lộ trình phù hợp với mục tiêu của từng học viên.",
     "cta": "Tìm hiểu về ALOHA",
-    "stats": {
-      "years": "Năm kinh nghiệm",
-      "branches": "Cơ sở",
-      "students": "Học viên"
-    }
+    "stats": { "years": "Năm kinh nghiệm", "branches": "Cơ sở", "students": "Học viên" }
   },
   "offering": {
     "eyebrow": "ALOHA có gì dành cho bạn",
@@ -62,30 +59,12 @@
     "title": "Vì sao chọn ALOHA?",
     "trust": "Hơn 10.000+ học viên đã tin tưởng lựa chọn ALOHA",
     "items": {
-      "roadmap": {
-        "title": "Lộ trình bài bản",
-        "desc": "Rõ ràng, cá nhân hóa theo trình độ & mục tiêu."
-      },
-      "classSize": {
-        "title": "Sĩ số lớp vừa & nhỏ",
-        "desc": "Tăng tương tác và theo sát từng học viên."
-      },
-      "commitment": {
-        "title": "Cam kết đầu ra",
-        "desc": "Cam kết đầu ra bằng văn bản, học lại MIỄN PHÍ."
-      },
-      "flexible": {
-        "title": "Học tập linh hoạt",
-        "desc": "Nhiều cơ sở với đa dạng hình thức học và khung thời gian học."
-      },
-      "teachers": {
-        "title": "Đội ngũ giảng viên",
-        "desc": "Đội ngũ giảng viên giàu kinh nghiệm, chuyên môn cao."
-      },
-      "facility": {
-        "title": "Cơ sở vật chất hiện đại",
-        "desc": "Không gian học tập hiện đại, trẻ trung với đầy đủ tiện ích."
-      }
+      "roadmap": { "title": "Lộ trình bài bản", "desc": "Rõ ràng, cá nhân hóa theo trình độ & mục tiêu." },
+      "classSize": { "title": "Sĩ số lớp vừa & nhỏ", "desc": "Tăng tương tác và theo sát từng học viên." },
+      "commitment": { "title": "Cam kết đầu ra", "desc": "Cam kết đầu ra bằng văn bản, học lại MIỄN PHÍ." },
+      "flexible": { "title": "Học tập linh hoạt", "desc": "Nhiều cơ sở với đa dạng hình thức học và khung thời gian học." },
+      "teachers": { "title": "Đội ngũ giảng viên", "desc": "Đội ngũ giảng viên giàu kinh nghiệm, chuyên môn cao." },
+      "facility": { "title": "Cơ sở vật chất hiện đại", "desc": "Không gian học tập hiện đại, trẻ trung với đầy đủ tiện ích." }
     }
   },
   "experience": {
@@ -93,22 +72,10 @@
     "title": "Trải nghiệm học tập tại ALOHA",
     "closing": "Không chỉ đến lớp để học, học viên được theo sát trong suốt quá trình từ học kiến thức, thực hành, làm bài đến đánh giá kết quả.",
     "items": {
-      "small": {
-        "title": "Lớp học quy mô nhỏ",
-        "desc": "Giáo viên có thời gian tương tác, sửa lỗi và hỗ trợ từng học viên."
-      },
-      "cycle": {
-        "title": "Học – Luyện – Kiểm tra",
-        "desc": "Ngoài việc học trên lớp, học viên được giao bài, luyện tập và kiểm tra định kỳ để đánh giá mức độ tiến bộ."
-      },
-      "practice": {
-        "title": "Thực hành ngôn ngữ thực tế",
-        "desc": "Tăng cường giao tiếp, phản xạ và xử lý các tình huống sử dụng ngôn ngữ trong đời sống, học tập và công việc."
-      },
-      "support": {
-        "title": "Hỗ trợ ngoài giờ học",
-        "desc": "Học viên được hỗ trợ thêm thông qua tài liệu, video và các công cụ học tập trong quá trình tự học."
-      }
+      "small": { "title": "Lớp học quy mô nhỏ", "desc": "Giáo viên có thời gian tương tác, sửa lỗi và hỗ trợ từng học viên." },
+      "cycle": { "title": "Học – Luyện – Kiểm tra", "desc": "Ngoài việc học trên lớp, học viên được giao bài, luyện tập và kiểm tra định kỳ để đánh giá mức độ tiến bộ." },
+      "practice": { "title": "Thực hành ngôn ngữ thực tế", "desc": "Tăng cường giao tiếp, phản xạ và xử lý các tình huống sử dụng ngôn ngữ trong đời sống, học tập và công việc." },
+      "support": { "title": "Hỗ trợ ngoài giờ học", "desc": "Học viên được hỗ trợ thêm thông qua tài liệu, video và các công cụ học tập trong quá trình tự học." }
     }
   },
   "journey": {
@@ -129,7 +96,7 @@
     "viewMore": "Xem thêm câu chuyện học viên",
     "trustBadge": "Được tin yêu bởi 10.000+ học viên"
   },
-  "branches": {
+  "branchesSection": {
     "eyebrow": "Hệ thống cơ sở",
     "title": "ALOHA đồng hành cùng bạn",
     "sub": "Hệ thống cơ sở phủ khắp Hà Nội và các tỉnh miền Bắc — luôn có một ALOHA gần bạn.",
@@ -140,18 +107,9 @@
     "title": "Tin tức ALOHA",
     "cta": "Xem thêm tin tức",
     "categories": {
-      "language": {
-        "title": "Ngoại ngữ",
-        "desc": "Kiến thức học ngoại ngữ, chứng chỉ và phương pháp học tập hiệu quả."
-      },
-      "abroad": {
-        "title": "Du học",
-        "desc": "Thông tin du học, học bổng và cơ hội học tập quốc tế."
-      },
-      "activity": {
-        "title": "Hoạt động ALOHA",
-        "desc": "Các hoạt động, sự kiện và câu chuyện ALOHA."
-      }
+      "language": { "title": "Ngoại ngữ", "desc": "Kiến thức học ngoại ngữ, chứng chỉ và phương pháp học tập hiệu quả." },
+      "abroad": { "title": "Du học", "desc": "Thông tin du học, học bổng và cơ hội học tập quốc tế." },
+      "activity": { "title": "Hoạt động ALOHA", "desc": "Các hoạt động, sự kiện và câu chuyện ALOHA." }
     }
   },
   "cta": {
@@ -160,6 +118,83 @@
     "sub": "Đăng ký học thử miễn phí hoặc gọi hotline để được tư vấn lộ trình phù hợp nhất với bạn.",
     "primary": "Đăng ký học thử",
     "secondary": "Gọi 1900 9309"
+  },
+  "pages": {
+    "training": {
+      "eyebrow": "Chương trình đào tạo",
+      "title": "Đào tạo ngoại ngữ",
+      "lead": "Anh – Trung – Hàn – Nhật với hệ thống band/level rõ ràng. Danh sách khóa học cập nhật liên tục theo từng kỳ tuyển sinh.",
+      "tabs": { "all": "Tất cả", "en": "Tiếng Anh", "zh": "Tiếng Trung", "ko": "Tiếng Hàn", "ja": "Tiếng Nhật" },
+      "recruiting": "Tuyển sinh",
+      "register": "Đăng ký",
+      "durationLine": "Thời lượng: {months} tháng ({sessions} buổi)",
+      "outcomeLine": "Đầu ra: {outcome}"
+    },
+    "global": {
+      "eyebrow": "Du học cùng ALOHA",
+      "title": "Chạm tay tới giấc mơ toàn cầu",
+      "lead": "Đồng hành trọn gói từ chọn trường, hoàn thiện hồ sơ đến visa và định cư — Trung, Hàn, Nhật và các nước nói tiếng Anh.",
+      "destinationsTitle": "Bạn muốn đi đâu?",
+      "destinations": {
+        "china": { "name": "Trung Quốc", "desc": "Học bổng chính phủ CSC, Khổng Tử, tự túc." },
+        "korea": { "name": "Hàn Quốc", "desc": "TOPIK 3+ vào D-2, chương trình cử nhân · thạc sĩ." },
+        "japan": { "name": "Nhật Bản", "desc": "JLPT N3+, trường Nhật ngữ · Senmon · Đại học." },
+        "uk": { "name": "Anh quốc & IELTS", "desc": "Foundation, cử nhân, thạc sĩ – các trường Top UK." }
+      },
+      "journeyTitle": "7 bước du học cùng ALOHA",
+      "journeySub": "Quy trình minh bạch — bạn luôn biết mình đang ở đâu trên hành trình.",
+      "steps": [
+        { "title": "Tư vấn định hướng", "desc": "Đánh giá năng lực và mong muốn, gợi ý quốc gia/ngành phù hợp." },
+        { "title": "Học ngoại ngữ", "desc": "Đạt chuẩn ngôn ngữ đầu vào của trường (TOPIK, JLPT, HSK, IELTS...)." },
+        { "title": "Chọn trường & ngành", "desc": "Tư vấn danh sách trường, so sánh học phí, học bổng, cơ hội việc làm." },
+        { "title": "Hoàn thiện hồ sơ", "desc": "Bảng điểm, kế hoạch học tập, thư giới thiệu, portfolio nếu cần." },
+        { "title": "Nộp hồ sơ apply", "desc": "Nộp trường và các quỹ học bổng phù hợp; theo dõi phản hồi." },
+        { "title": "Phỏng vấn & Visa", "desc": "Luyện phỏng vấn, hồ sơ visa, giải trình tài chính." },
+        { "title": "Lên đường & Hỗ trợ", "desc": "Hỗ trợ ổn định nơi ở, đón sân bay, hòa nhập môi trường mới." }
+      ],
+      "cta": "Nhận tư vấn du học"
+    },
+    "about": {
+      "eyebrow": "Về chúng tôi",
+      "title": "Về ALOHA Language School",
+      "lead": "Hệ thống đào tạo ngoại ngữ hướng tới chất lượng giảng dạy, trải nghiệm học tập và sự phát triển toàn diện của học viên.",
+      "vmvTitle": "Tầm nhìn · Sứ mệnh · Giá trị",
+      "vmv": {
+        "vision": { "title": "Tầm nhìn", "desc": "Trở thành hệ thống đào tạo ngoại ngữ hàng đầu miền Bắc." },
+        "mission": { "title": "Sứ mệnh", "desc": "Đồng hành cùng người học chinh phục mục tiêu ngôn ngữ và mở rộng cơ hội toàn cầu." },
+        "values": { "title": "Giá trị cốt lõi", "desc": "Chất lượng · Chân thành · Kiên trì · Đổi mới · Cộng đồng." }
+      },
+      "timelineTitle": "Chặng đường ALOHA",
+      "timeline": [
+        { "year": "2014", "title": "Thành lập ALOHA", "desc": "Cơ sở đầu tiên tại Hà Nội với 2 lớp học đầu tiên." },
+        { "year": "2017", "title": "Mở rộng miền Bắc", "desc": "Ra mắt cơ sở thứ 3 tại Hải Dương, ra mắt chương trình HSK." },
+        { "year": "2020", "title": "Chuyển đổi số", "desc": "Triển khai lớp học trực tuyến và app quản lý học viên." },
+        { "year": "2023", "title": "10.000+ học viên", "desc": "Cột mốc 10.000 học viên đã học và tốt nghiệp tại ALOHA." },
+        { "year": "2025", "title": "11 cơ sở", "desc": "Khai trương cơ sở thứ 11 tại Hải Phòng, phủ khắp miền Bắc." }
+      ]
+    },
+    "branches": {
+      "eyebrow": "Hệ thống cơ sở",
+      "title": "ALOHA khắp miền Bắc",
+      "lead": "Hơn 10 cơ sở phủ Hà Nội và các tỉnh phía Bắc — chọn cơ sở gần bạn nhất.",
+      "branchWord": "Cơ sở"
+    },
+    "news": {
+      "eyebrow": "Tin tức & Sự kiện",
+      "title": "Tin tức ALOHA",
+      "lead": "Cập nhật tuyển sinh, câu chuyện học viên và sự kiện tại ALOHA."
+    },
+    "contact": {
+      "eyebrow": "Liên hệ",
+      "title": "ALOHA lắng nghe bạn",
+      "lead": "Gửi tin nhắn hoặc gọi hotline để được tư vấn miễn phí lộ trình học phù hợp nhất."
+    },
+    "notFound": {
+      "eyebrow": "404",
+      "title": "Trang không tồn tại",
+      "sub": "Đường dẫn bạn tìm không có ở đây. Quay về trang chủ nhé.",
+      "cta": "Về trang chủ"
+    }
   },
   "footer": {
     "training": "Đào tạo ngoại ngữ",
@@ -173,6 +208,8 @@
       "news": "Tin tức",
       "contact": "Liên hệ"
     },
+    "trainingLinks": ["Tiếng Trung", "Tiếng Anh", "Tiếng Hàn", "Tiếng Nhật"],
+    "globalLinks": ["Du học Đài Loan", "Du học Hàn Quốc", "Du học Nhật Bản", "Du học Châu Âu", "Du học Singapore"],
     "email": "Email",
     "address": "Địa chỉ",
     "policy": "Chính sách bảo mật",

@@ -1,15 +1,16 @@
 {
   "nav": {
     "home": "홈",
-    "training": "어학 과정",
+    "training": "어학",
     "global": "유학",
     "about": "ALOHA 소개",
-    "branches": "지점 안내",
+    "branches": "지점",
     "news": "새 소식",
-    "contact": "문의하기",
+    "contact": "문의",
     "cta": "무료 체험",
     "hotline": "핫라인"
   },
+  "common": { "learnMore": "자세히", "readMore": "자세히 보기", "back": "돌아가기" },
   "languages": { "vi": "베트남어", "en": "영어", "ja": "일본어", "ko": "한국어" },
   "hero": {
     "tagline": "More Languages, A Brighter You",
@@ -73,12 +74,7 @@
     "title": "언어에서 새로운 기회로",
     "closing": "첫 한 마디부터 미래의 학업과 커리어까지 ALOHA가 함께합니다.",
     "cta": "ALOHA의 여정 보기",
-    "steps": {
-      "learn": "언어 학습",
-      "certificate": "자격증 취득",
-      "direction": "진로 설정",
-      "future": "유학 / 커리어 성장"
-    }
+    "steps": { "learn": "언어 학습", "certificate": "자격증 취득", "direction": "진로 설정", "future": "유학 / 커리어 성장" }
   },
   "testimonials": {
     "eyebrow": "수강생의 목소리",
@@ -86,7 +82,7 @@
     "viewMore": "더 보기",
     "trustBadge": "10,000명 이상의 수강생이 선택"
   },
-  "branches": {
+  "branchesSection": {
     "eyebrow": "지점 안내",
     "title": "ALOHA는 여러분과 함께",
     "sub": "하노이와 북부 전역에 지점을 두어 언제나 가까이 있습니다.",
@@ -109,12 +105,91 @@
     "primary": "무료 체험 신청",
     "secondary": "1900 9309 으로 연락"
   },
+  "pages": {
+    "training": {
+      "eyebrow": "교육 프로그램",
+      "title": "어학 교육",
+      "lead": "영어 · 중국어 · 한국어 · 일본어 — 레벨별 체계. 매 기수마다 갱신.",
+      "tabs": { "all": "전체", "en": "영어", "zh": "중국어", "ko": "한국어", "ja": "일본어" },
+      "recruiting": "모집 중",
+      "register": "등록",
+      "durationLine": "기간: {months}개월 ({sessions}회)",
+      "outcomeLine": "성과: {outcome}"
+    },
+    "global": {
+      "eyebrow": "ALOHA와 함께 유학",
+      "title": "글로벌 꿈에 손을 뻗어보세요",
+      "lead": "학교 선택, 서류, 장학금, 비자, 정착까지 — 중국·한국·일본과 영어권 국가.",
+      "destinationsTitle": "어디로 가고 싶으세요?",
+      "destinations": {
+        "china": { "name": "중국", "desc": "CSC·공자학원 장학금 또는 자비." },
+        "korea": { "name": "한국", "desc": "TOPIK 3+ D-2, 학사·석사 과정." },
+        "japan": { "name": "일본", "desc": "JLPT N3+, 일본어학교·전문학교·대학." },
+        "uk": { "name": "영국 & IELTS", "desc": "Foundation, 학사, 석사 — 영국 상위권." }
+      },
+      "journeyTitle": "ALOHA와 함께하는 유학 7단계",
+      "journeySub": "투명한 프로세스 — 지금 어디에 있는지 언제나 확인 가능합니다.",
+      "steps": [
+        { "title": "상담 & 방향 설정", "desc": "역량과 희망을 평가하고 국가/전공을 추천합니다." },
+        { "title": "언어 학습", "desc": "학교 입학 조건 달성(TOPIK, JLPT, HSK, IELTS 등)." },
+        { "title": "학교/전공 선택", "desc": "학교 리스트, 학비·장학금·진로 비교." },
+        { "title": "서류 준비", "desc": "성적표, 학업 계획, 추천서, 포트폴리오." },
+        { "title": "지원 제출", "desc": "학교 및 장학금에 지원하고 진행 상황 관리." },
+        { "title": "인터뷰 & 비자", "desc": "인터뷰 준비, 비자 서류, 재정 증명." },
+        { "title": "출국 & 정착", "desc": "숙소, 공항 픽업, 현지 적응 지원." }
+      ],
+      "cta": "유학 상담 받기"
+    },
+    "about": {
+      "eyebrow": "우리는",
+      "title": "ALOHA Language School 소개",
+      "lead": "교육의 질, 학습 경험, 학생의 전인적 성장을 지향합니다.",
+      "vmvTitle": "비전 · 미션 · 가치",
+      "vmv": {
+        "vision": { "title": "비전", "desc": "북부 최고의 어학 교육 네트워크를 지향합니다." },
+        "mission": { "title": "미션", "desc": "학습자의 언어 목표와 글로벌 기회를 함께합니다." },
+        "values": { "title": "핵심 가치", "desc": "품질 · 진정성 · 인내 · 혁신 · 커뮤니티." }
+      },
+      "timelineTitle": "ALOHA의 여정",
+      "timeline": [
+        { "year": "2014", "title": "ALOHA 설립", "desc": "하노이 첫 지점에서 두 개의 반으로 시작." },
+        { "year": "2017", "title": "북부 확장", "desc": "하이즈엉에 3호 지점 오픈, HSK 프로그램 런칭." },
+        { "year": "2020", "title": "디지털 전환", "desc": "온라인 수업과 수강생 관리 앱 도입." },
+        { "year": "2023", "title": "10,000명 돌파", "desc": "10,000명 이상의 수강생·졸업생." },
+        { "year": "2025", "title": "11개 지점", "desc": "하이퐁에 11번째 지점을 오픈해 북부 전역을 커버." }
+      ]
+    },
+    "branches": {
+      "eyebrow": "지점 안내",
+      "title": "북부 전역의 ALOHA",
+      "lead": "하노이와 북부 각 지역에 10개 이상의 지점 — 가까운 지점을 선택하세요.",
+      "branchWord": "지점"
+    },
+    "news": {
+      "eyebrow": "뉴스 & 이벤트",
+      "title": "ALOHA 뉴스",
+      "lead": "모집 안내, 수강생 이야기, 이벤트를 만나보세요."
+    },
+    "contact": {
+      "eyebrow": "문의",
+      "title": "ALOHA가 듣습니다",
+      "lead": "메시지 또는 핫라인으로 무료 상담을 받아보세요."
+    },
+    "notFound": {
+      "eyebrow": "404",
+      "title": "페이지를 찾을 수 없습니다",
+      "sub": "찾으시는 페이지가 없습니다. 홈으로 돌아가시겠어요?",
+      "cta": "홈으로"
+    }
+  },
   "footer": {
     "training": "어학 과정",
     "global": "유학",
     "about": "ALOHA 소개",
     "contact": "문의",
     "aboutLinks": { "intro": "소개", "team": "강사진", "branches": "지점", "news": "새 소식", "contact": "문의" },
+    "trainingLinks": ["중국어", "영어", "한국어", "일본어"],
+    "globalLinks": ["대만 유학", "한국 유학", "일본 유학", "유럽 유학", "싱가포르 유학"],
     "email": "이메일",
     "address": "주소",
     "policy": "개인정보 처리방침",

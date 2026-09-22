@@ -4,20 +4,20 @@ import { PageHero } from "@/components/layout/PageHero";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function ContactPage() {
-  const t = useTranslations("nav");
+  const t = useTranslations();
   return (
     <>
       <PageHero
-        eyebrow="Liên hệ"
-        title="ALOHA lắng nghe bạn"
-        lead="Gửi tin nhắn hoặc gọi hotline để được tư vấn miễn phí lộ trình học phù hợp nhất."
+        eyebrow={t("pages.contact.eyebrow")}
+        title={t("pages.contact.title")}
+        lead={t("pages.contact.lead")}
         breadcrumb={
           <>
             <Link href="/" className="hover:text-brand">
-              {t("home")}
+              {t("nav.home")}
             </Link>
             <span>/</span>
-            <span>{t("contact")}</span>
+            <span>{t("nav.contact")}</span>
           </>
         }
       />

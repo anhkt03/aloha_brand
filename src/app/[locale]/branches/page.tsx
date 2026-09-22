@@ -3,6 +3,7 @@ import { Link } from "@/i18n/routing";
 import { Container } from "@/components/common/Container";
 import { PageHero } from "@/components/layout/PageHero";
 
+/** Fake list — replace with DB-backed `Branch` records. */
 const BRANCHES = [
   { code: "CS1", name: "Cầu Giấy", address: "123 Trần Duy Hưng, Cầu Giấy, Hà Nội" },
   { code: "CS2", name: "Hải Dương", address: "56 Trần Hưng Đạo, TP. Hải Dương" },
@@ -13,20 +14,22 @@ const BRANCHES = [
 ];
 
 export default function BranchesPage() {
-  const t = useTranslations("nav");
+  const t = useTranslations();
+  const branchWord = t("pages.branches.branchWord");
+
   return (
     <>
       <PageHero
-        eyebrow="Hệ thống cơ sở"
-        title="ALOHA khắp miền Bắc"
-        lead="Hơn 10 cơ sở phủ Hà Nội và các tỉnh phía Bắc — chọn cơ sở gần bạn nhất."
+        eyebrow={t("pages.branches.eyebrow")}
+        title={t("pages.branches.title")}
+        lead={t("pages.branches.lead")}
         breadcrumb={
           <>
             <Link href="/" className="hover:text-brand">
-              {t("home")}
+              {t("nav.home")}
             </Link>
             <span>/</span>
-            <span>{t("branches")}</span>
+            <span>{t("nav.branches")}</span>
           </>
         }
       />
@@ -44,7 +47,9 @@ export default function BranchesPage() {
                   </div>
                   <div>
                     <div className="font-display text-lg font-extrabold">{b.name}</div>
-                    <div className="text-[13px] text-muted">Cơ sở {b.code}</div>
+                    <div className="text-[13px] text-muted">
+                      {branchWord} {b.code}
+                    </div>
                   </div>
                 </header>
                 <p className="flex gap-2 text-[14.5px] text-ink-soft">
