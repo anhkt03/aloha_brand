@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/common/Button";
 import { Container } from "@/components/common/Container";
@@ -61,58 +62,59 @@ function HeroBackdrop() {
 
 function HeroIllustration() {
   return (
-    <div className="rise mx-auto w-full max-w-[460px] lg:max-w-none">
-      <div className="overflow-hidden rounded-xl shadow-lg">
-        <svg viewBox="0 0 560 600" role="img" aria-label="Illustration" className="block h-auto w-full">
-          <defs>
-            <linearGradient id="ig-panel" x1="0" y1="0" x2="0.9" y2="1">
-              <stop offset="0" stopColor="#eaf6ef" />
-              <stop offset="1" stopColor="#dceff7" />
-            </linearGradient>
-            <linearGradient id="ig-globe" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stopColor="#41b8d8" />
-              <stop offset="1" stopColor="#469142" />
-            </linearGradient>
-          </defs>
-          <rect width="560" height="600" rx="40" fill="url(#ig-panel)" />
-          <circle cx="475" cy="115" r="72" fill="#28b4d2" opacity="0.12" />
-          <circle cx="85" cy="505" r="92" fill="#469142" opacity="0.1" />
-          <circle cx="255" cy="300" r="120" fill="url(#ig-globe)" />
-          <g stroke="#fff" strokeOpacity="0.55" strokeWidth="3" fill="none">
-            <ellipse cx="255" cy="300" rx="120" ry="48" />
-            <ellipse cx="255" cy="300" rx="48" ry="120" />
-            <line x1="135" y1="300" x2="375" y2="300" />
-          </g>
-          <g fontFamily="Montserrat, sans-serif" fontWeight="800" textAnchor="middle">
-            <g transform="translate(108,232)">
-              <circle r="30" fill="#fff" />
-              <circle r="24" fill="#469142" />
-              <text y="7" fill="#fff" fontSize="18">EN</text>
-            </g>
-            <g transform="translate(452,255)">
-              <circle r="30" fill="#fff" />
-              <circle r="24" fill="#d93b3b" />
-              <text y="9" fill="#fff" fontSize="24">中</text>
-            </g>
-            <g transform="translate(110,415)">
-              <circle r="30" fill="#fff" />
-              <circle r="24" fill="#2f6fd0" />
-              <text y="9" fill="#fff" fontSize="24">한</text>
-            </g>
-            <g transform="translate(452,412)">
-              <circle r="30" fill="#fff" />
-              <circle r="24" fill="#295326" />
-              <text y="9" fill="#fff" fontSize="24">日</text>
-            </g>
-          </g>
-          <g transform="translate(150,120)">
-            <rect x="-58" y="-26" width="116" height="52" rx="20" fill="#fff" />
-            <text x="0" y="7" textAnchor="middle" fontFamily="Montserrat, sans-serif" fontWeight="800" fontSize="20" fill="#469142">
-              Aloha!
-            </text>
-          </g>
-        </svg>
+    <div className="rise relative mx-auto aspect-square w-full max-w-[340px] lg:max-w-[400px]">
+      {/* Earth photo — outer wrapper floats, inner spins so both work.
+          Clip-path hides the JPG's baked-in checkered background. */}
+      <div className="relative h-full w-full animate-hero-float">
+        <div className="relative h-full w-full animate-hero-spin">
+          <Image
+            src="/images/homepage/earth.jpg"
+            alt="Earth"
+            fill
+            priority
+            sizes="(min-width:1024px) 400px, (min-width:640px) 340px, 80vw"
+            className="object-contain"
+            style={{
+              clipPath: "circle(46% at 50% 50%)",
+              WebkitClipPath: "circle(46% at 50% 50%)",
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Floating language badges */}
+      <LangBadge className="left-[6%] top-[26%]" bg="#469142" glyph="EN" size={44} />
+      <LangBadge className="right-[6%] top-[18%]" bg="#d93b3b" glyph="中" size={48} />
+      <LangBadge className="left-[10%] bottom-[16%]" bg="#2f6fd0" glyph="한" size={48} />
+      <LangBadge className="right-[8%] bottom-[24%]" bg="#295326" glyph="日" size={48} />
+
+      {/* Aloha! speech bubble */}
+      <div className="absolute left-[18%] top-[4%] rounded-full bg-white px-4 py-1.5 shadow ring-1 ring-black/5">
+        <span className="font-display text-sm font-black text-brand">Aloha!</span>
       </div>
     </div>
+  );
+}
+
+interface LangBadgeProps {
+  className?: string;
+  bg: string;
+  glyph: string;
+  size?: number;
+}
+
+function LangBadge({ className, bg, glyph, size = 60 }: LangBadgeProps) {
+  return (
+    <span
+      className={`absolute grid place-items-center rounded-full bg-white shadow-lg ring-1 ring-black/5 ${className ?? ""}`}
+      style={{ width: size, height: size }}
+    >
+      <span
+        className="grid place-items-center rounded-full font-display font-black text-white"
+        style={{ width: size - 12, height: size - 12, background: bg }}
+      >
+        <span style={{ fontSize: glyph.length > 1 ? size * 0.32 : size * 0.42 }}>{glyph}</span>
+      </span>
+    </span>
   );
 }

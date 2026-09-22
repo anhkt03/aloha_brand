@@ -8,8 +8,8 @@ export function Footer() {
   const t = useTranslations();
   const trainingLabels = t.raw("footer.trainingLinks") as string[];
   const globalLabels = t.raw("footer.globalLinks") as string[];
-  const trainingLinks = trainingLabels.map((label) => ({ label, href: "/training" as const }));
-  const globalLinks = globalLabels.map((label) => ({ label, href: "/global" as const }));
+  const trainingLinks = trainingLabels.map((label) => ({ label, href: "/ngoaingu" as const }));
+  const globalLinks = globalLabels.map((label) => ({ label, href: "/duhocquocte" as const }));
 
   const aboutLinks = [
     { key: "intro", href: "/about" as const },
@@ -100,7 +100,7 @@ export function Footer() {
 
 interface FooterListProps {
   title: string;
-  items: Array<{ label: string; href: "/" | "/training" | "/global" | "/about" | "/branches" | "/news" | "/contact" }>;
+  items: Array<{ label: string; href: "/" | "/ngoaingu" | "/duhocquocte" | "/about" | "/branches" | "/news" | "/contact" }>;
 }
 
 function FooterList({ title, items }: FooterListProps) {
