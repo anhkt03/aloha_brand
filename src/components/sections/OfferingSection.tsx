@@ -27,7 +27,7 @@ export function OfferingSection() {
             desc={t("training.desc")}
             items={training}
             ctaLabel={t("training.cta")}
-            onCta={() => router.push("/training")}
+            onCta={() => router.push("/ngoaingu")}
             icon={
               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
             }
@@ -38,7 +38,7 @@ export function OfferingSection() {
             desc={t("global.desc")}
             items={global}
             ctaLabel={t("global.cta")}
-            onCta={() => router.push("/global")}
+            onCta={() => router.push("/duhocquocte")}
             icon={
               <>
                 <path d="M2 12a10 10 0 1 0 20 0A10 10 0 0 0 2 12z" />

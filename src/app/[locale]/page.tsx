@@ -31,7 +31,7 @@ export default function HomePage() {
   const router = useRouter();
   return (
     <>
-      <HeroSection onOpenRegister={open} onGoToCourses={() => router.push("/training")} />
+      <HeroSection onOpenRegister={open} onGoToCourses={() => router.push("/ngoaingu")} />
       <AboutSection />
       <OfferingSection />
       <FeatureSection />

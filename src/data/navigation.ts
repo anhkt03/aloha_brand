@@ -7,8 +7,8 @@ import type { NavItem } from "@/types/navigation";
 export const primaryNav: NavItem[] = [
   { key: "home", href: "/" },
   { key: "about", href: "/about" },
-  { key: "training", href: "/training" },
-  { key: "global", href: "/global" },
+  { key: "training", href: "/ngoaingu" },
+  { key: "global", href: "/duhocquocte" },
   { key: "branches", href: "/branches" },
   { key: "news", href: "/news" },
   { key: "contact", href: "/contact" },
