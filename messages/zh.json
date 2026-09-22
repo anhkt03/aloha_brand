@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "home": "首页",
+    "training": "语言培训",
+    "global": "留学",
+    "about": "关于ALOHA",
+    "branches": "校区",
+    "news": "新闻",
+    "contact": "联系我们",
+    "cta": "免费试听",
+    "hotline": "热线"
+  },
+  "common": { "learnMore": "了解更多", "readMore": "阅读全文", "back": "返回" },
+  "languages": {
+    "vi": "越南语",
+    "en": "英语",
+    "zh": "中文",
+    "ja": "日语",
+    "ko": "韩语"
+  },
+  "hero": {
+    "tagline": "More Languages, A Brighter You",
+    "titleA": "学习外语",
+    "titleB": "开启更广阔的未来",
+    "lead": "ALOHA陪伴你走过每一段语言学习之路——从零基础到国际证书,乃至更广阔的舞台。",
+    "ctaTrial": "免费试听课",
+    "ctaCourses": "查看课程"
+  },
+  "about": {
+    "eyebrow": "关于我们",
+    "title": "ALOHA Language School",
+    "pillars": { "quality": "品质", "experience": "体验", "growth": "全面成长" },
+    "quote": "ALOHA是一所围绕三大核心搭建学习旅程的多语种学校:品质 — 体验 — 全面成长。",
+    "body": "ALOHA致力于为每位学员提供<b>现代化的学习环境、系统的课程体系以及量身定制的学习路径</b>。",
+    "cta": "了解ALOHA",
+    "stats": { "years": "年办学经验", "branches": "校区", "students": "学员" }
+  },
+  "offering": {
+    "eyebrow": "ALOHA能为你做什么",
+    "title": "你在寻找什么?",
+    "training": {
+      "title": "语言培训",
+      "desc": "从基础到国际证书再到实际应用的系统化学习路径。",
+      "cta": "立即探索",
+      "items": ["中文", "英语", "韩语", "日语"]
+    },
+    "global": {
+      "title": "海外留学",
+      "desc": "从课程选择、择校、奖学金到申请材料,全程陪伴学员完成留学梦想。",
+      "cta": "立即探索",
+      "items": ["台湾", "日本", "韩国", "新加坡", "欧洲"]
+    }
+  },
+  "why": {
+    "eyebrow": "为什么选择ALOHA",
+    "title": "为什么选择ALOHA?",
+    "trust": "10,000+ 学员已经选择了ALOHA",
+    "items": {
+      "roadmap": { "title": "系统化学习路径", "desc": "清晰、按水平和目标个性定制。" },
+      "classSize": { "title": "小班教学", "desc": "更多互动,关注每一位学员。" },
+      "commitment": { "title": "结果承诺", "desc": "书面结果承诺,免费重修。" },
+      "flexible": { "title": "灵活学习", "desc": "多校区、多种班型和时段可选。" },
+      "teachers": { "title": "优秀师资", "desc": "经验丰富、专业素养高的师资团队。" },
+      "facility": { "title": "现代化设施", "desc": "宽敞明亮、设施齐全的现代化教室。" }
+    }
+  },
+  "experience": {
+    "eyebrow": "学习体验",
+    "title": "ALOHA的学习体验",
+    "closing": "不仅是来上课——从学习、练习到评估,全程陪伴。",
+    "items": {
+      "small": { "title": "小班上课", "desc": "老师有时间与每位学员互动、纠错和辅导。" },
+      "cycle": { "title": "学习 – 练习 – 检验", "desc": "课后有作业、练习和定期测评来衡量进步。" },
+      "practice": { "title": "实景语言应用", "desc": "提升在生活、学习和工作中使用语言的反应能力。" },
+      "support": { "title": "课后支持", "desc": "提供教材、视频和自学工具,课外持续学习。" }
+    }
+  },
+  "journey": {
+    "eyebrow": "与ALOHA同行",
+    "title": "从语言开启新的机会",
+    "closing": "从第一句话到未来的求学与职业,ALOHA一路相伴。",
+    "cta": "了解与ALOHA同行的旅程",
+    "steps": {
+      "learn": "学习外语",
+      "certificate": "取得证书",
+      "direction": "确定方向",
+      "future": "海外留学 / 职业发展"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "学员心声",
+    "title": "学员如何评价ALOHA?",
+    "viewMore": "查看更多学员故事",
+    "trustBadge": "10,000+ 学员的信赖之选"
+  },
+  "branchesSection": {
+    "eyebrow": "校区网络",
+    "title": "ALOHA与你同行",
+    "sub": "遍布河内和越南北方的校区网络——总有一家ALOHA在你附近。",
+    "cta": "查看所有校区"
+  },
+  "news": {
+    "eyebrow": "ALOHA新闻",
+    "title": "ALOHA新闻",
+    "cta": "查看更多新闻",
+    "categories": {
+      "language": { "title": "语言", "desc": "学习方法、证书攻略和高效学习技巧。" },
+      "abroad": { "title": "留学", "desc": "留学信息、奖学金和海外学习机会。" },
+      "activity": { "title": "ALOHA活动", "desc": "活动、事件与ALOHA的故事。" }
+    }
+  },
+  "cta": {
+    "badge": "准备好开始了吗?",
+    "title": "今天就开启你的ALOHA之旅",
+    "sub": "预约免费试听或拨打热线,获取个性化学习方案。",
+    "primary": "免费试听",
+    "secondary": "拨打 1900 9309"
+  },
+  "pages": {
+    "training": {
+      "eyebrow": "培训课程",
+      "title": "语言培训",
+      "lead": "英语 · 中文 · 韩语 · 日语 —— 拥有清晰的等级/水平体系。课程随每期招生持续更新。",
+      "tabs": { "all": "全部", "en": "英语", "zh": "中文", "ko": "韩语", "ja": "日语" },
+      "recruiting": "招生中",
+      "register": "报名",
+      "durationLine": "时长: {months} 个月 ({sessions} 节课)",
+      "outcomeLine": "达成: {outcome}"
+    },
+    "global": {
+      "eyebrow": "与ALOHA一起留学",
+      "title": "触及全球梦想",
+      "lead": "从择校、申请、奖学金到签证与安置——中国、韩国、日本和英语国家的全程支持。",
+      "destinationsTitle": "你想去哪里?",
+      "destinations": {
+        "china": { "name": "中国", "desc": "CSC与孔子学院奖学金,或自费。" },
+        "korea": { "name": "韩国", "desc": "TOPIK 3+可申请D-2签证;本科与硕士课程。" },
+        "japan": { "name": "日本", "desc": "JLPT N3+,日语学校、专门学校与大学。" },
+        "uk": { "name": "英国 & IELTS", "desc": "Foundation、本科、硕士 —— 英国顶级院校。" }
+      },
+      "journeyTitle": "与ALOHA留学的7个步骤",
+      "journeySub": "流程透明——你始终清楚自己在哪一步。",
+      "steps": [
+        { "title": "咨询与方向", "desc": "评估能力与目标,推荐合适的国家与专业。" },
+        { "title": "语言学习", "desc": "达到学校的语言要求(TOPIK、JLPT、HSK、IELTS等)。" },
+        { "title": "选校与专业", "desc": "定制学校清单,比较学费、奖学金和职业前景。" },
+        { "title": "申请材料", "desc": "成绩单、学习计划、推荐信,如需还有作品集。" },
+        { "title": "提交申请", "desc": "向学校和匹配的奖学金基金申请,并跟进反馈。" },
+        { "title": "面试与签证", "desc": "面试辅导、签证材料与财务证明。" },
+        { "title": "出发与安置", "desc": "住宿安排、接机与融入新环境的支持。" }
+      ],
+      "cta": "获取留学咨询"
+    },
+    "about": {
+      "eyebrow": "关于我们",
+      "title": "关于ALOHA Language School",
+      "lead": "一家专注教学品质、学习体验和学员全面成长的语言学校。",
+      "vmvTitle": "愿景 · 使命 · 价值观",
+      "vmv": {
+        "vision": { "title": "愿景", "desc": "成为越南北部领先的语言教育网络。" },
+        "mission": { "title": "使命", "desc": "陪伴每一位学员实现语言目标并拓展全球机会。" },
+        "values": { "title": "核心价值", "desc": "品质 · 真诚 · 坚持 · 创新 · 社群。" }
+      },
+      "timelineTitle": "ALOHA的历程",
+      "timeline": [
+        { "year": "2014", "title": "ALOHA成立", "desc": "河内首家校区开设,首批两个班级。" },
+        { "year": "2017", "title": "拓展至越南北部", "desc": "海阳开设第三家校区;推出HSK课程。" },
+        { "year": "2020", "title": "数字化转型", "desc": "推出在线课堂与学员管理App。" },
+        { "year": "2023", "title": "10,000+ 学员", "desc": "累计10,000名以上学员在ALOHA学习与结业。" },
+        { "year": "2025", "title": "11家校区", "desc": "海防第11家校区开业,覆盖整个越南北部。" }
+      ]
+    },
+    "branches": {
+      "eyebrow": "校区网络",
+      "title": "遍布越南北部的ALOHA",
+      "lead": "河内及北方各省10+校区 —— 选择离你最近的一家。",
+      "branchWord": "校区"
+    },
+    "news": {
+      "eyebrow": "新闻 & 活动",
+      "title": "ALOHA新闻",
+      "lead": "招生动态、学员故事和ALOHA的活动。"
+    },
+    "contact": {
+      "eyebrow": "联系我们",
+      "title": "ALOHA在倾听",
+      "lead": "发送消息或拨打热线,获取适合你的学习路径的免费咨询。"
+    },
+    "notFound": {
+      "eyebrow": "404",
+      "title": "页面未找到",
+      "sub": "你要找的页面不存在。返回首页吧。",
+      "cta": "返回首页"
+    }
+  },
+  "footer": {
+    "training": "语言培训",
+    "global": "海外留学",
+    "about": "关于ALOHA",
+    "contact": "联系我们",
+    "aboutLinks": { "intro": "关于我们", "team": "师资团队", "branches": "校区", "news": "新闻", "contact": "联系我们" },
+    "trainingLinks": ["中文", "英语", "韩语", "日语"],
+    "globalLinks": ["留学台湾", "留学韩国", "留学日本", "留学欧洲", "留学新加坡"],
+    "email": "邮箱",
+    "address": "地址",
+    "policy": "隐私政策",
+    "terms": "使用条款",
+    "copyright": "© 2025 ALOHA Language School. All rights reserved."
+  },
+  "form": {
+    "name": "姓名",
+    "phone": "手机号码",
+    "email": "邮箱",
+    "language": "感兴趣的语言",
+    "message": "留言",
+    "submit": "发送",
+    "success": "感谢!ALOHA将尽快与你联系。"
+  }
+}

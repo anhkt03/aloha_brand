@@ -11,7 +11,7 @@
     "hotline": "ホットライン"
   },
   "common": { "learnMore": "詳しく", "readMore": "続きを読む", "back": "戻る" },
-  "languages": { "vi": "ベトナム語", "en": "英語", "ja": "日本語", "ko": "韓国語" },
+  "languages": { "vi": "ベトナム語", "en": "英語", "zh": "中国語", "ja": "日本語", "ko": "韓国語" },
   "hero": {
     "tagline": "More Languages, A Brighter You",
     "titleA": "外国語を学び",
