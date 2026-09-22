@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Home",
+    "training": "Training",
+    "global": "Study Abroad",
+    "about": "About ALOHA",
+    "branches": "Branches",
+    "news": "News",
+    "contact": "Contact",
+    "cta": "Book a trial",
+    "hotline": "Hotline"
+  },
+  "languages": {
+    "vi": "Vietnamese",
+    "en": "English",
+    "ja": "Japanese",
+    "ko": "Korean"
+  },
+  "hero": {
+    "tagline": "More Languages, A Brighter You",
+    "titleA": "Learn languages,",
+    "titleB": "open your future",
+    "lead": "ALOHA walks with you through every language milestone — from the first word to your international certificate and beyond.",
+    "ctaTrial": "Free trial class",
+    "ctaCourses": "See courses"
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "ALOHA Language School",
+    "pillars": {
+      "quality": "Quality",
+      "experience": "Experience",
+      "growth": "Well-rounded growth"
+    },
+    "quote": "ALOHA is a multi-language school built around three pillars: Quality — Experience — Well-rounded growth.",
+    "body": "We deliver a modern learning environment, a rigorous curriculum, and a personalized path for every student's goal.",
+    "cta": "Learn about ALOHA",
+    "stats": { "years": "Years of experience", "branches": "Branches", "students": "Students" }
+  },
+  "offering": {
+    "eyebrow": "What ALOHA offers",
+    "title": "What are you looking for?",
+    "training": {
+      "title": "Language training",
+      "desc": "A rigorous path from fundamentals to international certificates and real-world use.",
+      "cta": "Explore",
+      "items": ["Chinese", "English", "Korean", "Japanese"]
+    },
+    "global": {
+      "title": "Study abroad",
+      "desc": "Walk with our students through program choice, school selection, scholarships and application.",
+      "cta": "Explore",
+      "items": ["Taiwan", "Japan", "Korea", "Singapore", "Europe"]
+    }
+  },
+  "why": {
+    "eyebrow": "Why ALOHA",
+    "title": "Why choose ALOHA?",
+    "trust": "10,000+ students already trust ALOHA",
+    "items": {
+      "roadmap": { "title": "Structured roadmap", "desc": "Clear, personalized to your level and goal." },
+      "classSize": { "title": "Small class size", "desc": "More interaction, closer attention to every student." },
+      "commitment": { "title": "Outcome commitment", "desc": "Written outcome commitment — free retake included." },
+      "flexible": { "title": "Flexible learning", "desc": "Many branches, multiple formats and time slots." },
+      "teachers": { "title": "Expert teachers", "desc": "Experienced, high-caliber instructors and TAs." },
+      "facility": { "title": "Modern facilities", "desc": "Bright, contemporary classrooms with everything you need." }
+    }
+  },
+  "experience": {
+    "eyebrow": "Learning experience",
+    "title": "Learning experience at ALOHA",
+    "closing": "You don't just come to class — you're supported end-to-end, from learning and practice to assessment.",
+    "items": {
+      "small": { "title": "Small classes", "desc": "Teachers have time to interact, correct and support every student." },
+      "cycle": { "title": "Learn – Practice – Test", "desc": "Beyond classes, students get homework, practice and periodic tests to measure progress." },
+      "practice": { "title": "Real-world practice", "desc": "Strengthen communication, reflexes and real situations across life, study and work." },
+      "support": { "title": "After-class support", "desc": "Additional materials, videos and self-study tools to keep learning outside class." }
+    }
+  },
+  "journey": {
+    "eyebrow": "Journey with ALOHA",
+    "title": "From language to new opportunities",
+    "closing": "ALOHA walks with you from your first word to your future study and career.",
+    "cta": "Explore the journey with ALOHA",
+    "steps": {
+      "learn": "Learn the language",
+      "certificate": "Earn a certificate",
+      "direction": "Choose your direction",
+      "future": "Study abroad / Career growth"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Student voices",
+    "title": "What students say about ALOHA",
+    "viewMore": "More student stories",
+    "trustBadge": "Trusted by 10,000+ students"
+  },
+  "branches": {
+    "eyebrow": "Our branches",
+    "title": "ALOHA is with you",
+    "sub": "A branch network across Hanoi and North Vietnam — there is always an ALOHA close by.",
+    "cta": "See all branches"
+  },
+  "news": {
+    "eyebrow": "News",
+    "title": "ALOHA News",
+    "cta": "More news",
+    "categories": {
+      "language": { "title": "Languages", "desc": "Learning tips, certificate know-how and effective study methods." },
+      "abroad": { "title": "Study abroad", "desc": "Study abroad information, scholarships and global opportunities." },
+      "activity": { "title": "ALOHA activities", "desc": "Events, activities and ALOHA stories." }
+    }
+  },
+  "cta": {
+    "badge": "Ready to start?",
+    "title": "Start your ALOHA journey today",
+    "sub": "Book a free trial or call our hotline for a personalized roadmap.",
+    "primary": "Book a trial",
+    "secondary": "Call 1900 9309"
+  },
+  "footer": {
+    "training": "Language training",
+    "global": "Study abroad",
+    "about": "About ALOHA",
+    "contact": "Contact",
+    "aboutLinks": {
+      "intro": "About",
+      "team": "Team",
+      "branches": "Branches",
+      "news": "News",
+      "contact": "Contact"
+    },
+    "email": "Email",
+    "address": "Address",
+    "policy": "Privacy policy",
+    "terms": "Terms of use",
+    "copyright": "© 2025 ALOHA Language School. All rights reserved."
+  },
+  "form": {
+    "name": "Full name",
+    "phone": "Phone number",
+    "email": "Email",
+    "language": "Language of interest",
+    "message": "Message",
+    "submit": "Send",
+    "success": "Thank you! ALOHA will reach out soon."
+  }
+}

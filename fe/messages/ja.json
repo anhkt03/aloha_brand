@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "training": "語学コース",
+    "global": "留学",
+    "about": "ALOHAについて",
+    "branches": "教室一覧",
+    "news": "ニュース",
+    "contact": "お問い合わせ",
+    "cta": "無料体験",
+    "hotline": "ホットライン"
+  },
+  "languages": { "vi": "ベトナム語", "en": "英語", "ja": "日本語", "ko": "韓国語" },
+  "hero": {
+    "tagline": "More Languages, A Brighter You",
+    "titleA": "外国語を学び、",
+    "titleB": "未来を広げよう",
+    "lead": "ALOHAはあなたの語学学習の旅に寄り添い、目標達成と学び・キャリアの可能性を広げます。",
+    "ctaTrial": "無料体験レッスン",
+    "ctaCourses": "コースを見る"
+  },
+  "about": {
+    "eyebrow": "私たちについて",
+    "title": "ALOHA Language School",
+    "pillars": { "quality": "品質", "experience": "体験", "growth": "総合的な成長" },
+    "quote": "ALOHAは「品質・体験・総合的な成長」の3本柱を軸にした多言語スクールです。",
+    "body": "現代的な学習環境、体系的なカリキュラム、目標に沿った個別ロードマップを提供します。",
+    "cta": "ALOHAを詳しく",
+    "stats": { "years": "年の経験", "branches": "教室", "students": "受講生" }
+  },
+  "offering": {
+    "eyebrow": "ALOHAが提供するもの",
+    "title": "何を探していますか?",
+    "training": {
+      "title": "語学教育",
+      "desc": "基礎から資格取得、実践まで体系立ったロードマップ。",
+      "cta": "詳しく見る",
+      "items": ["中国語", "英語", "韓国語", "日本語"]
+    },
+    "global": {
+      "title": "留学",
+      "desc": "プログラム選定、学校、奨学金、書類まで留学の全工程をサポート。",
+      "cta": "詳しく見る",
+      "items": ["台湾", "日本", "韓国", "シンガポール", "ヨーロッパ"]
+    }
+  },
+  "why": {
+    "eyebrow": "なぜALOHA",
+    "title": "なぜALOHAを選ぶのか?",
+    "trust": "10,000名以上に選ばれています",
+    "items": {
+      "roadmap": { "title": "体系的なロードマップ", "desc": "レベルと目標に沿ったオーダーメイド。" },
+      "classSize": { "title": "少人数クラス", "desc": "対話と個別サポートを徹底。" },
+      "commitment": { "title": "アウトカム保証", "desc": "書面による成果保証、無料再受講付き。" },
+      "flexible": { "title": "柔軟な学習", "desc": "多拠点・多様な形式・時間帯。" },
+      "teachers": { "title": "優秀な講師陣", "desc": "経験豊富で専門性の高い講師。" },
+      "facility": { "title": "現代的な施設", "desc": "明るくモダンで機能的な学習空間。" }
+    }
+  },
+  "experience": {
+    "eyebrow": "学習体験",
+    "title": "ALOHAでの学習体験",
+    "closing": "授業に出るだけでなく、学習・実践・評価まで伴走します。",
+    "items": {
+      "small": { "title": "少人数クラス", "desc": "講師が一人ひとりに時間をかけて添削・サポート。" },
+      "cycle": { "title": "学ぶ・練習・テスト", "desc": "課題と定期テストで進捗を可視化。" },
+      "practice": { "title": "実践的なアウトプット", "desc": "日常・学習・仕事で使う場面での反応力を鍛える。" },
+      "support": { "title": "授業外サポート", "desc": "教材・動画・学習ツールで自習をサポート。" }
+    }
+  },
+  "journey": {
+    "eyebrow": "ALOHAと歩む道",
+    "title": "語学から新しいチャンスへ",
+    "closing": "最初のひとことから、未来の学びとキャリアまでALOHAが伴走します。",
+    "cta": "ALOHAの旅を見る",
+    "steps": {
+      "learn": "語学を学ぶ",
+      "certificate": "資格を取得",
+      "direction": "進路を選ぶ",
+      "future": "留学 / キャリア"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "受講生の声",
+    "title": "受講生がALOHAをどう見ているか",
+    "viewMore": "もっと見る",
+    "trustBadge": "10,000名以上に選ばれています"
+  },
+  "branches": {
+    "eyebrow": "教室ネットワーク",
+    "title": "ALOHAはあなたと一緒に",
+    "sub": "ハノイと北部エリアに広がる教室網 — きっと近くにALOHAがあります。",
+    "cta": "すべての教室を見る"
+  },
+  "news": {
+    "eyebrow": "ニュース",
+    "title": "ALOHAニュース",
+    "cta": "もっと見る",
+    "categories": {
+      "language": { "title": "語学", "desc": "学習法・資格・効率的な勉強のヒント。" },
+      "abroad": { "title": "留学", "desc": "留学情報・奨学金・海外での学び。" },
+      "activity": { "title": "ALOHAの活動", "desc": "イベント・活動・ストーリー。" }
+    }
+  },
+  "cta": {
+    "badge": "始める準備はできましたか?",
+    "title": "今日からALOHAで始めよう",
+    "sub": "無料体験のお申し込みまたはホットラインへ。",
+    "primary": "無料体験を予約",
+    "secondary": "1900 9309 に電話"
+  },
+  "footer": {
+    "training": "語学コース",
+    "global": "留学",
+    "about": "ALOHAについて",
+    "contact": "お問い合わせ",
+    "aboutLinks": { "intro": "会社紹介", "team": "講師陣", "branches": "教室一覧", "news": "ニュース", "contact": "お問い合わせ" },
+    "email": "メール",
+    "address": "住所",
+    "policy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "copyright": "© 2025 ALOHA Language School. All rights reserved."
+  },
+  "form": {
+    "name": "お名前",
+    "phone": "電話番号",
+    "email": "メール",
+    "language": "興味のある言語",
+    "message": "メッセージ",
+    "submit": "送信",
+    "success": "ありがとうございます。ALOHAより追ってご連絡します。"
+  }
+}
