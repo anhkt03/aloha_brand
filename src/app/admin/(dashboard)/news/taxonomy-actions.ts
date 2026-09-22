@@ -1,0 +1,12 @@
+"use server";
+import { revalidatePath } from "next/cache";
+import { prisma } from "@/lib/prisma";
+import { requireAdminUser } from "@/lib/auth";
+import { newsTaxonomyFromForm, newsTaxonomySchema } from "@/lib/validation/news-taxonomy";
+const invalidate = () => { revalidatePath("/admin/news/categories"); revalidatePath("/admin/news/tags"); revalidatePath("/vi/news"); };
+export async function saveCategory(formData: FormData) { await requireAdminUser(); const p = newsTaxonomySchema.safeParse(newsTaxonomyFromForm(formData)); if (!p.success) throw new Error("Dữ liệu danh mục không hợp lệ."); const { id, iconUrl, sortOrder, translations } = p.data; if (id) await prisma.newsArticleCategory.update({ where: { id }, data: { iconUrl: iconUrl || null, sortOrder, translations: { deleteMany: {}, create: translations } } }); else await prisma.newsArticleCategory.create({ data: { iconUrl: iconUrl || null, sortOrder, translations: { create: translations } } }); invalidate(); }
+export async function deleteCategory(id: number) { await requireAdminUser(); if (await prisma.newsArticle.count({ where: { categoryId: id } })) throw new Error("Không thể xóa danh mục đang có bài viết."); await prisma.newsArticleCategory.delete({ where: { id } }); invalidate(); }
+export async function toggleCategory(id: number) { await requireAdminUser(); const x = await prisma.newsArticleCategory.findUniqueOrThrow({ where: { id } }); await prisma.newsArticleCategory.update({ where: { id }, data: { active: !x.active } }); invalidate(); }
+export async function saveTag(formData: FormData) { await requireAdminUser(); const p = newsTaxonomySchema.safeParse(newsTaxonomyFromForm(formData)); if (!p.success) throw new Error("Dữ liệu thẻ không hợp lệ."); const { id, translations } = p.data; if (id) await prisma.newsTags.update({ where: { id }, data: { translations: { deleteMany: {}, create: translations } } }); else await prisma.newsTags.create({ data: { translations: { create: translations } } }); invalidate(); }
+export async function deleteTag(id: number) { await requireAdminUser(); await prisma.$transaction(async tx => { await tx.newsArticleTag.deleteMany({ where: { newsTagId: id } }); await tx.newsTags.delete({ where: { id } }); }); invalidate(); }
+export async function toggleTag(id: number) { await requireAdminUser(); const x = await prisma.newsTags.findUniqueOrThrow({ where: { id } }); await prisma.newsTags.update({ where: { id }, data: { active: !x.active } }); invalidate(); }
