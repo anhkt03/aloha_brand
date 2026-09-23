@@ -87,9 +87,9 @@ function BranchCard({ branch, branchWord, active, onHoverStart, onHoverEnd }: Br
           {branch.code}
         </div>
         <div>
-          <div className="font-display text-lg font-extrabold">{branch.name}</div>
+          <div className="font-display text-lg font-extrabold">{branch.city}</div>
           <div className="text-[13px] text-muted">
-            {branchWord} {branch.code} · {branch.city}
+            {branchWord} {branch.code}
           </div>
         </div>
       </header>

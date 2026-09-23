@@ -1,49 +1,66 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/common/Button";
 import { Section, SectionHead } from "@/components/common/Section";
-
-const BRANCHES = [
-  "CS1 · Cầu Giấy",
-  "CS2 · Hải Dương",
-  "CS3 · Long Biên",
-  "CS4 · Đống Đa",
-  "CS5 · Bắc Ninh",
-  "CS6 · Hải Phòng",
-  "CS7 · Thanh Xuân",
-  "CS8 · Hà Đông",
-  "CS9 · Nam Định",
-  "CS10 · Bắc Giang",
-];
+import { VietnamMap } from "@/components/branches/VietnamMap";
+import { branches, type Branch } from "@/data/branches";
 
 /**
- * Section 8 — nationwide branch teaser. A stylised map on the left and a
- * scrollable branch list on the right, linking to the /branches page.
+ * Section 8 — nationwide branch teaser. Reuses the interactive Vietnam
+ * map from `/branches` on the left, compact branch chips (code +
+ * province) on the right, and a CTA to the full branch page.
  */
 export function BranchesTeaserSection() {
   const t = useTranslations("branchesSection");
   const router = useRouter();
+  const [selected, setSelected] = useState<Branch | null>(null);
+  const activeCode = selected?.code;
+
   return (
     <Section>
       <SectionHead center eyebrow={t("eyebrow")} title={t("title")} sub={t("sub")} />
-      <div className="grid items-center gap-8 md:grid-cols-[1.1fr_.9fr]">
-        <MapPanel />
-        <div className="rounded-lg border border-line bg-surface p-6">
-          <ul className="grid grid-cols-2 gap-3">
-            {BRANCHES.map((b) => (
-              <li
-                key={b}
-                className="flex items-center gap-2 rounded-lg bg-surface-2 px-3 py-2.5 text-[13.5px] font-semibold text-ink"
-              >
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--teal)" strokeWidth="2">
-                  <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                {b}
-              </li>
-            ))}
+      <div className="grid justify-center gap-8 md:grid-cols-[minmax(260px,360px)_minmax(240px,320px)] md:items-stretch">
+        <div>
+          <VietnamMap selectedCode={activeCode} />
+        </div>
+        <div className="flex flex-col rounded-lg border border-line bg-surface p-5">
+          <ul className="flex flex-1 flex-col gap-1.5">
+            {branches.map((branch) => {
+              const active = activeCode === branch.code;
+              return (
+                <li key={branch.code} className="flex-1">
+                  <button
+                    type="button"
+                    onMouseEnter={() => setSelected(branch)}
+                    onMouseLeave={() => setSelected(null)}
+                    onFocus={() => setSelected(branch)}
+                    onBlur={() => setSelected(null)}
+                    className={`flex h-full w-full items-center gap-2.5 rounded-md px-3 py-2 text-left transition ${
+                      active
+                        ? "bg-[color-mix(in_srgb,var(--brand)_14%,transparent)] ring-1 ring-brand"
+                        : "bg-surface-2 hover:bg-[color-mix(in_srgb,var(--brand)_8%,transparent)]"
+                    }`}
+                  >
+                    <span
+                      className="grid h-7 w-10 flex-shrink-0 place-items-center rounded font-display text-[11px] font-black text-white"
+                      style={{ background: "var(--grad)" }}
+                    >
+                      {branch.code}
+                    </span>
+                    <span className="min-w-0 flex-1 font-display text-[13.5px] font-extrabold text-ink">
+                      {branch.city}
+                    </span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                      <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </button>
+                </li>
+              );
+            })}
           </ul>
           <Button variant="primary" className="mt-6 w-full" onClick={() => router.push("/branches")}>
             {t("cta")}
@@ -54,36 +71,5 @@ export function BranchesTeaserSection() {
         </div>
       </div>
     </Section>
-  );
-}
-
-function MapPanel() {
-  return (
-    <div className="overflow-hidden rounded-xl border border-line bg-brand-grad-soft p-8">
-      <svg viewBox="0 0 500 500" role="img" aria-label="Vietnam branches map" className="block h-auto w-full">
-        <path
-          d="M280 40 Q 320 90 300 150 Q 260 200 300 260 Q 330 320 290 380 Q 250 430 220 470"
-          stroke="#469142"
-          strokeWidth="8"
-          fill="none"
-          strokeLinecap="round"
-        />
-        {[
-          { cx: 290, cy: 70, r: 10, color: "#e1ba23" },
-          { cx: 305, cy: 130, r: 12, color: "#469142" },
-          { cx: 285, cy: 190, r: 10, color: "#28b4d2" },
-          { cx: 310, cy: 250, r: 10, color: "#469142" },
-          { cx: 295, cy: 310, r: 10, color: "#28b4d2" },
-          { cx: 275, cy: 370, r: 10, color: "#469142" },
-          { cx: 245, cy: 420, r: 10, color: "#28b4d2" },
-          { cx: 220, cy: 470, r: 12, color: "#e1ba23" },
-        ].map((p, i) => (
-          <g key={i}>
-            <circle cx={p.cx} cy={p.cy} r={p.r + 6} fill={p.color} opacity="0.25" />
-            <circle cx={p.cx} cy={p.cy} r={p.r} fill={p.color} />
-          </g>
-        ))}
-      </svg>
-    </div>
   );
 }

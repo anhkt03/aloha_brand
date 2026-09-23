@@ -34,10 +34,21 @@
     "eyebrow": "Về chúng tôi",
     "title": "ALOHA Language School",
     "pillars": { "quality": "Chất lượng", "experience": "Trải nghiệm", "growth": "Phát triển toàn diện" },
-    "quote": "ALOHA là hệ thống đào tạo đa ngôn ngữ với định hướng xây dựng hành trình học tập dựa trên 3 trụ cột",
+    "quote": "ALOHA là hệ thống đào tạo đa ngôn ngữ với định hướng xây dựng hành trình học tập dựa trên 3 trụ cột chính",
     "body": "ALOHA hướng tới mang đến <b>môi trường học tập hiện đại, chương trình đào tạo bài bản và lộ trình phù hợp</b> với mục tiêu của từng học viên.",
-    "cta": "Tìm hiểu về ALOHA",
-    "stats": { "years": "Năm kinh nghiệm", "branches": "Cơ sở", "students": "Học viên" }
+    "cta": "Tìm hiểu về ALOHA"
+  },
+  "stats": {
+    "eyebrow": "Số liệu biết nói",
+    "title": "Hành trình ngôn ngữ cùng\n<b>hàng ngàn cơ hội</b>",
+    "sub": "Những con số là minh chứng cho cam kết và nỗ lực của ALOHA trong hành trình kiến tạo tương lai cho mỗi học viên.",
+    "items": {
+      "years": "Năm kinh nghiệm",
+      "branches": "Cơ sở toàn quốc",
+      "students": "Học viên",
+      "languages": "Ngôn ngữ đào tạo",
+      "goal": "Học viên đạt mục tiêu"
+    }
   },
   "offering": {
     "eyebrow": "ALOHA có gì dành cho bạn",
@@ -57,7 +68,8 @@
   },
   "why": {
     "eyebrow": "Vì sao chọn ALOHA",
-    "title": "Vì sao chọn ALOHA?",
+    "title": "Vì sao chọn <b>ALOHA</b>?",
+    "sub": "Không chỉ là một khóa học, ALOHA là người bạn đồng hành trên hành trình chinh phục những cơ hội lớn hơn.",
     "trust": "Hơn 10.000+ học viên đã tin tưởng lựa chọn ALOHA",
     "items": {
       "roadmap": { "title": "Lộ trình bài bản", "desc": "Rõ ràng, cá nhân hóa theo trình độ & mục tiêu." },
@@ -70,8 +82,8 @@
   },
   "experience": {
     "eyebrow": "Trải nghiệm học tập",
-    "title": "Trải nghiệm học tập tại ALOHA",
-    "closing": "Không chỉ đến lớp để học, học viên được theo sát trong suốt quá trình từ học kiến thức, thực hành, làm bài đến đánh giá kết quả.",
+    "title": "Trải nghiệm học tập\n<b>tại ALOHA</b>",
+    "closing": "Không chỉ đến lớp để học, học viên được theo sát trong suốt quá trình <b>từ học kiến thức, thực hành, làm bài đến đánh giá kết quả.</b>",
     "items": {
       "small": { "title": "Lớp học quy mô nhỏ", "desc": "Giáo viên có thời gian tương tác, sửa lỗi và hỗ trợ từng học viên." },
       "cycle": { "title": "Học – Luyện – Kiểm tra", "desc": "Ngoài việc học trên lớp, học viên được giao bài, luyện tập và kiểm tra định kỳ để đánh giá mức độ tiến bộ." },
@@ -92,8 +104,8 @@
     }
   },
   "testimonials": {
-    "eyebrow": "Học viên nói gì",
-    "title": "Học viên nói gì về ALOHA?",
+    "eyebrow": "Cảm nhận của học viên",
+    "title": "Học viên nói gì về <b>ALOHA</b>?",
     "viewMore": "Xem thêm câu chuyện học viên",
     "trustBadge": "Được tin yêu bởi 10.000+ học viên"
   },
