@@ -248,6 +248,7 @@ model Feedback {
   name      String
   rating    Int
   comment   String   @db.Text
+  active    Boolean  @default(false)
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
@@ -292,13 +293,31 @@ model Branch {
 
 model User {
   id           Int      @id @default(autoincrement())
+  username     String   @unique
   name         String
-  email        String   @unique
+  email        String?  @unique
   passwordHash String   @map("password_hash")
   role         UserRole @default(STAFF)
   active       Boolean  @default(true)
   createdAt    DateTime @default(now()) @map("created_at")
   updatedAt    DateTime @updatedAt @map("updated_at")
+  auditLogs    AuditLog[]
 
+  @@index([username, active])
   @@map("users")
+}
+
+model AuditLog {
+  id          BigInt   @id @default(autoincrement())
+  actorUserId Int?     @map("actor_user_id")
+  action      String
+  entity      String
+  entityId    String?  @map("entity_id")
+  metadata    Json?
+  createdAt   DateTime @default(now()) @map("created_at")
+  actor       User?    @relation(fields: [actorUserId], references: [id], onDelete: SetNull)
+
+  @@index([actorUserId, createdAt(sort: Desc)])
+  @@index([entity, entityId, createdAt(sort: Desc)])
+  @@map("audit_logs")
 }

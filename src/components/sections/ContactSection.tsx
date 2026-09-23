@@ -1,14 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/common/Button";
 import { Section, SectionHead } from "@/components/common/Section";
 import { siteConfig } from "@/config/site";
+import { useEnrollmentForm } from "@/hooks/useEnrollmentForm";
 
 export function ContactSection() {
   const t = useTranslations();
-  const [submitted, setSubmitted] = useState(false);
+  const { courses, submitted, error, pending, submit } = useEnrollmentForm();
 
   return (
     <Section>
@@ -25,27 +25,26 @@ export function ContactSection() {
           ) : (
             <form
               className="flex flex-col gap-4"
-              onSubmit={(event) => {
-                event.preventDefault();
-                setSubmitted(true);
-              }}
+              onSubmit={submit}
             >
+              <input type="hidden" name="type" value="REAL" />
               <Field id="name" label={t("form.name")} required />
               <Field id="phone" label={t("form.phone")} type="tel" required />
               <Field id="email" label={t("form.email")} type="email" />
-              <Field id="language" label={t("form.language")} />
+              <label className="flex flex-col gap-2 font-display text-[13.5px] font-bold text-ink">{t("form.language")}<select name="courseId" required className="rounded-xl border-[1.5px] border-line-2 bg-surface-2 px-4 py-3"><option value="">Chọn khóa học</option>{courses.map(course => <option key={course.id} value={course.id}>{course.title}</option>)}</select></label>
               <div className="flex flex-col gap-2">
                 <label htmlFor="message" className="font-display text-[13.5px] font-bold text-ink">
                   {t("form.message")}
                 </label>
                 <textarea
-                  id="message"
+                  id="message" name="note"
                   rows={4}
                   className="min-h-[110px] w-full resize-y rounded-xl border-[1.5px] border-line-2 bg-surface-2 p-4 text-[15px] text-ink outline-none focus:border-brand focus:bg-surface"
                 />
               </div>
-              <Button type="submit" variant="primary" size="block">
-                {t("form.submit")}
+              {error ? <p role="alert" className="text-sm text-red-600">{error}</p> : null}
+              <Button type="submit" variant="primary" size="block" disabled={pending}>
+                {pending ? "Đang gửi..." : t("form.submit")}
               </Button>
             </form>
           )}
@@ -74,6 +73,7 @@ function Field({
       </label>
       <input
         id={id}
+        name={id}
         type={type}
         required={required}
         className="w-full rounded-xl border-[1.5px] border-line-2 bg-surface-2 px-4 py-3 text-[15px] text-ink outline-none transition focus:border-brand focus:bg-surface"

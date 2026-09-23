@@ -1,0 +1,4 @@
+import { UserRole } from "@prisma/client";
+import { z } from "zod";
+export const branchSchema = z.object({ id: z.coerce.number().int().positive().optional(), code: z.string().trim().min(2).max(30).regex(/^[A-Z0-9_-]+$/), name: z.string().trim().min(2).max(160), address: z.string().trim().min(3).max(500), phone: z.string().trim().max(30).optional(), mapUrl: z.string().url().optional().or(z.literal("")), lat: z.coerce.number().min(-90).max(90).optional(), lng: z.coerce.number().min(-180).max(180).optional(), active: z.coerce.boolean() });
+export const userSchema = z.object({ id: z.coerce.number().int().positive().optional(), username: z.string().trim().min(3).max(64).regex(/^[a-z0-9_.-]+$/), name: z.string().trim().min(2).max(120), email: z.string().trim().email().optional().or(z.literal("")), role: z.nativeEnum(UserRole), active: z.coerce.boolean(), password: z.string().min(8).max(128).optional().or(z.literal("")) });

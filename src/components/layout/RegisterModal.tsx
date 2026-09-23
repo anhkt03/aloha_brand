@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/common/Button";
 import { cn } from "@/lib/utils";
+import { useEnrollmentForm } from "@/hooks/useEnrollmentForm";
 
 interface RegisterModalProps {
   open: boolean;
@@ -12,7 +13,7 @@ interface RegisterModalProps {
 
 export function RegisterModal({ open, onClose }: RegisterModalProps) {
   const t = useTranslations();
-  const [submitted, setSubmitted] = useState(false);
+  const { courses, submitted, error, pending, submit } = useEnrollmentForm();
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -71,30 +72,27 @@ export function RegisterModal({ open, onClose }: RegisterModalProps) {
         ) : (
           <form
             className="flex flex-col gap-4"
-            onSubmit={(event) => {
-              event.preventDefault();
-              setSubmitted(true);
-            }}
+            onSubmit={submit}
           >
-            <ModalField id="rm-name" label={t("form.name")} required />
-            <ModalField id="rm-phone" label={t("form.phone")} type="tel" required />
-            <ModalField id="rm-email" label={t("form.email")} type="email" />
+            <input type="hidden" name="type" value="TRIAL" />
+            <ModalField id="rm-name" name="name" label={t("form.name")} required />
+            <ModalField id="rm-phone" name="phone" label={t("form.phone")} type="tel" required />
+            <ModalField id="rm-email" name="email" label={t("form.email")} type="email" />
             <div className="flex flex-col gap-2">
               <label htmlFor="rm-language" className="font-display text-[13.5px] font-bold text-ink">
                 {t("form.language")}
               </label>
               <select
-                id="rm-language"
+                id="rm-language" name="courseId" required
                 className="w-full rounded-xl border-[1.5px] border-line-2 bg-surface-2 px-4 py-3 text-[15px] text-ink outline-none focus:border-brand focus:bg-surface"
               >
-                <option>English</option>
-                <option>中文</option>
-                <option>한국어</option>
-                <option>日本語</option>
+                <option value="">Chọn khóa học</option>
+                {courses.map((course) => <option key={course.id} value={course.id}>{course.title}</option>)}
               </select>
             </div>
-            <Button type="submit" variant="primary" size="block">
-              {t("form.submit")}
+            {error ? <p role="alert" className="text-sm text-red-600">{error}</p> : null}
+            <Button type="submit" variant="primary" size="block" disabled={pending}>
+              {pending ? "Đang gửi..." : t("form.submit")}
             </Button>
           </form>
         )}
@@ -105,11 +103,13 @@ export function RegisterModal({ open, onClose }: RegisterModalProps) {
 
 function ModalField({
   id,
+  name,
   label,
   type = "text",
   required,
 }: {
   id: string;
+  name: string;
   label: string;
   type?: string;
   required?: boolean;
@@ -121,6 +121,7 @@ function ModalField({
       </label>
       <input
         id={id}
+        name={name}
         type={type}
         required={required}
         className="w-full rounded-xl border-[1.5px] border-line-2 bg-surface-2 px-4 py-3 text-[15px] text-ink outline-none transition focus:border-brand focus:bg-surface"
