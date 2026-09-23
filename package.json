@@ -12,7 +12,9 @@
     "db:migrate": "prisma migrate dev",
     "db:studio": "prisma studio",
     "db:seed-admin": "node scripts/seed-default-admin.mjs",
-    "test": "vitest run"
+    "test": "vitest run",
+    "smoke:seed": "node --env-file=.env scripts/smoke-real-data.mjs",
+    "smoke:http": "node --env-file=.env scripts/smoke-http.mjs"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
