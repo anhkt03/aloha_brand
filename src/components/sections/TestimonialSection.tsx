@@ -20,7 +20,13 @@ export function TestimonialSection() {
   return (
     <section className="section">
       <Container>
-        <SectionHead center eyebrow={t("eyebrow")} title={t("title")} />
+        <SectionHead
+          center
+          eyebrow={t("eyebrow")}
+          title={t.rich("title", {
+            b: (chunks) => <span className="text-brand">{chunks}</span>,
+          })}
+        />
       </Container>
       <div className="flex flex-col gap-5">
         <MarqueeRow items={rowA} direction="left" duration={44} />
