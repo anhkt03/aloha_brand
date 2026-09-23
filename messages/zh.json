@@ -205,23 +205,101 @@
       "cta": "获取留学咨询"
     },
     "about": {
-      "eyebrow": "关于我们",
-      "title": "关于ALOHA Language School",
-      "lead": "一家专注教学品质、学习体验和学员全面成长的语言学校。",
-      "vmvTitle": "愿景 · 使命 · 价值观",
-      "vmv": {
-        "vision": { "title": "愿景", "desc": "成为越南北部领先的语言教育网络。" },
-        "mission": { "title": "使命", "desc": "陪伴每一位学员实现语言目标并拓展全球机会。" },
-        "values": { "title": "核心价值", "desc": "品质 · 真诚 · 坚持 · 创新 · 社群。" }
+      "eyebrow": "关于ALOHA",
+      "title": "关于ALOHA",
+      "lead": "一所陪伴学员通向更大世界的语言与留学学校。",
+      "hero": {
+        "tagline": "More Languages, A Brighter You",
+        "title": "语言培训\n& 留学生态",
+        "lead": "ALOHA陪伴学员从语言能力建设到抵达越南与国际的学习与发展机会。",
+        "ctaExplore": "探索ALOHA",
+        "ctaVideo": "观看介绍视频",
+        "stats": {
+          "years": { "value": "10+", "label": "年办学历程" },
+          "students": { "value": "10,000+", "label": "学员" },
+          "branches": { "value": "10+", "label": "全国校区" },
+          "goal": { "value": "95%", "label": "学员达成目标" }
+        }
       },
-      "timelineTitle": "ALOHA的历程",
-      "timeline": [
-        { "year": "2014", "title": "ALOHA成立", "desc": "河内首家校区开设,首批两个班级。" },
-        { "year": "2017", "title": "拓展至越南北部", "desc": "海阳开设第三家校区;推出HSK课程。" },
-        { "year": "2020", "title": "数字化转型", "desc": "推出在线课堂与学员管理App。" },
-        { "year": "2023", "title": "10,000+ 学员", "desc": "累计10,000名以上学员在ALOHA学习与结业。" },
-        { "year": "2025", "title": "11家校区", "desc": "海防第11家校区开业,覆盖整个越南北部。" }
-      ]
+      "what": {
+        "eyebrow": "ALOHA是谁?",
+        "title": "多语种培训与发展生态",
+        "lead": "ALOHA是一家专注真实语言能力的多语种学校。除中文、英语、韩语、日语外,还开设留学线,连接学员与国际机会。",
+        "steps": {
+          "learn": "学习语言",
+          "certificate": "取得证书",
+          "direction": "选择方向",
+          "future": "留学 / 就业"
+        }
+      },
+      "offering": {
+        "eyebrow": "两大业务",
+        "title": "语言是基础,\n留学是下一步",
+        "training": {
+          "title": "语言培训",
+          "desc": "中文、英语、韩语与日语 —— 从基础到证书再到实际应用的系统化学习。",
+          "cta": "查看语言课程"
+        },
+        "global": {
+          "title": "留学",
+          "desc": "中国、韩国、日本留学咨询,学校信息、奖学金与申请材料指导。",
+          "cta": "查看留学服务"
+        }
+      },
+      "vmv": {
+        "eyebrow": "愿景与使命",
+        "vision": { "title": "愿景", "desc": "成为越南领先的多语种培训与发展网络。" },
+        "mission": {
+          "title": "使命",
+          "items": [
+            "提供高质量、持续更新的课程。",
+            "现代教学方法,贴近实际。",
+            "根据学员需求个性化。",
+            "专业且用心的团队。",
+            "连接学员与国际学习机会。"
+          ]
+        }
+      },
+      "values": {
+        "eyebrow": "核心价值",
+        "title": "构成ALOHA的5大价值",
+        "items": [
+          { "letter": "A", "name": "AFFECTION", "desc": "尊重、分享,营造积极的学习氛围。" },
+          { "letter": "L", "name": "LEARNING", "desc": "持续学习、更新与创新。" },
+          { "letter": "O", "name": "OPPORTUNITY", "desc": "拓展学习、职业与全球机会。" },
+          { "letter": "H", "name": "HARMONY", "desc": "平衡学习效果、体验与长期成长。" },
+          { "letter": "A", "name": "ACTION", "desc": "学以致用,注重实际应用能力。" }
+        ]
+      },
+      "principles": {
+        "eyebrow": "教学理念",
+        "title": "学以致用",
+        "motto": "以学生为中心 — 学以致用",
+        "mottoAlt": "以学生为中心 · 学以致用",
+        "subtitle": "03 项原则",
+        "items": [
+          { "title": "学对", "desc": "符合水平与目标的学习路径。" },
+          { "title": "练够", "desc": "加强互动、练习与反射。" },
+          { "title": "用真", "desc": "将知识落实到真实场景。" }
+        ]
+      },
+      "team": {
+        "eyebrow": "ALOHA团队",
+        "title": "与学员并肩前行的人",
+        "lead": "ALOHA拥有专业、经验丰富且用心的师资与团队,全程陪伴学员。",
+        "cta": "认识ALOHA团队"
+      },
+      "ecosystem": {
+        "eyebrow": "ALOHA生态",
+        "title": "从语言到国际机会",
+        "lead": "ALOHA陪伴学员走完整个发展之路。",
+        "steps": [
+          { "num": "01", "title": "语言", "items": ["中文", "英语", "韩语", "日语"] },
+          { "num": "02", "title": "证书", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
+          { "num": "03", "title": "留学", "items": ["中国", "韩国", "日本"] },
+          { "num": "04", "title": "未来", "items": ["国际学习", "职业发展", "更多机会"] }
+        ]
+      }
     },
     "branches": {
       "eyebrow": "校区网络",
