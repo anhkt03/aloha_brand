@@ -209,23 +209,104 @@
       "cta": "Get study-abroad advice"
     },
     "about": {
-      "eyebrow": "About us",
-      "title": "About ALOHA Language School",
-      "lead": "A language school committed to real teaching quality, a joyful learning experience and each student's well-rounded growth.",
-      "vmvTitle": "Vision · Mission · Values",
-      "vmv": {
-        "vision": { "title": "Vision", "desc": "Become the leading language education network in North Vietnam." },
-        "mission": { "title": "Mission", "desc": "Walk with every learner toward their language goal and broader global opportunities." },
-        "values": { "title": "Core values", "desc": "Quality · Sincerity · Perseverance · Innovation · Community." }
+      "eyebrow": "About ALOHA",
+      "title": "About ALOHA",
+      "lead": "A language and study-abroad school that walks with every learner on the road to a wider world.",
+      "hero": {
+        "tagline": "More Languages, A Brighter You",
+        "title": "Language training\n& study-abroad ecosystem",
+        "lead": "ALOHA walks with learners from building language skills to reaching study and career opportunities both in Vietnam and abroad.",
+        "ctaExplore": "Explore ALOHA",
+        "ctaVideo": "Watch intro video",
+        "stats": {
+          "years": { "value": "10+", "label": "Years of growth" },
+          "students": { "value": "10,000+", "label": "Students" },
+          "branches": { "value": "10+", "label": "Branches nationwide" },
+          "goal": { "value": "95%", "label": "Students meet their goal" }
+        }
       },
-      "timelineTitle": "ALOHA journey",
-      "timeline": [
-        { "year": "2014", "title": "ALOHA is founded", "desc": "First branch in Hanoi with the first two classes." },
-        { "year": "2017", "title": "Expanding North Vietnam", "desc": "Third branch in Hai Duong; launched the HSK program." },
-        { "year": "2020", "title": "Digital transformation", "desc": "Launched online classes and a student-management app." },
-        { "year": "2023", "title": "10,000+ students", "desc": "Reached 10,000 students studied and graduated at ALOHA." },
-        { "year": "2025", "title": "11 branches", "desc": "Opened the 11th branch in Hai Phong, covering all of North Vietnam." }
-      ]
+      "what": {
+        "eyebrow": "Who is ALOHA?",
+        "title": "A multi-language training & growth ecosystem",
+        "lead": "ALOHA is a multi-language school focused on real language competency for study, work and future direction. Alongside Chinese, English, Korean and Japanese, ALOHA also runs a Study Abroad line that connects learners with international opportunities.",
+        "steps": {
+          "learn": "Learn a language",
+          "certificate": "Earn a certificate",
+          "direction": "Choose a direction",
+          "future": "Study abroad / career"
+        }
+      },
+      "offering": {
+        "eyebrow": "Two lines of business",
+        "title": "Language is the foundation,\nstudy abroad is the next step",
+        "training": {
+          "title": "Language training",
+          "desc": "Chinese, English, Korean and Japanese programs — a structured path from fundamentals to certificates and real-world use.",
+          "cta": "Explore language programs"
+        },
+        "global": {
+          "title": "Study abroad",
+          "desc": "Advice for China, Korea and Japan. School information, scholarships and dossier preparation.",
+          "cta": "Explore study-abroad"
+        }
+      },
+      "vmv": {
+        "eyebrow": "Vision & mission",
+        "vision": {
+          "title": "Vision",
+          "desc": "Become the leading multi-language training and development network in Vietnam."
+        },
+        "mission": {
+          "title": "Mission",
+          "items": [
+            "Deliver high-quality, continuously updated curricula.",
+            "Modern teaching methods, tied to real usage.",
+            "Personalize for each learner's needs.",
+            "A dedicated, high-expertise team.",
+            "Bridge learners to international opportunities."
+          ]
+        }
+      },
+      "values": {
+        "eyebrow": "Core values",
+        "title": "5 values that make ALOHA",
+        "items": [
+          { "letter": "A", "name": "AFFECTION", "desc": "Respect, sharing and a positive learning environment." },
+          { "letter": "L", "name": "LEARNING", "desc": "Never stop learning, updating and reinventing." },
+          { "letter": "O", "name": "OPPORTUNITY", "desc": "Open more learning, career and global opportunities." },
+          { "letter": "H", "name": "HARMONY", "desc": "Balance study results, experience and long-term growth." },
+          { "letter": "A", "name": "ACTION", "desc": "Learning meets doing — focused on real application." }
+        ]
+      },
+      "principles": {
+        "eyebrow": "Teaching philosophy",
+        "title": "Learn to use it",
+        "motto": "Student-centered — Learn to apply in real life",
+        "mottoAlt": "以学生为中心 · 学以致用",
+        "subtitle": "03 principles",
+        "items": [
+          { "title": "Learn right", "desc": "A path tuned to your level and goal." },
+          { "title": "Practice enough", "desc": "More interaction, drills and reflex." },
+          { "title": "Apply for real", "desc": "Take knowledge into real-world situations." }
+        ]
+      },
+      "team": {
+        "eyebrow": "The ALOHA team",
+        "title": "The people who walk beside every learner",
+        "lead": "ALOHA builds a team of teachers and specialists with expertise, experience and dedication — supporting students end-to-end.",
+        "cta": "Meet the ALOHA team"
+      },
+      "ecosystem": {
+        "eyebrow": "The ALOHA ecosystem",
+        "title": "From language to international opportunities",
+        "lead": "ALOHA walks with learners on a full development journey.",
+        "steps": [
+          { "num": "01", "title": "Language", "items": ["Chinese", "English", "Korean", "Japanese"] },
+          { "num": "02", "title": "Certificate", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
+          { "num": "03", "title": "Study abroad", "items": ["China", "Korea", "Japan"] },
+          { "num": "04", "title": "Future", "items": ["International study", "Career growth", "Wider opportunities"] }
+        ]
+      }
     },
     "branches": {
       "eyebrow": "Branch network",
