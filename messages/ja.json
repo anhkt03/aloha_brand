@@ -194,23 +194,101 @@
       "cta": "留学相談を受ける"
     },
     "about": {
-      "eyebrow": "私たちについて",
-      "title": "ALOHA Language Schoolについて",
-      "lead": "教育の質、学習体験、そして学生の総合的な成長を大切にする語学スクール。",
-      "vmvTitle": "ビジョン・ミッション・バリュー",
-      "vmv": {
-        "vision": { "title": "ビジョン", "desc": "北部で最も選ばれる語学教育ネットワークを目指す。" },
-        "mission": { "title": "ミッション", "desc": "学習者の目標達成と世界への機会拡大に寄り添う。" },
-        "values": { "title": "コアバリュー", "desc": "品質・誠実・忍耐・革新・コミュニティ。" }
+      "eyebrow": "ALOHAについて",
+      "title": "ALOHAについて",
+      "lead": "学習者を広い世界へと導く語学&留学のスクール。",
+      "hero": {
+        "tagline": "More Languages, A Brighter You",
+        "title": "語学教育\n&留学のエコシステム",
+        "lead": "ALOHAは、語学力の育成からベトナム国内外の学習・キャリアの機会獲得までを伴走します。",
+        "ctaExplore": "ALOHAを見る",
+        "ctaVideo": "紹介動画を見る",
+        "stats": {
+          "years": { "value": "10+", "label": "年の歩み" },
+          "students": { "value": "10,000+", "label": "受講生" },
+          "branches": { "value": "10+", "label": "全国教室" },
+          "goal": { "value": "95%", "label": "目標達成率" }
+        }
       },
-      "timelineTitle": "ALOHAの歩み",
-      "timeline": [
-        { "year": "2014", "title": "ALOHA設立", "desc": "ハノイで最初の教室を開講(2クラス)。" },
-        { "year": "2017", "title": "北部へ拡大", "desc": "ハイズオンに3拠点目を開設、HSKプログラム開始。" },
-        { "year": "2020", "title": "デジタル化", "desc": "オンライン授業と受講生管理アプリを導入。" },
-        { "year": "2023", "title": "10,000名以上", "desc": "累計10,000名以上の受講生・卒業生。" },
-        { "year": "2025", "title": "11教室", "desc": "ハイフォン11校目を開校、北部全域をカバー。" }
-      ]
+      "what": {
+        "eyebrow": "ALOHAとは?",
+        "title": "多言語教育・発展エコシステム",
+        "lead": "ALOHAは実践的な語学力に焦点を置いた多言語スクール。中国語・英語・韓国語・日本語に加え、留学サポートも展開。",
+        "steps": {
+          "learn": "語学を学ぶ",
+          "certificate": "資格を取る",
+          "direction": "進路を選ぶ",
+          "future": "留学 / キャリア"
+        }
+      },
+      "offering": {
+        "eyebrow": "2つの事業領域",
+        "title": "語学は土台、\n留学は次のステップ",
+        "training": {
+          "title": "語学教育",
+          "desc": "中国語・英語・韓国語・日本語 — 基礎から資格・実践までの体系。",
+          "cta": "コースを見る"
+        },
+        "global": {
+          "title": "留学",
+          "desc": "中国・韓国・日本の留学相談、学校情報、奨学金、書類作成。",
+          "cta": "留学サポートを見る"
+        }
+      },
+      "vmv": {
+        "eyebrow": "ビジョン & ミッション",
+        "vision": { "title": "ビジョン", "desc": "ベトナムで最も選ばれる多言語教育・発展ネットワーク。" },
+        "mission": {
+          "title": "ミッション",
+          "items": [
+            "高品質で常にアップデートされたカリキュラムを提供。",
+            "現代的で実践に即した教授法。",
+            "学習者の目的に応じて個別最適化。",
+            "専門性と情熱のあるチーム。",
+            "国際的な学びの機会を橋渡し。"
+          ]
+        }
+      },
+      "values": {
+        "eyebrow": "コアバリュー",
+        "title": "ALOHAを支える5つの価値",
+        "items": [
+          { "letter": "A", "name": "AFFECTION", "desc": "尊重と共有、ポジティブな学びの場を築く。" },
+          { "letter": "L", "name": "LEARNING", "desc": "学び・アップデート・革新を止めない。" },
+          { "letter": "O", "name": "OPPORTUNITY", "desc": "学び・キャリア・世界の機会を拡げる。" },
+          { "letter": "H", "name": "HARMONY", "desc": "成果・体験・長期的成長のバランス。" },
+          { "letter": "A", "name": "ACTION", "desc": "実践重視、使える力に焦点。" }
+        ]
+      },
+      "principles": {
+        "eyebrow": "教育理念",
+        "title": "使える語学を",
+        "motto": "学生中心 — 学びを実践で活かす",
+        "mottoAlt": "以学生为中心 · 学以致用",
+        "subtitle": "03 の原則",
+        "items": [
+          { "title": "正しく学ぶ", "desc": "レベルと目標に合ったロードマップ。" },
+          { "title": "十分に練習", "desc": "対話・訓練・反射を強化。" },
+          { "title": "実際に使う", "desc": "知識を実場面へ落とし込む。" }
+        ]
+      },
+      "team": {
+        "eyebrow": "ALOHAチーム",
+        "title": "受講生と共に歩む人たち",
+        "lead": "経験と情熱を持つ講師とチームが、学びの全過程で伴走します。",
+        "cta": "ALOHAチームを見る"
+      },
+      "ecosystem": {
+        "eyebrow": "ALOHAエコシステム",
+        "title": "語学から国際的な機会へ",
+        "lead": "ALOHAは学習者の発展の旅路に伴走します。",
+        "steps": [
+          { "num": "01", "title": "語学", "items": ["中国語", "英語", "韓国語", "日本語"] },
+          { "num": "02", "title": "資格", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
+          { "num": "03", "title": "留学", "items": ["中国", "韓国", "日本"] },
+          { "num": "04", "title": "未来", "items": ["国際的な学び", "キャリア形成", "より広い機会"] }
+        ]
+      }
     },
     "branches": {
       "eyebrow": "教室ネットワーク",

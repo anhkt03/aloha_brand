@@ -209,23 +209,104 @@
       "cta": "Nhận tư vấn du học"
     },
     "about": {
-      "eyebrow": "Về chúng tôi",
-      "title": "Về ALOHA Language School",
-      "lead": "Hệ thống đào tạo ngoại ngữ hướng tới chất lượng giảng dạy, trải nghiệm học tập và sự phát triển toàn diện của học viên.",
-      "vmvTitle": "Tầm nhìn · Sứ mệnh · Giá trị",
-      "vmv": {
-        "vision": { "title": "Tầm nhìn", "desc": "Trở thành hệ thống đào tạo ngoại ngữ hàng đầu miền Bắc." },
-        "mission": { "title": "Sứ mệnh", "desc": "Đồng hành cùng người học chinh phục mục tiêu ngôn ngữ và mở rộng cơ hội toàn cầu." },
-        "values": { "title": "Giá trị cốt lõi", "desc": "Chất lượng · Chân thành · Kiên trì · Đổi mới · Cộng đồng." }
+      "eyebrow": "Về ALOHA",
+      "title": "Về ALOHA",
+      "lead": "Hệ thống đào tạo Ngoại ngữ & Du học đồng hành cùng người học trên hành trình phát triển toàn diện.",
+      "hero": {
+        "tagline": "More Languages, A Brighter You",
+        "title": "Hệ thống đào tạo\nNgoại ngữ & Du học",
+        "lead": "ALOHA đồng hành cùng người học từ việc xây dựng năng lực ngôn ngữ đến chinh phục các cơ hội học tập và phát triển tại Việt Nam và quốc tế.",
+        "ctaExplore": "Khám phá ALOHA",
+        "ctaVideo": "Xem video giới thiệu",
+        "stats": {
+          "years": { "value": "10+", "label": "Năm phát triển" },
+          "students": { "value": "10.000+", "label": "Học viên" },
+          "branches": { "value": "10+", "label": "Cơ sở toàn quốc" },
+          "goal": { "value": "95%", "label": "Học viên đạt mục tiêu" }
+        }
       },
-      "timelineTitle": "Chặng đường ALOHA",
-      "timeline": [
-        { "year": "2014", "title": "Thành lập ALOHA", "desc": "Cơ sở đầu tiên tại Hà Nội với 2 lớp học đầu tiên." },
-        { "year": "2017", "title": "Mở rộng miền Bắc", "desc": "Ra mắt cơ sở thứ 3 tại Hải Dương, ra mắt chương trình HSK." },
-        { "year": "2020", "title": "Chuyển đổi số", "desc": "Triển khai lớp học trực tuyến và app quản lý học viên." },
-        { "year": "2023", "title": "10.000+ học viên", "desc": "Cột mốc 10.000 học viên đã học và tốt nghiệp tại ALOHA." },
-        { "year": "2025", "title": "11 cơ sở", "desc": "Khai trương cơ sở thứ 11 tại Hải Phòng, phủ khắp miền Bắc." }
-      ]
+      "what": {
+        "eyebrow": "ALOHA là ai?",
+        "title": "Hệ thống đào tạo & phát triển đa ngôn ngữ",
+        "lead": "ALOHA là hệ thống đào tạo đa ngôn ngữ, tập trung phát triển năng lực sử dụng ngôn ngữ gắn với học tập, công việc và định hướng tương lai. Bên cạnh Tiếng Trung, Tiếng Anh, Tiếng Hàn, Tiếng Nhật, ALOHA còn phát triển mảng Du học nhằm kết nối người học với các cơ hội học tập quốc tế.",
+        "steps": {
+          "learn": "Học ngoại ngữ",
+          "certificate": "Chinh phục chứng chỉ",
+          "direction": "Định hướng tương lai",
+          "future": "Du học / Nghề nghiệp"
+        }
+      },
+      "offering": {
+        "eyebrow": "Hai lĩnh vực hoạt động",
+        "title": "Ngoại ngữ là nền tảng,\nDu học là hành trình tiếp theo",
+        "training": {
+          "title": "Đào tạo ngoại ngữ",
+          "desc": "Các chương trình Tiếng Trung, Tiếng Anh, Tiếng Hàn và Tiếng Nhật với lộ trình bài bản từ nền tảng đến chứng chỉ và ứng dụng thực tế.",
+          "cta": "Khám phá chương trình ngoại ngữ"
+        },
+        "global": {
+          "title": "Du học",
+          "desc": "Tư vấn du học Trung Quốc, Hàn Quốc, Nhật Bản. Hỗ trợ thông tin trường học, chương trình học bổng và chuẩn bị hồ sơ.",
+          "cta": "Khám phá chương trình du học"
+        }
+      },
+      "vmv": {
+        "eyebrow": "Tầm nhìn & sứ mệnh",
+        "vision": {
+          "title": "Tầm nhìn",
+          "desc": "Trở thành hệ thống đào tạo và phát triển đa ngôn ngữ hàng đầu tại Việt Nam."
+        },
+        "mission": {
+          "title": "Sứ mệnh",
+          "items": [
+            "Cung cấp chương trình học chất lượng, cập nhật liên tục.",
+            "Phương pháp giảng dạy hiện đại, gắn với thực tế.",
+            "Cá nhân hoá theo nhu cầu người học.",
+            "Đội ngũ chuyên môn tận tâm.",
+            "Kết nối cơ hội học tập và phát triển quốc tế."
+          ]
+        }
+      },
+      "values": {
+        "eyebrow": "Giá trị cốt lõi",
+        "title": "5 giá trị tạo nên ALOHA",
+        "items": [
+          { "letter": "A", "name": "AFFECTION", "desc": "Tôn trọng, sẻ chia và xây dựng môi trường học tập tích cực." },
+          { "letter": "L", "name": "LEARNING", "desc": "Không ngừng học hỏi, cập nhật và đổi mới." },
+          { "letter": "O", "name": "OPPORTUNITY", "desc": "Mở rộng cơ hội học tập, nghề nghiệp và hội nhập." },
+          { "letter": "H", "name": "HARMONY", "desc": "Cân bằng giữa hiệu quả học tập, trải nghiệm và sự phát triển lâu dài." },
+          { "letter": "A", "name": "ACTION", "desc": "Học đi đôi với hành động, tập trung vào khả năng ứng dụng thực tế." }
+        ]
+      },
+      "principles": {
+        "eyebrow": "Triết lý đào tạo",
+        "title": "Học để sử dụng được",
+        "motto": "Lấy học viên làm trung tâm — Học để áp dụng thực tế",
+        "mottoAlt": "以学生为中心 · 学以致用",
+        "subtitle": "03 nguyên tắc",
+        "items": [
+          { "title": "Học đúng", "desc": "Lộ trình phù hợp với trình độ và mục tiêu." },
+          { "title": "Thực hành đủ", "desc": "Tăng cường tương tác, luyện tập và phản xạ." },
+          { "title": "Ứng dụng thật", "desc": "Đưa kiến thức vào tình huống thực tế." }
+        ]
+      },
+      "team": {
+        "eyebrow": "Đội ngũ ALOHA",
+        "title": "Những người đồng hành cùng người học",
+        "lead": "ALOHA xây dựng đội ngũ giáo viên và nhân sự chuyên môn với năng lực, kinh nghiệm và sự tận tâm, luôn theo sát học viên trong suốt quá trình học tập.",
+        "cta": "Gặp gỡ đội ngũ ALOHA"
+      },
+      "ecosystem": {
+        "eyebrow": "Hệ sinh thái ALOHA",
+        "title": "Từ ngoại ngữ đến các cơ hội quốc tế",
+        "lead": "ALOHA đồng hành cùng người học trên hành trình phát triển toàn diện.",
+        "steps": [
+          { "num": "01", "title": "Ngoại ngữ", "items": ["Tiếng Trung", "Tiếng Anh", "Tiếng Hàn", "Tiếng Nhật"] },
+          { "num": "02", "title": "Chứng chỉ", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
+          { "num": "03", "title": "Du học", "items": ["Trung Quốc", "Hàn Quốc", "Nhật Bản"] },
+          { "num": "04", "title": "Tương lai", "items": ["Học tập quốc tế", "Phát triển nghề nghiệp", "Mở rộng cơ hội"] }
+        ]
+      }
     },
     "branches": {
       "eyebrow": "Hệ thống cơ sở",
