@@ -34,17 +34,28 @@
     "eyebrow": "About us",
     "title": "ALOHA Language School",
     "pillars": { "quality": "Quality", "experience": "Experience", "growth": "Well-rounded growth" },
-    "quote": "ALOHA is a multi-language school built around three pillars",
+    "quote": "ALOHA is a multi-language school built around three main pillars",
     "body": "We deliver <b>a modern learning environment, a rigorous curriculum, and a personalized path</b> for every student's goal.",
-    "cta": "Learn about ALOHA",
-    "stats": { "years": "Years of experience", "branches": "Branches", "students": "Students" }
+    "cta": "Learn about ALOHA"
+  },
+  "stats": {
+    "eyebrow": "Numbers speak",
+    "title": "A language journey with\n<b>thousands of opportunities</b>",
+    "sub": "Numbers back up ALOHA's commitment and effort in shaping every student's future.",
+    "items": {
+      "years": "Years of experience",
+      "branches": "Branches nationwide",
+      "students": "Students",
+      "languages": "Languages taught",
+      "goal": "Students meet their goal"
+    }
   },
   "offering": {
     "eyebrow": "What ALOHA offers",
     "title": "What are you looking for?",
     "training": {
       "title": "Language training",
-      "desc": "A rigorous path from fundamentals to international certificates and real-world use.",
+      "desc": "A rigorous path from fundamentals to international certificates and\nreal-world use.",
       "cta": "Explore",
       "items": ["Chinese", "English", "Korean", "Japanese"]
     },
@@ -57,7 +68,8 @@
   },
   "why": {
     "eyebrow": "Why ALOHA",
-    "title": "Why choose ALOHA?",
+    "title": "Why choose <b>ALOHA</b>?",
+    "sub": "More than a language course — ALOHA is a companion on your journey to bigger opportunities.",
     "trust": "10,000+ students already trust ALOHA",
     "items": {
       "roadmap": { "title": "Structured roadmap", "desc": "Clear, personalized to your level and goal." },
@@ -70,8 +82,8 @@
   },
   "experience": {
     "eyebrow": "Learning experience",
-    "title": "Learning experience at ALOHA",
-    "closing": "You don't just come to class — you're supported end-to-end, from learning and practice to assessment.",
+    "title": "Learning experience\n<b>at ALOHA</b>",
+    "closing": "You don't just come to class — <b>you're supported end-to-end, from learning and practice to assessment.</b>",
     "items": {
       "small": { "title": "Small classes", "desc": "Teachers have time to interact, correct and support every student." },
       "cycle": { "title": "Learn – Practice – Test", "desc": "Beyond classes, students get homework, practice and periodic tests to measure progress." },
@@ -92,8 +104,8 @@
     }
   },
   "testimonials": {
-    "eyebrow": "Student voices",
-    "title": "What students say about ALOHA",
+    "eyebrow": "Student feedback",
+    "title": "What students say about <b>ALOHA</b>",
     "viewMore": "More student stories",
     "trustBadge": "Trusted by 10,000+ students"
   },
@@ -134,45 +146,167 @@
     "global": {
       "eyebrow": "Study abroad with ALOHA",
       "title": "Reach your global dream",
-      "lead": "End-to-end support — from school choice, application, scholarships and visa to settling in — for China, Korea, Japan and English-speaking countries.",
-      "destinationsTitle": "Where do you want to go?",
-      "destinations": {
-        "china": { "name": "China", "desc": "CSC & Confucius Institute scholarships, or self-funded." },
-        "korea": { "name": "Korea", "desc": "TOPIK 3+ for a D-2 visa; bachelor and master programs." },
-        "japan": { "name": "Japan", "desc": "JLPT N3+, Japanese language schools, Senmon and universities." },
-        "uk": { "name": "UK & IELTS", "desc": "Foundation, bachelor and master programs — top UK schools." }
+      "lead": "End-to-end support — from school choice and application to scholarships, visa and settling in — for China, Korea, Japan and English-speaking countries.",
+      "hero": {
+        "badge": "2026 intake now open",
+        "ctaPrimary": "Get a free consult",
+        "ctaSecondary": "See a sample roadmap"
       },
-      "journeyTitle": "7 steps to study abroad with ALOHA",
-      "journeySub": "A transparent process — you always know where you are on the journey.",
-      "steps": [
-        { "title": "Advisory & orientation", "desc": "Assess your ability and goal, then suggest countries and majors that fit." },
-        { "title": "Language study", "desc": "Reach the school's language requirement (TOPIK, JLPT, HSK, IELTS...)." },
-        { "title": "Choose school & major", "desc": "Curate a school list, compare tuition, scholarships and career outcomes." },
-        { "title": "Application dossier", "desc": "Transcripts, study plan, recommendation letters, portfolio if needed." },
-        { "title": "Submit applications", "desc": "Apply to schools and matched scholarship funds; track responses." },
-        { "title": "Interview & Visa", "desc": "Interview coaching, visa dossier and financial proof." },
-        { "title": "Departure & support", "desc": "Housing setup, airport pickup, and settling into your new environment." }
-      ],
+      "countries": {
+        "eyebrow": "Destinations",
+        "title": "Pick your country",
+        "sub": "Every country is a door — ALOHA takes you to the one that fits your ability, major and budget.",
+        "labels": {
+          "tuition": "Tuition",
+          "language": "Language requirement",
+          "majors": "Popular majors",
+          "scholarship": "Scholarships"
+        },
+        "yearUnit": "/year",
+        "explore": "Explore"
+      },
+      "destinations": {
+        "china": { "name": "China" },
+        "korea": { "name": "Korea" },
+        "japan": { "name": "Japan" },
+        "uk": { "name": "United Kingdom" },
+        "singapore": { "name": "Singapore" },
+        "europe": { "name": "Europe" }
+      },
+      "timeline": {
+        "eyebrow": "Application roadmap",
+        "title": "12 months to campus",
+        "sub": "A sample timeline for a September intake — adjusted per country and per student."
+      },
+      "scholarships": {
+        "eyebrow": "Scholarships",
+        "title": "Scholarship opportunities with ALOHA",
+        "sub": "We walk with you through public and private scholarships around the world.",
+        "audienceLabel": "For",
+        "valueLabel": "Value"
+      },
+      "stories": {
+        "eyebrow": "Student stories",
+        "title": "Where our students have gone",
+        "sub": "ALOHA alumni already studying at international universities.",
+        "yearLabel": "Enrolled"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Frequently asked questions",
+        "sub": "Quick answers to common study-abroad questions."
+      },
+      "form": {
+        "eyebrow": "Book a consult",
+        "title": "Free 1-on-1 study-abroad consult",
+        "sub": "Drop your info — ALOHA calls back within 24 hours with a personalized roadmap.",
+        "destination": "Preferred country",
+        "note": "Anything else (optional)",
+        "submit": "Send request",
+        "success": "Thank you! ALOHA will reach out within 24 hours.",
+        "trust": "Trusted by 10,000+ students"
+      },
       "cta": "Get study-abroad advice"
     },
     "about": {
-      "eyebrow": "About us",
-      "title": "About ALOHA Language School",
-      "lead": "A language school committed to real teaching quality, a joyful learning experience and each student's well-rounded growth.",
-      "vmvTitle": "Vision · Mission · Values",
-      "vmv": {
-        "vision": { "title": "Vision", "desc": "Become the leading language education network in North Vietnam." },
-        "mission": { "title": "Mission", "desc": "Walk with every learner toward their language goal and broader global opportunities." },
-        "values": { "title": "Core values", "desc": "Quality · Sincerity · Perseverance · Innovation · Community." }
+      "eyebrow": "About ALOHA",
+      "title": "About ALOHA",
+      "lead": "A language and study-abroad school that walks with every learner on the road to a wider world.",
+      "hero": {
+        "tagline": "More Languages, A Brighter You",
+        "title": "Language training\n& study-abroad ecosystem",
+        "lead": "ALOHA walks with learners from building language skills to reaching study and career opportunities both in Vietnam and abroad.",
+        "ctaExplore": "Explore ALOHA",
+        "ctaVideo": "Watch intro video",
+        "stats": {
+          "years": { "value": "10+", "label": "Years of growth" },
+          "students": { "value": "10,000+", "label": "Students" },
+          "branches": { "value": "10+", "label": "Branches nationwide" },
+          "goal": { "value": "95%", "label": "Students meet their goal" }
+        }
       },
-      "timelineTitle": "ALOHA journey",
-      "timeline": [
-        { "year": "2014", "title": "ALOHA is founded", "desc": "First branch in Hanoi with the first two classes." },
-        { "year": "2017", "title": "Expanding North Vietnam", "desc": "Third branch in Hai Duong; launched the HSK program." },
-        { "year": "2020", "title": "Digital transformation", "desc": "Launched online classes and a student-management app." },
-        { "year": "2023", "title": "10,000+ students", "desc": "Reached 10,000 students studied and graduated at ALOHA." },
-        { "year": "2025", "title": "11 branches", "desc": "Opened the 11th branch in Hai Phong, covering all of North Vietnam." }
-      ]
+      "what": {
+        "eyebrow": "Who is ALOHA?",
+        "title": "A multi-language training & growth ecosystem",
+        "lead": "ALOHA is a multi-language school focused on real language competency for study, work and future direction. Alongside Chinese, English, Korean and Japanese, ALOHA also runs a Study Abroad line that connects learners with international opportunities.",
+        "steps": {
+          "learn": "Learn a language",
+          "certificate": "Earn a certificate",
+          "direction": "Choose a direction",
+          "future": "Study abroad / career"
+        }
+      },
+      "offering": {
+        "eyebrow": "Two lines of business",
+        "title": "Language is the foundation,\nstudy abroad is the next step",
+        "training": {
+          "title": "Language training",
+          "desc": "Chinese, English, Korean and Japanese programs — a structured path from fundamentals to certificates and real-world use.",
+          "cta": "Explore language programs"
+        },
+        "global": {
+          "title": "Study abroad",
+          "desc": "Advice for China, Korea and Japan. School information, scholarships and dossier preparation.",
+          "cta": "Explore study-abroad"
+        }
+      },
+      "vmv": {
+        "eyebrow": "Vision & mission",
+        "vision": {
+          "title": "Vision",
+          "desc": "Become the leading multi-language training and development network in Vietnam."
+        },
+        "mission": {
+          "title": "Mission",
+          "items": [
+            "Deliver high-quality, continuously updated curricula.",
+            "Modern teaching methods, tied to real usage.",
+            "Personalize for each learner's needs.",
+            "A dedicated, high-expertise team.",
+            "Bridge learners to international opportunities."
+          ]
+        }
+      },
+      "values": {
+        "eyebrow": "Core values",
+        "title": "5 values that make ALOHA",
+        "items": [
+          { "letter": "A", "name": "AFFECTION", "desc": "Respect, sharing and a positive learning environment." },
+          { "letter": "L", "name": "LEARNING", "desc": "Never stop learning, updating and reinventing." },
+          { "letter": "O", "name": "OPPORTUNITY", "desc": "Open more learning, career and global opportunities." },
+          { "letter": "H", "name": "HARMONY", "desc": "Balance study results, experience and long-term growth." },
+          { "letter": "A", "name": "ACTION", "desc": "Learning meets doing — focused on real application." }
+        ]
+      },
+      "principles": {
+        "eyebrow": "Teaching philosophy",
+        "title": "Learn to use it",
+        "motto": "Student-centered — Learn to apply in real life",
+        "mottoAlt": "以学生为中心 · 学以致用",
+        "subtitle": "03 principles",
+        "items": [
+          { "title": "Learn right", "desc": "A path tuned to your level and goal." },
+          { "title": "Practice enough", "desc": "More interaction, drills and reflex." },
+          { "title": "Apply for real", "desc": "Take knowledge into real-world situations." }
+        ]
+      },
+      "team": {
+        "eyebrow": "The ALOHA team",
+        "title": "The people who walk beside every learner",
+        "lead": "ALOHA builds a team of teachers and specialists with expertise, experience and dedication — supporting students end-to-end.",
+        "cta": "Meet the ALOHA team"
+      },
+      "ecosystem": {
+        "eyebrow": "The ALOHA ecosystem",
+        "title": "From language to international opportunities",
+        "lead": "ALOHA walks with learners on a full development journey.",
+        "steps": [
+          { "num": "01", "title": "Language", "items": ["Chinese", "English", "Korean", "Japanese"] },
+          { "num": "02", "title": "Certificate", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
+          { "num": "03", "title": "Study abroad", "items": ["China", "Korea", "Japan"] },
+          { "num": "04", "title": "Future", "items": ["International study", "Career growth", "Wider opportunities"] }
+        ]
+      }
     },
     "branches": {
       "eyebrow": "Branch network",

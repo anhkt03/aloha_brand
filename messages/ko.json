@@ -24,17 +24,28 @@
     "eyebrow": "우리는",
     "title": "ALOHA Language School",
     "pillars": { "quality": "품질", "experience": "경험", "growth": "전인적 성장" },
-    "quote": "ALOHA는 품질·경험·전인적 성장의 세 축으로 학습 여정을 설계하는 다국어 스쿨입니다.",
+    "quote": "ALOHA는 세 가지 주요 축으로 학습 여정을 설계하는 다국어 스쿨입니다",
     "body": "<b>현대적인 학습 환경, 체계적인 커리큘럼, 학생 목표에 맞춘 개별 로드맵</b>을 제공합니다.",
-    "cta": "ALOHA 알아보기",
-    "stats": { "years": "년 경력", "branches": "지점", "students": "수강생" }
+    "cta": "ALOHA 알아보기"
+  },
+  "stats": {
+    "eyebrow": "숫자가 말한다",
+    "title": "언어의 여정과\n<b>수많은 기회</b>",
+    "sub": "숫자는 ALOHA가 학생 한 명 한 명의 미래를 위해 헌신하는 증거입니다.",
+    "items": {
+      "years": "년 경력",
+      "branches": "전국 지점",
+      "students": "수강생",
+      "languages": "교육 언어",
+      "goal": "학생 목표 달성"
+    }
   },
   "offering": {
     "eyebrow": "ALOHA가 제공하는 것",
     "title": "무엇을 찾고 계신가요?",
     "training": {
       "title": "어학 교육",
-      "desc": "기초부터 국제 자격증, 실전까지 체계적인 로드맵.",
+      "desc": "기초부터 국제 자격증,\n실전까지 체계적인 로드맵.",
       "cta": "자세히 보기",
       "items": ["중국어", "영어", "한국어", "일본어"]
     },
@@ -47,7 +58,8 @@
   },
   "why": {
     "eyebrow": "왜 ALOHA",
-    "title": "왜 ALOHA인가?",
+    "title": "왜 <b>ALOHA</b>인가?",
+    "sub": "단순한 강좌가 아니라, 더 큰 기회를 향한 여정의 동반자입니다.",
     "trust": "10,000명 이상의 수강생이 ALOHA를 선택했습니다",
     "items": {
       "roadmap": { "title": "체계적인 로드맵", "desc": "수준과 목표에 맞춘 개인 맞춤형." },
@@ -60,8 +72,8 @@
   },
   "experience": {
     "eyebrow": "학습 경험",
-    "title": "ALOHA에서의 학습 경험",
-    "closing": "수업만이 아니라 학습·실습·평가까지 전 과정을 함께합니다.",
+    "title": "<b>ALOHA</b>에서의\n학습 경험",
+    "closing": "수업만이 아니라 <b>학습·실습·평가까지 전 과정을 함께합니다.</b>",
     "items": {
       "small": { "title": "소규모 수업", "desc": "강사가 학생 한 명 한 명에게 시간을 씁니다." },
       "cycle": { "title": "학습 – 연습 – 테스트", "desc": "과제와 정기 평가로 진행 상황을 확인합니다." },
@@ -77,8 +89,8 @@
     "steps": { "learn": "언어 학습", "certificate": "자격증 취득", "direction": "진로 설정", "future": "유학 / 커리어 성장" }
   },
   "testimonials": {
-    "eyebrow": "수강생의 목소리",
-    "title": "수강생이 말하는 ALOHA",
+    "eyebrow": "수강생의 후기",
+    "title": "수강생이 말하는 <b>ALOHA</b>",
     "viewMore": "더 보기",
     "trustBadge": "10,000명 이상의 수강생이 선택"
   },
@@ -120,44 +132,163 @@
       "eyebrow": "ALOHA와 함께 유학",
       "title": "글로벌 꿈에 손을 뻗어보세요",
       "lead": "학교 선택, 서류, 장학금, 비자, 정착까지 — 중국·한국·일본과 영어권 국가.",
-      "destinationsTitle": "어디로 가고 싶으세요?",
-      "destinations": {
-        "china": { "name": "중국", "desc": "CSC·공자학원 장학금 또는 자비." },
-        "korea": { "name": "한국", "desc": "TOPIK 3+ D-2, 학사·석사 과정." },
-        "japan": { "name": "일본", "desc": "JLPT N3+, 일본어학교·전문학교·대학." },
-        "uk": { "name": "영국 & IELTS", "desc": "Foundation, 학사, 석사 — 영국 상위권." }
+      "hero": {
+        "badge": "2026년 신입생 모집 중",
+        "ctaPrimary": "무료 상담 신청",
+        "ctaSecondary": "샘플 로드맵 보기"
       },
-      "journeyTitle": "ALOHA와 함께하는 유학 7단계",
-      "journeySub": "투명한 프로세스 — 지금 어디에 있는지 언제나 확인 가능합니다.",
-      "steps": [
-        { "title": "상담 & 방향 설정", "desc": "역량과 희망을 평가하고 국가/전공을 추천합니다." },
-        { "title": "언어 학습", "desc": "학교 입학 조건 달성(TOPIK, JLPT, HSK, IELTS 등)." },
-        { "title": "학교/전공 선택", "desc": "학교 리스트, 학비·장학금·진로 비교." },
-        { "title": "서류 준비", "desc": "성적표, 학업 계획, 추천서, 포트폴리오." },
-        { "title": "지원 제출", "desc": "학교 및 장학금에 지원하고 진행 상황 관리." },
-        { "title": "인터뷰 & 비자", "desc": "인터뷰 준비, 비자 서류, 재정 증명." },
-        { "title": "출국 & 정착", "desc": "숙소, 공항 픽업, 현지 적응 지원." }
-      ],
+      "countries": {
+        "eyebrow": "유학 국가",
+        "title": "가고 싶은 나라를 선택하세요",
+        "sub": "나라는 곧 기회의 문 — ALOHA가 역량·전공·예산에 맞는 문을 열어드립니다.",
+        "labels": {
+          "tuition": "학비",
+          "language": "언어 요건",
+          "majors": "인기 전공",
+          "scholarship": "장학금"
+        },
+        "yearUnit": "/년",
+        "explore": "자세히 보기"
+      },
+      "destinations": {
+        "china": { "name": "중국" },
+        "korea": { "name": "한국" },
+        "japan": { "name": "일본" },
+        "uk": { "name": "영국" },
+        "singapore": { "name": "싱가포르" },
+        "europe": { "name": "유럽" }
+      },
+      "timeline": {
+        "eyebrow": "지원 로드맵",
+        "title": "12개월이면 캠퍼스로",
+        "sub": "9월 학기 지원 샘플 타임라인 — 국가·개인 상황에 따라 조정됩니다."
+      },
+      "scholarships": {
+        "eyebrow": "장학금",
+        "title": "ALOHA와 함께 도전하는 장학금",
+        "sub": "세계 각국의 공공·민간 장학금을 함께 준비해 드립니다.",
+        "audienceLabel": "대상",
+        "valueLabel": "혜택"
+      },
+      "stories": {
+        "eyebrow": "수강생 이야기",
+        "title": "ALOHA 수강생의 진로",
+        "sub": "국제 대학에서 공부 중인 ALOHA 출신 학생들.",
+        "yearLabel": "입학"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "자주 묻는 질문",
+        "sub": "유학 관련 자주 묻는 질문에 빠르게 답변합니다."
+      },
+      "form": {
+        "eyebrow": "상담 신청",
+        "title": "무료 1:1 유학 상담",
+        "sub": "정보를 입력해 주세요 — ALOHA가 24시간 내 개인 맞춤 로드맵을 안내합니다.",
+        "destination": "희망 국가",
+        "note": "추가 내용 (선택)",
+        "submit": "상담 신청 보내기",
+        "success": "감사합니다! ALOHA가 24시간 내 연락드립니다.",
+        "trust": "10,000명 이상의 수강생이 선택"
+      },
       "cta": "유학 상담 받기"
     },
     "about": {
-      "eyebrow": "우리는",
-      "title": "ALOHA Language School 소개",
-      "lead": "교육의 질, 학습 경험, 학생의 전인적 성장을 지향합니다.",
-      "vmvTitle": "비전 · 미션 · 가치",
-      "vmv": {
-        "vision": { "title": "비전", "desc": "북부 최고의 어학 교육 네트워크를 지향합니다." },
-        "mission": { "title": "미션", "desc": "학습자의 언어 목표와 글로벌 기회를 함께합니다." },
-        "values": { "title": "핵심 가치", "desc": "품질 · 진정성 · 인내 · 혁신 · 커뮤니티." }
+      "eyebrow": "ALOHA 소개",
+      "title": "ALOHA 소개",
+      "lead": "학습자를 더 큰 세계로 이끄는 어학·유학 스쿨.",
+      "hero": {
+        "tagline": "More Languages, A Brighter You",
+        "title": "어학 교육\n& 유학 생태계",
+        "lead": "ALOHA는 어학 역량부터 국내외 학습·커리어 기회까지 학습자를 함께합니다.",
+        "ctaExplore": "ALOHA 살펴보기",
+        "ctaVideo": "소개 영상 보기",
+        "stats": {
+          "years": { "value": "10+", "label": "년의 발전" },
+          "students": { "value": "10,000+", "label": "수강생" },
+          "branches": { "value": "10+", "label": "전국 지점" },
+          "goal": { "value": "95%", "label": "학생 목표 달성" }
+        }
       },
-      "timelineTitle": "ALOHA의 여정",
-      "timeline": [
-        { "year": "2014", "title": "ALOHA 설립", "desc": "하노이 첫 지점에서 두 개의 반으로 시작." },
-        { "year": "2017", "title": "북부 확장", "desc": "하이즈엉에 3호 지점 오픈, HSK 프로그램 런칭." },
-        { "year": "2020", "title": "디지털 전환", "desc": "온라인 수업과 수강생 관리 앱 도입." },
-        { "year": "2023", "title": "10,000명 돌파", "desc": "10,000명 이상의 수강생·졸업생." },
-        { "year": "2025", "title": "11개 지점", "desc": "하이퐁에 11번째 지점을 오픈해 북부 전역을 커버." }
-      ]
+      "what": {
+        "eyebrow": "ALOHA는?",
+        "title": "다국어 교육·발전 생태계",
+        "lead": "ALOHA는 실전 어학 역량에 집중하는 다국어 스쿨. 중국어·영어·한국어·일본어와 함께 유학 라인도 운영합니다.",
+        "steps": {
+          "learn": "언어 학습",
+          "certificate": "자격 취득",
+          "direction": "방향 설정",
+          "future": "유학 / 커리어"
+        }
+      },
+      "offering": {
+        "eyebrow": "두 가지 사업 영역",
+        "title": "언어는 기초,\n유학은 다음 여정",
+        "training": {
+          "title": "어학 교육",
+          "desc": "중국어·영어·한국어·일본어 — 기초부터 자격증, 실전까지의 체계적인 로드맵.",
+          "cta": "어학 과정 보기"
+        },
+        "global": {
+          "title": "유학",
+          "desc": "중국·한국·일본 유학 컨설팅, 학교 정보·장학금·서류 준비 지원.",
+          "cta": "유학 서비스 보기"
+        }
+      },
+      "vmv": {
+        "eyebrow": "비전 & 미션",
+        "vision": { "title": "비전", "desc": "베트남 최고의 다국어 교육·발전 네트워크." },
+        "mission": {
+          "title": "미션",
+          "items": [
+            "고품질의 지속적으로 갱신되는 커리큘럼.",
+            "실전 지향의 현대적 교수법.",
+            "학습자 니즈에 맞춘 개인화.",
+            "전문성과 진심을 갖춘 팀.",
+            "국제 학습 기회로 이어주는 다리."
+          ]
+        }
+      },
+      "values": {
+        "eyebrow": "핵심 가치",
+        "title": "ALOHA를 만드는 5가지 가치",
+        "items": [
+          { "letter": "A", "name": "AFFECTION", "desc": "존중과 공유, 긍정적인 학습 환경." },
+          { "letter": "L", "name": "LEARNING", "desc": "끊임없는 학습·갱신·혁신." },
+          { "letter": "O", "name": "OPPORTUNITY", "desc": "학습·커리어·글로벌 기회의 확대." },
+          { "letter": "H", "name": "HARMONY", "desc": "성과·경험·장기 성장의 균형." },
+          { "letter": "A", "name": "ACTION", "desc": "실행 중심, 활용 가능한 실력." }
+        ]
+      },
+      "principles": {
+        "eyebrow": "교육 철학",
+        "title": "쓸 수 있는 언어",
+        "motto": "학생 중심 — 배운 것을 실전에 활용",
+        "mottoAlt": "以学生为中心 · 学以致用",
+        "subtitle": "03 원칙",
+        "items": [
+          { "title": "제대로 배우기", "desc": "수준과 목표에 맞춘 로드맵." },
+          { "title": "충분한 연습", "desc": "상호작용·훈련·반사 강화." },
+          { "title": "실제로 사용", "desc": "지식을 실제 상황에 적용." }
+        ]
+      },
+      "team": {
+        "eyebrow": "ALOHA 팀",
+        "title": "학습자와 함께 걷는 사람들",
+        "lead": "전문성과 경험, 진심을 갖춘 강사와 팀이 학습 전 과정을 함께합니다.",
+        "cta": "ALOHA 팀 만나기"
+      },
+      "ecosystem": {
+        "eyebrow": "ALOHA 생태계",
+        "title": "언어에서 국제 기회로",
+        "lead": "ALOHA가 학습자의 발전 여정을 함께합니다.",
+        "steps": [
+          { "num": "01", "title": "언어", "items": ["중국어", "영어", "한국어", "일본어"] },
+          { "num": "02", "title": "자격증", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
+          { "num": "03", "title": "유학", "items": ["중국", "한국", "일본"] },
+          { "num": "04", "title": "미래", "items": ["국제 학습", "커리어 성장", "더 넓은 기회"] }
+        ]
+      }
     },
     "branches": {
       "eyebrow": "지점 안내",

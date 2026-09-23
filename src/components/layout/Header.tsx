@@ -35,7 +35,7 @@ export function Header({ onOpenRegister = () => {} }: HeaderProps) {
             aria-label={siteConfig.name}
             className="flex h-full flex-shrink-0 items-center"
           >
-            <span className="relative block h-full w-[180px] overflow-hidden md:w-[210px]">
+            <span className="relative block h-full w-[130px] overflow-hidden sm:w-[160px] md:w-[210px]">
               <Image
                 src="/images/brand/aloha-logo-horizontal.webp"
                 alt={siteConfig.name}
@@ -70,13 +70,13 @@ export function Header({ onOpenRegister = () => {} }: HeaderProps) {
             })}
           </nav>
           <div className="ml-auto flex flex-shrink-0 items-center gap-2 xl:ml-0">
-            <LanguageSwitcher className="hidden md:inline-flex" />
-            <ThemeToggle className="hidden sm:inline-grid" />
+            <LanguageSwitcher />
+            <ThemeToggle />
             <Button
               variant="primary"
               size="sm"
               onClick={onOpenRegister}
-              className="hidden sm:inline-flex"
+              className="hidden lg:inline-flex"
             >
               {t("cta")}
             </Button>
