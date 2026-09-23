@@ -15,17 +15,18 @@ import { useRegisterModal } from "@/components/layout/register-context";
 import { useRouter } from "@/i18n/routing";
 
 /**
- * Homepage — 10 sections per the site outline:
+ * Homepage — 11 sections per the site outline:
  *  1. Hero               — Định vị ALOHA
  *  2. About              — Giới thiệu chung + 3 pillars
  *  3. Offering           — Đào tạo ngoại ngữ / Du học
- *  4. Feature (why)      — 6 differentiators
- *  5. Experience         — Trải nghiệm học tập
- *  6. Journey            — Hành trình cùng ALOHA
- *  7. Testimonial        — Marquee ảnh học viên
- *  8. Branches teaser    — Hệ thống cơ sở
- *  9. News               — Tin tức theo 3 chuyên mục
- * 10. CTA                — Cuối trang
+ *  4. Stats              — Số liệu biết nói
+ *  5. Feature (why)      — 6 differentiators
+ *  6. Experience         — Trải nghiệm học tập
+ *  7. Journey            — Hành trình cùng ALOHA
+ *  8. Testimonial        — Marquee ảnh học viên
+ *  9. Branches teaser    — Hệ thống cơ sở
+ * 10. News               — Tin tức theo 3 chuyên mục
+ * 11. CTA                — Cuối trang
  */
 export default function HomePage() {
   const { open } = useRegisterModal();
@@ -34,8 +35,8 @@ export default function HomePage() {
     <>
       <HeroSection onOpenRegister={open} onGoToCourses={() => router.push("/ngoaingu")} />
       <AboutSection />
-      <StatsSection />
       <OfferingSection />
+      <StatsSection />
       <FeatureSection />
       <ExperienceSection />
       <JourneySection />

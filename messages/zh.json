@@ -210,7 +210,8 @@
       "lead": "一所陪伴学员通向更大世界的语言与留学学校。",
       "hero": {
         "tagline": "More Languages, A Brighter You",
-        "title": "语言培训\n& 留学生态",
+        "titleA": "语言培训",
+        "titleB": "& 留学生态",
         "lead": "ALOHA陪伴学员从语言能力建设到抵达越南与国际的学习与发展机会。",
         "ctaExplore": "探索ALOHA",
         "ctaVideo": "观看介绍视频",
@@ -296,7 +297,7 @@
         "steps": [
           { "num": "01", "title": "语言", "items": ["中文", "英语", "韩语", "日语"] },
           { "num": "02", "title": "证书", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
-          { "num": "03", "title": "留学", "items": ["中国", "韩国", "日本"] },
+          { "num": "03", "title": "留学", "items": ["中国", "韩国", "日本", "台湾", "新加坡", "欧洲"] },
           { "num": "04", "title": "未来", "items": ["国际学习", "职业发展", "更多机会"] }
         ]
       }

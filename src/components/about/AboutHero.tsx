@@ -28,8 +28,9 @@ export function AboutHero({ onOpenRegister }: AboutHeroProps) {
             <span className="inline-block font-display text-[clamp(14px,1.6vw,17px)] font-semibold italic text-brand">
               {t("tagline")}
             </span>
-            <h1 className="mt-3 whitespace-pre-line font-display text-[clamp(30px,4.6vw,52px)] font-black leading-[1.1] tracking-tight text-ink">
-              {t("title")}
+            <h1 className="mt-3 font-display text-[clamp(30px,4.6vw,52px)] font-black leading-[1.1] tracking-tight text-ink">
+              <span className="block">{t("titleA")}</span>
+              <span className="grad-text mt-1 block">{t("titleB")}</span>
             </h1>
             <p className="mt-5 max-w-[52ch] text-[clamp(15px,1.7vw,18px)] text-ink-soft">
               {t("lead")}

@@ -26,15 +26,24 @@ const STATS: StatDef[] = [
 /**
  * "Số liệu biết nói" — 5 stat cards. White cards on a soft brand-tinted
  * background, numbers count up from 0 when the row enters the viewport.
- * On mobile the cards stack 2 per row; from lg they lay out in a single
- * row of 5.
+ * Below sm, cards are full-width rows with the icon on the left and the
+ * number/label to its right (compact); from sm they switch to the taller
+ * icon-on-top layout, stacking 2 per row, then 3, then a single row of 5
+ * from lg.
  */
 export function StatsSection() {
   const t = useTranslations("stats");
   const rowRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <section className="section" style={{ background: "var(--surface-2)" }}>
+    <section
+      className="section"
+      style={{
+        background: "var(--surface-2)",
+        paddingTop: "clamp(28px, 5vw, 52px)",
+        paddingBottom: "clamp(16px, 2.5vw, 32px)",
+      }}
+    >
       <Container>
         <SectionHead
           center
@@ -77,21 +86,25 @@ function StatCard({ icon, target, suffix, label, triggerRef }: StatCardProps) {
   const value = useCountUp({ end: target, duration: 3000, triggerRef });
   const formatted = value.toLocaleString("de-DE");
   return (
-    <article className="relative flex flex-col rounded-2xl border border-line bg-surface p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+    <article className="relative flex items-center gap-3 rounded-2xl border border-line bg-surface p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:flex-col sm:items-stretch sm:gap-0 sm:p-6">
       <span
-        className="grid h-11 w-11 place-items-center rounded-xl text-brand"
+        className="grid h-11 w-11 shrink-0 place-items-center rounded-xl text-brand"
         style={{ background: "color-mix(in srgb, var(--brand) 12%, transparent)" }}
       >
         {icon}
       </span>
-      <div className="mt-6 font-display text-[clamp(30px,3.6vw,42px)] font-black leading-none tabular-nums text-brand">
-        {formatted}
-        <span>{suffix}</span>
+      <div className="min-w-0 sm:mt-6">
+        <div className="font-display text-[26px] font-black leading-none tabular-nums text-brand sm:text-[clamp(30px,3.6vw,42px)]">
+          {formatted}
+          <span>{suffix}</span>
+        </div>
+        <div className="mt-1 truncate text-[13px] font-semibold text-ink-soft sm:mt-2 sm:whitespace-normal sm:text-[14.5px]">
+          {label}
+        </div>
       </div>
-      <div className="mt-2 text-[14.5px] font-semibold text-ink-soft">{label}</div>
       <span
         aria-hidden
-        className="mt-4 block h-[3px] w-10 rounded-full"
+        className="hidden h-[3px] w-10 rounded-full sm:mt-4 sm:block"
         style={{ background: "var(--grad)" }}
       />
     </article>
