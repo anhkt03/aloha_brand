@@ -2,6 +2,7 @@
 
 import { CourseStatus } from "@prisma/client";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { writeAuditLog } from "@/lib/audit";
 import { requireAdminUser } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
@@ -13,14 +14,16 @@ const invalidate = () => {
   revalidatePath("/vi/training");
 };
 
-export async function saveCourse(formData: FormData) {
+export type CourseFormState = { message?: string };
+
+export async function saveCourse(_previous: CourseFormState, formData: FormData): Promise<CourseFormState> {
   const actor = await requireAdminUser();
   const parsed = courseSchema.safeParse(courseFromForm(formData));
-  if (!parsed.success) throw new Error("Dữ liệu khóa học không hợp lệ.");
+  if (!parsed.success) return { message: "Dữ liệu khóa học không hợp lệ. Vui lòng kiểm tra lại các trường bắt buộc." };
   const { id, courseLevelId, courseTypeId, translations, ...data } = parsed.data;
   const previous = id ? await prisma.course.findUnique({ where: { id }, select: { iconUrl: true } }) : null;
   const level = await prisma.courseLevel.findFirst({ where: { id: courseLevelId, courseTypeId }, select: { id: true } });
-  if (!level) throw new Error("Cấp độ không thuộc loại khóa học đã chọn.");
+  if (!level) return { message: "Cấp độ không thuộc loại khóa học đã chọn." };
 
   try {
     await prisma.$transaction(async (tx) => {
@@ -31,11 +34,13 @@ export async function saveCourse(formData: FormData) {
     });
   } catch (error) {
     if (data.iconUrl && data.iconUrl !== previous?.iconUrl) await deleteManagedImages([data.iconUrl]);
-    if ((error as { code?: string }).code === "P2002") throw new Error("Slug đã tồn tại.");
+    if ((error as { code?: string }).code === "P2002") return { message: "Slug đã tồn tại." };
     throw error;
   }
   if (previous?.iconUrl && previous.iconUrl !== data.iconUrl) await deleteManagedImages([previous.iconUrl]);
   invalidate();
+  if (!id) redirect("/admin/courses");
+  return {};
 }
 
 export async function setCourseStatus(id: number, status: CourseStatus) {

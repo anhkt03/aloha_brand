@@ -7,51 +7,113 @@ import { useState } from "react";
 import { logout } from "@/app/admin/actions";
 import { canAccessModule, type AdminModule } from "@/lib/permissions";
 
-type NavigationItem = { module: AdminModule; label: string; href: string; group?: "courses" | "news" };
+type NavigationItem = { module: AdminModule; label: string; href: string; group?: "courses" | "news"; icon: React.ReactNode };
+
+function Icon({ path }: { path: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+      <path d={path} />
+    </svg>
+  );
+}
 
 const navigation: NavigationItem[] = [
-  { module: "dashboard", label: "Tổng quan", href: "/admin" },
-  { module: "courses", label: "Khóa học", href: "/admin/courses", group: "courses" },
-  { module: "courses", label: "Loại khóa học", href: "/admin/courses/types", group: "courses" },
-  { module: "courses", label: "Cấp độ", href: "/admin/courses/levels", group: "courses" },
-  { module: "news", label: "Bài viết", href: "/admin/news", group: "news" },
-  { module: "news", label: "Danh mục tin tức", href: "/admin/news/categories", group: "news" },
-  { module: "news", label: "Thẻ tin tức", href: "/admin/news/tags", group: "news" },
-  { module: "enrollments", label: "Đăng ký", href: "/admin/enrollments" },
-  { module: "feedback", label: "Đánh giá", href: "/admin/feedback" },
-  { module: "branches", label: "Cơ sở", href: "/admin/branches" },
-  { module: "users", label: "Tài khoản", href: "/admin/users" },
+  { module: "dashboard", label: "Tổng quan", href: "/admin", icon: <Icon path="M4 13h6V4H4v9zm0 7h6v-5H4v5zm10 0h6V11h-6v9zm0-16v5h6V4h-6z" /> },
+  { module: "courses", label: "Khóa học", href: "/admin/courses", group: "courses", icon: <Icon path="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z" /> },
+  { module: "courses", label: "Loại khóa học", href: "/admin/courses/types", group: "courses", icon: <Icon path="M3 7l9-4 9 4-9 4-9-4zm0 5l9 4 9-4M3 17l9 4 9-4" /> },
+  { module: "courses", label: "Cấp độ", href: "/admin/courses/levels", group: "courses", icon: <Icon path="M4 19V5m0 14 5-5m-5 5-5-5M20 5v14m0-14-5 5m5-5 5 5" /> },
+  { module: "news", label: "Bài viết", href: "/admin/news", group: "news", icon: <Icon path="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4zm4 4h9m-9 4h9m-9 4h5" /> },
+  { module: "news", label: "Danh mục tin tức", href: "/admin/news/categories", group: "news", icon: <Icon path="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" /> },
+  { module: "news", label: "Thẻ tin tức", href: "/admin/news/tags", group: "news", icon: <Icon path="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3.2L4 3a1 1 0 0 0-1 1l.2 5.59a2 2 0 0 0 .58 1.41l9.59 9.59a2 2 0 0 0 2.83 0l4.39-4.39a2 2 0 0 0 0-2.79zM7 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" /> },
+  { module: "enrollments", label: "Đăng ký", href: "/admin/enrollments", icon: <Icon path="M9 12l2 2 4-4M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14l-4-3-3 3-3-3-3 3-4-3V6z" /> },
+  { module: "feedback", label: "Đánh giá", href: "/admin/feedback", icon: <Icon path="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /> },
+  { module: "branches", label: "Cơ sở", href: "/admin/branches", icon: <Icon path="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m-1 4h1m4-4h1m-1 4h1M9 21v-4h6v4" /> },
+  { module: "users", label: "Tài khoản", href: "/admin/users", icon: <Icon path="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm8 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /> },
 ];
 
-const groupLabels = { courses: "ĐÀO TẠO", news: "NỘI DUNG" } as const;
+const groupLabels = { courses: "Đào tạo", news: "Nội dung" } as const;
 
-export function AdminShell({ children, user }: { children: React.ReactNode; user: { name: string; email: string | null; role: UserRole } }) {
+export function AdminShell({ children, user }: { children: React.ReactNode; user: { name: string; role: UserRole } }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const items = navigation.filter((item) => canAccessModule(user.role, item.module));
   const activeHref = items
-    .filter((item) => item.href === "/admin" ? pathname === item.href : pathname === item.href || pathname.startsWith(`${item.href}/`))
+    .filter((item) => (item.href === "/admin" ? pathname === item.href : pathname === item.href || pathname.startsWith(`${item.href}/`)))
     .sort((left, right) => right.href.length - left.href.length)[0]?.href;
   let lastGroup: NavigationItem["group"];
 
+  const sidebar = (
+    <>
+      <div className="flex h-16 items-center gap-2.5 px-5">
+        <span className="grid h-9 w-9 place-items-center rounded-lg bg-indigo-600 font-display text-base font-black text-white">A</span>
+        <div className="leading-tight">
+          <p className="font-display text-sm font-black text-white">ALOHA</p>
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Admin</p>
+        </div>
+      </div>
+      <nav className="grid gap-0.5 px-3 pb-4">
+        {items.map((item) => {
+          const showGroup = item.group && item.group !== lastGroup;
+          lastGroup = item.group;
+          const active = item.href === activeHref;
+          return (
+            <div key={item.href}>
+              {showGroup ? <p className="mb-1 mt-4 px-3 text-[11px] font-bold uppercase tracking-widest text-slate-500 first:mt-1">{groupLabels[item.group!]}</p> : null}
+              <Link
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className={`flex items-center gap-2.5 rounded-md px-3 py-2 text-sm font-medium transition ${
+                  active ? "bg-indigo-600 text-white" : "text-slate-300 hover:bg-slate-800 hover:text-white"
+                }`}
+              >
+                {item.icon}
+                {item.label}
+              </Link>
+            </div>
+          );
+        })}
+      </nav>
+    </>
+  );
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <header className="flex h-16 items-center justify-between border-b bg-white px-4">
-        <button type="button" className="md:hidden" onClick={() => setOpen(!open)} aria-expanded={open}>Menu</button>
-        <p className="font-bold text-emerald-800">ALOHA Admin</p>
-        <details className="relative"><summary className="cursor-pointer list-none text-sm">{user.name}</summary><div className="absolute right-0 z-10 mt-2 w-56 rounded border bg-white p-3 shadow"><p className="text-xs text-slate-500">{user.email} · {user.role}</p><form action={logout}><button className="mt-3 text-sm text-red-700">Đăng xuất</button></form></div></details>
-      </header>
-      <aside className={`${open ? "block" : "hidden"} fixed inset-x-0 top-16 z-10 border-b bg-white p-4 md:static md:block md:float-left md:min-h-[calc(100vh-4rem)] md:w-60 md:border-b-0 md:border-r`}>
-        <nav className="grid gap-1">
-          {items.map((item) => {
-            const showGroup = item.group && item.group !== lastGroup;
-            lastGroup = item.group;
-            const active = item.href === activeHref;
-            return <div key={item.href}>{showGroup ? <p className="mb-1 mt-4 px-3 text-[11px] font-black tracking-widest text-slate-400">{groupLabels[item.group!]}</p> : null}<Link href={item.href} onClick={() => setOpen(false)} className={`block rounded-xl px-3 py-2 text-sm transition ${active ? "bg-emerald-100 font-bold text-emerald-900" : "hover:bg-emerald-50"}`}>{item.label}</Link></div>;
-          })}
-        </nav>
+      {open ? <button aria-label="Đóng menu" onClick={() => setOpen(false)} className="fixed inset-0 z-30 bg-slate-900/50 md:hidden" /> : null}
+
+      <aside className={`fixed inset-y-0 left-0 z-40 w-64 -translate-x-full bg-slate-900 transition-transform md:translate-x-0 ${open ? "translate-x-0" : ""}`}>
+        {sidebar}
       </aside>
-      <main className="p-4 md:ml-60 md:p-8">{children}</main>
+
+      <div className="md:pl-64">
+        <header className="sticky top-0 z-20 flex h-16 items-center justify-between gap-3 border-b border-slate-200 bg-white px-4 sm:px-6">
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            aria-label="Mở menu"
+            className="grid h-9 w-9 place-items-center rounded-md border border-slate-200 text-slate-600 md:hidden"
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+          </button>
+          <span className="hidden text-sm font-semibold text-slate-500 md:block">{items.find((item) => item.href === activeHref)?.label ?? "Tổng quan"}</span>
+          <div className="ml-auto flex items-center gap-3">
+            <span className="flex items-center gap-2.5">
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-indigo-100 text-sm font-bold text-indigo-700">{user.name.charAt(0).toUpperCase()}</span>
+              <span className="hidden text-sm font-semibold text-slate-800 sm:block">{user.name}</span>
+            </span>
+            <form action={logout}>
+              <button
+                type="submit"
+                title="Đăng xuất"
+                aria-label="Đăng xuất"
+                className="grid h-9 w-9 place-items-center rounded-md border border-slate-200 text-red-600 transition hover:border-red-200 hover:bg-red-50"
+              >
+                <Icon path="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4m6 14 5-5-5-5m5 5H9" />
+              </button>
+            </form>
+          </div>
+        </header>
+        <main className="p-4 sm:p-6 lg:p-8">{children}</main>
+      </div>
     </div>
   );
 }

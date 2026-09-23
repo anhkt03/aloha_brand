@@ -1,4 +1,59 @@
-import { prisma } from "@/lib/prisma";
 import Link from "next/link";
-const icons = ["◫", "◇", "◌", "★"];
-export default async function AdminDashboardPage() { const [courses, articles, enrollments, feedback] = await prisma.$transaction([prisma.course.count(), prisma.newsArticle.count(), prisma.enrollment.count(), prisma.feedback.count()]); const metrics = [["Khóa học", courses, "Nội dung đào tạo"], ["Tin tức", articles, "Bài viết & cập nhật"], ["Đăng ký", enrollments, "Học viên quan tâm"], ["Đánh giá", feedback, "Phản hồi học viên"]]; return <div className="rise"><div className="flex flex-wrap items-end justify-between gap-4"><div><span className="eyebrow">Tổng quan hệ thống</span><h1 className="mt-3 text-4xl font-black">Chào mừng trở lại, <span className="grad-text">ALOHA!</span></h1><p className="mt-3 text-ink-soft">Theo dõi nhanh hoạt động và nội dung của trung tâm.</p></div><div className="rounded-2xl border border-line bg-surface px-4 py-3 text-sm shadow-sm"><b className="mr-2 text-brand">●</b> Hệ thống đang hoạt động</div></div><section className="mt-9 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">{metrics.map(([label, count, caption], index) => <article key={label as string} className="card hover relative overflow-hidden p-5"><span className="absolute right-0 top-0 h-24 w-24 rounded-bl-[48px] bg-[color:color-mix(in_srgb,var(--teal)_10%,transparent)]" /><span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-grad text-xl text-white shadow-sm">{icons[index]}</span><p className="mt-5 text-sm font-bold text-ink-soft">{label}</p><p className="mt-1 font-display text-4xl font-black text-ink">{count}</p><p className="mt-2 text-xs text-muted">{caption}</p></article>)}</section><section className="mt-8 grid gap-5 lg:grid-cols-[1.4fr_1fr]"><article className="card"><div className="flex items-center justify-between"><div><p className="font-display text-lg font-black">Bắt đầu quản lý</p><p className="mt-1 text-sm text-ink-soft">Tạo nội dung đầu tiên cho website ALOHA.</p></div><span className="text-3xl">✦</span></div><div className="mt-6 grid gap-3 sm:grid-cols-2"><Link href="/admin/courses/types/new" className="rounded-2xl border border-line bg-surface-2 p-4 transition hover:border-brand hover:bg-surface"><b className="block text-sm text-brand">+ Loại khóa học</b><span className="mt-1 block text-xs text-muted">Phân loại chương trình</span></Link><Link href="/admin/courses/types" className="rounded-2xl border border-line bg-surface-2 p-4 transition hover:border-brand hover:bg-surface"><b className="block text-sm text-brand">Quản lý khóa học</b><span className="mt-1 block text-xs text-muted">Cập nhật chương trình</span></Link></div></article><article className="rounded-[var(--r)] bg-brand-grad p-6 text-white shadow"><p className="text-sm font-bold text-white/75">GỢI Ý HÔM NAY</p><h2 className="mt-3 text-2xl font-black">Một trải nghiệm đồng nhất bắt đầu từ nội dung chỉn chu.</h2><p className="mt-4 text-sm leading-relaxed text-white/80">Hoàn thiện loại khóa học và cấp độ để chuẩn bị xuất bản chương trình đầu tiên.</p></article></section></div>; }
+import { prisma } from "@/lib/prisma";
+import { PageHeader } from "@/components/admin/ui";
+
+const metricIcons = [
+  "M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z",
+  "M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z",
+  "M9 12l2 2 4-4M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14l-4-3-3 3-3-3-3 3-4-3V6z",
+  "M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z",
+];
+
+export default async function AdminDashboardPage() {
+  const [courses, articles, enrollments, feedback] = await prisma.$transaction([
+    prisma.course.count(),
+    prisma.newsArticle.count(),
+    prisma.enrollment.count(),
+    prisma.feedback.count(),
+  ]);
+  const metrics = [
+    { label: "Khóa học", count: courses, caption: "Nội dung đào tạo" },
+    { label: "Tin tức", count: articles, caption: "Bài viết & cập nhật" },
+    { label: "Đăng ký", count: enrollments, caption: "Học viên quan tâm" },
+    { label: "Đánh giá", count: feedback, caption: "Phản hồi học viên" },
+  ];
+
+  return (
+    <div>
+      <PageHeader eyebrow="Tổng quan hệ thống" title="Chào mừng trở lại, ALOHA" />
+
+      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        {metrics.map((metric, index) => (
+          <article key={metric.label} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+            <span className="grid h-10 w-10 place-items-center rounded-lg bg-indigo-50 text-indigo-600">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d={metricIcons[index]} /></svg>
+            </span>
+            <p className="mt-4 text-sm font-semibold text-slate-500">{metric.label}</p>
+            <p className="mt-1 font-display text-3xl font-black text-slate-900">{metric.count}</p>
+            <p className="mt-1 text-xs text-slate-400">{metric.caption}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <p className="font-display text-base font-black text-slate-900">Bắt đầu quản lý</p>
+        <p className="mt-1 text-sm text-slate-500">Tạo nội dung đầu tiên cho website ALOHA.</p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <Link href="/admin/courses/types/new" className="rounded-lg border border-slate-200 p-4 transition hover:border-indigo-300 hover:bg-indigo-50/40">
+            <b className="block text-sm text-indigo-600">+ Loại khóa học</b>
+            <span className="mt-1 block text-xs text-slate-400">Phân loại chương trình</span>
+          </Link>
+          <Link href="/admin/courses" className="rounded-lg border border-slate-200 p-4 transition hover:border-indigo-300 hover:bg-indigo-50/40">
+            <b className="block text-sm text-indigo-600">Quản lý khóa học</b>
+            <span className="mt-1 block text-xs text-slate-400">Cập nhật chương trình</span>
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}
