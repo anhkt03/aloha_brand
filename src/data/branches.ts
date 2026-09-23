@@ -9,7 +9,7 @@
  */
 export interface Branch {
   code: string;
-  name: string;
+  /** Tỉnh / thành phố — dùng để nhóm & hiển thị. */
   city: string;
   address: string;
   phone?: string;
@@ -21,24 +21,24 @@ export interface Branch {
 }
 
 export const branches: Branch[] = [
-  { code: "CS1", name: "Cầu Giấy", city: "Hà Nội", address: "123 Trần Duy Hưng, Cầu Giấy, Hà Nội", phone: "024 3555 1234", x: 27, y: 17 },
-  { code: "CS2", name: "Hải Dương", city: "Hải Dương", address: "56 Trần Hưng Đạo, TP. Hải Dương", phone: "0220 3555 456", x: 34, y: 18 },
-  { code: "CS3", name: "Long Biên", city: "Hà Nội", address: "88 Nguyễn Văn Cừ, Long Biên, Hà Nội", phone: "024 3888 3333", x: 30, y: 17 },
-  { code: "CS4", name: "Đống Đa", city: "Hà Nội", address: "12 Xã Đàn, Đống Đa, Hà Nội", phone: "024 3573 4444", x: 27, y: 18 },
-  { code: "CS5", name: "Bắc Ninh", city: "Bắc Ninh", address: "45 Nguyễn Trãi, TP. Bắc Ninh", phone: "0222 3555 555", x: 32, y: 16 },
-  { code: "CS6", name: "Hải Phòng", city: "Hải Phòng", address: "22 Lạch Tray, Ngô Quyền, Hải Phòng", phone: "0225 3555 666", x: 38, y: 19 },
-  { code: "CS7", name: "Thanh Xuân", city: "Hà Nội", address: "156 Nguyễn Trãi, Thanh Xuân, Hà Nội", phone: "024 3555 7777", x: 26, y: 19 },
-  { code: "CS8", name: "Hà Đông", city: "Hà Nội", address: "78 Quang Trung, Hà Đông, Hà Nội", phone: "024 3388 8888", x: 25, y: 20 },
-  { code: "CS9", name: "Nam Định", city: "Nam Định", address: "34 Trần Hưng Đạo, TP. Nam Định", phone: "0228 3555 999", x: 28, y: 22 },
-  { code: "CS10", name: "Bắc Giang", city: "Bắc Giang", address: "12 Ngô Gia Tự, TP. Bắc Giang", phone: "0204 3555 010", x: 32, y: 14 },
+  { code: "CS1", city: "Hưng Yên", address: "Bến xe Mỹ Hào, thị xã Mỹ Hào, Hưng Yên", x: 30, y: 19 },
+  { code: "CS2", city: "Hải Dương", address: "195 Phạm Văn Đồng, Thanh Bình, Hải Dương", x: 33, y: 19 },
+  { code: "CS3", city: "Hưng Yên", address: "Yên Lịch, Dân Tiến, Khoái Châu, Hưng Yên", x: 29, y: 20 },
+  { code: "CS4", city: "Hà Nội", address: "Khu Đô thị mới Cầu Giấy, Dịch Vọng, Cầu Giấy, Hà Nội", x: 27, y: 17 },
+  { code: "CS5", city: "Hải Dương", address: "241 Thống Nhất, Bình Giang, Hải Dương", x: 32, y: 20 },
+  { code: "CS6", city: "Hải Phòng", address: "409 Máng Nước, An Đồng, An Dương, Hải Phòng", x: 37, y: 19 },
+  { code: "CS7", city: "Bắc Ninh", address: "982 Đường Quang Trung, Quế Võ, Bắc Ninh", x: 31, y: 17 },
+  { code: "CS8", city: "Hải Dương", address: "2/15 phố Gia Phúc, Phương Điểm 1, Gia Lộc, Hải Dương", x: 34, y: 20 },
+  { code: "CS9", city: "Thái Nguyên", address: "348A Phan Đình Phùng, Thái Nguyên", x: 25, y: 14 },
+  { code: "CS10", city: "Vĩnh Phúc", address: "Vĩnh Yên, Vĩnh Phúc", x: 24, y: 16 },
 ];
 
 /**
  * Prefer the branch's real `mapUrl`; fall back to a Google Maps search
- * scoped to the branch name + address so the pin is still clickable.
+ * scoped to the branch address so the pin is still clickable.
  */
 export function branchMapUrl(branch: Branch): string {
   if (branch.mapUrl) return branch.mapUrl;
-  const query = encodeURIComponent(`ALOHA Language School ${branch.name} ${branch.address}`);
+  const query = encodeURIComponent(`ALOHA Language School ${branch.address}`);
   return `https://www.google.com/maps/search/?api=1&query=${query}`;
 }

@@ -68,7 +68,8 @@
   },
   "why": {
     "eyebrow": "Why ALOHA",
-    "title": "Why choose ALOHA?",
+    "title": "Why choose <b>ALOHA</b>?",
+    "sub": "More than a language course — ALOHA is a companion on your journey to bigger opportunities.",
     "trust": "10,000+ students already trust ALOHA",
     "items": {
       "roadmap": { "title": "Structured roadmap", "desc": "Clear, personalized to your level and goal." },

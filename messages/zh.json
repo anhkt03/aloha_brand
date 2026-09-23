@@ -64,7 +64,8 @@
   },
   "why": {
     "eyebrow": "为什么选择ALOHA",
-    "title": "为什么选择ALOHA?",
+    "title": "为什么选择<b>ALOHA</b>?",
+    "sub": "不仅是一门课程 —— ALOHA是陪你走向更大机会的同伴。",
     "trust": "10,000+ 学员已经选择了ALOHA",
     "items": {
       "roadmap": { "title": "系统化学习路径", "desc": "清晰、按水平和目标个性定制。" },

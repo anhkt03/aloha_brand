@@ -58,7 +58,8 @@
   },
   "why": {
     "eyebrow": "왜 ALOHA",
-    "title": "왜 ALOHA인가?",
+    "title": "왜 <b>ALOHA</b>인가?",
+    "sub": "단순한 강좌가 아니라, 더 큰 기회를 향한 여정의 동반자입니다.",
     "trust": "10,000명 이상의 수강생이 ALOHA를 선택했습니다",
     "items": {
       "roadmap": { "title": "체계적인 로드맵", "desc": "수준과 목표에 맞춘 개인 맞춤형." },

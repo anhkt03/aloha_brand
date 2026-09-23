@@ -68,7 +68,8 @@
   },
   "why": {
     "eyebrow": "Vì sao chọn ALOHA",
-    "title": "Vì sao chọn ALOHA?",
+    "title": "Vì sao chọn <b>ALOHA</b>?",
+    "sub": "Không chỉ là một khóa học, ALOHA là người bạn đồng hành trên hành trình chinh phục những cơ hội lớn hơn.",
     "trust": "Hơn 10.000+ học viên đã tin tưởng lựa chọn ALOHA",
     "items": {
       "roadmap": { "title": "Lộ trình bài bản", "desc": "Rõ ràng, cá nhân hóa theo trình độ & mục tiêu." },

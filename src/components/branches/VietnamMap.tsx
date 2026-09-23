@@ -142,7 +142,7 @@ export function VietnamMap({
                 if (dragRef.current.moved) event.preventDefault();
                 onSelect?.(branch);
               }}
-              aria-label={`Mở Google Maps: ALOHA ${branch.name}`}
+              aria-label={`Mở Google Maps: ALOHA ${branch.code} ${branch.city}`}
               className={`group absolute -translate-x-1/2 -translate-y-full ${highlighted ? "z-20" : "z-10"}`}
               style={{ left: `${branch.x}%`, top: `${branch.y}%` }}
             >
@@ -153,7 +153,7 @@ export function VietnamMap({
                 }`}
                 style={{ background: "#182a17" }}
               >
-                {branch.code} · {branch.name}
+                {branch.code} · {branch.city}
               </span>
             </a>
           );
