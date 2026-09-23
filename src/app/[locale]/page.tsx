@@ -2,6 +2,7 @@
 
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { StatsSection } from "@/components/sections/StatsSection";
 import { OfferingSection } from "@/components/sections/OfferingSection";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
@@ -33,6 +34,7 @@ export default function HomePage() {
     <>
       <HeroSection onOpenRegister={open} onGoToCourses={() => router.push("/ngoaingu")} />
       <AboutSection />
+      <StatsSection />
       <OfferingSection />
       <FeatureSection />
       <ExperienceSection />

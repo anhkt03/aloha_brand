@@ -40,7 +40,7 @@ export function SectionHead({
   return (
     <div className={cn("section-head", center && "center")}>
       {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
-      <h2 className="sec-title">{title}</h2>
+      <h2 className="sec-title whitespace-pre-line">{title}</h2>
       {sub ? <p className="sec-sub">{sub}</p> : null}
     </div>
   );

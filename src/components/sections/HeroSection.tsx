@@ -68,16 +68,12 @@ function HeroIllustration() {
       <div className="relative h-full w-full animate-hero-float">
         <div className="relative h-full w-full animate-hero-spin">
           <Image
-            src="/images/homepage/earth.jpg"
+            src="/images/homepage/earth.png"
             alt="Earth"
             fill
             priority
             sizes="(min-width:1024px) 400px, (min-width:640px) 340px, 80vw"
             className="object-contain"
-            style={{
-              clipPath: "circle(46% at 50% 50%)",
-              WebkitClipPath: "circle(46% at 50% 50%)",
-            }}
           />
         </div>
       </div>

@@ -24,10 +24,21 @@
     "eyebrow": "私たちについて",
     "title": "ALOHA Language School",
     "pillars": { "quality": "品質", "experience": "体験", "growth": "総合的な成長" },
-    "quote": "ALOHAは「品質・体験・総合的な成長」の3本柱を軸にした多言語スクールです。",
+    "quote": "ALOHAは3つの主要な柱を軸に学習の旅を築く多言語スクールです",
     "body": "<b>現代的な学習環境、体系的なカリキュラム、目標に沿った個別ロードマップ</b>を提供します。",
-    "cta": "ALOHAを詳しく",
-    "stats": { "years": "年の経験", "branches": "教室", "students": "受講生" }
+    "cta": "ALOHAを詳しく"
+  },
+  "stats": {
+    "eyebrow": "数字が語る",
+    "title": "語学の旅と\n<b>無数のチャンス</b>",
+    "sub": "数字がALOHAの学生一人ひとりの未来を築く取り組みを裏付けます。",
+    "items": {
+      "years": "年の経験",
+      "branches": "全国の教室",
+      "students": "受講生",
+      "languages": "教育言語",
+      "goal": "目標達成率"
+    }
   },
   "offering": {
     "eyebrow": "ALOHAが提供するもの",
@@ -47,7 +58,8 @@
   },
   "why": {
     "eyebrow": "なぜALOHA",
-    "title": "なぜALOHAを選ぶのか?",
+    "title": "なぜ<b>ALOHA</b>を選ぶのか?",
+    "sub": "単なる語学コースではなく、より大きなチャンスを掴むための伴走者です。",
     "trust": "10,000名以上に選ばれています",
     "items": {
       "roadmap": { "title": "体系的なロードマップ", "desc": "レベルと目標に沿ったオーダーメイド。" },
@@ -60,8 +72,8 @@
   },
   "experience": {
     "eyebrow": "学習体験",
-    "title": "ALOHAでの学習体験",
-    "closing": "授業に出るだけでなく、学習・実践・評価まで伴走します。",
+    "title": "<b>ALOHA</b>での\n学習体験",
+    "closing": "授業に出るだけでなく、<b>学習・実践・評価まで伴走します。</b>",
     "items": {
       "small": { "title": "少人数クラス", "desc": "講師が一人ひとりに時間をかけて添削・サポート。" },
       "cycle": { "title": "学ぶ・練習・テスト", "desc": "課題と定期テストで進捗を可視化。" },
@@ -77,8 +89,8 @@
     "steps": { "learn": "語学を学ぶ", "certificate": "資格を取得", "direction": "進路を選ぶ", "future": "留学 / キャリア" }
   },
   "testimonials": {
-    "eyebrow": "受講生の声",
-    "title": "受講生がALOHAをどう見ているか",
+    "eyebrow": "受講生の感想",
+    "title": "受講生が<b>ALOHA</b>をどう見ているか",
     "viewMore": "もっと見る",
     "trustBadge": "10,000名以上に選ばれています"
   },
@@ -120,24 +132,65 @@
       "eyebrow": "ALOHAで留学",
       "title": "グローバルな夢へ",
       "lead": "学校選び、書類、奨学金、ビザ、現地サポートまで — 中国・韓国・日本と英語圏まで対応。",
-      "destinationsTitle": "どこへ行きたい?",
-      "destinations": {
-        "china": { "name": "中国", "desc": "CSC・孔子学院奨学金、自費。" },
-        "korea": { "name": "韓国", "desc": "TOPIK 3+でD-2、学士・修士プログラム。" },
-        "japan": { "name": "日本", "desc": "JLPT N3+、日本語学校・専門学校・大学。" },
-        "uk": { "name": "英国", "desc": "Foundation、学士、修士 — トップUK校。" }
+      "hero": {
+        "badge": "2026年秋入学 出願受付中",
+        "ctaPrimary": "無料相談を受ける",
+        "ctaSecondary": "サンプルの流れを見る"
       },
-      "journeyTitle": "ALOHAで留学するまでの7ステップ",
-      "journeySub": "透明なプロセス — 今どこにいるか常に把握できます。",
-      "steps": [
-        { "title": "オリエンテーション相談", "desc": "レベルと希望を評価し、国と専攻を提案。" },
-        { "title": "語学学習", "desc": "学校の入学条件を満たす(TOPIK・JLPT・HSK・IELTS等)。" },
-        { "title": "学校・専攻選び", "desc": "学校リスト、学費・奨学金・キャリアを比較。" },
-        { "title": "書類作成", "desc": "成績・学習計画・推薦状・ポートフォリオ。" },
-        { "title": "出願", "desc": "学校と奨学金へ出願し、進捗を管理。" },
-        { "title": "面接・ビザ", "desc": "面接練習、ビザ書類、財務資料。" },
-        { "title": "出発・現地サポート", "desc": "住居手配、空港ピックアップ、環境への適応。" }
-      ],
+      "countries": {
+        "eyebrow": "留学先",
+        "title": "行きたい国を選ぶ",
+        "sub": "国はチャンスの扉。ALOHAが能力・専攻・予算に合う一枚を提案します。",
+        "labels": {
+          "tuition": "学費",
+          "language": "語学要件",
+          "majors": "人気専攻",
+          "scholarship": "奨学金"
+        },
+        "yearUnit": "/年",
+        "explore": "詳細を見る"
+      },
+      "destinations": {
+        "china": { "name": "中国" },
+        "korea": { "name": "韓国" },
+        "japan": { "name": "日本" },
+        "uk": { "name": "英国" },
+        "singapore": { "name": "シンガポール" },
+        "europe": { "name": "ヨーロッパ" }
+      },
+      "timeline": {
+        "eyebrow": "出願ロードマップ",
+        "title": "12ヶ月で入学へ",
+        "sub": "9月入学向けのサンプル。国・個人事情に合わせて調整します。"
+      },
+      "scholarships": {
+        "eyebrow": "奨学金",
+        "title": "ALOHAで狙える奨学金",
+        "sub": "世界の政府系・民間奨学金までサポートします。",
+        "audienceLabel": "対象",
+        "valueLabel": "内容"
+      },
+      "stories": {
+        "eyebrow": "受講生ストーリー",
+        "title": "ALOHA受講生の進路",
+        "sub": "海外大学で学ぶALOHA卒業生たち。",
+        "yearLabel": "入学"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "よくある質問",
+        "sub": "留学に関するよくある疑問に手短にお答えします。"
+      },
+      "form": {
+        "eyebrow": "相談予約",
+        "title": "無料の1対1留学相談",
+        "sub": "情報を入力 — 24時間以内にALOHAより個別プランをご連絡します。",
+        "destination": "希望の国",
+        "note": "その他(任意)",
+        "submit": "相談を送信",
+        "success": "ありがとうございます。24時間以内にご連絡します。",
+        "trust": "10,000名以上に選ばれています"
+      },
       "cta": "留学相談を受ける"
     },
     "about": {

@@ -34,10 +34,21 @@
     "eyebrow": "Về chúng tôi",
     "title": "ALOHA Language School",
     "pillars": { "quality": "Chất lượng", "experience": "Trải nghiệm", "growth": "Phát triển toàn diện" },
-    "quote": "ALOHA là hệ thống đào tạo đa ngôn ngữ với định hướng xây dựng hành trình học tập dựa trên 3 trụ cột",
+    "quote": "ALOHA là hệ thống đào tạo đa ngôn ngữ với định hướng xây dựng hành trình học tập dựa trên 3 trụ cột chính",
     "body": "ALOHA hướng tới mang đến <b>môi trường học tập hiện đại, chương trình đào tạo bài bản và lộ trình phù hợp</b> với mục tiêu của từng học viên.",
-    "cta": "Tìm hiểu về ALOHA",
-    "stats": { "years": "Năm kinh nghiệm", "branches": "Cơ sở", "students": "Học viên" }
+    "cta": "Tìm hiểu về ALOHA"
+  },
+  "stats": {
+    "eyebrow": "Số liệu biết nói",
+    "title": "Hành trình ngôn ngữ cùng\n<b>hàng ngàn cơ hội</b>",
+    "sub": "Những con số là minh chứng cho cam kết và nỗ lực của ALOHA trong hành trình kiến tạo tương lai cho mỗi học viên.",
+    "items": {
+      "years": "Năm kinh nghiệm",
+      "branches": "Cơ sở toàn quốc",
+      "students": "Học viên",
+      "languages": "Ngôn ngữ đào tạo",
+      "goal": "Học viên đạt mục tiêu"
+    }
   },
   "offering": {
     "eyebrow": "ALOHA có gì dành cho bạn",
@@ -57,7 +68,8 @@
   },
   "why": {
     "eyebrow": "Vì sao chọn ALOHA",
-    "title": "Vì sao chọn ALOHA?",
+    "title": "Vì sao chọn <b>ALOHA</b>?",
+    "sub": "Không chỉ là một khóa học, ALOHA là người bạn đồng hành trên hành trình chinh phục những cơ hội lớn hơn.",
     "trust": "Hơn 10.000+ học viên đã tin tưởng lựa chọn ALOHA",
     "items": {
       "roadmap": { "title": "Lộ trình bài bản", "desc": "Rõ ràng, cá nhân hóa theo trình độ & mục tiêu." },
@@ -70,8 +82,8 @@
   },
   "experience": {
     "eyebrow": "Trải nghiệm học tập",
-    "title": "Trải nghiệm học tập tại ALOHA",
-    "closing": "Không chỉ đến lớp để học, học viên được theo sát trong suốt quá trình từ học kiến thức, thực hành, làm bài đến đánh giá kết quả.",
+    "title": "Trải nghiệm học tập\n<b>tại ALOHA</b>",
+    "closing": "Không chỉ đến lớp để học, học viên được theo sát trong suốt quá trình <b>từ học kiến thức, thực hành, làm bài đến đánh giá kết quả.</b>",
     "items": {
       "small": { "title": "Lớp học quy mô nhỏ", "desc": "Giáo viên có thời gian tương tác, sửa lỗi và hỗ trợ từng học viên." },
       "cycle": { "title": "Học – Luyện – Kiểm tra", "desc": "Ngoài việc học trên lớp, học viên được giao bài, luyện tập và kiểm tra định kỳ để đánh giá mức độ tiến bộ." },
@@ -92,8 +104,8 @@
     }
   },
   "testimonials": {
-    "eyebrow": "Học viên nói gì",
-    "title": "Học viên nói gì về ALOHA?",
+    "eyebrow": "Cảm nhận của học viên",
+    "title": "Học viên nói gì về <b>ALOHA</b>?",
     "viewMore": "Xem thêm câu chuyện học viên",
     "trustBadge": "Được tin yêu bởi 10.000+ học viên"
   },
@@ -135,24 +147,65 @@
       "eyebrow": "Du học cùng ALOHA",
       "title": "Chạm tay tới giấc mơ toàn cầu",
       "lead": "Đồng hành trọn gói từ chọn trường, hoàn thiện hồ sơ đến visa và định cư — Trung, Hàn, Nhật và các nước nói tiếng Anh.",
-      "destinationsTitle": "Bạn muốn đi đâu?",
-      "destinations": {
-        "china": { "name": "Trung Quốc", "desc": "Học bổng chính phủ CSC, Khổng Tử, tự túc." },
-        "korea": { "name": "Hàn Quốc", "desc": "TOPIK 3+ vào D-2, chương trình cử nhân · thạc sĩ." },
-        "japan": { "name": "Nhật Bản", "desc": "JLPT N3+, trường Nhật ngữ · Senmon · Đại học." },
-        "uk": { "name": "Anh quốc", "desc": "Foundation, cử nhân, thạc sĩ – các trường Top UK." }
+      "hero": {
+        "badge": "Du học 2026 mở đăng ký",
+        "ctaPrimary": "Nhận tư vấn miễn phí",
+        "ctaSecondary": "Xem hành trình mẫu"
       },
-      "journeyTitle": "7 bước du học cùng ALOHA",
-      "journeySub": "Quy trình minh bạch — bạn luôn biết mình đang ở đâu trên hành trình.",
-      "steps": [
-        { "title": "Tư vấn định hướng", "desc": "Đánh giá năng lực và mong muốn, gợi ý quốc gia/ngành phù hợp." },
-        { "title": "Học ngoại ngữ", "desc": "Đạt chuẩn ngôn ngữ đầu vào của trường (TOPIK, JLPT, HSK, IELTS...)." },
-        { "title": "Chọn trường & ngành", "desc": "Tư vấn danh sách trường, so sánh học phí, học bổng, cơ hội việc làm." },
-        { "title": "Hoàn thiện hồ sơ", "desc": "Bảng điểm, kế hoạch học tập, thư giới thiệu, portfolio nếu cần." },
-        { "title": "Nộp hồ sơ apply", "desc": "Nộp trường và các quỹ học bổng phù hợp; theo dõi phản hồi." },
-        { "title": "Phỏng vấn & Visa", "desc": "Luyện phỏng vấn, hồ sơ visa, giải trình tài chính." },
-        { "title": "Lên đường & Hỗ trợ", "desc": "Hỗ trợ ổn định nơi ở, đón sân bay, hòa nhập môi trường mới." }
-      ],
+      "countries": {
+        "eyebrow": "Điểm đến",
+        "title": "Chọn quốc gia của bạn",
+        "sub": "Mỗi quốc gia là một cánh cửa — ALOHA đưa bạn tới nơi phù hợp với năng lực, ngành học và ngân sách.",
+        "labels": {
+          "tuition": "Học phí",
+          "language": "Yêu cầu ngôn ngữ",
+          "majors": "Ngành phổ biến",
+          "scholarship": "Học bổng"
+        },
+        "yearUnit": "/năm",
+        "explore": "Xem chi tiết"
+      },
+      "destinations": {
+        "china": { "name": "Trung Quốc" },
+        "korea": { "name": "Hàn Quốc" },
+        "japan": { "name": "Nhật Bản" },
+        "uk": { "name": "Anh Quốc" },
+        "singapore": { "name": "Singapore" },
+        "europe": { "name": "Châu Âu" }
+      },
+      "timeline": {
+        "eyebrow": "Lộ trình apply",
+        "title": "12 tháng đi tới giảng đường",
+        "sub": "Timeline mẫu cho kỳ nhập học tháng 9 — điều chỉnh cho từng quốc gia và học viên."
+      },
+      "scholarships": {
+        "eyebrow": "Học bổng",
+        "title": "Cơ hội học bổng cùng ALOHA",
+        "sub": "Chúng tôi đồng hành cùng bạn qua các học bổng chính phủ và tư nhân trên toàn cầu.",
+        "audienceLabel": "Đối tượng",
+        "valueLabel": "Giá trị"
+      },
+      "stories": {
+        "eyebrow": "Câu chuyện học viên",
+        "title": "Học viên ALOHA đã đi đâu?",
+        "sub": "Những gương mặt học viên ALOHA đã và đang học tập tại các trường quốc tế.",
+        "yearLabel": "Nhập học"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Câu hỏi thường gặp",
+        "sub": "Câu trả lời nhanh cho những băn khoăn phổ biến về du học."
+      },
+      "form": {
+        "eyebrow": "Đăng ký tư vấn",
+        "title": "Nhận tư vấn du học 1-1 miễn phí",
+        "sub": "Điền thông tin — ALOHA sẽ gọi lại trong 24 giờ để lên lộ trình cá nhân cho bạn.",
+        "destination": "Quốc gia mong muốn",
+        "note": "Chia sẻ thêm (tùy chọn)",
+        "submit": "Gửi yêu cầu tư vấn",
+        "success": "Cảm ơn bạn! ALOHA sẽ liên hệ trong 24 giờ.",
+        "trust": "10.000+ học viên đã tin tưởng"
+      },
       "cta": "Nhận tư vấn du học"
     },
     "about": {

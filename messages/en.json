@@ -34,10 +34,21 @@
     "eyebrow": "About us",
     "title": "ALOHA Language School",
     "pillars": { "quality": "Quality", "experience": "Experience", "growth": "Well-rounded growth" },
-    "quote": "ALOHA is a multi-language school built around three pillars",
+    "quote": "ALOHA is a multi-language school built around three main pillars",
     "body": "We deliver <b>a modern learning environment, a rigorous curriculum, and a personalized path</b> for every student's goal.",
-    "cta": "Learn about ALOHA",
-    "stats": { "years": "Years of experience", "branches": "Branches", "students": "Students" }
+    "cta": "Learn about ALOHA"
+  },
+  "stats": {
+    "eyebrow": "Numbers speak",
+    "title": "A language journey with\n<b>thousands of opportunities</b>",
+    "sub": "Numbers back up ALOHA's commitment and effort in shaping every student's future.",
+    "items": {
+      "years": "Years of experience",
+      "branches": "Branches nationwide",
+      "students": "Students",
+      "languages": "Languages taught",
+      "goal": "Students meet their goal"
+    }
   },
   "offering": {
     "eyebrow": "What ALOHA offers",
@@ -57,7 +68,8 @@
   },
   "why": {
     "eyebrow": "Why ALOHA",
-    "title": "Why choose ALOHA?",
+    "title": "Why choose <b>ALOHA</b>?",
+    "sub": "More than a language course — ALOHA is a companion on your journey to bigger opportunities.",
     "trust": "10,000+ students already trust ALOHA",
     "items": {
       "roadmap": { "title": "Structured roadmap", "desc": "Clear, personalized to your level and goal." },
@@ -70,8 +82,8 @@
   },
   "experience": {
     "eyebrow": "Learning experience",
-    "title": "Learning experience at ALOHA",
-    "closing": "You don't just come to class — you're supported end-to-end, from learning and practice to assessment.",
+    "title": "Learning experience\n<b>at ALOHA</b>",
+    "closing": "You don't just come to class — <b>you're supported end-to-end, from learning and practice to assessment.</b>",
     "items": {
       "small": { "title": "Small classes", "desc": "Teachers have time to interact, correct and support every student." },
       "cycle": { "title": "Learn – Practice – Test", "desc": "Beyond classes, students get homework, practice and periodic tests to measure progress." },
@@ -92,8 +104,8 @@
     }
   },
   "testimonials": {
-    "eyebrow": "Student voices",
-    "title": "What students say about ALOHA",
+    "eyebrow": "Student feedback",
+    "title": "What students say about <b>ALOHA</b>",
     "viewMore": "More student stories",
     "trustBadge": "Trusted by 10,000+ students"
   },
@@ -134,25 +146,66 @@
     "global": {
       "eyebrow": "Study abroad with ALOHA",
       "title": "Reach your global dream",
-      "lead": "End-to-end support — from school choice, application, scholarships and visa to settling in — for China, Korea, Japan and English-speaking countries.",
-      "destinationsTitle": "Where do you want to go?",
-      "destinations": {
-        "china": { "name": "China", "desc": "CSC & Confucius Institute scholarships, or self-funded." },
-        "korea": { "name": "Korea", "desc": "TOPIK 3+ for a D-2 visa; bachelor and master programs." },
-        "japan": { "name": "Japan", "desc": "JLPT N3+, Japanese language schools, Senmon and universities." },
-        "uk": { "name": "UK", "desc": "Foundation, bachelor and master programs — top UK schools." }
+      "lead": "End-to-end support — from school choice and application to scholarships, visa and settling in — for China, Korea, Japan and English-speaking countries.",
+      "hero": {
+        "badge": "2026 intake now open",
+        "ctaPrimary": "Get a free consult",
+        "ctaSecondary": "See a sample roadmap"
       },
-      "journeyTitle": "7 steps to study abroad with ALOHA",
-      "journeySub": "A transparent process — you always know where you are on the journey.",
-      "steps": [
-        { "title": "Advisory & orientation", "desc": "Assess your ability and goal, then suggest countries and majors that fit." },
-        { "title": "Language study", "desc": "Reach the school's language requirement (TOPIK, JLPT, HSK, IELTS...)." },
-        { "title": "Choose school & major", "desc": "Curate a school list, compare tuition, scholarships and career outcomes." },
-        { "title": "Application dossier", "desc": "Transcripts, study plan, recommendation letters, portfolio if needed." },
-        { "title": "Submit applications", "desc": "Apply to schools and matched scholarship funds; track responses." },
-        { "title": "Interview & Visa", "desc": "Interview coaching, visa dossier and financial proof." },
-        { "title": "Departure & support", "desc": "Housing setup, airport pickup, and settling into your new environment." }
-      ],
+      "countries": {
+        "eyebrow": "Destinations",
+        "title": "Pick your country",
+        "sub": "Every country is a door — ALOHA takes you to the one that fits your ability, major and budget.",
+        "labels": {
+          "tuition": "Tuition",
+          "language": "Language requirement",
+          "majors": "Popular majors",
+          "scholarship": "Scholarships"
+        },
+        "yearUnit": "/year",
+        "explore": "Explore"
+      },
+      "destinations": {
+        "china": { "name": "China" },
+        "korea": { "name": "Korea" },
+        "japan": { "name": "Japan" },
+        "uk": { "name": "United Kingdom" },
+        "singapore": { "name": "Singapore" },
+        "europe": { "name": "Europe" }
+      },
+      "timeline": {
+        "eyebrow": "Application roadmap",
+        "title": "12 months to campus",
+        "sub": "A sample timeline for a September intake — adjusted per country and per student."
+      },
+      "scholarships": {
+        "eyebrow": "Scholarships",
+        "title": "Scholarship opportunities with ALOHA",
+        "sub": "We walk with you through public and private scholarships around the world.",
+        "audienceLabel": "For",
+        "valueLabel": "Value"
+      },
+      "stories": {
+        "eyebrow": "Student stories",
+        "title": "Where our students have gone",
+        "sub": "ALOHA alumni already studying at international universities.",
+        "yearLabel": "Enrolled"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Frequently asked questions",
+        "sub": "Quick answers to common study-abroad questions."
+      },
+      "form": {
+        "eyebrow": "Book a consult",
+        "title": "Free 1-on-1 study-abroad consult",
+        "sub": "Drop your info — ALOHA calls back within 24 hours with a personalized roadmap.",
+        "destination": "Preferred country",
+        "note": "Anything else (optional)",
+        "submit": "Send request",
+        "success": "Thank you! ALOHA will reach out within 24 hours.",
+        "trust": "Trusted by 10,000+ students"
+      },
       "cta": "Get study-abroad advice"
     },
     "about": {
