@@ -7,10 +7,11 @@ import { requireAdminUser } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { deleteManagedImages } from "@/lib/storage";
 import { newsArticleFromForm, newsArticleSchema } from "@/lib/validation/news-article";
+import { LOCALES } from "@/lib/constants";
 
 function invalidate(slug?: string) {
   revalidatePath("/admin/news");
-  for (const locale of ["vi", "en", "ko", "ja", "zh"]) {
+  for (const locale of LOCALES) {
     revalidatePath(`/${locale}/news`);
     if (slug) revalidatePath(`/${locale}/news/${slug}`);
   }

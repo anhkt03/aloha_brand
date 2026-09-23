@@ -1,6 +1,7 @@
 import { z } from "zod";
+import { LOCALES } from "../constants";
 
-export const taxonomyLocales = ["vi", "en", "ko", "ja"] as const;
+export const taxonomyLocales = LOCALES;
 const translationSchema = z.object({ locale: z.enum(taxonomyLocales), name: z.string().trim().min(1).max(160) });
 
 export const courseTypeSchema = z.object({

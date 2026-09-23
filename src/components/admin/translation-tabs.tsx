@@ -3,6 +3,7 @@ import { taxonomyLocales } from "@/lib/validation/course-taxonomy";
 const localeNames: Record<(typeof taxonomyLocales)[number], string> = {
   vi: "Tiếng Việt",
   en: "English",
+  zh: "中文",
   ko: "한국어",
   ja: "日本語",
 };

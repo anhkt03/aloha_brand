@@ -38,6 +38,6 @@ export const BREAKPOINTS = {
   xl: 1280,
 } as const;
 
-export const LOCALES = ["vi", "en", "zh", "ja", "ko"] as const;
+export const LOCALES = ["vi", "en", "zh", "ko", "ja"] as const;
 export const DEFAULT_LOCALE = "vi";
 export type Locale = (typeof LOCALES)[number];
