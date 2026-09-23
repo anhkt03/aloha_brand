@@ -58,9 +58,9 @@ export function AboutWhat() {
       <div className="section">
         <SectionHead center eyebrow={t("eyebrow")} title={t("title")} sub={t("lead")} />
 
-        <div className="mt-12 flex flex-col items-stretch gap-4 md:flex-row md:items-center md:justify-center md:gap-2">
+        <div className="mt-12 flex flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-2">
           {STEPS.map((step, idx) => (
-            <div key={step.key} className="flex flex-col items-center gap-4 md:flex-row">
+            <div key={step.key} className="flex flex-col items-center gap-4 md:flex-row md:items-start">
               <div className="flex flex-col items-center text-center md:w-40">
                 <span
                   className="grid h-16 w-16 place-items-center rounded-2xl text-white shadow"
@@ -96,7 +96,7 @@ function Arrow() {
   return (
     <svg
       viewBox="0 0 40 40"
-      className="h-5 w-5 rotate-90 text-brand md:h-6 md:w-6 md:rotate-0"
+      className="h-5 w-5 rotate-90 text-brand md:mt-5 md:h-6 md:w-6 md:rotate-0"
       fill="none"
       stroke="currentColor"
       strokeWidth="2.4"

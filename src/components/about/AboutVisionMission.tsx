@@ -22,7 +22,7 @@ export function AboutVisionMission() {
             {/* Vision */}
             <article
               className="relative overflow-hidden rounded-2xl p-8 text-white shadow-lg"
-              style={{ background: "linear-gradient(140deg,#469142 0%,#295326 100%)" }}
+              style={{ background: "var(--grad)" }}
             >
               <span aria-hidden className="absolute -right-14 -top-14 h-40 w-40 rounded-full bg-white/10" />
               <span aria-hidden className="absolute -bottom-16 -left-10 h-36 w-36 rounded-full bg-white/[.08]" />
@@ -56,7 +56,7 @@ export function AboutVisionMission() {
                   <li key={item} className="flex gap-3 text-[15px] text-ink-soft">
                     <span
                       className="mt-1 grid h-5 w-5 flex-shrink-0 place-items-center rounded-full text-white"
-                      style={{ background: "var(--brand)" }}
+                      style={{ background: "var(--grad)" }}
                     >
                       <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m5 13 5 5L20 7" />
