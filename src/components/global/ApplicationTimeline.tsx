@@ -52,7 +52,7 @@ export function ApplicationTimeline() {
       <Container>
         <SectionHead center eyebrow={t("eyebrow")} title={t("title")} />
 
-        <div className="flex flex-wrap items-start justify-center gap-x-1 gap-y-10 lg:flex-nowrap">
+        <div className="flex flex-wrap items-stretch justify-center gap-x-1 gap-y-10 lg:flex-nowrap">
           {globalTimelineSteps.map((stepKey, idx) => (
             <Fragment key={stepKey}>
               <div className="flex w-[min(220px,44vw)] flex-col items-center rounded-2xl border border-brand bg-surface p-5 text-center shadow-sm lg:w-auto lg:flex-1">

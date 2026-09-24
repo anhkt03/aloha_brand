@@ -819,7 +819,9 @@
     "news": {
       "eyebrow": "Tin tức & Sự kiện",
       "title": "Tin tức ALOHA",
-      "lead": "Cập nhật tuyển sinh, câu chuyện học viên và sự kiện tại ALOHA."
+      "lead": "Cập nhật tuyển sinh, câu chuyện học viên và sự kiện tại ALOHA.",
+      "latest": "Mới nhất",
+      "gallery": "Hình ảnh"
     },
     "contact": {
       "eyebrow": "Liên hệ",
