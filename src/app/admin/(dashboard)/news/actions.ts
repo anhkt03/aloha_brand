@@ -1,7 +1,7 @@
 "use server";
 
 import { NewsStatus } from "@prisma/client";
-import { revalidatePath } from "next/cache";
+import { revalidatePath, updateTag } from "next/cache";
 import { redirect } from "next/navigation";
 import { writeAuditLog } from "@/lib/audit";
 import { requireAdminUser } from "@/lib/auth";
@@ -11,6 +11,14 @@ import { newsArticleFromForm, newsArticleSchema } from "@/lib/validation/news-ar
 import { LOCALES } from "@/lib/constants";
 
 function invalidate(slug?: string) {
+  // `getPublicNews` is wrapped in `unstable_cache(..., { tags: ["news"] })` —
+  // that data cache entry only clears via a tag revalidation, not
+  // `revalidatePath` (which just busts the route cache; the re-render would
+  // still read the same stale cached rows). `updateTag` is Next 16's
+  // Server-Action-only, read-your-own-writes primitive — the admin sees the
+  // change immediately instead of `revalidateTag`'s stale-while-revalidate
+  // window.
+  updateTag("news");
   revalidatePath("/admin/news");
   for (const locale of LOCALES) {
     revalidatePath(`/${locale}/news`);

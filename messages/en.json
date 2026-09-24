@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "training": "Training",
+    "training": "Languages",
     "global": "Study Abroad",
     "about": "About ALOHA",
     "branches": "Branches",
@@ -244,7 +244,9 @@
       "coursesList": {
         "title": "Currently enrolling",
         "empty": "No open courses yet.",
-        "all": "All"
+        "all": "All",
+        "viewMore": "View more",
+        "register": "Register"
       },
       "goals": {
         "eyebrow": "Learn by Goal",
@@ -817,7 +819,9 @@
     "news": {
       "eyebrow": "News & events",
       "title": "ALOHA News",
-      "lead": "Enrollment updates, student stories and events at ALOHA."
+      "lead": "Enrollment updates, student stories and events at ALOHA.",
+      "latest": "Latest",
+      "gallery": "Gallery"
     },
     "contact": {
       "eyebrow": "Contact",

@@ -29,7 +29,7 @@ export function OfferingSection() {
             items={training}
             ctaLabel={t("training.cta")}
             onCta={() => router.push("/ngoaingu")}
-            image="/images/homepage/class.jpg"
+            image="/images/homepage/home-studyboard.png"
             imageAlt="Lớp học ALOHA"
             icon={
               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
@@ -42,7 +42,7 @@ export function OfferingSection() {
             items={global}
             ctaLabel={t("global.cta")}
             onCta={() => router.push("/duhocquocte")}
-            image="/images/homepage/studyaboad.jpg"
+            image="/images/homepage/home-language.png"
             imageAlt="Du học cùng ALOHA"
             icon={
               <>

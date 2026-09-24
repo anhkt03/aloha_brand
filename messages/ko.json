@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "홈",
-    "training": "어학",
+    "training": "외국어",
     "global": "유학",
     "about": "ALOHA 소개",
     "branches": "지점",
@@ -244,7 +244,9 @@
       "coursesList": {
         "title": "모집 중인 과정",
         "empty": "현재 개설된 과정이 없습니다.",
-        "all": "전체"
+        "all": "전체",
+        "viewMore": "더보기",
+        "register": "신청하기"
       },
       "goals": {
         "eyebrow": "목표별 학습",
@@ -817,7 +819,9 @@
     "news": {
       "eyebrow": "뉴스 & 이벤트",
       "title": "ALOHA 뉴스",
-      "lead": "모집 안내, 수강생 이야기, 이벤트를 만나보세요."
+      "lead": "모집 안내, 수강생 이야기, 이벤트를 만나보세요.",
+      "latest": "최신",
+      "gallery": "갤러리"
     },
     "contact": {
       "eyebrow": "문의",

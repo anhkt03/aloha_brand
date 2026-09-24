@@ -53,19 +53,22 @@ export function TrainingList({ courses, categories }: { courses: Course[]; categ
       {paged.length ? (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {paged.map((course) => {
-            const flag = getCategoryFlag(course.category);
+            const flag = getCategoryFlag(course.categoryFlagKey);
             return (
               <article key={course.id} className="flex flex-col overflow-hidden rounded-lg border border-line bg-surface transition hover:-translate-y-1 hover:shadow">
-                <div className={`relative overflow-hidden px-6 py-5 ${flag ? "" : "bg-brand-grad text-white"}`}>
+                <div className={`relative flex aspect-video flex-col justify-end overflow-hidden px-6 py-5 ${flag ? "" : "bg-brand-grad text-white"}`}>
                   {flag && (
                     <>
                       <Image src={flag} alt="" aria-hidden fill sizes="400px" className="object-cover" />
                       <div aria-hidden className="absolute inset-0 bg-white/60" />
                     </>
                   )}
-                  <div className={`relative ${flag ? "text-ink" : ""}`}>
-                    <div className={`text-sm ${flag ? "text-ink/70" : "opacity-90"}`}>{course.category}</div>
-                    <div className="mt-1 font-display text-2xl font-black">{course.level}</div>
+                  <div className="relative">
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-brand bg-surface px-3.5 py-1.5 font-display text-[13px] font-bold text-ink shadow-sm">
+                      {course.category}
+                      <span className="text-ink/40">-</span>
+                      {course.level}
+                    </span>
                   </div>
                 </div>
                 <div className="flex flex-1 flex-col gap-3 p-6">
@@ -78,11 +81,11 @@ export function TrainingList({ courses, categories }: { courses: Course[]; categ
                       onClick={() => setSelectedCourse(course)}
                       className="mt-1 font-display text-[13px] font-bold text-brand hover:underline"
                     >
-                      Xem thêm
+                      {t("viewMore")}
                     </button>
                   </div>
                   <div className="mt-auto pt-3">
-                    <Button variant="primary" size="sm" onClick={open}>Đăng ký</Button>
+                    <Button variant="primary" size="sm" onClick={open}>{t("register")}</Button>
                   </div>
                 </div>
               </article>

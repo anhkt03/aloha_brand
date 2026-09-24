@@ -21,15 +21,17 @@ export function StudyFormatSection() {
         <div className="grid gap-8 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
           <div className="grid gap-5 sm:grid-cols-2">
             {FORMATS.map((key, idx) => (
-              <article key={key} className="flex flex-col gap-3 rounded-2xl border border-line bg-surface p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+              <article key={key} className="flex items-start gap-3 rounded-2xl border border-line bg-surface p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:flex-col sm:items-stretch">
                 <span
-                  className="grid h-12 w-12 place-items-center rounded-2xl text-brand"
+                  className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-2xl text-brand"
                   style={{ background: "color-mix(in srgb, var(--brand) 12%, transparent)" }}
                 >
                   <FormatIcon index={idx} />
                 </span>
-                <h3 className="font-display text-[16px] font-black text-ink">{t(`items.${key}.title`)}</h3>
-                <p className="text-[13.5px] leading-relaxed text-ink-soft">{t(`items.${key}.desc`)}</p>
+                <div className="min-w-0">
+                  <h3 className="font-display text-[16px] font-black text-ink">{t(`items.${key}.title`)}</h3>
+                  <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink-soft">{t(`items.${key}.desc`)}</p>
+                </div>
               </article>
             ))}
           </div>

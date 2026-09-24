@@ -5,7 +5,17 @@ import { Container } from "@/components/common/Container";
 import { SectionHead } from "@/components/common/Section";
 
 type ItemKey = "smallClass" | "practice" | "tracking" | "personalize" | "commitment";
-const ITEMS: ItemKey[] = ["smallClass", "practice", "tracking", "personalize", "commitment"];
+// Display order (personalize moved up, practice moved down to the
+// centered 2-card row) — kept separate from `ICON_INDEX` below, which
+// tracks each item's fixed icon regardless of display order.
+const ITEMS: ItemKey[] = ["smallClass", "personalize", "tracking", "practice", "commitment"];
+const ICON_INDEX: Record<ItemKey, number> = {
+  smallClass: 0,
+  practice: 1,
+  tracking: 2,
+  personalize: 3,
+  commitment: 4,
+};
 
 /**
  * "Phương pháp học tại ALOHA" — 5 method highlights on the left, a
@@ -20,17 +30,22 @@ export function MethodSection() {
         <div className="section">
           <SectionHead center eyebrow={t("eyebrow")} title={t("title")} />
           <div className="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
-            <div className="grid gap-5 sm:grid-cols-3">
-              {ITEMS.map((key, idx) => (
-                <article key={key} className="flex flex-col gap-3 rounded-2xl border border-line bg-surface p-5 shadow-sm">
+            <div className="flex flex-wrap justify-center gap-5">
+              {ITEMS.map((key) => (
+                <article
+                  key={key}
+                  className="flex w-full items-start gap-3 rounded-2xl border border-line bg-surface p-5 shadow-sm sm:w-[calc((100%-40px)/3)] sm:flex-col sm:items-stretch"
+                >
                   <span
-                    className="grid h-11 w-11 place-items-center rounded-xl text-brand"
+                    className="grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl text-brand"
                     style={{ background: "color-mix(in srgb, var(--brand) 12%, transparent)" }}
                   >
-                    <MethodIcon index={idx} />
+                    <MethodIcon index={ICON_INDEX[key]} />
                   </span>
-                  <h3 className="font-display text-[14.5px] font-black leading-snug text-ink">{t(`items.${key}.title`)}</h3>
-                  <p className="text-[12.5px] leading-relaxed text-ink-soft">{t(`items.${key}.desc`)}</p>
+                  <div className="min-w-0">
+                    <h3 className="font-display text-[14.5px] font-black leading-snug text-ink">{t(`items.${key}.title`)}</h3>
+                    <p className="mt-1 text-[12.5px] leading-relaxed text-ink-soft">{t(`items.${key}.desc`)}</p>
+                  </div>
                 </article>
               ))}
             </div>

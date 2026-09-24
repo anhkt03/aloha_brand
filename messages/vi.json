@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Trang chủ",
-    "training": "Đào tạo",
+    "training": "Ngoại ngữ",
     "global": "Du học",
     "about": "Về ALOHA",
     "branches": "Cơ sở",
@@ -244,7 +244,9 @@
       "coursesList": {
         "title": "Khóa học đang tuyển sinh",
         "empty": "Chưa có khóa học đang mở.",
-        "all": "Tất cả"
+        "all": "Tất cả",
+        "viewMore": "Xem thêm",
+        "register": "Đăng ký"
       },
       "goals": {
         "eyebrow": "Học theo mục tiêu",
@@ -817,7 +819,9 @@
     "news": {
       "eyebrow": "Tin tức & Sự kiện",
       "title": "Tin tức ALOHA",
-      "lead": "Cập nhật tuyển sinh, câu chuyện học viên và sự kiện tại ALOHA."
+      "lead": "Cập nhật tuyển sinh, câu chuyện học viên và sự kiện tại ALOHA.",
+      "latest": "Mới nhất",
+      "gallery": "Hình ảnh"
     },
     "contact": {
       "eyebrow": "Liên hệ",
