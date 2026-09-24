@@ -9,23 +9,23 @@ export async function listCourses({
   pageSize = DEFAULT_PAGE_SIZE,
   query,
   status,
-  courseTypeId,
-  courseLevelId,
+  categoryId,
+  levelId,
 }: {
   page?: number;
   pageSize?: number;
   query?: string;
   status?: CourseStatus;
-  courseTypeId?: number;
-  courseLevelId?: number;
+  categoryId?: number;
+  levelId?: number;
 } = {}) {
   const size = PAGE_SIZE_OPTIONS.includes(pageSize as (typeof PAGE_SIZE_OPTIONS)[number]) ? pageSize : DEFAULT_PAGE_SIZE;
   const currentPage = Math.max(1, page);
   const where: Prisma.CourseWhereInput = {
     ...(status ? { status } : {}),
-    ...(courseTypeId ? { courseTypeId } : {}),
-    ...(courseLevelId ? { courseLevelId } : {}),
-    ...(query ? { OR: [{ slug: { contains: query, mode: "insensitive" } }, { translations: { some: { title: { contains: query, mode: "insensitive" } } } }] } : {}),
+    ...(categoryId ? { categoryId } : {}),
+    ...(levelId ? { levelId } : {}),
+    ...(query ? { translations: { some: { title: { contains: query, mode: "insensitive" } } } } : {}),
   };
 
   const [items, total] = await prisma.$transaction([
@@ -34,8 +34,8 @@ export async function listCourses({
       skip: (currentPage - 1) * size,
       take: size,
       include: {
-        courseType: { include: { translations: { where: { locale: "vi" } } } },
-        courseLevel: { include: { translations: { where: { locale: "vi" } } } },
+        category: { include: { translations: { where: { locale: "vi" } } } },
+        level: { include: { translations: { where: { locale: "vi" } } } },
         translations: { where: { locale: "vi" } },
         _count: { select: { enrollments: true } },
       },

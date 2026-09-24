@@ -11,14 +11,14 @@ export function validateImageUpload(file: Pick<File, "type" | "size">, folder: s
   const extension = IMAGE_EXTENSIONS[file.type];
   if (!extension) throw new Error("Định dạng ảnh không được hỗ trợ.");
   if (file.size > MAX_IMAGE_SIZE) throw new Error("Ảnh vượt quá giới hạn 5MB.");
-  if (!/^(course-types|courses|news|branches)\/\d+(\/(cover|gallery))?$/.test(folder)) {
+  if (!/^news\/\d+\/(cover|gallery)$/.test(folder)) {
     throw new Error("Đường dẫn upload không hợp lệ.");
   }
   return extension;
 }
 
 export function validateStoragePath(path: string) {
-  if (path.includes("..") || path.startsWith("/") || !/^(course-types|courses|news|branches)\/\d+\//.test(path)) {
+  if (path.includes("..") || path.startsWith("/") || !/^news\/\d+\//.test(path)) {
     throw new Error("Đường dẫn ảnh không hợp lệ.");
   }
 }

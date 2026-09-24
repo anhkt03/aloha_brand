@@ -10,15 +10,13 @@ datasource db {
 }
 
 enum CourseStatus {
-  OPEN
-  COMING_SOON
-  CLOSED
+  HIDDEN
+  PUBLISHED
 }
 
 enum NewsStatus {
-  DRAFT
+  HIDDEN
   PUBLISHED
-  ARCHIVED
 }
 
 enum EnrollmentType {
@@ -38,59 +36,48 @@ enum UserRole {
   STAFF
 }
 
-model CourseType {
-  id           Int                     @id @default(autoincrement())
-  iconUrl      String?                 @map("icon_url")
-  sortOrder    Int                     @default(0) @map("sort_order")
-  active       Boolean                 @default(true)
-  createdAt    DateTime                @default(now()) @map("created_at")
-  updatedAt    DateTime                @updatedAt @map("updated_at")
+model CourseCategory {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   courses      Course[]
-  levels       CourseLevel[]
-  translations CourseTypeTranslation[]
+  translations CourseCategoryTranslation[]
 
-  @@map("course_types")
+  @@map("course_categories")
 }
 
-model CourseTypeTranslation {
-  id           Int        @id @default(autoincrement())
-  courseTypeId Int        @map("course_type_id")
-  locale       String
-  name         String
+model CourseCategoryTranslation {
+  id         Int    @id @default(autoincrement())
+  categoryId Int    @map("category_id")
+  locale     String
+  name       String
 
-  courseType   CourseType @relation(fields: [courseTypeId], references: [id], onDelete: Cascade)
+  category CourseCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
 
-  @@unique([courseTypeId, locale])
+  @@unique([categoryId, locale])
   @@index([locale])
-  @@map("course_type_translations")
+  @@map("course_category_translations")
 }
 
 model CourseLevel {
-  id           Int                      @id @default(autoincrement())
-  courseTypeId Int                      @map("course_type_id")
-  name         String
-  sortOrder    Int                      @default(0) @map("sort_order")
-  active       Boolean                  @default(true)
-  createdAt    DateTime                 @default(now()) @map("created_at")
-  updatedAt    DateTime                 @updatedAt @map("updated_at")
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
-  courseType   CourseType               @relation(fields: [courseTypeId], references: [id], onDelete: Cascade)
   courses      Course[]
   translations CourseLevelTranslation[]
 
-  @@unique([courseTypeId, name])
-  @@index([courseTypeId, active])
   @@map("course_levels")
 }
 
 model CourseLevelTranslation {
-  id            Int         @id @default(autoincrement())
-  courseLevelId Int         @map("course_level_id")
+  id            Int    @id @default(autoincrement())
+  courseLevelId Int    @map("course_level_id")
   locale        String
   name          String
 
-  courseLevel   CourseLevel @relation(fields: [courseLevelId], references: [id], onDelete: Cascade)
+  courseLevel CourseLevel @relation(fields: [courseLevelId], references: [id], onDelete: Cascade)
 
   @@unique([courseLevelId, locale])
   @@index([locale])
@@ -98,145 +85,62 @@ model CourseLevelTranslation {
 }
 
 model Course {
-  id              Int                  @id @default(autoincrement())
-  slug            String               @unique
-  courseTypeId    Int                  @map("course_type_id")
-  courseLevelId   Int                  @map("course_level_id")
-  durationMonths  Int                  @map("duration_months")
-  totalSessions   Int                  @map("total_sessions")
-  status          CourseStatus         @default(OPEN)
-  sortOrder       Int                  @default(0) @map("sort_order")
-  iconUrl         String?              @map("icon_url")
-  priceVnd        Int?                 @map("price_vnd")
-  discountPercent Int?                 @map("discount_percent")
-  createdAt       DateTime             @default(now()) @map("created_at")
-  updatedAt       DateTime             @updatedAt @map("updated_at")
+  id         Int          @id @default(autoincrement())
+  categoryId Int          @map("category_id")
+  levelId    Int          @map("level_id")
+  status     CourseStatus @default(HIDDEN)
+  createdAt  DateTime     @default(now()) @map("created_at")
+  updatedAt  DateTime     @updatedAt @map("updated_at")
 
-  courseType      CourseType           @relation(fields: [courseTypeId], references: [id])
-  courseLevel     CourseLevel          @relation(fields: [courseLevelId], references: [id])
-  enrollments     Enrollment[]
-  translations    CourseTranslation[]
+  category     CourseCategory      @relation(fields: [categoryId], references: [id])
+  level        CourseLevel         @relation(fields: [levelId], references: [id])
+  enrollments  Enrollment[]
+  translations CourseTranslation[]
 
-  @@index([courseTypeId, status])
-  @@index([courseLevelId, status])
-  @@index([sortOrder, status])
+  @@index([categoryId, status])
+  @@index([levelId, status])
   @@map("courses")
 }
 
 model CourseTranslation {
-  id        Int      @id @default(autoincrement())
-  courseId  Int      @map("course_id")
-  locale    String
-  title     String
-  label     String
-  target    String
-  outcome   String
-  syllabus  String[]
-  roadmap   String?
+  id       Int    @id @default(autoincrement())
+  courseId Int    @map("course_id")
+  locale   String
+  title    String
+  duration String
+  content  String @db.Text
 
-  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
   @@unique([courseId, locale])
   @@index([locale])
   @@map("course_translations")
 }
 
-model NewsArticleCategory {
-  id           Int                              @id @default(autoincrement())
-  iconUrl      String?                          @map("icon_url")
-  sortOrder    Int                              @default(0) @map("sort_order")
-  active       Boolean                          @default(true)
-  createdAt    DateTime                         @default(now()) @map("created_at")
-  updatedAt    DateTime                         @updatedAt @map("updated_at")
-
-  articles     NewsArticle[]
-  translations NewsArticleCategoryTranslation[]
-
-  @@map("news_article_categories")
-}
-
-model NewsArticleCategoryTranslation {
-  id         Int                 @id @default(autoincrement())
-  categoryId Int                 @map("category_id")
-  locale     String
-  name       String
-
-  category   NewsArticleCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
-
-  @@unique([categoryId, locale])
-  @@index([locale])
-  @@map("news_article_category_translations")
-}
-
-model NewsTags {
-  id           Int                   @id @default(autoincrement())
-  active       Boolean               @default(true)
-  createdAt    DateTime              @default(now()) @map("created_at")
-  updatedAt    DateTime              @updatedAt @map("updated_at")
-
-  articleLinks NewsArticleTag[]
-  translations NewsTagsTranslation[]
-
-  @@map("news_tags")
-}
-
-model NewsTagsTranslation {
-  id        Int      @id @default(autoincrement())
-  newsTagId Int      @map("news_tag_id")
-  locale    String
-  name      String
-
-  newsTag   NewsTags @relation(fields: [newsTagId], references: [id], onDelete: Cascade)
-
-  @@unique([newsTagId, locale])
-  @@index([locale])
-  @@map("news_tag_translations")
-}
-
 model NewsArticle {
-  id          Int                 @id @default(autoincrement())
-  slug        String              @unique
-  coverImage  String              @map("cover_image")
-  gallery     String[]            @default([])
-  categoryId  Int                 @map("category_id")
-  author      String
-  status      NewsStatus          @default(PUBLISHED)
-  prominent   Boolean             @default(false)
-  viewCount   Int                 @default(0) @map("view_count")
-  publishedAt DateTime            @map("published_at")
-  createdAt   DateTime            @default(now()) @map("created_at")
-  updatedAt   DateTime            @updatedAt @map("updated_at")
+  id          Int        @id @default(autoincrement())
+  slug        String     @unique
+  coverImage  String     @map("cover_image")
+  gallery     String[]   @default([])
+  status      NewsStatus @default(HIDDEN)
+  publishedAt DateTime   @map("published_at")
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
 
-  category    NewsArticleCategory @relation(fields: [categoryId], references: [id])
-  tagLinks    NewsArticleTag[]
   translations NewsArticleTranslation[]
 
-  @@index([categoryId, publishedAt(sort: Desc)])
   @@index([status, publishedAt(sort: Desc)])
-  @@index([prominent, status])
   @@map("news_articles")
 }
 
-model NewsArticleTag {
-  newsArticleId Int         @map("news_article_id")
-  newsTagId     Int         @map("news_tag_id")
-  newsArticle   NewsArticle @relation(fields: [newsArticleId], references: [id], onDelete: Cascade)
-  newsTag       NewsTags    @relation(fields: [newsTagId], references: [id], onDelete: Cascade)
-
-  @@id([newsArticleId, newsTagId])
-  @@index([newsTagId])
-  @@map("news_article_tags")
-}
-
 model NewsArticleTranslation {
-  id            Int         @id @default(autoincrement())
-  newsArticleId Int         @map("news_article_id")
+  id            Int    @id @default(autoincrement())
+  newsArticleId Int    @map("news_article_id")
   locale        String
   title         String
-  excerpt       String
-  content       String      @db.Text
+  content       String @db.Text
 
-  newsArticle   NewsArticle @relation(fields: [newsArticleId], references: [id], onDelete: Cascade)
+  newsArticle NewsArticle @relation(fields: [newsArticleId], references: [id], onDelete: Cascade)
 
   @@unique([newsArticleId, locale])
   @@index([locale])
@@ -267,7 +171,7 @@ model Enrollment {
   createdAt DateTime         @default(now()) @map("created_at")
   updatedAt DateTime         @updatedAt @map("updated_at")
 
-  course    Course           @relation(fields: [courseId], references: [id])
+  course Course @relation(fields: [courseId], references: [id])
 
   @@index([type, status])
   @@index([courseId, status])
@@ -292,15 +196,15 @@ model Branch {
 }
 
 model User {
-  id           Int      @id @default(autoincrement())
-  username     String   @unique
+  id           Int        @id @default(autoincrement())
+  username     String     @unique
   name         String
-  email        String?  @unique
-  passwordHash String   @map("password_hash")
-  role         UserRole @default(STAFF)
-  active       Boolean  @default(true)
-  createdAt    DateTime @default(now()) @map("created_at")
-  updatedAt    DateTime @updatedAt @map("updated_at")
+  email        String?    @unique
+  passwordHash String     @map("password_hash")
+  role         UserRole   @default(STAFF)
+  active       Boolean    @default(true)
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
   auditLogs    AuditLog[]
 
   @@index([username, active])

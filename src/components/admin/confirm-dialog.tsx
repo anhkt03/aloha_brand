@@ -4,23 +4,25 @@ import { useRef } from "react";
 
 export function ConfirmDialog({
   trigger = "Xóa",
+  triggerLabel,
+  triggerClassName = "rounded-md px-2.5 py-1.5 text-sm font-semibold text-red-600 transition hover:bg-red-50",
   title = "Xác nhận xóa",
   description = "Thao tác này không thể hoàn tác.",
   children,
 }: {
-  trigger?: string;
+  trigger?: React.ReactNode;
+  /** Tooltip + accessible name for the trigger — required when `trigger` isn't plain text (e.g. an icon). */
+  triggerLabel?: string;
+  triggerClassName?: string;
   title?: string;
   description?: string;
   children: React.ReactNode;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const label = triggerLabel ?? (typeof trigger === "string" ? trigger : undefined);
   return (
     <>
-      <button
-        type="button"
-        onClick={() => dialogRef.current?.showModal()}
-        className="rounded-md px-2.5 py-1.5 text-sm font-semibold text-red-600 transition hover:bg-red-50"
-      >
+      <button type="button" onClick={() => dialogRef.current?.showModal()} title={label} aria-label={label} className={triggerClassName}>
         {trigger}
       </button>
       <dialog ref={dialogRef} className="rounded-lg border border-slate-200 p-0 shadow-xl backdrop:bg-slate-900/50">

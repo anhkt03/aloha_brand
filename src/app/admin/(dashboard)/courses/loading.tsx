@@ -26,14 +26,16 @@ export default function Loading() {
           <SkeletonBlock className="h-3 w-28" />
           <SkeletonBlock className="h-3 w-20" />
           <SkeletonBlock className="h-3 w-16" />
+          <SkeletonBlock className="h-3 w-16" />
         </div>
         <div className="divide-y divide-slate-100">
           {Array.from({ length: 10 }).map((_, index) => (
             <div key={index} className="flex items-center gap-6 px-4 py-4">
-              <div className="w-1/3"><SkeletonBlock className="h-4 w-full max-w-[160px]" /><SkeletonBlock className="mt-1.5 h-3 w-20" /></div>
+              <SkeletonBlock className="h-4 w-1/3 max-w-[160px]" />
               <div className="w-1/4"><SkeletonBlock className="h-4 w-24" /><SkeletonBlock className="mt-1.5 h-3 w-16" /></div>
               <SkeletonBlock className="h-5 w-20 rounded-full" />
               <SkeletonBlock className="h-4 w-6" />
+              <div className="flex gap-1"><SkeletonBlock className="h-8 w-8 rounded-md" /><SkeletonBlock className="h-8 w-8 rounded-md" /></div>
             </div>
           ))}
         </div>

@@ -13,16 +13,13 @@ export function TrainingList({ courses }: { courses: Course[] }) {
       {courses.map(course => (
         <article key={course.id} className="flex flex-col overflow-hidden rounded-lg border border-line bg-surface transition hover:-translate-y-1 hover:shadow">
           <div className="bg-brand-grad px-6 py-5 text-white">
-            <div className="text-sm opacity-90">{course.type}</div>
+            <div className="text-sm opacity-90">{course.category}</div>
             <div className="mt-1 font-display text-2xl font-black">{course.level}</div>
           </div>
           <div className="flex flex-1 flex-col gap-3 p-6">
             <h2 className="text-lg font-extrabold">{course.title}</h2>
-            <p className="text-sm text-ink-soft">{course.target}</p>
-            <ul className="ml-4 list-disc text-sm text-ink-soft">
-              <li>{course.durationMonths} tháng · {course.totalSessions} buổi</li>
-              <li>{course.outcome}</li>
-            </ul>
+            <p className="text-sm font-semibold text-brand">{course.duration}</p>
+            <p className="line-clamp-4 text-sm text-ink-soft">{course.content}</p>
             <div className="mt-auto pt-3">
               <Button variant="primary" size="sm" onClick={open}>Đăng ký</Button>
             </div>

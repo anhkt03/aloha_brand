@@ -2,6 +2,7 @@
 
 import { NewsStatus } from "@prisma/client";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { writeAuditLog } from "@/lib/audit";
 import { requireAdminUser } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
@@ -17,26 +18,31 @@ function invalidate(slug?: string) {
   }
 }
 
-export async function saveNewsArticle(formData: FormData) {
+export type NewsFormState = { message?: string };
+
+export async function saveNewsArticle(_previous: NewsFormState, formData: FormData): Promise<NewsFormState> {
   const actor = await requireAdminUser();
   const parsed = newsArticleSchema.safeParse(newsArticleFromForm(formData));
-  if (!parsed.success) throw new Error("Dữ liệu bài viết không hợp lệ.");
-  const { id, tagIds, translations, ...data } = parsed.data;
+  if (!parsed.success) return { message: "Dữ liệu bài viết không hợp lệ. Vui lòng kiểm tra lại các trường bắt buộc." };
+  const { id, translations, ...data } = parsed.data;
   const previous = id ? await prisma.newsArticle.findUnique({ where: { id }, select: { coverImage: true, gallery: true } }) : null;
+
   try {
     await prisma.$transaction(async (tx) => {
       const item = id
-        ? await tx.newsArticle.update({ where: { id }, data: { ...data, translations: { deleteMany: {}, create: translations }, tagLinks: { deleteMany: {}, create: tagIds.map((newsTagId) => ({ newsTagId })) } } })
-        : await tx.newsArticle.create({ data: { ...data, translations: { create: translations }, tagLinks: { create: tagIds.map((newsTagId) => ({ newsTagId })) } } });
+        ? await tx.newsArticle.update({ where: { id }, data: { ...data, translations: { deleteMany: {}, create: translations } } })
+        : await tx.newsArticle.create({ data: { ...data, translations: { create: translations } } });
       await writeAuditLog({ actorUserId: actor.id, action: id ? "UPDATE" : "CREATE", entity: "NewsArticle", entityId: item.id }, tx);
     });
   } catch (error) {
     await deleteManagedImages([data.coverImage, ...data.gallery].filter((url) => url !== previous?.coverImage && !previous?.gallery.includes(url)));
-    if ((error as { code?: string }).code === "P2002") throw new Error("Slug bài viết đã tồn tại.");
+    if ((error as { code?: string }).code === "P2002") return { message: "Slug bài viết đã tồn tại." };
     throw error;
   }
   if (previous) await deleteManagedImages([previous.coverImage, ...previous.gallery].filter((url) => url !== data.coverImage && !data.gallery.includes(url)));
   invalidate(data.slug);
+  if (!id) redirect("/admin/news");
+  return {};
 }
 
 export async function setNewsStatus(id: number, status: NewsStatus) {
@@ -44,17 +50,6 @@ export async function setNewsStatus(id: number, status: NewsStatus) {
   const item = await prisma.$transaction(async (tx) => {
     const updated = await tx.newsArticle.update({ where: { id }, data: { status }, select: { slug: true } });
     await writeAuditLog({ actorUserId: actor.id, action: "UPDATE_STATUS", entity: "NewsArticle", entityId: id, metadata: { status } }, tx);
-    return updated;
-  });
-  invalidate(item.slug);
-}
-
-export async function toggleProminent(id: number) {
-  const actor = await requireAdminUser();
-  const item = await prisma.$transaction(async (tx) => {
-    const old = await tx.newsArticle.findUniqueOrThrow({ where: { id } });
-    const updated = await tx.newsArticle.update({ where: { id }, data: { prominent: !old.prominent } });
-    await writeAuditLog({ actorUserId: actor.id, action: "TOGGLE_PROMINENT", entity: "NewsArticle", entityId: id, metadata: { prominent: updated.prominent } }, tx);
     return updated;
   });
   invalidate(item.slug);

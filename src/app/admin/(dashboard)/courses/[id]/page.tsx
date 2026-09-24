@@ -10,9 +10,10 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   const id = Number((await params).id);
   const course = await getCourse(id);
   if (!course) notFound();
-  const types = await prisma.courseType.findMany({
-    include: { translations: { where: { locale: "vi" } }, levels: { include: { translations: { where: { locale: "vi" } } } } },
-  });
+  const [categories, levels] = await Promise.all([
+    prisma.courseCategory.findMany({ include: { translations: { where: { locale: "vi" } } } }),
+    prisma.courseLevel.findMany({ include: { translations: { where: { locale: "vi" } } } }),
+  ]);
 
   return (
     <>
@@ -21,10 +22,10 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         title="Chỉnh sửa khóa học"
         actions={
           <>
-            <form action={setCourseStatus.bind(null, id, "CLOSED")}>
-              <Button type="submit" variant="ghost">Đóng khóa học</Button>
+            <form action={setCourseStatus.bind(null, id, "HIDDEN")}>
+              <Button type="submit" variant="ghost">Ẩn khóa học</Button>
             </form>
-            <ConfirmDialog description="Xóa vĩnh viễn khóa học này? Nếu đã có học viên đăng ký, khóa học sẽ chỉ được đóng thay vì xóa hẳn.">
+            <ConfirmDialog description="Xóa vĩnh viễn khóa học này? Nếu đã có học viên đăng ký, khóa học sẽ chỉ được ẩn thay vì xóa hẳn.">
               <form action={deleteCourse.bind(null, id)}>
                 <Button type="submit" variant="danger">Xác nhận xóa</Button>
               </form>
@@ -32,7 +33,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           </>
         }
       />
-      <CourseForm action={saveCourse} course={course} types={types} />
+      <CourseForm action={saveCourse} course={course} categories={categories} levels={levels} />
     </>
   );
 }

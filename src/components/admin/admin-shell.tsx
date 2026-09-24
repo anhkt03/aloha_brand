@@ -20,11 +20,9 @@ function Icon({ path }: { path: string }) {
 const navigation: NavigationItem[] = [
   { module: "dashboard", label: "Tổng quan", href: "/admin", icon: <Icon path="M4 13h6V4H4v9zm0 7h6v-5H4v5zm10 0h6V11h-6v9zm0-16v5h6V4h-6z" /> },
   { module: "courses", label: "Khóa học", href: "/admin/courses", group: "courses", icon: <Icon path="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z" /> },
-  { module: "courses", label: "Loại khóa học", href: "/admin/courses/types", group: "courses", icon: <Icon path="M3 7l9-4 9 4-9 4-9-4zm0 5l9 4 9-4M3 17l9 4 9-4" /> },
+  { module: "courses", label: "Danh mục khóa học", href: "/admin/courses/categories", group: "courses", icon: <Icon path="M3 7l9-4 9 4-9 4-9-4zm0 5l9 4 9-4M3 17l9 4 9-4" /> },
   { module: "courses", label: "Cấp độ", href: "/admin/courses/levels", group: "courses", icon: <Icon path="M4 19V5m0 14 5-5m-5 5-5-5M20 5v14m0-14-5 5m5-5 5 5" /> },
   { module: "news", label: "Bài viết", href: "/admin/news", group: "news", icon: <Icon path="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4zm4 4h9m-9 4h9m-9 4h5" /> },
-  { module: "news", label: "Danh mục tin tức", href: "/admin/news/categories", group: "news", icon: <Icon path="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" /> },
-  { module: "news", label: "Thẻ tin tức", href: "/admin/news/tags", group: "news", icon: <Icon path="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3.2L4 3a1 1 0 0 0-1 1l.2 5.59a2 2 0 0 0 .58 1.41l9.59 9.59a2 2 0 0 0 2.83 0l4.39-4.39a2 2 0 0 0 0-2.79zM7 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" /> },
   { module: "enrollments", label: "Đăng ký", href: "/admin/enrollments", icon: <Icon path="M9 12l2 2 4-4M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14l-4-3-3 3-3-3-3 3-4-3V6z" /> },
   { module: "feedback", label: "Đánh giá", href: "/admin/feedback", icon: <Icon path="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /> },
   { module: "branches", label: "Cơ sở", href: "/admin/branches", icon: <Icon path="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m-1 4h1m4-4h1m-1 4h1M9 21v-4h6v4" /> },
@@ -45,11 +43,8 @@ export function AdminShell({ children, user }: { children: React.ReactNode; user
   const sidebar = (
     <>
       <div className="flex h-16 items-center gap-2.5 px-5">
-        <span className="grid h-9 w-9 place-items-center rounded-lg bg-indigo-600 font-display text-base font-black text-white">A</span>
-        <div className="leading-tight">
-          <p className="font-display text-sm font-black text-white">ALOHA</p>
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Admin</p>
-        </div>
+        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-indigo-600 font-display text-base font-black text-white">A</span>
+        <p className="font-display text-[13px] font-black leading-tight text-white">ALOHA Language School</p>
       </div>
       <nav className="grid gap-0.5 px-3 pb-4">
         {items.map((item) => {
@@ -89,6 +84,7 @@ export function AdminShell({ children, user }: { children: React.ReactNode; user
           <button
             type="button"
             onClick={() => setOpen(true)}
+            title="Mở menu"
             aria-label="Mở menu"
             className="grid h-9 w-9 place-items-center rounded-md border border-slate-200 text-slate-600 md:hidden"
           >

@@ -20,18 +20,13 @@ export function CourseFormSkeleton({ actions = false }: { actions?: boolean }) {
         <div className="rounded-xl border border-slate-200 bg-white p-5">
           <SkeletonBlock className="mb-4 h-4 w-32" />
           <div className="grid gap-4 md:grid-cols-2">
-            {Array.from({ length: 9 }).map((_, index) => (
+            {Array.from({ length: 3 }).map((_, index) => (
               <div key={index}>
                 <SkeletonBlock className="h-3 w-24" />
                 <SkeletonBlock className="mt-2 h-9 w-full" />
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="rounded-xl border border-slate-200 bg-white p-5">
-          <SkeletonBlock className="mb-4 h-4 w-28" />
-          <SkeletonBlock className="h-32 w-48 rounded-lg" />
         </div>
 
         <div className="rounded-xl border border-slate-200 bg-white p-5">
@@ -42,9 +37,9 @@ export function CourseFormSkeleton({ actions = false }: { actions?: boolean }) {
             ))}
           </div>
           <div className="mt-4 grid gap-3">
-            {Array.from({ length: 4 }).map((_, index) => (
-              <SkeletonBlock key={index} className="h-9 w-full" />
-            ))}
+            <SkeletonBlock className="h-9 w-full" />
+            <SkeletonBlock className="h-9 w-full" />
+            <SkeletonBlock className="h-32 w-full" />
           </div>
         </div>
 

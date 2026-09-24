@@ -1,4 +1,0 @@
-import Link from "next/link";
-import { prisma } from "@/lib/prisma";
-import { DataTable } from "@/components/admin/data-table";
-export default async function TagsPage() { const items = await prisma.newsTags.findMany({ include: { translations: { where: { locale: "vi" } }, _count: { select: { articleLinks: true } } }, orderBy: { id: "desc" } }); return <><div className="mb-6 flex justify-between"><h1 className="text-3xl font-black">Thẻ tin tức</h1><Link className="btn btn-primary btn-sm" href="/admin/news/tags/new">+ Thêm thẻ</Link></div><DataTable headers={["Tên", "Bài viết", "Trạng thái", ""]} isEmpty={!items.length}>{items.map(x => <tr key={x.id}><td className="px-4 py-3">{x.translations[0]?.name}</td><td className="px-4 py-3">{x._count.articleLinks}</td><td className="px-4 py-3">{x.active ? "Hoạt động" : "Đã tắt"}</td><td className="px-4 py-3"><Link className="font-bold text-brand" href={`/admin/news/tags/${x.id}`}>Sửa</Link></td></tr>)}</DataTable></>; }

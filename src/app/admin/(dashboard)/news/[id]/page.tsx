@@ -1,6 +1,34 @@
 import { notFound } from "next/navigation";
-import { prisma } from "@/lib/prisma";
 import { getNewsArticle } from "@/lib/dal/news-articles";
+import { ConfirmDialog } from "@/components/admin/confirm-dialog";
+import { Button, PageHeader } from "@/components/admin/ui";
 import { ArticleForm } from "../article-form";
-import { deleteNewsArticle, saveNewsArticle, setNewsStatus, toggleProminent } from "../actions";
-export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) { const id = Number((await params).id); const [article, categories, tags] = await Promise.all([getNewsArticle(id), prisma.newsArticleCategory.findMany({ include: { translations: { where: { locale: "vi" } } } }), prisma.newsTags.findMany({ include: { translations: { where: { locale: "vi" } } } })]); if (!article) notFound(); return <><div className="mb-6 flex flex-wrap justify-between gap-3"><h1 className="text-3xl font-black">Chỉnh sửa bài viết</h1><div className="flex gap-2"><form action={setNewsStatus.bind(null, id, "PUBLISHED")}><button className="btn btn-ghost btn-sm">Xuất bản</button></form><form action={setNewsStatus.bind(null, id, "ARCHIVED")}><button className="btn btn-ghost btn-sm">Lưu trữ</button></form><form action={toggleProminent.bind(null, id)}><button className="btn btn-ghost btn-sm">{article.prominent ? "Bỏ nổi bật" : "Nổi bật"}</button></form><form action={deleteNewsArticle.bind(null, id)}><button className="btn btn-ghost btn-sm text-red-700">Xóa</button></form></div></div><ArticleForm action={saveNewsArticle} article={article} categories={categories} tags={tags} /></>; }
+import { deleteNewsArticle, saveNewsArticle, setNewsStatus } from "../actions";
+
+export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
+  const id = Number((await params).id);
+  const article = await getNewsArticle(id);
+  if (!article) notFound();
+
+  return (
+    <>
+      <PageHeader
+        eyebrow="Nội dung"
+        title="Chỉnh sửa bài viết"
+        actions={
+          <>
+            <form action={setNewsStatus.bind(null, id, "HIDDEN")}>
+              <Button type="submit" variant="ghost">Ẩn bài viết</Button>
+            </form>
+            <ConfirmDialog description="Xóa vĩnh viễn bài viết này? Thao tác không thể hoàn tác.">
+              <form action={deleteNewsArticle.bind(null, id)}>
+                <Button type="submit" variant="danger">Xác nhận xóa</Button>
+              </form>
+            </ConfirmDialog>
+          </>
+        }
+      />
+      <ArticleForm action={saveNewsArticle} article={article} />
+    </>
+  );
+}

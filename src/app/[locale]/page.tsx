@@ -11,7 +11,7 @@ import { HomeContent } from "./home-content";
  *  6. Journey            — Hành trình cùng ALOHA
  *  7. Testimonial        — Marquee ảnh học viên
  *  8. Branches teaser    — Hệ thống cơ sở
- *  9. News               — Tin tức theo 3 chuyên mục
+ *  9. News               — 3 bài viết mới nhất
  * 10. CTA                — Cuối trang
  */
 export const dynamic = "force-dynamic";

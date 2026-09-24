@@ -14,7 +14,7 @@ import { CtaSection } from "@/components/sections/CtaSection";
 import { useRegisterModal } from "@/components/layout/register-context";
 import { useRouter } from "@/i18n/routing";
 
-type News = { id: number; slug: string; title: string; excerpt: string; coverImage: string; category: string; publishedAt: string };
+type News = { id: number; slug: string; title: string; content: string; coverImage: string; publishedAt: string };
 
 export function HomeContent({ news }: { news: News[] }) {
   const { open } = useRegisterModal();
