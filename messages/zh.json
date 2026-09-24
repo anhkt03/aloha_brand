@@ -10,7 +10,11 @@
     "cta": "免费试听",
     "hotline": "热线"
   },
-  "common": { "learnMore": "了解更多", "readMore": "阅读全文", "back": "返回" },
+  "common": {
+    "learnMore": "了解更多",
+    "readMore": "阅读全文",
+    "back": "返回"
+  },
   "languages": {
     "vi": "越南语",
     "en": "英语",
@@ -29,7 +33,11 @@
   "about": {
     "eyebrow": "关于我们",
     "title": "ALOHA Language School",
-    "pillars": { "quality": "品质", "experience": "体验", "growth": "全面成长" },
+    "pillars": {
+      "quality": "品质",
+      "experience": "体验",
+      "growth": "全面成长"
+    },
     "quote": "ALOHA是一所围绕三大核心支柱搭建学习旅程的多语种学校",
     "body": "ALOHA致力于为每位学员提供<b>现代化的学习环境、系统的课程体系以及量身定制的学习路径</b>。",
     "cta": "了解ALOHA"
@@ -53,13 +61,24 @@
       "title": "语言培训",
       "desc": "从基础到国际证书再到\n实际应用的系统化学习路径。",
       "cta": "立即探索",
-      "items": ["中文", "英语", "韩语", "日语"]
+      "items": [
+        "中文",
+        "英语",
+        "韩语",
+        "日语"
+      ]
     },
     "global": {
       "title": "海外留学",
       "desc": "从课程选择、择校、奖学金到申请材料,全程陪伴学员完成留学梦想。",
       "cta": "立即探索",
-      "items": ["台湾", "日本", "韩国", "新加坡", "欧洲"]
+      "items": [
+        "台湾",
+        "日本",
+        "韩国",
+        "新加坡",
+        "欧洲"
+      ]
     }
   },
   "why": {
@@ -68,12 +87,30 @@
     "sub": "不仅是一门课程 —— ALOHA是陪你走向更大机会的同伴。",
     "trust": "10,000+ 学员已经选择了ALOHA",
     "items": {
-      "roadmap": { "title": "系统化学习路径", "desc": "清晰、按水平和目标个性定制。" },
-      "classSize": { "title": "小班教学", "desc": "更多互动,关注每一位学员。" },
-      "commitment": { "title": "结果承诺", "desc": "书面结果承诺,免费重修。" },
-      "flexible": { "title": "灵活学习", "desc": "多校区、多种班型和时段可选。" },
-      "teachers": { "title": "优秀师资", "desc": "经验丰富、专业素养高的师资团队。" },
-      "facility": { "title": "现代化设施", "desc": "宽敞明亮、设施齐全的现代化教室。" }
+      "roadmap": {
+        "title": "系统化学习路径",
+        "desc": "清晰、按水平和目标个性定制。"
+      },
+      "classSize": {
+        "title": "小班教学",
+        "desc": "更多互动,关注每一位学员。"
+      },
+      "commitment": {
+        "title": "结果承诺",
+        "desc": "书面结果承诺,免费重修。"
+      },
+      "flexible": {
+        "title": "灵活学习",
+        "desc": "多校区、多种班型和时段可选。"
+      },
+      "teachers": {
+        "title": "优秀师资",
+        "desc": "经验丰富、专业素养高的师资团队。"
+      },
+      "facility": {
+        "title": "现代化设施",
+        "desc": "宽敞明亮、设施齐全的现代化教室。"
+      }
     }
   },
   "experience": {
@@ -81,10 +118,22 @@
     "title": "<b>ALOHA</b>的\n学习体验",
     "closing": "不仅是来上课——<b>从学习、练习到评估,全程陪伴。</b>",
     "items": {
-      "small": { "title": "小班上课", "desc": "老师有时间与每位学员互动、纠错和辅导。" },
-      "cycle": { "title": "学习 – 练习 – 检验", "desc": "课后有作业、练习和定期测评来衡量进步。" },
-      "practice": { "title": "实景语言应用", "desc": "提升在生活、学习和工作中使用语言的反应能力。" },
-      "support": { "title": "课后支持", "desc": "提供教材、视频和自学工具,课外持续学习。" }
+      "small": {
+        "title": "小班上课",
+        "desc": "老师有时间与每位学员互动、纠错和辅导。"
+      },
+      "cycle": {
+        "title": "学习 – 练习 – 检验",
+        "desc": "课后有作业、练习和定期测评来衡量进步。"
+      },
+      "practice": {
+        "title": "实景语言应用",
+        "desc": "提升在生活、学习和工作中使用语言的反应能力。"
+      },
+      "support": {
+        "title": "课后支持",
+        "desc": "提供教材、视频和自学工具,课外持续学习。"
+      }
     }
   },
   "journey": {
@@ -116,9 +165,18 @@
     "title": "ALOHA新闻",
     "cta": "查看更多新闻",
     "categories": {
-      "language": { "title": "语言", "desc": "学习方法、证书攻略和高效学习技巧。" },
-      "abroad": { "title": "留学", "desc": "留学信息、奖学金和海外学习机会。" },
-      "activity": { "title": "ALOHA活动", "desc": "活动、事件与ALOHA的故事。" }
+      "language": {
+        "title": "语言",
+        "desc": "学习方法、证书攻略和高效学习技巧。"
+      },
+      "abroad": {
+        "title": "留学",
+        "desc": "留学信息、奖学金和海外学习机会。"
+      },
+      "activity": {
+        "title": "ALOHA活动",
+        "desc": "活动、事件与ALOHA的故事。"
+      }
     }
   },
   "cta": {
@@ -137,10 +195,22 @@
         "ctaPrimary": "探索语言培训课程",
         "ctaSecondary": "预约咨询",
         "stats": {
-          "students": { "value": "10,000+", "label": "学员" },
-          "teachers": { "value": "500+", "label": "教师" },
-          "branches": { "value": "10+", "label": "全国校区" },
-          "programs": { "value": "40+", "label": "培训课程" }
+          "students": {
+            "value": "10,000+",
+            "label": "学员"
+          },
+          "teachers": {
+            "value": "500+",
+            "label": "教师"
+          },
+          "branches": {
+            "value": "10+",
+            "label": "全国校区"
+          },
+          "programs": {
+            "value": "40+",
+            "label": "培训课程"
+          }
         }
       },
       "programs": {
@@ -149,10 +219,26 @@
         "sub": "无论你是为了考证、学习、工作还是留学，ALOHA 都有适合你的学习路径。",
         "cta": "查看课程",
         "items": {
-          "zh": { "name": "中文", "badge": "HSK · 口语", "desc": "从基础到 HSK6，结合应试训练与学习、工作中的实际应用。" },
-          "en": { "name": "英语", "badge": "雅思 · 托业", "desc": "从基础到雅思高分/托业课程，专注提升实际英语能力。" },
-          "ko": { "name": "韩语", "badge": "TOPIK · 口语", "desc": "从基础到 TOPIK5，结合知识学习与实际应用。" },
-          "ja": { "name": "日语", "badge": "JLPT · 口语", "desc": "从 N5 到 N3，同步提升 JLPT 能力与实际会话能力。" }
+          "zh": {
+            "name": "中文",
+            "badge": "HSK · 口语",
+            "desc": "从基础到 HSK6，结合应试训练与学习、工作中的实际应用。"
+          },
+          "en": {
+            "name": "英语",
+            "badge": "雅思 · 托业",
+            "desc": "从基础到雅思高分/托业课程，专注提升实际英语能力。"
+          },
+          "ko": {
+            "name": "韩语",
+            "badge": "TOPIK · 口语",
+            "desc": "从基础到 TOPIK5，结合知识学习与实际应用。"
+          },
+          "ja": {
+            "name": "日语",
+            "badge": "JLPT · 口语",
+            "desc": "从 N5 到 N3，同步提升 JLPT 能力与实际会话能力。"
+          }
         }
       },
       "coursesList": {
@@ -164,32 +250,75 @@
         "eyebrow": "按目标学习",
         "title": "你的语言学习目标是什么？",
         "items": {
-          "certificate": { "title": "考取证书", "badge": "HSK · 雅思 · 托业 · TOPIK · JLPT", "desc": "通过清晰的学习路径达成证书目标" },
-          "study": { "title": "用于学习", "desc": "为学习和教育目标打好语言基础" },
-          "work": { "title": "用于工作", "desc": "沟通交流、企业环境、工业园区、贸易及各类职场场景" },
-          "abroad": { "title": "留学", "desc": "为留学计划打造语言能力与证书" }
+          "certificate": {
+            "title": "考取证书",
+            "badge": "HSK · 雅思 · 托业 · TOPIK · JLPT",
+            "desc": "通过清晰的学习路径达成证书目标"
+          },
+          "study": {
+            "title": "用于学习",
+            "desc": "为学习和教育目标打好语言基础"
+          },
+          "work": {
+            "title": "用于工作",
+            "desc": "沟通交流、企业环境、工业园区、贸易及各类职场场景"
+          },
+          "abroad": {
+            "title": "留学",
+            "desc": "为留学计划打造语言能力与证书"
+          }
         }
       },
       "roadmap": {
         "eyebrow": "学习路径",
         "title": "从基础到实现目标",
         "steps": {
-          "evaluate": { "title": "入学测评", "desc": "确定水平与目标" },
-          "plan": { "title": "制定学习路径", "desc": "选择合适的课程" },
-          "practice": { "title": "学习与实践", "desc": "知识学习结合练习与应用" },
-          "review": { "title": "测试与评估", "desc": "跟踪学习进度" },
-          "achieve": { "title": "实现目标", "desc": "证书 · 学习 · 工作 · 留学" }
+          "evaluate": {
+            "title": "入学测评",
+            "desc": "确定水平与目标"
+          },
+          "plan": {
+            "title": "制定学习路径",
+            "desc": "选择合适的课程"
+          },
+          "practice": {
+            "title": "学习与实践",
+            "desc": "知识学习结合练习与应用"
+          },
+          "review": {
+            "title": "测试与评估",
+            "desc": "跟踪学习进度"
+          },
+          "achieve": {
+            "title": "实现目标",
+            "desc": "证书 · 学习 · 工作 · 留学"
+          }
         }
       },
       "method": {
         "eyebrow": "ALOHA 教学方法",
         "title": "学以致用",
         "items": {
-          "smallClass": { "title": "小班教学", "desc": "增加互动，及时纠错" },
-          "practice": { "title": "学习 – 实践 – 应用", "desc": "将知识运用到实际场景中" },
-          "tracking": { "title": "进度跟踪", "desc": "定期布置作业并检测评估" },
-          "personalize": { "title": "个性化学习路径", "desc": "根据个人水平与目标调整" },
-          "commitment": { "title": "效果承诺", "desc": "按具体课程与培训条件作出承诺" }
+          "smallClass": {
+            "title": "小班教学",
+            "desc": "增加互动，及时纠错"
+          },
+          "practice": {
+            "title": "学习 – 实践 – 应用",
+            "desc": "将知识运用到实际场景中"
+          },
+          "tracking": {
+            "title": "进度跟踪",
+            "desc": "定期布置作业并检测评估"
+          },
+          "personalize": {
+            "title": "个性化学习路径",
+            "desc": "根据个人水平与目标调整"
+          },
+          "commitment": {
+            "title": "效果承诺",
+            "desc": "按具体课程与培训条件作出承诺"
+          }
         },
         "quote": "语言不仅仅是一门学科，更是开启未来更多机会的工具。",
         "quoteAuthor": "ALOHA"
@@ -198,10 +327,22 @@
         "eyebrow": "学习形式",
         "title": "自由选择合适的学习形式",
         "items": {
-          "offline": { "title": "线下", "desc": "在 ALOHA 校区面授学习" },
-          "online": { "title": "线上", "desc": "通过 Zoom 平台在线学习" },
-          "smallGroup": { "title": "小组课", "desc": "增加互动与练习时间" },
-          "oneOnOne": { "title": "1对1", "desc": "根据个人目标定制学习路径" }
+          "offline": {
+            "title": "线下",
+            "desc": "在 ALOHA 校区面授学习"
+          },
+          "online": {
+            "title": "线上",
+            "desc": "通过 Zoom 平台在线学习"
+          },
+          "smallGroup": {
+            "title": "小组课",
+            "desc": "增加互动与练习时间"
+          },
+          "oneOnOne": {
+            "title": "1对1",
+            "desc": "根据个人目标定制学习路径"
+          }
         }
       },
       "teachers": {
@@ -209,7 +350,12 @@
         "title": "专业素养高，用心教学",
         "desc": "ALOHA 教师均按各课程的严格标准选拔，并全程跟踪学员的学习过程",
         "viewAll": "查看全部教师",
-        "roles": { "zh": "中文教师", "en": "英语教师", "ko": "韩语教师", "ja": "日语教师" }
+        "roles": {
+          "zh": "中文教师",
+          "en": "英语教师",
+          "ko": "韩语教师",
+          "ja": "日语教师"
+        }
       },
       "results": {
         "eyebrow": "学习成果",
@@ -223,69 +369,265 @@
       }
     },
     "global": {
-      "eyebrow": "与ALOHA一起留学",
-      "title": "触及全球梦想",
-      "lead": "从择校、申请、奖学金到签证与安置——中国、韩国、日本和英语国家的全程支持。",
       "hero": {
-        "badge": "2026年秋季申请开放",
-        "ctaPrimary": "免费咨询",
-        "ctaSecondary": "查看示例路径"
+        "eyebrow": "与ALOHA一起留学",
+        "title": "开启通往世界顶尖教育的大门",
+        "lead": "根据每位学生的能力、学习目标和未来方向，量身定制留学规划。",
+        "ctaPrimary": "寻找合适的留学目的地",
+        "ctaSecondary": "预约咨询",
+        "stats": {
+          "markets": {
+            "value": "05",
+            "label": "留学目的地"
+          },
+          "partners": {
+            "value": "100+",
+            "label": "合作院校"
+          },
+          "advised": {
+            "value": "500+",
+            "label": "每年咨询学生数"
+          },
+          "satisfaction": {
+            "value": "90%+",
+            "label": "学生满意度"
+          }
+        }
       },
       "countries": {
-        "eyebrow": "留学国家",
-        "title": "选择你的目的地",
-        "sub": "每个国家都是一扇门 —— ALOHA帮你找到最适合能力、专业和预算的一扇。",
-        "labels": {
-          "tuition": "学费",
-          "language": "语言要求",
-          "majors": "热门专业",
-          "scholarship": "奖学金"
-        },
-        "yearUnit": "/年",
-        "explore": "查看详情"
+        "eyebrow": "留学目的地",
+        "title": "与ALOHA一起探索5大留学市场"
       },
       "destinations": {
-        "china": { "name": "中国" },
-        "korea": { "name": "韩国" },
-        "japan": { "name": "日本" },
-        "uk": { "name": "英国" },
-        "singapore": { "name": "新加坡" },
-        "europe": { "name": "欧洲" }
+        "taiwan": {
+          "name": "台湾",
+          "highlights": [
+            "奖学金种类丰富",
+            "生活费用合理",
+            "学习与工作机会兼备"
+          ]
+        },
+        "korea": {
+          "name": "韩国",
+          "highlights": [
+            "课程选择多样",
+            "国际化环境",
+            "奖学金选择丰富"
+          ]
+        },
+        "japan": {
+          "name": "日本",
+          "highlights": [
+            "教育质量高",
+            "注重职业发展",
+            "学习环境严谨"
+          ]
+        },
+        "singapore": {
+          "name": "新加坡",
+          "highlights": [
+            "国际化课程",
+            "英语学习环境",
+            "连接全球资源"
+          ]
+        },
+        "europe": {
+          "name": "欧洲",
+          "highlights": [
+            "国家选择多样",
+            "专业方向丰富",
+            "接轨国际教育资源"
+          ]
+        }
       },
-      "timeline": {
-        "eyebrow": "申请路径",
-        "title": "12个月抵达校园",
-        "sub": "面向9月入学的示例时间线 —— 根据国家和学生情况调整。"
+      "programs": {
+        "eyebrow": "留学项目",
+        "title": "您正在寻找哪种留学项目？",
+        "items": {
+          "undergrad": {
+            "title": "本科留学",
+            "desc": "根据未来发展方向选择合适的专业、学校和国家"
+          },
+          "postgrad": {
+            "title": "研究生留学",
+            "desc": "硕士、博士及深造项目"
+          },
+          "language": {
+            "title": "语言留学",
+            "desc": "在攻读专业课程前提升语言能力"
+          },
+          "scholarship": {
+            "title": "留学奖学金",
+            "desc": "寻找与您背景相匹配的奖学金项目"
+          }
+        }
+      },
+      "schools": {
+        "eyebrow": "合作院校",
+        "title": "值得信赖的合作院校体系",
+        "all": "全部"
       },
       "scholarships": {
-        "eyebrow": "奖学金",
-        "title": "与ALOHA一起冲奖学金",
-        "sub": "我们协助你申请全球公立与私立奖学金。",
-        "audienceLabel": "面向",
-        "valueLabel": "金额"
+        "eyebrow": "留学奖学金",
+        "title": "国际学习机会",
+        "deadline": "申请截止日期",
+        "badges": {
+          "full": "全额",
+          "partial": "部分",
+          "tuition": "学费资助"
+        },
+        "items": {
+          "taiwanUndergrad": {
+            "name": "本科奖学金",
+            "school": "台湾大学",
+            "level": "本科"
+          },
+          "koreaGks": {
+            "name": "Global Korea 奖学金",
+            "school": "延世大学",
+            "level": "本科"
+          },
+          "erasmus": {
+            "name": "伊拉斯谟+奖学金",
+            "school": "多所大学",
+            "level": "研究生"
+          }
+        }
+      },
+      "timeline": {
+        "eyebrow": "留学流程",
+        "title": "从规划到启程",
+        "steps": {
+          "step1": {
+            "title": "咨询与规划",
+            "desc": "评估能力、目标与个人条件"
+          },
+          "step2": {
+            "title": "选择学校与专业",
+            "desc": "推荐合适的国家、学校与专业"
+          },
+          "step3": {
+            "title": "准备申请材料",
+            "desc": "指导并完善申请所需文件"
+          },
+          "step4": {
+            "title": "递交申请",
+            "desc": "跟进进度并协助处理申请"
+          },
+          "step5": {
+            "title": "签证与行前准备",
+            "desc": "指导入学前所需的各项手续"
+          },
+          "step6": {
+            "title": "正式入学",
+            "desc": "准备好在新的国家开启新旅程"
+          }
+        }
+      },
+      "languageCross": {
+        "eyebrow": "语言与留学",
+        "title": "语言——迈向国际的基础",
+        "lead": "扎实的语言基础能让您在准备申请材料时更加从容，也能更快适应国际化的学习环境。在ALOHA，您可以在同一学习路径中学习语言并为留学做准备。",
+        "cta": "探索语言课程",
+        "steps": {
+          "assess": "入学能力测评",
+          "learn": "学习语言",
+          "certificate": "考取语言证书",
+          "profile": "准备申请材料",
+          "go": "启程留学"
+        }
       },
       "stories": {
-        "eyebrow": "学员故事",
-        "title": "ALOHA学员的去向",
-        "sub": "已在国际大学学习的ALOHA毕业生。",
-        "yearLabel": "入学"
+        "eyebrow": "留学故事",
+        "title": "ALOHA学员的新旅程",
+        "yearLabel": "入学年份",
+        "items": {
+          "taiwan1": {
+            "school": "台湾大学",
+            "quote": "我获得了50%的学费奖学金，非常荣幸能在台湾大学学习。谢谢ALOHA！"
+          },
+          "korea1": {
+            "school": "延世大学",
+            "quote": "留学规划清晰，老师非常用心，从最初的咨询到顺利入学，ALOHA一直陪伴着我。"
+          },
+          "japan1": {
+            "school": "早稻田大学",
+            "quote": "从JLPT N5到N2，再到申请早稻田大学——两年的努力，有ALOHA团队的陪伴让我更有信心。"
+          },
+          "taiwan2": {
+            "school": "成功大学",
+            "quote": "获得台湾政府全额奖学金——非常感谢ALOHA帮我准备HSK和奖学金申请材料，十分用心。"
+          },
+          "singapore1": {
+            "school": "南洋理工大学",
+            "quote": "在ALOHA学习6个月后雅思达到6.5分，成功申请南洋理工大学。这里的学习环境非常国际化且充满活力。"
+          },
+          "europe1": {
+            "school": "曼彻斯特大学",
+            "quote": "在ALOHA学习5个月后雅思达到6.5分，成功申请曼彻斯特大学商科硕士。谢谢老师们！"
+          },
+          "korea2": {
+            "school": "首尔大学",
+            "quote": "ALOHA帮助我在10个月内从TOPIK 2提升到TOPIK 5，申请材料也准备得非常仔细。现在我已经在首尔生活了。"
+          }
+        }
+      },
+      "knowledge": {
+        "eyebrow": "留学知识",
+        "title": "留学指南",
+        "cta": "查看全部文章",
+        "scholarshipLabel": "奖学金",
+        "items": {
+          "japanConditions": {
+            "title": "2026年最新日本留学条件"
+          },
+          "koreaCost": {
+            "title": "2026年韩国留学费用"
+          },
+          "taiwanScholarships": {
+            "title": "越南学生台湾留学奖学金精选"
+          },
+          "singaporeMajors": {
+            "title": "新加坡留学：该如何选择专业？"
+          }
+        }
       },
       "faq": {
         "eyebrow": "常见问题",
-        "title": "常见问题",
-        "sub": "关于留学的常见问题快速解答。"
+        "title": "常见问题解答",
+        "sub": "关于留学的常见疑问，快速为您解答。",
+        "items": {
+          "cost": {
+            "q": "留学一年平均需要多少费用？",
+            "a": "视国家而定：台湾约80–200万越南盾/年，韩国120–280万，日本180–320万，新加坡300–650万，欧洲200–500万。通过奖学金可大幅降低费用。"
+          },
+          "timing": {
+            "q": "应该提前多久开始准备申请材料？",
+            "a": "理想情况下建议提前12–18个月准备。ALOHA会根据您的能力为您量身制定详细规划。"
+          },
+          "language": {
+            "q": "最低语言要求是什么？",
+            "a": "台湾：HSK 4级以上或TOCFL A2；韩国：TOPIK 3级以上（D-2）；日本：大多数学校要求JLPT N3；新加坡与欧洲：雅思6.0–6.5分以上。"
+          },
+          "scholarshipSupport": {
+            "q": "ALOHA是否协助申请奖学金？",
+            "a": "是的。ALOHA与台湾政府奖学金、GKS（韩国）、MEXT（日本）、伊拉斯谟+（欧洲）等奖学金项目合作，全程协助材料准备与面试，直到获得结果。"
+          },
+          "workAfter": {
+            "q": "毕业后可以留下来工作吗？",
+            "a": "可以：台湾（毕业后工作签证）、韩国（D-10 → E-7）、日本（工程师/工作签证）、新加坡（Employment Pass）、欧洲（视国家而定）。ALOHA会为您提供具体规划建议。"
+          },
+          "noLanguageYet": {
+            "q": "完全没有语言基础可以留学吗？",
+            "a": "可以。ALOHA提供6–12个月的国内语言预备课程，也可以选择在国外进行为期1年的预科项目。"
+          }
+        }
       },
-      "form": {
-        "eyebrow": "预约咨询",
-        "title": "免费1对1留学咨询",
-        "sub": "留下你的信息 —— ALOHA将在24小时内回电,并为你制定个性化方案。",
-        "destination": "意向国家",
-        "note": "其他说明(可选)",
-        "submit": "发送咨询请求",
-        "success": "感谢!ALOHA将在24小时内联系你。",
-        "trust": "10,000+ 学员的信赖之选"
-      },
-      "cta": "获取留学咨询"
+      "cta": {
+        "title": "您正在计划留学吗？",
+        "sub": "分享您的目标，ALOHA将为您规划合适的留学路径。",
+        "primary": "预约留学咨询"
+      }
     },
     "about": {
       "eyebrow": "关于ALOHA",
@@ -299,10 +641,22 @@
         "ctaExplore": "探索ALOHA",
         "ctaVideo": "观看介绍视频",
         "stats": {
-          "years": { "value": "10+", "label": "年办学历程" },
-          "students": { "value": "10,000+", "label": "学员" },
-          "branches": { "value": "10+", "label": "全国校区" },
-          "goal": { "value": "95%", "label": "学员达成目标" }
+          "years": {
+            "value": "10+",
+            "label": "年办学历程"
+          },
+          "students": {
+            "value": "10,000+",
+            "label": "学员"
+          },
+          "branches": {
+            "value": "10+",
+            "label": "全国校区"
+          },
+          "goal": {
+            "value": "95%",
+            "label": "学员达成目标"
+          }
         }
       },
       "what": {
@@ -332,7 +686,10 @@
       },
       "vmv": {
         "eyebrow": "愿景与使命",
-        "vision": { "title": "愿景", "desc": "成为越南领先的多语种培训与发展网络。" },
+        "vision": {
+          "title": "愿景",
+          "desc": "成为越南领先的多语种培训与发展网络。"
+        },
         "mission": {
           "title": "使命",
           "items": [
@@ -348,11 +705,31 @@
         "eyebrow": "核心价值",
         "title": "构成ALOHA的5大价值",
         "items": [
-          { "letter": "A", "name": "AFFECTION", "desc": "尊重、分享,营造积极的学习氛围。" },
-          { "letter": "L", "name": "LEARNING", "desc": "持续学习、更新与创新。" },
-          { "letter": "O", "name": "OPPORTUNITY", "desc": "拓展学习、职业与全球机会。" },
-          { "letter": "H", "name": "HARMONY", "desc": "平衡学习效果、体验与长期成长。" },
-          { "letter": "A", "name": "ACTION", "desc": "学以致用,注重实际应用能力。" }
+          {
+            "letter": "A",
+            "name": "AFFECTION",
+            "desc": "尊重、分享,营造积极的学习氛围。"
+          },
+          {
+            "letter": "L",
+            "name": "LEARNING",
+            "desc": "持续学习、更新与创新。"
+          },
+          {
+            "letter": "O",
+            "name": "OPPORTUNITY",
+            "desc": "拓展学习、职业与全球机会。"
+          },
+          {
+            "letter": "H",
+            "name": "HARMONY",
+            "desc": "平衡学习效果、体验与长期成长。"
+          },
+          {
+            "letter": "A",
+            "name": "ACTION",
+            "desc": "学以致用,注重实际应用能力。"
+          }
         ]
       },
       "principles": {
@@ -362,9 +739,18 @@
         "mottoAlt": "以学生为中心 · 学以致用",
         "subtitle": "03 项原则",
         "items": [
-          { "title": "学对", "desc": "符合水平与目标的学习路径。" },
-          { "title": "练够", "desc": "加强互动、练习与反射。" },
-          { "title": "用真", "desc": "将知识落实到真实场景。" }
+          {
+            "title": "学对",
+            "desc": "符合水平与目标的学习路径。"
+          },
+          {
+            "title": "练够",
+            "desc": "加强互动、练习与反射。"
+          },
+          {
+            "title": "用真",
+            "desc": "将知识落实到真实场景。"
+          }
         ]
       },
       "team": {
@@ -378,10 +764,47 @@
         "title": "从语言到国际机会",
         "lead": "ALOHA陪伴学员走完整个发展之路。",
         "steps": [
-          { "num": "01", "title": "语言", "items": ["中文", "英语", "韩语", "日语"] },
-          { "num": "02", "title": "证书", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
-          { "num": "03", "title": "留学", "items": ["中国", "韩国", "日本", "台湾", "新加坡", "欧洲"] },
-          { "num": "04", "title": "未来", "items": ["国际学习", "职业发展", "更多机会"] }
+          {
+            "num": "01",
+            "title": "语言",
+            "items": [
+              "中文",
+              "英语",
+              "韩语",
+              "日语"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "证书",
+            "items": [
+              "HSK",
+              "IELTS",
+              "TOPIK",
+              "JLPT"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "留学",
+            "items": [
+              "中国",
+              "韩国",
+              "日本",
+              "台湾",
+              "新加坡",
+              "欧洲"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "未来",
+            "items": [
+              "国际学习",
+              "职业发展",
+              "更多机会"
+            ]
+          }
         ]
       }
     },
@@ -413,9 +836,26 @@
     "global": "海外留学",
     "about": "关于ALOHA",
     "contact": "联系我们",
-    "aboutLinks": { "intro": "关于我们", "team": "师资团队", "branches": "校区", "news": "新闻", "contact": "联系我们" },
-    "trainingLinks": ["中文", "英语", "韩语", "日语"],
-    "globalLinks": ["留学台湾", "留学韩国", "留学日本", "留学欧洲", "留学新加坡"],
+    "aboutLinks": {
+      "intro": "关于我们",
+      "team": "师资团队",
+      "branches": "校区",
+      "news": "新闻",
+      "contact": "联系我们"
+    },
+    "trainingLinks": [
+      "中文",
+      "英语",
+      "韩语",
+      "日语"
+    ],
+    "globalLinks": [
+      "留学台湾",
+      "留学韩国",
+      "留学日本",
+      "留学欧洲",
+      "留学新加坡"
+    ],
     "email": "邮箱",
     "address": "地址",
     "policy": "隐私政策",

@@ -4,11 +4,15 @@ import { useRef } from "react";
 import { useRegisterModal } from "@/components/layout/register-context";
 import { GlobalHero } from "@/components/global/GlobalHero";
 import { CountryShowcase } from "@/components/global/CountryShowcase";
+import { StudyProgramsSection } from "@/components/global/StudyProgramsSection";
+import { PartnerSchoolsSection } from "@/components/global/PartnerSchoolsSection";
 import { ApplicationTimeline } from "@/components/global/ApplicationTimeline";
 import { ScholarshipsGrid } from "@/components/global/ScholarshipsGrid";
+import { LanguageCrossSection } from "@/components/global/LanguageCrossSection";
 import { GlobalStories } from "@/components/global/GlobalStories";
+import { StudyAbroadKnowledge } from "@/components/global/StudyAbroadKnowledge";
 import { GlobalFaq } from "@/components/global/GlobalFaq";
-import { GlobalContactForm } from "@/components/global/GlobalContactForm";
+import { StudyAbroadCta } from "@/components/global/StudyAbroadCta";
 
 /**
  * /duhocquocte — Study-abroad landing page. Order of sections is picked
@@ -17,21 +21,25 @@ import { GlobalContactForm } from "@/components/global/GlobalContactForm";
  */
 export default function GlobalPage() {
   const { open } = useRegisterModal();
-  const timelineRef = useRef<HTMLElement | null>(null);
+  const destinationsRef = useRef<HTMLElement | null>(null);
 
-  const scrollToTimeline = () => {
-    timelineRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const scrollToDestinations = () => {
+    destinationsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <>
-      <GlobalHero onOpenRegister={open} onScrollToTimeline={scrollToTimeline} />
-      <CountryShowcase />
-      <ApplicationTimeline ref={timelineRef} />
+      <GlobalHero onOpenRegister={open} onScrollToDestinations={scrollToDestinations} />
+      <CountryShowcase ref={destinationsRef} />
+      <StudyProgramsSection />
+      <PartnerSchoolsSection />
       <ScholarshipsGrid />
+      <ApplicationTimeline />
+      <LanguageCrossSection />
       <GlobalStories />
+      <StudyAbroadKnowledge />
       <GlobalFaq />
-      <GlobalContactForm />
+      <StudyAbroadCta onOpenRegister={open} />
     </>
   );
 }

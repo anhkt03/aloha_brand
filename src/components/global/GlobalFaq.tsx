@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/common/Container";
 import { SectionHead } from "@/components/common/Section";
-import { globalFaq } from "@/data/globalFaq";
+import { globalFaqKeys } from "@/data/globalFaq";
 import { cn } from "@/lib/utils";
 
 /**
@@ -19,17 +19,17 @@ export function GlobalFaq() {
       <div className="section">
         <SectionHead center eyebrow={t("eyebrow")} title={t("title")} sub={t("sub")} />
         <div className="mx-auto max-w-3xl overflow-hidden rounded-lg border border-line bg-surface">
-          {globalFaq.map((item, idx) => {
+          {globalFaqKeys.map((key, idx) => {
             const open = openIdx === idx;
             return (
-              <div key={item.q} className={cn(idx > 0 && "border-t border-line")}>
+              <div key={key} className={cn(idx > 0 && "border-t border-line")}>
                 <button
                   type="button"
                   onClick={() => setOpenIdx(open ? null : idx)}
                   aria-expanded={open}
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-surface-2"
                 >
-                  <span className="font-display text-[15px] font-extrabold text-ink">{item.q}</span>
+                  <span className="font-display text-[15px] font-extrabold text-ink">{t(`items.${key}.q`)}</span>
                   <svg
                     viewBox="0 0 24 24"
                     width="20"
@@ -53,7 +53,7 @@ export function GlobalFaq() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-5 pb-4 text-[14.5px] leading-relaxed text-ink-soft">{item.a}</p>
+                    <p className="px-5 pb-4 text-[14.5px] leading-relaxed text-ink-soft">{t(`items.${key}.a`)}</p>
                   </div>
                 </div>
               </div>

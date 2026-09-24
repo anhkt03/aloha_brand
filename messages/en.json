@@ -33,7 +33,11 @@
   "about": {
     "eyebrow": "About us",
     "title": "ALOHA Language School",
-    "pillars": { "quality": "Quality", "experience": "Experience", "growth": "Well-rounded growth" },
+    "pillars": {
+      "quality": "Quality",
+      "experience": "Experience",
+      "growth": "Well-rounded growth"
+    },
     "quote": "ALOHA is a multi-language school built around three main pillars",
     "body": "We deliver <b>a modern learning environment, a rigorous curriculum, and a personalized path</b> for every student's goal.",
     "cta": "Learn about ALOHA"
@@ -57,13 +61,24 @@
       "title": "Language training",
       "desc": "A rigorous path from fundamentals to international certificates and\nreal-world use.",
       "cta": "Explore",
-      "items": ["Chinese", "English", "Korean", "Japanese"]
+      "items": [
+        "Chinese",
+        "English",
+        "Korean",
+        "Japanese"
+      ]
     },
     "global": {
       "title": "Study abroad",
       "desc": "Walk with our students through program choice, school selection, scholarships and application.",
       "cta": "Explore",
-      "items": ["Taiwan", "Japan", "Korea", "Singapore", "Europe"]
+      "items": [
+        "Taiwan",
+        "Japan",
+        "Korea",
+        "Singapore",
+        "Europe"
+      ]
     }
   },
   "why": {
@@ -72,12 +87,30 @@
     "sub": "More than a language course — ALOHA is a companion on your journey to bigger opportunities.",
     "trust": "10,000+ students already trust ALOHA",
     "items": {
-      "roadmap": { "title": "Structured roadmap", "desc": "Clear, personalized to your level and goal." },
-      "classSize": { "title": "Small class size", "desc": "More interaction, closer attention to every student." },
-      "commitment": { "title": "Outcome commitment", "desc": "Written outcome commitment — free retake included." },
-      "flexible": { "title": "Flexible learning", "desc": "Many branches, multiple formats and time slots." },
-      "teachers": { "title": "Expert teachers", "desc": "Experienced, high-caliber instructors and TAs." },
-      "facility": { "title": "Modern facilities", "desc": "Bright, contemporary classrooms with everything you need." }
+      "roadmap": {
+        "title": "Structured roadmap",
+        "desc": "Clear, personalized to your level and goal."
+      },
+      "classSize": {
+        "title": "Small class size",
+        "desc": "More interaction, closer attention to every student."
+      },
+      "commitment": {
+        "title": "Outcome commitment",
+        "desc": "Written outcome commitment — free retake included."
+      },
+      "flexible": {
+        "title": "Flexible learning",
+        "desc": "Many branches, multiple formats and time slots."
+      },
+      "teachers": {
+        "title": "Expert teachers",
+        "desc": "Experienced, high-caliber instructors and TAs."
+      },
+      "facility": {
+        "title": "Modern facilities",
+        "desc": "Bright, contemporary classrooms with everything you need."
+      }
     }
   },
   "experience": {
@@ -85,10 +118,22 @@
     "title": "Learning experience\n<b>at ALOHA</b>",
     "closing": "You don't just come to class — <b>you're supported end-to-end, from learning and practice to assessment.</b>",
     "items": {
-      "small": { "title": "Small classes", "desc": "Teachers have time to interact, correct and support every student." },
-      "cycle": { "title": "Learn – Practice – Test", "desc": "Beyond classes, students get homework, practice and periodic tests to measure progress." },
-      "practice": { "title": "Real-world practice", "desc": "Strengthen communication, reflexes and real situations across life, study and work." },
-      "support": { "title": "After-class support", "desc": "Additional materials, videos and self-study tools to keep learning outside class." }
+      "small": {
+        "title": "Small classes",
+        "desc": "Teachers have time to interact, correct and support every student."
+      },
+      "cycle": {
+        "title": "Learn – Practice – Test",
+        "desc": "Beyond classes, students get homework, practice and periodic tests to measure progress."
+      },
+      "practice": {
+        "title": "Real-world practice",
+        "desc": "Strengthen communication, reflexes and real situations across life, study and work."
+      },
+      "support": {
+        "title": "After-class support",
+        "desc": "Additional materials, videos and self-study tools to keep learning outside class."
+      }
     }
   },
   "journey": {
@@ -120,9 +165,18 @@
     "title": "ALOHA News",
     "cta": "More news",
     "categories": {
-      "language": { "title": "Languages", "desc": "Learning tips, certificate know-how and effective study methods." },
-      "abroad": { "title": "Study abroad", "desc": "Study abroad information, scholarships and global opportunities." },
-      "activity": { "title": "ALOHA activities", "desc": "Events, activities and ALOHA stories." }
+      "language": {
+        "title": "Languages",
+        "desc": "Learning tips, certificate know-how and effective study methods."
+      },
+      "abroad": {
+        "title": "Study abroad",
+        "desc": "Study abroad information, scholarships and global opportunities."
+      },
+      "activity": {
+        "title": "ALOHA activities",
+        "desc": "Events, activities and ALOHA stories."
+      }
     }
   },
   "cta": {
@@ -141,10 +195,22 @@
         "ctaPrimary": "Explore language programs",
         "ctaSecondary": "Get a consultation",
         "stats": {
-          "students": { "value": "10,000+", "label": "Students" },
-          "teachers": { "value": "500+", "label": "Teachers" },
-          "branches": { "value": "10+", "label": "Branches nationwide" },
-          "programs": { "value": "40+", "label": "Training programs" }
+          "students": {
+            "value": "10,000+",
+            "label": "Students"
+          },
+          "teachers": {
+            "value": "500+",
+            "label": "Teachers"
+          },
+          "branches": {
+            "value": "10+",
+            "label": "Branches nationwide"
+          },
+          "programs": {
+            "value": "40+",
+            "label": "Training programs"
+          }
         }
       },
       "programs": {
@@ -153,10 +219,26 @@
         "sub": "Whether you're aiming for a certificate, study, work or studying abroad, ALOHA has a path for you.",
         "cta": "View program",
         "items": {
-          "zh": { "name": "Chinese", "badge": "HSK · Conversation", "desc": "From the basics to HSK 6, combining exam prep with real study and work use." },
-          "en": { "name": "English", "badge": "IELTS · TOEIC", "desc": "From foundation to advanced IELTS/TOEIC, focused on real English proficiency." },
-          "ko": { "name": "Korean", "badge": "TOPIK · Conversation", "desc": "From the basics to TOPIK 5, combining knowledge with real application." },
-          "ja": { "name": "Japanese", "badge": "JLPT · Conversation", "desc": "From N5 to N3, building JLPT skills alongside real conversation ability." }
+          "zh": {
+            "name": "Chinese",
+            "badge": "HSK · Conversation",
+            "desc": "From the basics to HSK 6, combining exam prep with real study and work use."
+          },
+          "en": {
+            "name": "English",
+            "badge": "IELTS · TOEIC",
+            "desc": "From foundation to advanced IELTS/TOEIC, focused on real English proficiency."
+          },
+          "ko": {
+            "name": "Korean",
+            "badge": "TOPIK · Conversation",
+            "desc": "From the basics to TOPIK 5, combining knowledge with real application."
+          },
+          "ja": {
+            "name": "Japanese",
+            "badge": "JLPT · Conversation",
+            "desc": "From N5 to N3, building JLPT skills alongside real conversation ability."
+          }
         }
       },
       "coursesList": {
@@ -168,32 +250,75 @@
         "eyebrow": "Learn by Goal",
         "title": "What's your goal for learning a language?",
         "items": {
-          "certificate": { "title": "Certificate exams", "badge": "HSK · IELTS · TOEIC · TOPIK · JLPT", "desc": "Reach your certificate goal with a clear roadmap" },
-          "study": { "title": "For study", "desc": "Build a language foundation for school and academic goals" },
-          "work": { "title": "For work", "desc": "Communication, corporate environments, industrial parks, trade and workplace situations" },
-          "abroad": { "title": "Study abroad", "desc": "Build language proficiency and certificates for your study-abroad plan" }
+          "certificate": {
+            "title": "Certificate exams",
+            "badge": "HSK · IELTS · TOEIC · TOPIK · JLPT",
+            "desc": "Reach your certificate goal with a clear roadmap"
+          },
+          "study": {
+            "title": "For study",
+            "desc": "Build a language foundation for school and academic goals"
+          },
+          "work": {
+            "title": "For work",
+            "desc": "Communication, corporate environments, industrial parks, trade and workplace situations"
+          },
+          "abroad": {
+            "title": "Study abroad",
+            "desc": "Build language proficiency and certificates for your study-abroad plan"
+          }
         }
       },
       "roadmap": {
         "eyebrow": "Learning Roadmap",
         "title": "From foundation to reaching your goal",
         "steps": {
-          "evaluate": { "title": "Placement test", "desc": "Assess your level and goal" },
-          "plan": { "title": "Build your roadmap", "desc": "Choose the right program" },
-          "practice": { "title": "Learn & practice", "desc": "Combine knowledge with practice and application" },
-          "review": { "title": "Test & review", "desc": "Track your progress" },
-          "achieve": { "title": "Reach your goal", "desc": "Certificate · Study · Work · Study abroad" }
+          "evaluate": {
+            "title": "Placement test",
+            "desc": "Assess your level and goal"
+          },
+          "plan": {
+            "title": "Build your roadmap",
+            "desc": "Choose the right program"
+          },
+          "practice": {
+            "title": "Learn & practice",
+            "desc": "Combine knowledge with practice and application"
+          },
+          "review": {
+            "title": "Test & review",
+            "desc": "Track your progress"
+          },
+          "achieve": {
+            "title": "Reach your goal",
+            "desc": "Certificate · Study · Work · Study abroad"
+          }
         }
       },
       "method": {
         "eyebrow": "ALOHA's Method",
         "title": "Learn to actually use it",
         "items": {
-          "smallClass": { "title": "Small class size", "desc": "More interaction and direct feedback" },
-          "practice": { "title": "Learn – Practice – Apply", "desc": "Put knowledge into real situations" },
-          "tracking": { "title": "Progress tracking", "desc": "Regular assignments and assessments" },
-          "personalize": { "title": "Personalized roadmap", "desc": "Adjusted to your level and goal" },
-          "commitment": { "title": "Outcome commitment", "desc": "Committed to the program and specific training conditions" }
+          "smallClass": {
+            "title": "Small class size",
+            "desc": "More interaction and direct feedback"
+          },
+          "practice": {
+            "title": "Learn – Practice – Apply",
+            "desc": "Put knowledge into real situations"
+          },
+          "tracking": {
+            "title": "Progress tracking",
+            "desc": "Regular assignments and assessments"
+          },
+          "personalize": {
+            "title": "Personalized roadmap",
+            "desc": "Adjusted to your level and goal"
+          },
+          "commitment": {
+            "title": "Outcome commitment",
+            "desc": "Committed to the program and specific training conditions"
+          }
         },
         "quote": "A language isn't just a subject — it's a tool that opens more opportunities for your future.",
         "quoteAuthor": "ALOHA"
@@ -202,10 +327,22 @@
         "eyebrow": "Learning Formats",
         "title": "Choose the format that suits you",
         "items": {
-          "offline": { "title": "Offline", "desc": "Learn in person at ALOHA branches" },
-          "online": { "title": "Online", "desc": "Learn live via Zoom" },
-          "smallGroup": { "title": "Small group", "desc": "More time to interact and practice" },
-          "oneOnOne": { "title": "1:1", "desc": "A roadmap personalized to your goal" }
+          "offline": {
+            "title": "Offline",
+            "desc": "Learn in person at ALOHA branches"
+          },
+          "online": {
+            "title": "Online",
+            "desc": "Learn live via Zoom"
+          },
+          "smallGroup": {
+            "title": "Small group",
+            "desc": "More time to interact and practice"
+          },
+          "oneOnOne": {
+            "title": "1:1",
+            "desc": "A roadmap personalized to your goal"
+          }
         }
       },
       "teachers": {
@@ -213,7 +350,12 @@
         "title": "Highly skilled and dedicated",
         "desc": "ALOHA teachers are selected to strict program requirements and closely follow each student's learning progress",
         "viewAll": "View all teachers",
-        "roles": { "zh": "Chinese Teacher", "en": "English Teacher", "ko": "Korean Teacher", "ja": "Japanese Teacher" }
+        "roles": {
+          "zh": "Chinese Teacher",
+          "en": "English Teacher",
+          "ko": "Korean Teacher",
+          "ja": "Japanese Teacher"
+        }
       },
       "results": {
         "eyebrow": "Learning Outcomes",
@@ -227,69 +369,265 @@
       }
     },
     "global": {
-      "eyebrow": "Study abroad with ALOHA",
-      "title": "Reach your global dream",
-      "lead": "End-to-end support — from school choice and application to scholarships, visa and settling in — for China, Korea, Japan and English-speaking countries.",
       "hero": {
-        "badge": "2026 intake now open",
-        "ctaPrimary": "Get a free consult",
-        "ctaSecondary": "See a sample roadmap"
+        "eyebrow": "Study abroad with ALOHA",
+        "title": "Your gateway to the world's leading education systems",
+        "lead": "Personalized study-abroad roadmaps built around each student's ability, goals and future direction.",
+        "ctaPrimary": "Find the right destination",
+        "ctaSecondary": "Book a consult",
+        "stats": {
+          "markets": {
+            "value": "05",
+            "label": "Study destinations"
+          },
+          "partners": {
+            "value": "100+",
+            "label": "Partner schools"
+          },
+          "advised": {
+            "value": "500+",
+            "label": "Students advised / year"
+          },
+          "satisfaction": {
+            "value": "90%+",
+            "label": "Students satisfied"
+          }
+        }
       },
       "countries": {
-        "eyebrow": "Destinations",
-        "title": "Pick your country",
-        "sub": "Every country is a door — ALOHA takes you to the one that fits your ability, major and budget.",
-        "labels": {
-          "tuition": "Tuition",
-          "language": "Language requirement",
-          "majors": "Popular majors",
-          "scholarship": "Scholarships"
-        },
-        "yearUnit": "/year",
-        "explore": "Explore"
+        "eyebrow": "Study destinations",
+        "title": "05 destinations with ALOHA"
       },
       "destinations": {
-        "china": { "name": "China" },
-        "korea": { "name": "Korea" },
-        "japan": { "name": "Japan" },
-        "uk": { "name": "United Kingdom" },
-        "singapore": { "name": "Singapore" },
-        "europe": { "name": "Europe" }
+        "taiwan": {
+          "name": "Taiwan",
+          "highlights": [
+            "Diverse scholarships",
+            "Affordable cost of living",
+            "Study & work opportunities"
+          ]
+        },
+        "korea": {
+          "name": "Korea",
+          "highlights": [
+            "Wide range of programs",
+            "International environment",
+            "Many scholarship options"
+          ]
+        },
+        "japan": {
+          "name": "Japan",
+          "highlights": [
+            "High-quality education",
+            "Career-focused training",
+            "Disciplined learning environment"
+          ]
+        },
+        "singapore": {
+          "name": "Singapore",
+          "highlights": [
+            "International curricula",
+            "English-speaking environment",
+            "Global connections"
+          ]
+        },
+        "europe": {
+          "name": "Europe",
+          "highlights": [
+            "Diverse countries",
+            "Rich range of majors",
+            "Access to world-class education"
+          ]
+        }
       },
-      "timeline": {
-        "eyebrow": "Application roadmap",
-        "title": "12 months to campus",
-        "sub": "A sample timeline for a September intake — adjusted per country and per student."
+      "programs": {
+        "eyebrow": "Study-abroad programs",
+        "title": "Which program are you looking for?",
+        "items": {
+          "undergrad": {
+            "title": "Undergraduate study abroad",
+            "desc": "Choose the major, school and country that fit your future direction"
+          },
+          "postgrad": {
+            "title": "Postgraduate study abroad",
+            "desc": "Master's, PhD and advanced specialist programs"
+          },
+          "language": {
+            "title": "Language study abroad",
+            "desc": "Strengthen your language skills before your major coursework"
+          },
+          "scholarship": {
+            "title": "Study-abroad scholarships",
+            "desc": "Find scholarship programs that match your profile"
+          }
+        }
+      },
+      "schools": {
+        "eyebrow": "Partner schools",
+        "title": "Our trusted partner-school network",
+        "all": "All"
       },
       "scholarships": {
         "eyebrow": "Scholarships",
-        "title": "Scholarship opportunities with ALOHA",
-        "sub": "We walk with you through public and private scholarships around the world.",
-        "audienceLabel": "For",
-        "valueLabel": "Value"
+        "title": "Global study opportunities",
+        "deadline": "Deadline",
+        "badges": {
+          "full": "Full ride",
+          "partial": "Partial",
+          "tuition": "Tuition support"
+        },
+        "items": {
+          "taiwanUndergrad": {
+            "name": "Undergraduate Scholarship",
+            "school": "National Taiwan University",
+            "level": "Undergraduate"
+          },
+          "koreaGks": {
+            "name": "Global Korea Scholarship",
+            "school": "Yonsei University",
+            "level": "Undergraduate"
+          },
+          "erasmus": {
+            "name": "Erasmus+ Scholarship",
+            "school": "Multiple universities",
+            "level": "Postgraduate"
+          }
+        }
+      },
+      "timeline": {
+        "eyebrow": "Application process",
+        "title": "From guidance to departure day",
+        "steps": {
+          "step1": {
+            "title": "Consultation & orientation",
+            "desc": "Assess ability, goals and personal circumstances"
+          },
+          "step2": {
+            "title": "Choose school & program",
+            "desc": "Guidance on the right country, school and major"
+          },
+          "step3": {
+            "title": "Prepare your application",
+            "desc": "Guidance to complete your application documents"
+          },
+          "step4": {
+            "title": "Submit application",
+            "desc": "Track progress and get help processing your file"
+          },
+          "step5": {
+            "title": "Visa & pre-departure",
+            "desc": "Guidance on everything needed before enrolling"
+          },
+          "step6": {
+            "title": "Enrollment",
+            "desc": "Ready to start your journey in a new country"
+          }
+        }
+      },
+      "languageCross": {
+        "eyebrow": "Language & Study Abroad",
+        "title": "Language — the foundation for your global journey",
+        "lead": "A strong language foundation helps you move through your application with confidence and adapt quickly to an international classroom. At ALOHA, you can learn the language and prepare to study abroad on the same track.",
+        "cta": "Explore our language programs",
+        "steps": {
+          "assess": "Level assessment",
+          "learn": "Learn the language",
+          "certificate": "Earn a certificate",
+          "profile": "Prepare your application",
+          "go": "Study abroad"
+        }
       },
       "stories": {
-        "eyebrow": "Student stories",
-        "title": "Where our students have gone",
-        "sub": "ALOHA alumni already studying at international universities.",
-        "yearLabel": "Enrolled"
+        "eyebrow": "Study-abroad stories",
+        "title": "ALOHA students & their new journeys",
+        "yearLabel": "Enrolled",
+        "items": {
+          "taiwan1": {
+            "school": "National Taiwan University",
+            "quote": "I received a 50% tuition scholarship and get to study at National Taiwan University. Thank you, ALOHA!"
+          },
+          "korea1": {
+            "school": "Yonsei University",
+            "quote": "A clear roadmap and dedicated guidance — ALOHA was with me every step, right through to enrollment."
+          },
+          "japan1": {
+            "school": "Waseda University",
+            "quote": "From JLPT N5 to N2, then applying to Waseda — a 2-year journey made solid with ALOHA by my side."
+          },
+          "taiwan2": {
+            "school": "National Cheng Kung University",
+            "quote": "A full Taiwanese government scholarship — I'm grateful ALOHA handled both my HSK prep and my scholarship application so carefully."
+          },
+          "singapore1": {
+            "school": "Nanyang Technological University",
+            "quote": "IELTS 6.5 after 6 months at ALOHA, enough for NTU. The environment here is international and dynamic."
+          },
+          "europe1": {
+            "school": "University of Manchester",
+            "quote": "IELTS 6.5 after 5 months at ALOHA — enough for a Master's in Business at Manchester. Thank you, teachers!"
+          },
+          "korea2": {
+            "school": "Seoul National University",
+            "quote": "ALOHA took me from TOPIK 2 to TOPIK 5 in just 10 months, plus a really thorough application. Now I'm in Seoul."
+          }
+        }
+      },
+      "knowledge": {
+        "eyebrow": "Study-abroad guide",
+        "title": "Study-abroad handbook",
+        "cta": "View all articles",
+        "scholarshipLabel": "Scholarships",
+        "items": {
+          "japanConditions": {
+            "title": "Latest 2026 requirements for studying in Japan"
+          },
+          "koreaCost": {
+            "title": "Cost of studying in Korea in 2026"
+          },
+          "taiwanScholarships": {
+            "title": "Top Taiwan scholarships for Vietnamese students"
+          },
+          "singaporeMajors": {
+            "title": "Studying in Singapore: which major should you choose?"
+          }
+        }
       },
       "faq": {
         "eyebrow": "FAQ",
         "title": "Frequently asked questions",
-        "sub": "Quick answers to common study-abroad questions."
+        "sub": "Quick answers to common study-abroad questions.",
+        "items": {
+          "cost": {
+            "q": "How much does a year of study abroad cost on average?",
+            "a": "It depends on the country: Taiwan ~80–200M VND/year, Korea 120–280M, Japan 180–320M, Singapore 300–650M, Europe 200–500M. Scholarships can lower this significantly."
+          },
+          "timing": {
+            "q": "How far in advance should I start preparing my application?",
+            "a": "Ideally 12–18 months before enrollment. ALOHA will assess your ability and build a detailed roadmap for you."
+          },
+          "language": {
+            "q": "What's the minimum language level required?",
+            "a": "Taiwan: HSK 4+ or TOCFL Band A2; Korea: TOPIK 3+ (D-2); Japan: JLPT N3 for most schools; Singapore & Europe: IELTS 6.0–6.5+."
+          },
+          "scholarshipSupport": {
+            "q": "Does ALOHA help with scholarship applications?",
+            "a": "Yes. ALOHA works with Taiwanese government scholarships, GKS (Korea), MEXT (Japan), Erasmus+ (Europe) and more — supporting your application and interview until you get a result."
+          },
+          "workAfter": {
+            "q": "Can I stay and work after graduating?",
+            "a": "Yes: Taiwan (post-graduation work visa), Korea (D-10 → E-7), Japan (engineer/work visa), Singapore (Employment Pass), Europe (varies by country). ALOHA will advise on the specific route."
+          },
+          "noLanguageYet": {
+            "q": "Can I study abroad even with no language foundation yet?",
+            "a": "Yes. ALOHA offers a 6–12 month local language-prep track before you apply, or a 1-year prep program abroad."
+          }
+        }
       },
-      "form": {
-        "eyebrow": "Book a consult",
-        "title": "Free 1-on-1 study-abroad consult",
-        "sub": "Drop your info — ALOHA calls back within 24 hours with a personalized roadmap.",
-        "destination": "Preferred country",
-        "note": "Anything else (optional)",
-        "submit": "Send request",
-        "success": "Thank you! ALOHA will reach out within 24 hours.",
-        "trust": "Trusted by 10,000+ students"
-      },
-      "cta": "Get study-abroad advice"
+      "cta": {
+        "title": "Planning to study abroad?",
+        "sub": "Share your goals — ALOHA will map out the right roadmap for you.",
+        "primary": "Get study-abroad advice"
+      }
     },
     "about": {
       "eyebrow": "About ALOHA",
@@ -303,10 +641,22 @@
         "ctaExplore": "Explore ALOHA",
         "ctaVideo": "Watch intro video",
         "stats": {
-          "years": { "value": "10+", "label": "Years of growth" },
-          "students": { "value": "10,000+", "label": "Students" },
-          "branches": { "value": "10+", "label": "Branches nationwide" },
-          "goal": { "value": "95%", "label": "Students meet their goal" }
+          "years": {
+            "value": "10+",
+            "label": "Years of growth"
+          },
+          "students": {
+            "value": "10,000+",
+            "label": "Students"
+          },
+          "branches": {
+            "value": "10+",
+            "label": "Branches nationwide"
+          },
+          "goal": {
+            "value": "95%",
+            "label": "Students meet their goal"
+          }
         }
       },
       "what": {
@@ -355,11 +705,31 @@
         "eyebrow": "Core values",
         "title": "5 values that make ALOHA",
         "items": [
-          { "letter": "A", "name": "AFFECTION", "desc": "Respect, sharing and a positive learning environment." },
-          { "letter": "L", "name": "LEARNING", "desc": "Never stop learning, updating and reinventing." },
-          { "letter": "O", "name": "OPPORTUNITY", "desc": "Open more learning, career and global opportunities." },
-          { "letter": "H", "name": "HARMONY", "desc": "Balance study results, experience and long-term growth." },
-          { "letter": "A", "name": "ACTION", "desc": "Learning meets doing — focused on real application." }
+          {
+            "letter": "A",
+            "name": "AFFECTION",
+            "desc": "Respect, sharing and a positive learning environment."
+          },
+          {
+            "letter": "L",
+            "name": "LEARNING",
+            "desc": "Never stop learning, updating and reinventing."
+          },
+          {
+            "letter": "O",
+            "name": "OPPORTUNITY",
+            "desc": "Open more learning, career and global opportunities."
+          },
+          {
+            "letter": "H",
+            "name": "HARMONY",
+            "desc": "Balance study results, experience and long-term growth."
+          },
+          {
+            "letter": "A",
+            "name": "ACTION",
+            "desc": "Learning meets doing — focused on real application."
+          }
         ]
       },
       "principles": {
@@ -369,9 +739,18 @@
         "mottoAlt": "以学生为中心 · 学以致用",
         "subtitle": "03 principles",
         "items": [
-          { "title": "Learn right", "desc": "A path tuned to your level and goal." },
-          { "title": "Practice enough", "desc": "More interaction, drills and reflex." },
-          { "title": "Apply for real", "desc": "Take knowledge into real-world situations." }
+          {
+            "title": "Learn right",
+            "desc": "A path tuned to your level and goal."
+          },
+          {
+            "title": "Practice enough",
+            "desc": "More interaction, drills and reflex."
+          },
+          {
+            "title": "Apply for real",
+            "desc": "Take knowledge into real-world situations."
+          }
         ]
       },
       "team": {
@@ -385,10 +764,47 @@
         "title": "From language to international opportunities",
         "lead": "ALOHA walks with learners on a full development journey.",
         "steps": [
-          { "num": "01", "title": "Language", "items": ["Chinese", "English", "Korean", "Japanese"] },
-          { "num": "02", "title": "Certificate", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
-          { "num": "03", "title": "Study abroad", "items": ["China", "Korea", "Japan", "Taiwan", "Singapore", "Europe"] },
-          { "num": "04", "title": "Future", "items": ["International study", "Career growth", "Wider opportunities"] }
+          {
+            "num": "01",
+            "title": "Language",
+            "items": [
+              "Chinese",
+              "English",
+              "Korean",
+              "Japanese"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Certificate",
+            "items": [
+              "HSK",
+              "IELTS",
+              "TOPIK",
+              "JLPT"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Study abroad",
+            "items": [
+              "China",
+              "Korea",
+              "Japan",
+              "Taiwan",
+              "Singapore",
+              "Europe"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Future",
+            "items": [
+              "International study",
+              "Career growth",
+              "Wider opportunities"
+            ]
+          }
         ]
       }
     },
@@ -427,8 +843,19 @@
       "news": "News",
       "contact": "Contact"
     },
-    "trainingLinks": ["Chinese", "English", "Korean", "Japanese"],
-    "globalLinks": ["Study in Taiwan", "Study in Korea", "Study in Japan", "Study in Europe", "Study in Singapore"],
+    "trainingLinks": [
+      "Chinese",
+      "English",
+      "Korean",
+      "Japanese"
+    ],
+    "globalLinks": [
+      "Study in Taiwan",
+      "Study in Korea",
+      "Study in Japan",
+      "Study in Europe",
+      "Study in Singapore"
+    ],
     "email": "Email",
     "address": "Address",
     "policy": "Privacy policy",

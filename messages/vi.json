@@ -33,7 +33,11 @@
   "about": {
     "eyebrow": "Về chúng tôi",
     "title": "ALOHA Language School",
-    "pillars": { "quality": "Chất lượng", "experience": "Trải nghiệm", "growth": "Phát triển toàn diện" },
+    "pillars": {
+      "quality": "Chất lượng",
+      "experience": "Trải nghiệm",
+      "growth": "Phát triển toàn diện"
+    },
     "quote": "ALOHA là hệ thống đào tạo đa ngôn ngữ với định hướng xây dựng hành trình học tập dựa trên 3 trụ cột chính",
     "body": "ALOHA hướng tới mang đến <b>môi trường học tập hiện đại, chương trình đào tạo bài bản và lộ trình phù hợp</b> với mục tiêu của từng học viên.",
     "cta": "Tìm hiểu về ALOHA"
@@ -57,13 +61,24 @@
       "title": "Đào tạo ngoại ngữ",
       "desc": "Lộ trình đào tạo bài bản từ nền tảng đến chứng chỉ và\nứng dụng thực tế.",
       "cta": "Khám phá ngay",
-      "items": ["Tiếng Trung", "Tiếng Anh", "Tiếng Hàn", "Tiếng Nhật"]
+      "items": [
+        "Tiếng Trung",
+        "Tiếng Anh",
+        "Tiếng Hàn",
+        "Tiếng Nhật"
+      ]
     },
     "global": {
       "title": "Du học",
       "desc": "Đồng hành cùng học viên trên hành trình lựa chọn chương trình, trường học, học bổng và hoàn thiện hồ sơ du học.",
       "cta": "Khám phá ngay",
-      "items": ["Đài Loan", "Nhật Bản", "Hàn Quốc", "Singapore", "Châu Âu"]
+      "items": [
+        "Đài Loan",
+        "Nhật Bản",
+        "Hàn Quốc",
+        "Singapore",
+        "Châu Âu"
+      ]
     }
   },
   "why": {
@@ -72,12 +87,30 @@
     "sub": "Không chỉ là một khóa học, ALOHA là người bạn đồng hành trên hành trình chinh phục những cơ hội lớn hơn.",
     "trust": "Hơn 10.000+ học viên đã tin tưởng lựa chọn ALOHA",
     "items": {
-      "roadmap": { "title": "Lộ trình bài bản", "desc": "Rõ ràng, cá nhân hóa theo trình độ & mục tiêu." },
-      "classSize": { "title": "Sĩ số lớp vừa & nhỏ", "desc": "Tăng tương tác và theo sát từng học viên." },
-      "commitment": { "title": "Cam kết đầu ra", "desc": "Cam kết đầu ra bằng văn bản, học lại MIỄN PHÍ." },
-      "flexible": { "title": "Học tập linh hoạt", "desc": "Nhiều cơ sở với đa dạng hình thức học và khung thời gian học." },
-      "teachers": { "title": "Đội ngũ giảng viên", "desc": "Đội ngũ giảng viên giàu kinh nghiệm, chuyên môn cao." },
-      "facility": { "title": "Cơ sở vật chất hiện đại", "desc": "Không gian học tập hiện đại, trẻ trung với đầy đủ tiện ích." }
+      "roadmap": {
+        "title": "Lộ trình bài bản",
+        "desc": "Rõ ràng, cá nhân hóa theo trình độ & mục tiêu."
+      },
+      "classSize": {
+        "title": "Sĩ số lớp vừa & nhỏ",
+        "desc": "Tăng tương tác và theo sát từng học viên."
+      },
+      "commitment": {
+        "title": "Cam kết đầu ra",
+        "desc": "Cam kết đầu ra bằng văn bản, học lại MIỄN PHÍ."
+      },
+      "flexible": {
+        "title": "Học tập linh hoạt",
+        "desc": "Nhiều cơ sở với đa dạng hình thức học và khung thời gian học."
+      },
+      "teachers": {
+        "title": "Đội ngũ giảng viên",
+        "desc": "Đội ngũ giảng viên giàu kinh nghiệm, chuyên môn cao."
+      },
+      "facility": {
+        "title": "Cơ sở vật chất hiện đại",
+        "desc": "Không gian học tập hiện đại, trẻ trung với đầy đủ tiện ích."
+      }
     }
   },
   "experience": {
@@ -85,10 +118,22 @@
     "title": "Trải nghiệm học tập\n<b>tại ALOHA</b>",
     "closing": "Không chỉ đến lớp để học, học viên được theo sát trong suốt quá trình <b>từ học kiến thức, thực hành, làm bài đến đánh giá kết quả.</b>",
     "items": {
-      "small": { "title": "Lớp học quy mô nhỏ", "desc": "Giáo viên có thời gian tương tác, sửa lỗi và hỗ trợ từng học viên." },
-      "cycle": { "title": "Học – Luyện – Kiểm tra", "desc": "Ngoài việc học trên lớp, học viên được giao bài, luyện tập và kiểm tra định kỳ để đánh giá mức độ tiến bộ." },
-      "practice": { "title": "Thực hành ngôn ngữ thực tế", "desc": "Tăng cường giao tiếp, phản xạ và xử lý các tình huống sử dụng ngôn ngữ trong đời sống, học tập và công việc." },
-      "support": { "title": "Hỗ trợ ngoài giờ học", "desc": "Học viên được hỗ trợ thêm thông qua tài liệu, video và các công cụ học tập trong quá trình tự học." }
+      "small": {
+        "title": "Lớp học quy mô nhỏ",
+        "desc": "Giáo viên có thời gian tương tác, sửa lỗi và hỗ trợ từng học viên."
+      },
+      "cycle": {
+        "title": "Học – Luyện – Kiểm tra",
+        "desc": "Ngoài việc học trên lớp, học viên được giao bài, luyện tập và kiểm tra định kỳ để đánh giá mức độ tiến bộ."
+      },
+      "practice": {
+        "title": "Thực hành ngôn ngữ thực tế",
+        "desc": "Tăng cường giao tiếp, phản xạ và xử lý các tình huống sử dụng ngôn ngữ trong đời sống, học tập và công việc."
+      },
+      "support": {
+        "title": "Hỗ trợ ngoài giờ học",
+        "desc": "Học viên được hỗ trợ thêm thông qua tài liệu, video và các công cụ học tập trong quá trình tự học."
+      }
     }
   },
   "journey": {
@@ -120,9 +165,18 @@
     "title": "Tin tức ALOHA",
     "cta": "Xem thêm tin tức",
     "categories": {
-      "language": { "title": "Ngoại ngữ", "desc": "Kiến thức học ngoại ngữ, chứng chỉ và phương pháp học tập hiệu quả." },
-      "abroad": { "title": "Du học", "desc": "Thông tin du học, học bổng và cơ hội học tập quốc tế." },
-      "activity": { "title": "Hoạt động ALOHA", "desc": "Các hoạt động, sự kiện và câu chuyện ALOHA." }
+      "language": {
+        "title": "Ngoại ngữ",
+        "desc": "Kiến thức học ngoại ngữ, chứng chỉ và phương pháp học tập hiệu quả."
+      },
+      "abroad": {
+        "title": "Du học",
+        "desc": "Thông tin du học, học bổng và cơ hội học tập quốc tế."
+      },
+      "activity": {
+        "title": "Hoạt động ALOHA",
+        "desc": "Các hoạt động, sự kiện và câu chuyện ALOHA."
+      }
     }
   },
   "cta": {
@@ -141,10 +195,22 @@
         "ctaPrimary": "Khám phá chương trình ngoại ngữ",
         "ctaSecondary": "Đăng ký tư vấn",
         "stats": {
-          "students": { "value": "10.000+", "label": "Học viên" },
-          "teachers": { "value": "500+", "label": "Giáo viên" },
-          "branches": { "value": "10+", "label": "Cơ sở toàn quốc" },
-          "programs": { "value": "40+", "label": "Chương trình đào tạo" }
+          "students": {
+            "value": "10.000+",
+            "label": "Học viên"
+          },
+          "teachers": {
+            "value": "500+",
+            "label": "Giáo viên"
+          },
+          "branches": {
+            "value": "10+",
+            "label": "Cơ sở toàn quốc"
+          },
+          "programs": {
+            "value": "40+",
+            "label": "Chương trình đào tạo"
+          }
         }
       },
       "programs": {
@@ -153,10 +219,26 @@
         "sub": "Dù bạn học để thi chứng chỉ, phục vụ học tập, công việc hay định hướng du học, ALOHA đều có lộ trình phù hợp.",
         "cta": "Xem chương trình",
         "items": {
-          "zh": { "name": "Tiếng Trung", "badge": "HSK ∙ Giao tiếp", "desc": "Lộ trình từ cơ bản đến HSK 6, kết hợp luyện thi và ứng dụng trong học tập, công việc." },
-          "en": { "name": "Tiếng Anh", "badge": "IELTS ∙ TOEIC", "desc": "Các chương trình từ nền tảng đến IELTS nâng cao/TOEIC, tập trung phát triển năng lực sử dụng Tiếng Anh." },
-          "ko": { "name": "Tiếng Hàn", "badge": "TOPIK ∙ Giao tiếp", "desc": "Lộ trình từ cơ bản đến TOPIK 5, kết hợp kiến thức và ứng dụng thực tế." },
-          "ja": { "name": "Tiếng Nhật", "badge": "JLPT ∙ Giao tiếp", "desc": "Lộ trình N5 đến N3, phát triển đồng thời năng lực JLPT và khả năng giao tiếp thực tế." }
+          "zh": {
+            "name": "Tiếng Trung",
+            "badge": "HSK ∙ Giao tiếp",
+            "desc": "Lộ trình từ cơ bản đến HSK 6, kết hợp luyện thi và ứng dụng trong học tập, công việc."
+          },
+          "en": {
+            "name": "Tiếng Anh",
+            "badge": "IELTS ∙ TOEIC",
+            "desc": "Các chương trình từ nền tảng đến IELTS nâng cao/TOEIC, tập trung phát triển năng lực sử dụng Tiếng Anh."
+          },
+          "ko": {
+            "name": "Tiếng Hàn",
+            "badge": "TOPIK ∙ Giao tiếp",
+            "desc": "Lộ trình từ cơ bản đến TOPIK 5, kết hợp kiến thức và ứng dụng thực tế."
+          },
+          "ja": {
+            "name": "Tiếng Nhật",
+            "badge": "JLPT ∙ Giao tiếp",
+            "desc": "Lộ trình N5 đến N3, phát triển đồng thời năng lực JLPT và khả năng giao tiếp thực tế."
+          }
         }
       },
       "coursesList": {
@@ -168,32 +250,75 @@
         "eyebrow": "Học theo mục tiêu",
         "title": "Mục tiêu học ngoại ngữ của bạn?",
         "items": {
-          "certificate": { "title": "Thi chứng chỉ", "badge": "HSK ∙ IELTS ∙ TOEIC ∙ TOPIK ∙ JLPT", "desc": "Đạt mục tiêu chứng chỉ với lộ trình rõ ràng" },
-          "study": { "title": "Phục vụ học tập", "desc": "Xây dựng nền tảng ngoại ngữ cho học tập và các mục tiêu giáo dục" },
-          "work": { "title": "Phục vụ công việc", "desc": "Giao tiếp, môi trường doanh nghiệp, KCN, thương mại và các tình huống nghề nghiệp" },
-          "abroad": { "title": "Du học", "desc": "Xây dựng năng lực ngoại ngữ và chứng chỉ phục vụ kế hoạch du học" }
+          "certificate": {
+            "title": "Thi chứng chỉ",
+            "badge": "HSK ∙ IELTS ∙ TOEIC ∙ TOPIK ∙ JLPT",
+            "desc": "Đạt mục tiêu chứng chỉ với lộ trình rõ ràng"
+          },
+          "study": {
+            "title": "Phục vụ học tập",
+            "desc": "Xây dựng nền tảng ngoại ngữ cho học tập và các mục tiêu giáo dục"
+          },
+          "work": {
+            "title": "Phục vụ công việc",
+            "desc": "Giao tiếp, môi trường doanh nghiệp, KCN, thương mại và các tình huống nghề nghiệp"
+          },
+          "abroad": {
+            "title": "Du học",
+            "desc": "Xây dựng năng lực ngoại ngữ và chứng chỉ phục vụ kế hoạch du học"
+          }
         }
       },
       "roadmap": {
         "eyebrow": "Lộ trình học tập",
         "title": "Từ nền tảng đến chinh phục mục tiêu",
         "steps": {
-          "evaluate": { "title": "Đánh giá đầu vào", "desc": "Xác định trình độ và mục tiêu" },
-          "plan": { "title": "Xây dựng lộ trình", "desc": "Lựa chọn chương trình học phù hợp" },
-          "practice": { "title": "Học & Thực hành", "desc": "Học kiến thức kết hợp luyện tập và ứng dụng" },
-          "review": { "title": "Kiểm tra & đánh giá", "desc": "Theo dõi tiến độ" },
-          "achieve": { "title": "Chinh phục mục tiêu", "desc": "Chứng chỉ ∙ Học tập ∙ Công việc ∙ Du học" }
+          "evaluate": {
+            "title": "Đánh giá đầu vào",
+            "desc": "Xác định trình độ và mục tiêu"
+          },
+          "plan": {
+            "title": "Xây dựng lộ trình",
+            "desc": "Lựa chọn chương trình học phù hợp"
+          },
+          "practice": {
+            "title": "Học & Thực hành",
+            "desc": "Học kiến thức kết hợp luyện tập và ứng dụng"
+          },
+          "review": {
+            "title": "Kiểm tra & đánh giá",
+            "desc": "Theo dõi tiến độ"
+          },
+          "achieve": {
+            "title": "Chinh phục mục tiêu",
+            "desc": "Chứng chỉ ∙ Học tập ∙ Công việc ∙ Du học"
+          }
         }
       },
       "method": {
         "eyebrow": "Phương pháp học tại ALOHA",
         "title": "Học để sử dụng được",
         "items": {
-          "smallClass": { "title": "Lớp học quy mô nhỏ", "desc": "Tăng tương tác và được sửa lỗi trực tiếp" },
-          "practice": { "title": "Học – Thực hành – Ứng dụng", "desc": "Đưa kiến thức vào tình huống thực tế" },
-          "tracking": { "title": "Theo sát tiến độ", "desc": "Quản lý bài tập và kiểm tra định kỳ" },
-          "personalize": { "title": "Cá nhân hóa lộ trình", "desc": "Điều chỉnh theo trình độ và mục tiêu riêng" },
-          "commitment": { "title": "Cam kết đầu ra", "desc": "Cam kết theo chương trình và điều kiện đào tạo cụ thể" }
+          "smallClass": {
+            "title": "Lớp học quy mô nhỏ",
+            "desc": "Tăng tương tác và được sửa lỗi trực tiếp"
+          },
+          "practice": {
+            "title": "Học – Thực hành – Ứng dụng",
+            "desc": "Đưa kiến thức vào tình huống thực tế"
+          },
+          "tracking": {
+            "title": "Theo sát tiến độ",
+            "desc": "Quản lý bài tập và kiểm tra định kỳ"
+          },
+          "personalize": {
+            "title": "Cá nhân hóa lộ trình",
+            "desc": "Điều chỉnh theo trình độ và mục tiêu riêng"
+          },
+          "commitment": {
+            "title": "Cam kết đầu ra",
+            "desc": "Cam kết theo chương trình và điều kiện đào tạo cụ thể"
+          }
         },
         "quote": "Ngoại ngữ không chỉ là một môn học, mà là công cụ mở ra nhiều cơ hội hơn trong tương lai.",
         "quoteAuthor": "ALOHA"
@@ -202,10 +327,22 @@
         "eyebrow": "Hình thức học",
         "title": "Chủ động lựa chọn hình thức học thuận tiện",
         "items": {
-          "offline": { "title": "Offline", "desc": "Học trực tiếp tại hệ thống cơ sở ALOHA" },
-          "online": { "title": "Online", "desc": "Học trực tuyến qua nền tảng Zoom" },
-          "smallGroup": { "title": "Lớp nhỏ", "desc": "Tăng thời lượng tương tác và thực hành" },
-          "oneOnOne": { "title": "Lớp 1:1", "desc": "Lộ trình cá nhân hóa theo mục tiêu riêng" }
+          "offline": {
+            "title": "Offline",
+            "desc": "Học trực tiếp tại hệ thống cơ sở ALOHA"
+          },
+          "online": {
+            "title": "Online",
+            "desc": "Học trực tuyến qua nền tảng Zoom"
+          },
+          "smallGroup": {
+            "title": "Lớp nhỏ",
+            "desc": "Tăng thời lượng tương tác và thực hành"
+          },
+          "oneOnOne": {
+            "title": "Lớp 1:1",
+            "desc": "Lộ trình cá nhân hóa theo mục tiêu riêng"
+          }
         }
       },
       "teachers": {
@@ -213,7 +350,12 @@
         "title": "Chuyên môn cao và tận tâm",
         "desc": "Giáo viên ALOHA được lựa chọn theo yêu cầu khắt khe của từng chương trình, và theo sát quá trình học tập của học viên",
         "viewAll": "Xem tất cả giảng viên",
-        "roles": { "zh": "Giáo viên Tiếng Trung", "en": "Giáo viên Tiếng Anh", "ko": "Giáo viên Tiếng Hàn", "ja": "Giáo viên Tiếng Nhật" }
+        "roles": {
+          "zh": "Giáo viên Tiếng Trung",
+          "en": "Giáo viên Tiếng Anh",
+          "ko": "Giáo viên Tiếng Hàn",
+          "ja": "Giáo viên Tiếng Nhật"
+        }
       },
       "results": {
         "eyebrow": "Kết quả học tập",
@@ -227,69 +369,265 @@
       }
     },
     "global": {
-      "eyebrow": "Du học cùng ALOHA",
-      "title": "Chạm tay tới giấc mơ toàn cầu",
-      "lead": "Đồng hành trọn gói từ chọn trường, hoàn thiện hồ sơ đến visa và định cư — Trung, Hàn, Nhật và các nước nói tiếng Anh.",
       "hero": {
-        "badge": "Du học 2026 mở đăng ký",
-        "ctaPrimary": "Nhận tư vấn miễn phí",
-        "ctaSecondary": "Xem hành trình mẫu"
+        "eyebrow": "Du học cùng ALOHA",
+        "title": "Mở lối đến những nền giáo dục hàng đầu thế giới",
+        "lead": "Tư vấn lộ trình du học phù hợp với năng lực, mục tiêu học tập và định hướng tương lai của từng học sinh, sinh viên.",
+        "ctaPrimary": "Tìm điểm đến phù hợp",
+        "ctaSecondary": "Đăng ký tư vấn",
+        "stats": {
+          "markets": {
+            "value": "05",
+            "label": "Thị trường du học"
+          },
+          "partners": {
+            "value": "100+",
+            "label": "Trường đối tác"
+          },
+          "advised": {
+            "value": "500+",
+            "label": "Học viên tư vấn mỗi năm"
+          },
+          "satisfaction": {
+            "value": "90%+",
+            "label": "Học viên hài lòng"
+          }
+        }
       },
       "countries": {
-        "eyebrow": "Điểm đến",
-        "title": "Chọn quốc gia của bạn",
-        "sub": "Mỗi quốc gia là một cánh cửa — ALOHA đưa bạn tới nơi phù hợp với năng lực, ngành học và ngân sách.",
-        "labels": {
-          "tuition": "Học phí",
-          "language": "Yêu cầu ngôn ngữ",
-          "majors": "Ngành phổ biến",
-          "scholarship": "Học bổng"
-        },
-        "yearUnit": "/năm",
-        "explore": "Xem chi tiết"
+        "eyebrow": "Điểm đến du học",
+        "title": "05 thị trường du học cùng ALOHA"
       },
       "destinations": {
-        "china": { "name": "Trung Quốc" },
-        "korea": { "name": "Hàn Quốc" },
-        "japan": { "name": "Nhật Bản" },
-        "uk": { "name": "Anh Quốc" },
-        "singapore": { "name": "Singapore" },
-        "europe": { "name": "Châu Âu" }
+        "taiwan": {
+          "name": "Đài Loan",
+          "highlights": [
+            "Học bổng đa dạng",
+            "Chi phí hợp lý",
+            "Cơ hội học tập & việc làm"
+          ]
+        },
+        "korea": {
+          "name": "Hàn Quốc",
+          "highlights": [
+            "Đa dạng chương trình",
+            "Môi trường quốc tế",
+            "Nhiều lựa chọn học bổng"
+          ]
+        },
+        "japan": {
+          "name": "Nhật Bản",
+          "highlights": [
+            "Giáo dục chất lượng",
+            "Định hướng nghề nghiệp",
+            "Môi trường học tập kỷ luật"
+          ]
+        },
+        "singapore": {
+          "name": "Singapore",
+          "highlights": [
+            "Chương trình quốc tế",
+            "Môi trường sử dụng Tiếng Anh",
+            "Kết nối toàn cầu"
+          ]
+        },
+        "europe": {
+          "name": "Châu Âu",
+          "highlights": [
+            "Đa dạng quốc gia",
+            "Ngành học phong phú",
+            "Cơ hội tiếp cận giáo dục quốc tế"
+          ]
+        }
       },
-      "timeline": {
-        "eyebrow": "Lộ trình apply",
-        "title": "12 tháng đi tới giảng đường",
-        "sub": "Timeline mẫu cho kỳ nhập học tháng 9 — điều chỉnh cho từng quốc gia và học viên."
+      "programs": {
+        "eyebrow": "Các chương trình du học",
+        "title": "Bạn đang tìm kiếm chương trình nào?",
+        "items": {
+          "undergrad": {
+            "title": "Du học đại học",
+            "desc": "Lựa chọn ngành học, trường và quốc gia phù hợp với định hướng tương lai"
+          },
+          "postgrad": {
+            "title": "Du học sau đại học",
+            "desc": "Các chương trình Thạc sĩ, Tiến sĩ và đào tạo chuyên sâu"
+          },
+          "language": {
+            "title": "Du học ngôn ngữ",
+            "desc": "Nâng cao năng lực ngôn ngữ trước khi học chuyên ngành"
+          },
+          "scholarship": {
+            "title": "Học bổng du học",
+            "desc": "Tìm kiếm các chương trình học bổng phù hợp với hồ sơ cá nhân"
+          }
+        }
+      },
+      "schools": {
+        "eyebrow": "Trường đối tác",
+        "title": "Hệ thống trường đối tác uy tín",
+        "all": "Tất cả"
       },
       "scholarships": {
-        "eyebrow": "Học bổng",
-        "title": "Cơ hội học bổng cùng ALOHA",
-        "sub": "Chúng tôi đồng hành cùng bạn qua các học bổng chính phủ và tư nhân trên toàn cầu.",
-        "audienceLabel": "Đối tượng",
-        "valueLabel": "Giá trị"
+        "eyebrow": "Học bổng du học",
+        "title": "Cơ hội học tập quốc tế",
+        "deadline": "Hạn đăng ký",
+        "badges": {
+          "full": "Toàn phần",
+          "partial": "Bán phần",
+          "tuition": "Hỗ trợ học phí"
+        },
+        "items": {
+          "taiwanUndergrad": {
+            "name": "Học bổng hệ Đại học",
+            "school": "Đại học Quốc lập Đài Loan",
+            "level": "Đại học"
+          },
+          "koreaGks": {
+            "name": "Học bổng Global Korea",
+            "school": "Đại học Yonsei",
+            "level": "Đại học"
+          },
+          "erasmus": {
+            "name": "Học bổng Erasmus+",
+            "school": "Nhiều trường đại học",
+            "level": "Sau đại học"
+          }
+        }
+      },
+      "timeline": {
+        "eyebrow": "Quy trình du học",
+        "title": "Từ định hướng đến ngày lên đường",
+        "steps": {
+          "step1": {
+            "title": "Tư vấn & định hướng",
+            "desc": "Đánh giá năng lực, mục tiêu và điều kiện cá nhân"
+          },
+          "step2": {
+            "title": "Chọn trường và chương trình",
+            "desc": "Tư vấn quốc gia, trường và ngành học phù hợp"
+          },
+          "step3": {
+            "title": "Chuẩn bị hồ sơ",
+            "desc": "Hướng dẫn và hoàn thiện hồ sơ theo yêu cầu"
+          },
+          "step4": {
+            "title": "Nộp hồ sơ",
+            "desc": "Theo dõi tiến trình và hỗ trợ xử lý hồ sơ"
+          },
+          "step5": {
+            "title": "Visa và chuẩn bị lên đường",
+            "desc": "Hướng dẫn thủ tục cần thiết trước khi nhập học"
+          },
+          "step6": {
+            "title": "Nhập học",
+            "desc": "Sẵn sàng bắt đầu hành trình tại quốc gia mới"
+          }
+        }
+      },
+      "languageCross": {
+        "eyebrow": "Ngoại ngữ & Du học",
+        "title": "Ngoại ngữ – nền tảng cho hành trình quốc tế",
+        "lead": "Một nền tảng ngoại ngữ tốt giúp bạn chủ động hơn trong quá trình chuẩn bị hồ sơ và nhanh chóng thích nghi với môi trường học tập quốc tế. Tại ALOHA, học viên có thể học ngoại ngữ và chuẩn bị du học trên cùng một lộ trình.",
+        "cta": "Khám phá chương trình ngoại ngữ",
+        "steps": {
+          "assess": "Đánh giá năng lực đầu vào",
+          "learn": "Học ngoại ngữ",
+          "certificate": "Chinh phục chứng chỉ",
+          "profile": "Chuẩn bị hồ sơ",
+          "go": "Du học"
+        }
       },
       "stories": {
-        "eyebrow": "Câu chuyện học viên",
-        "title": "Học viên ALOHA đã đi đâu?",
-        "sub": "Những gương mặt học viên ALOHA đã và đang học tập tại các trường quốc tế.",
-        "yearLabel": "Nhập học"
+        "eyebrow": "Câu chuyện du học",
+        "title": "Học viên ALOHA & những hành trình mới",
+        "yearLabel": "Nhập học",
+        "items": {
+          "taiwan1": {
+            "school": "Đại học Quốc lập Đài Loan",
+            "quote": "Mình nhận được học bổng 50% học phí và niềm đam mê học tại Đại học Quốc lập Đài Loan. Cảm ơn ALOHA!"
+          },
+          "korea1": {
+            "school": "Đại học Yonsei",
+            "quote": "Lộ trình rõ ràng, tư vấn tận tâm, luôn đồng hành cùng mình từng bước đầu tiên khi nhập học."
+          },
+          "japan1": {
+            "school": "Đại học Waseda",
+            "quote": "Từ JLPT N5 lên N2 rồi apply Waseda — hành trình 2 năm nhưng có đội ngũ ALOHA đồng hành nên rất chắc chắn."
+          },
+          "taiwan2": {
+            "school": "Đại học Quốc lập Thành Công",
+            "quote": "Học bổng chính phủ Đài Loan toàn phần — mình biết ơn ALOHA đã lo cả HSK lẫn bộ hồ sơ scholarship rất chỉn chu."
+          },
+          "singapore1": {
+            "school": "Nanyang Technological University",
+            "quote": "IELTS 6.5 sau 6 tháng luyện tập ở ALOHA, đủ đầu vào NTU. Môi trường học rất quốc tế và năng động."
+          },
+          "europe1": {
+            "school": "University of Manchester",
+            "quote": "IELTS 6.5 sau 5 tháng luyện tập ở ALOHA, đủ đầu vào Master Business tại Manchester. Cảm ơn thầy cô!"
+          },
+          "korea2": {
+            "school": "Đại học Quốc gia Seoul",
+            "quote": "ALOHA hỗ trợ em từ TOPIK 2 lên TOPIK 5 chỉ trong 10 tháng, cùng hồ sơ apply rất kỹ. Giờ em đã ở Seoul."
+          }
+        }
+      },
+      "knowledge": {
+        "eyebrow": "Kiến thức du học",
+        "title": "Cẩm nang du học",
+        "cta": "Xem tất cả bài viết",
+        "scholarshipLabel": "Học bổng",
+        "items": {
+          "japanConditions": {
+            "title": "Điều kiện du học Nhật Bản mới nhất 2026"
+          },
+          "koreaCost": {
+            "title": "Chi phí du học Hàn Quốc năm 2026"
+          },
+          "taiwanScholarships": {
+            "title": "Top học bổng du học Đài Loan dành cho sinh viên Việt Nam"
+          },
+          "singaporeMajors": {
+            "title": "Du học Singapore: Nên chọn ngành gì?"
+          }
+        }
       },
       "faq": {
         "eyebrow": "FAQ",
         "title": "Câu hỏi thường gặp",
-        "sub": "Câu trả lời nhanh cho những băn khoăn phổ biến về du học."
+        "sub": "Câu trả lời nhanh cho những băn khoăn phổ biến về du học.",
+        "items": {
+          "cost": {
+            "q": "Chi phí du học trung bình một năm là bao nhiêu?",
+            "a": "Tùy quốc gia: Đài Loan ~80–200tr/năm, Hàn Quốc 120–280tr/năm, Nhật Bản 180–320tr/năm, Singapore 300–650tr/năm, Châu Âu 200–500tr/năm. Chi phí có thể giảm nhiều nhờ học bổng."
+          },
+          "timing": {
+            "q": "Nên bắt đầu chuẩn bị hồ sơ trước bao lâu?",
+            "a": "Lý tưởng nhất là 12–18 tháng trước ngày nhập học. ALOHA sẽ đánh giá năng lực và lên lộ trình chi tiết cho từng cá nhân."
+          },
+          "language": {
+            "q": "Trình độ ngoại ngữ tối thiểu cần đạt?",
+            "a": "Đài Loan: HSK 4+ hoặc TOCFL Band A2; Hàn Quốc: TOPIK 3+ (D-2); Nhật Bản: JLPT N3 với đa số trường; Singapore & Châu Âu: IELTS 6.0–6.5+."
+          },
+          "scholarshipSupport": {
+            "q": "ALOHA có hỗ trợ xin học bổng không?",
+            "a": "Có. Đội ngũ ALOHA làm việc với các quỹ học bổng chính phủ Đài Loan, GKS (Hàn Quốc), MEXT (Nhật Bản), Erasmus+ (Châu Âu)... hỗ trợ hồ sơ và phỏng vấn đến khi có kết quả."
+          },
+          "workAfter": {
+            "q": "Sau khi tốt nghiệp có được ở lại làm việc không?",
+            "a": "Có: Đài Loan (visa lao động sau tốt nghiệp), Hàn Quốc (D-10 → E-7), Nhật Bản (visa kỹ sư/lao động), Singapore (Employment Pass), Châu Âu (tùy quốc gia). ALOHA sẽ tư vấn lộ trình cụ thể."
+          },
+          "noLanguageYet": {
+            "q": "Nếu chưa có ngoại ngữ hoàn toàn có đi du học được không?",
+            "a": "Được. ALOHA có lộ trình khóa dự bị ngôn ngữ trong nước 6–12 tháng trước khi apply, hoặc chương trình 1 năm dự bị tại nước ngoài."
+          }
+        }
       },
-      "form": {
-        "eyebrow": "Đăng ký tư vấn",
-        "title": "Nhận tư vấn du học 1-1 miễn phí",
-        "sub": "Điền thông tin — ALOHA sẽ gọi lại trong 24 giờ để lên lộ trình cá nhân cho bạn.",
-        "destination": "Quốc gia mong muốn",
-        "note": "Chia sẻ thêm (tùy chọn)",
-        "submit": "Gửi yêu cầu tư vấn",
-        "success": "Cảm ơn bạn! ALOHA sẽ liên hệ trong 24 giờ.",
-        "trust": "10.000+ học viên đã tin tưởng"
-      },
-      "cta": "Nhận tư vấn du học"
+      "cta": {
+        "title": "Bạn đang có dự định du học?",
+        "sub": "Chia sẻ mục tiêu của bạn, ALOHA sẽ tư vấn lộ trình phù hợp.",
+        "primary": "Đăng ký tư vấn du học"
+      }
     },
     "about": {
       "eyebrow": "Về ALOHA",
@@ -303,10 +641,22 @@
         "ctaExplore": "Khám phá ALOHA",
         "ctaVideo": "Xem video giới thiệu",
         "stats": {
-          "years": { "value": "10+", "label": "Năm phát triển" },
-          "students": { "value": "10.000+", "label": "Học viên" },
-          "branches": { "value": "10+", "label": "Cơ sở toàn quốc" },
-          "goal": { "value": "95%", "label": "Học viên đạt mục tiêu" }
+          "years": {
+            "value": "10+",
+            "label": "Năm phát triển"
+          },
+          "students": {
+            "value": "10.000+",
+            "label": "Học viên"
+          },
+          "branches": {
+            "value": "10+",
+            "label": "Cơ sở toàn quốc"
+          },
+          "goal": {
+            "value": "95%",
+            "label": "Học viên đạt mục tiêu"
+          }
         }
       },
       "what": {
@@ -355,11 +705,31 @@
         "eyebrow": "Giá trị cốt lõi",
         "title": "5 giá trị tạo nên ALOHA",
         "items": [
-          { "letter": "A", "name": "AFFECTION", "desc": "Tôn trọng, sẻ chia và xây dựng môi trường học tập tích cực." },
-          { "letter": "L", "name": "LEARNING", "desc": "Không ngừng học hỏi, cập nhật và đổi mới." },
-          { "letter": "O", "name": "OPPORTUNITY", "desc": "Mở rộng cơ hội học tập, nghề nghiệp và hội nhập." },
-          { "letter": "H", "name": "HARMONY", "desc": "Cân bằng giữa hiệu quả học tập, trải nghiệm và sự phát triển lâu dài." },
-          { "letter": "A", "name": "ACTION", "desc": "Học đi đôi với hành động, tập trung vào khả năng ứng dụng thực tế." }
+          {
+            "letter": "A",
+            "name": "AFFECTION",
+            "desc": "Tôn trọng, sẻ chia và xây dựng môi trường học tập tích cực."
+          },
+          {
+            "letter": "L",
+            "name": "LEARNING",
+            "desc": "Không ngừng học hỏi, cập nhật và đổi mới."
+          },
+          {
+            "letter": "O",
+            "name": "OPPORTUNITY",
+            "desc": "Mở rộng cơ hội học tập, nghề nghiệp và hội nhập."
+          },
+          {
+            "letter": "H",
+            "name": "HARMONY",
+            "desc": "Cân bằng giữa hiệu quả học tập, trải nghiệm và sự phát triển lâu dài."
+          },
+          {
+            "letter": "A",
+            "name": "ACTION",
+            "desc": "Học đi đôi với hành động, tập trung vào khả năng ứng dụng thực tế."
+          }
         ]
       },
       "principles": {
@@ -369,9 +739,18 @@
         "mottoAlt": "以学生为中心 · 学以致用",
         "subtitle": "03 nguyên tắc",
         "items": [
-          { "title": "Học đúng", "desc": "Lộ trình phù hợp với trình độ và mục tiêu." },
-          { "title": "Thực hành đủ", "desc": "Tăng cường tương tác, luyện tập và phản xạ." },
-          { "title": "Ứng dụng thật", "desc": "Đưa kiến thức vào tình huống thực tế." }
+          {
+            "title": "Học đúng",
+            "desc": "Lộ trình phù hợp với trình độ và mục tiêu."
+          },
+          {
+            "title": "Thực hành đủ",
+            "desc": "Tăng cường tương tác, luyện tập và phản xạ."
+          },
+          {
+            "title": "Ứng dụng thật",
+            "desc": "Đưa kiến thức vào tình huống thực tế."
+          }
         ]
       },
       "team": {
@@ -385,10 +764,47 @@
         "title": "Từ ngoại ngữ đến các cơ hội quốc tế",
         "lead": "ALOHA đồng hành cùng người học trên hành trình phát triển toàn diện.",
         "steps": [
-          { "num": "01", "title": "Ngoại ngữ", "items": ["Tiếng Trung", "Tiếng Anh", "Tiếng Hàn", "Tiếng Nhật"] },
-          { "num": "02", "title": "Chứng chỉ", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
-          { "num": "03", "title": "Du học", "items": ["Trung Quốc", "Hàn Quốc", "Nhật Bản", "Đài Loan", "Singapo", "Châu Âu"] },
-          { "num": "04", "title": "Tương lai", "items": ["Học tập quốc tế", "Phát triển nghề nghiệp", "Mở rộng cơ hội"] }
+          {
+            "num": "01",
+            "title": "Ngoại ngữ",
+            "items": [
+              "Tiếng Trung",
+              "Tiếng Anh",
+              "Tiếng Hàn",
+              "Tiếng Nhật"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Chứng chỉ",
+            "items": [
+              "HSK",
+              "IELTS",
+              "TOPIK",
+              "JLPT"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Du học",
+            "items": [
+              "Trung Quốc",
+              "Hàn Quốc",
+              "Nhật Bản",
+              "Đài Loan",
+              "Singapore",
+              "Châu Âu"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Tương lai",
+            "items": [
+              "Học tập quốc tế",
+              "Phát triển nghề nghiệp",
+              "Mở rộng cơ hội"
+            ]
+          }
         ]
       }
     },
@@ -427,8 +843,19 @@
       "news": "Tin tức",
       "contact": "Liên hệ"
     },
-    "trainingLinks": ["Tiếng Trung", "Tiếng Anh", "Tiếng Hàn", "Tiếng Nhật"],
-    "globalLinks": ["Du học Đài Loan", "Du học Hàn Quốc", "Du học Nhật Bản", "Du học Châu Âu", "Du học Singapore"],
+    "trainingLinks": [
+      "Tiếng Trung",
+      "Tiếng Anh",
+      "Tiếng Hàn",
+      "Tiếng Nhật"
+    ],
+    "globalLinks": [
+      "Du học Đài Loan",
+      "Du học Hàn Quốc",
+      "Du học Nhật Bản",
+      "Du học Châu Âu",
+      "Du học Singapore"
+    ],
     "email": "Email",
     "address": "Địa chỉ",
     "policy": "Chính sách bảo mật",
