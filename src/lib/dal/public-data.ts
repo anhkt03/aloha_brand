@@ -24,6 +24,11 @@ export async function getPublicCourses(locale: string) {
   return rows.map((x) => {
     const t = pick(x.translations, locale);
     const category = pick(x.category.translations, locale);
+    // Flag matching (`getCategoryFlag`) keys off Vietnamese keywords
+    // ("Tiếng Anh", "Tiếng Trung", ...) — look that up regardless of the
+    // active locale so the flag doesn't disappear once the display name
+    // is translated.
+    const categoryVi = pick(x.category.translations, "vi");
     const level = pick(x.level.translations, locale);
     return {
       id: x.id,
@@ -32,6 +37,7 @@ export async function getPublicCourses(locale: string) {
       duration: t?.duration ?? "",
       content: t?.content ?? "",
       category: category?.name ?? "",
+      categoryFlagKey: categoryVi?.name ?? category?.name ?? "",
       level: level?.name ?? "",
     };
   });

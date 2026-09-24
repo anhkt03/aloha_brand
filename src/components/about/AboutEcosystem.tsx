@@ -23,8 +23,8 @@ const BG_IMAGES = [
  * About page section 8 — 4-step ecosystem flow (language → certificate →
  * study abroad → future). All 4 cards sit on a single row from md+,
  * separated by connector chevrons; stacked with down-chevrons on mobile.
- * The first two cards (language, certificate) list their items as one
- * column, one per row, instead of a wrapping chip cloud. Each card has a
+ * The first two cards (language, certificate) list their items as a 2-column
+ * grid (paired by row) instead of a wrapping chip cloud. Each card has a
  * faint themed photo behind its content (kept low-opacity for readability).
  */
 export function AboutEcosystem() {
@@ -48,7 +48,7 @@ export function AboutEcosystem() {
                   alt=""
                   fill
                   sizes="(min-width:768px) 25vw, 100vw"
-                  className="object-cover opacity-40"
+                  className="object-cover opacity-15"
                 />
                 <div className="relative">
                   <div
@@ -58,7 +58,7 @@ export function AboutEcosystem() {
                     {step.num}
                   </div>
                   <h3 className="mt-3 font-display text-[16px] font-black text-ink">{step.title}</h3>
-                  <ul className={`mt-1 flex gap-1.5 ${idx < 2 ? "flex-col items-start" : "flex-wrap"}`}>
+                  <ul className={`mt-1 gap-1.5 ${idx < 2 ? "grid grid-cols-2 justify-items-start" : "flex flex-wrap"}`}>
                     {step.items.map((item) => (
                       <li
                         key={item}
