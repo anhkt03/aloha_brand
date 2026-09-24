@@ -8,3 +8,4 @@
 5. Run `npx prisma migrate deploy`, `npm test`, `npm run typecheck`, then `npm run build`.
 6. Smoke-test login and CRUD as ADMIN, STAFF, inactive user and anonymous user. Verify upload type/size rejection and enrollment throttling.
 7. Rotate any database password or secret ever shared outside the secret manager.
+ok
