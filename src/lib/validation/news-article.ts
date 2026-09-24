@@ -1,7 +1,11 @@
 import { NewsStatus } from "@prisma/client";
 import { z } from "zod";
+import { siteConfig } from "@/config/site";
 import { parseLocalDateTime } from "@/lib/utils";
 import { taxonomyLocales } from "./course-taxonomy";
+
+/** A brand-new article has no id yet, so its cover can't be uploaded to `news/{id}/cover/` — fall back until the first save gives it one. */
+const DEFAULT_COVER_IMAGE = `${siteConfig.url}/images/news/placeholder.svg`;
 
 export const newsArticleSchema = z.object({
   id: z.coerce.number().int().positive().optional(),
@@ -25,7 +29,7 @@ export function newsArticleFromForm(formData: FormData) {
   return {
     id: formData.get("id") || undefined,
     slug: formData.get("slug"),
-    coverImage: formData.get("coverImage"),
+    coverImage: formData.get("coverImage") || DEFAULT_COVER_IMAGE,
     gallery: String(formData.get("gallery") ?? "")
       .split("\n")
       .map((x) => x.trim())

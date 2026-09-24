@@ -1,5 +1,6 @@
 import { taxonomyLocales } from "@/lib/validation/course-taxonomy";
-import { Button, Panel, inputClass } from "@/components/admin/ui";
+import { Panel, inputClass } from "@/components/admin/ui";
+import { SubmitButton } from "@/components/admin/submit-button";
 
 const LOCALE_LABELS: Record<string, string> = { vi: "Tiếng Việt", en: "English", zh: "中文", ko: "한국어", ja: "日本語" };
 
@@ -21,7 +22,7 @@ export function TaxonomyForm({ action, item }: { action: (formData: FormData) =>
           ))}
         </div>
       </Panel>
-      <Button type="submit" className="justify-self-start">Lưu</Button>
+      <SubmitButton variant="primary" pendingText="Đang lưu..." className="justify-self-start">Lưu</SubmitButton>
     </form>
   );
 }

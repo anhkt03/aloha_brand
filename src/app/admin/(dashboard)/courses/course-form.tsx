@@ -3,8 +3,10 @@
 import { useActionState } from "react";
 import { CourseStatus } from "@prisma/client";
 import { LocaleTabs } from "@/components/admin/locale-tabs";
-import { Button, Field, Panel, inputClass } from "@/components/admin/ui";
+import { Field, Panel, inputClass } from "@/components/admin/ui";
+import { SubmitButton } from "@/components/admin/submit-button";
 import { FormError } from "@/components/admin/form-error";
+import { FormSuccess } from "@/components/admin/form-success";
 import { taxonomyLocales } from "@/lib/validation/course-taxonomy";
 
 type Translation = { locale: string; title: string; duration: string; content: string };
@@ -19,18 +21,20 @@ export function CourseForm({
   categories,
   levels,
 }: {
-  action: (previous: { message?: string }, formData: FormData) => Promise<{ message?: string }>;
+  action: (previous: { message?: string; success?: boolean }, formData: FormData) => Promise<{ message?: string; success?: boolean }>;
   course?: Course;
   categories: Named[];
   levels: Named[];
 }) {
-  const [state, formAction, pending] = useActionState(action, {});
+  const [state, formAction] = useActionState(action, {});
   const translations = Object.fromEntries((course?.translations ?? []).map((item) => [item.locale, item])) as Record<string, Translation>;
 
   return (
     <form action={formAction} className="grid gap-5">
       <input type="hidden" name="id" value={course?.id ?? ""} />
+      {course ? <input type="hidden" name="status" value={course.status} /> : null}
       <FormError message={state.message} />
+      <FormSuccess message={state.success ? "Đã lưu khóa học thành công." : undefined} />
 
       <Panel title="Thông tin chung">
         <div className="grid gap-4 md:grid-cols-2">
@@ -44,11 +48,13 @@ export function CourseForm({
               {levels.map((item) => <option key={item.id} value={item.id}>{item.translations[0]?.name}</option>)}
             </select>
           </Field>
-          <Field label="Trạng thái">
-            <select name="status" defaultValue={course?.status ?? "HIDDEN"} className={inputClass}>
-              {Object.values(CourseStatus).map((status) => <option key={status} value={status}>{STATUS_LABELS[status]}</option>)}
-            </select>
-          </Field>
+          {course ? null : (
+            <Field label="Trạng thái">
+              <select name="status" defaultValue="HIDDEN" className={inputClass}>
+                {Object.values(CourseStatus).map((status) => <option key={status} value={status}>{STATUS_LABELS[status]}</option>)}
+              </select>
+            </Field>
+          )}
         </div>
       </Panel>
 
@@ -64,9 +70,9 @@ export function CourseForm({
         </LocaleTabs>
       </Panel>
 
-      <Button type="submit" disabled={pending} className="justify-self-start">
-        {pending ? "Đang lưu..." : "Lưu khóa học"}
-      </Button>
+      <SubmitButton variant="primary" pendingText="Đang lưu..." className="justify-self-start">
+        Lưu khóa học
+      </SubmitButton>
     </form>
   );
 }

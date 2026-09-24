@@ -1,4 +1,4 @@
-import { SkeletonBlock } from "@/components/admin/skeleton";
+import { SkeletonBlock, SkeletonPanel } from "@/components/admin/skeleton";
 
 export function CourseFormSkeleton({ actions = false }: { actions?: boolean }) {
   return (
@@ -17,7 +17,7 @@ export function CourseFormSkeleton({ actions = false }: { actions?: boolean }) {
       </div>
 
       <div className="grid gap-5">
-        <div className="rounded-xl border border-slate-200 bg-white p-5">
+        <SkeletonPanel>
           <SkeletonBlock className="mb-4 h-4 w-32" />
           <div className="grid gap-4 md:grid-cols-2">
             {Array.from({ length: 3 }).map((_, index) => (
@@ -27,9 +27,9 @@ export function CourseFormSkeleton({ actions = false }: { actions?: boolean }) {
               </div>
             ))}
           </div>
-        </div>
+        </SkeletonPanel>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-5">
+        <SkeletonPanel>
           <SkeletonBlock className="mb-4 h-4 w-44" />
           <div className="flex gap-1.5 border-b border-slate-200 pb-2.5">
             {Array.from({ length: 5 }).map((_, index) => (
@@ -41,7 +41,7 @@ export function CourseFormSkeleton({ actions = false }: { actions?: boolean }) {
             <SkeletonBlock className="h-9 w-full" />
             <SkeletonBlock className="h-32 w-full" />
           </div>
-        </div>
+        </SkeletonPanel>
 
         <SkeletonBlock className="h-10 w-36 justify-self-start rounded-md" />
       </div>

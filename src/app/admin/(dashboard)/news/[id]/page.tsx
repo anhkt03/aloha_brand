@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
 import { getNewsArticle } from "@/lib/dal/news-articles";
 import { ConfirmDialog } from "@/components/admin/confirm-dialog";
-import { Button, PageHeader } from "@/components/admin/ui";
+import { LinkButton, PageHeader } from "@/components/admin/ui";
+import { SubmitButton } from "@/components/admin/submit-button";
+import { Icon, ICON_PATHS } from "@/components/admin/icons";
 import { ArticleForm } from "../article-form";
 import { deleteNewsArticle, saveNewsArticle, setNewsStatus } from "../actions";
 
@@ -17,12 +19,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         title="Chỉnh sửa bài viết"
         actions={
           <>
+            <LinkButton href="/admin/news" variant="ghost"><Icon path={ICON_PATHS.back} className="h-4 w-4" />Quay lại</LinkButton>
             <form action={setNewsStatus.bind(null, id, "HIDDEN")}>
-              <Button type="submit" variant="ghost">Ẩn bài viết</Button>
+              <SubmitButton variant="ghost" pendingText="Đang ẩn...">Ẩn bài viết</SubmitButton>
             </form>
             <ConfirmDialog description="Xóa vĩnh viễn bài viết này? Thao tác không thể hoàn tác.">
               <form action={deleteNewsArticle.bind(null, id)}>
-                <Button type="submit" variant="danger">Xác nhận xóa</Button>
+                <SubmitButton variant="danger" pendingText="Đang xóa...">Xác nhận xóa</SubmitButton>
               </form>
             </ConfirmDialog>
           </>

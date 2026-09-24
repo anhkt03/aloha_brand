@@ -1,23 +1,44 @@
 import { listCourseLevels } from "@/lib/dal/course-taxonomy";
 import { DataTable } from "@/components/admin/data-table";
-import { Button, LinkButton, PageHeader } from "@/components/admin/ui";
+import { PageHeader, buttonBase, buttonVariants } from "@/components/admin/ui";
+import { SubmitButton } from "@/components/admin/submit-button";
 import { ConfirmDialog } from "@/components/admin/confirm-dialog";
-import { Icon, IconLink, ICON_PATHS } from "@/components/admin/icons";
-import { deleteCourseLevel } from "../taxonomy-actions";
+import { Icon, ICON_PATHS } from "@/components/admin/icons";
+import { cn } from "@/lib/utils";
+import { TaxonomyDialog } from "../taxonomy-dialog";
+import { deleteCourseLevel, saveCourseLevel } from "../taxonomy-actions";
 
 export default async function CourseLevelsPage() {
   const levels = await listCourseLevels();
   return (
     <>
-      <PageHeader eyebrow="Đào tạo" title="Cấp độ khóa học" actions={<LinkButton href="/admin/courses/levels/new">+ Thêm cấp độ</LinkButton>} />
+      <PageHeader
+        eyebrow="Đào tạo"
+        title="Cấp độ khóa học"
+        actions={
+          <TaxonomyDialog
+            action={saveCourseLevel}
+            title="Thêm cấp độ khóa học"
+            trigger="+ Thêm cấp độ"
+            triggerClassName={cn(buttonBase, buttonVariants.primary)}
+          />
+        }
+      />
       <DataTable headers={["Tên", "Khóa học", "Thao tác"]} isEmpty={!levels.length}>
         {levels.map((item) => (
           <tr key={item.id}>
-            <td className="px-4 py-3 font-semibold text-slate-900">{item.translations[0]?.name ?? "—"}</td>
+            <td className="px-4 py-3 font-semibold text-slate-900">{item.translations.find((t) => t.locale === "vi")?.name ?? "—"}</td>
             <td className="px-4 py-3">{item._count.courses}</td>
             <td className="px-4 py-3">
               <div className="flex items-center gap-1">
-                <IconLink href={`/admin/courses/levels/${item.id}`} label="Chỉnh sửa" path={ICON_PATHS.edit} />
+                <TaxonomyDialog
+                  action={saveCourseLevel}
+                  item={item}
+                  title="Chỉnh sửa cấp độ khóa học"
+                  trigger={<Icon path={ICON_PATHS.edit} />}
+                  triggerLabel="Chỉnh sửa"
+                  triggerClassName="grid h-8 w-8 place-items-center rounded-md text-slate-500 transition hover:bg-slate-100 hover:text-slate-700"
+                />
                 <ConfirmDialog
                   trigger={<Icon path={ICON_PATHS.trash} />}
                   triggerLabel="Xóa cấp độ"
@@ -29,7 +50,7 @@ export default async function CourseLevelsPage() {
                   }
                 >
                   <form action={deleteCourseLevel.bind(null, item.id)}>
-                    <Button type="submit" variant="danger" disabled={item._count.courses > 0}>Xác nhận xóa</Button>
+                    <SubmitButton variant="danger" pendingText="Đang xóa..." disabled={item._count.courses > 0}>Xác nhận xóa</SubmitButton>
                   </form>
                 </ConfirmDialog>
               </div>

@@ -18,7 +18,7 @@ function invalidate(slug?: string) {
   }
 }
 
-export type NewsFormState = { message?: string };
+export type NewsFormState = { message?: string; success?: boolean };
 
 export async function saveNewsArticle(_previous: NewsFormState, formData: FormData): Promise<NewsFormState> {
   const actor = await requireAdminUser();
@@ -41,8 +41,8 @@ export async function saveNewsArticle(_previous: NewsFormState, formData: FormDa
   }
   if (previous) await deleteManagedImages([previous.coverImage, ...previous.gallery].filter((url) => url !== data.coverImage && !data.gallery.includes(url)));
   invalidate(data.slug);
-  if (!id) redirect("/admin/news");
-  return {};
+  if (!id) redirect("/admin/news?created=1");
+  return { success: true };
 }
 
 export async function setNewsStatus(id: number, status: NewsStatus) {

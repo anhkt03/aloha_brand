@@ -5,8 +5,10 @@ import { NewsStatus } from "@prisma/client";
 import { GalleryUploader } from "@/components/admin/gallery-uploader";
 import { ImageUploader } from "@/components/admin/image-uploader";
 import { LocaleTabs } from "@/components/admin/locale-tabs";
-import { Button, Field, Panel, inputClass } from "@/components/admin/ui";
+import { Field, Panel, inputClass } from "@/components/admin/ui";
+import { SubmitButton } from "@/components/admin/submit-button";
 import { FormError } from "@/components/admin/form-error";
+import { FormSuccess } from "@/components/admin/form-success";
 import { taxonomyLocales } from "@/lib/validation/course-taxonomy";
 
 type Translation = { locale: string; title: string; content: string };
@@ -18,16 +20,17 @@ export function ArticleForm({
   action,
   article,
 }: {
-  action: (previous: { message?: string }, formData: FormData) => Promise<{ message?: string }>;
+  action: (previous: { message?: string; success?: boolean }, formData: FormData) => Promise<{ message?: string; success?: boolean }>;
   article?: Article;
 }) {
-  const [state, formAction, pending] = useActionState(action, {});
+  const [state, formAction] = useActionState(action, {});
   const translations = Object.fromEntries((article?.translations ?? []).map((item) => [item.locale, item])) as Record<string, Translation>;
 
   return (
     <form action={formAction} className="grid gap-5">
       <input type="hidden" name="id" value={article?.id ?? ""} />
       <FormError message={state.message} />
+      <FormSuccess message={state.success ? "Đã lưu bài viết thành công." : undefined} />
 
       <Panel title="Thông tin chung">
         <div className="grid gap-4 md:grid-cols-2">
@@ -78,9 +81,9 @@ export function ArticleForm({
         </LocaleTabs>
       </Panel>
 
-      <Button type="submit" disabled={pending} className="justify-self-start">
-        {pending ? "Đang lưu..." : "Lưu bài viết"}
-      </Button>
+      <SubmitButton variant="primary" pendingText="Đang lưu..." className="justify-self-start">
+        Lưu bài viết
+      </SubmitButton>
     </form>
   );
 }

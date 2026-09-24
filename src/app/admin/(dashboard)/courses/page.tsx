@@ -3,17 +3,19 @@ import { listCourses, PAGE_SIZE_OPTIONS } from "@/lib/dal/courses";
 import { deleteCourse } from "./actions";
 import { DataTable } from "@/components/admin/data-table";
 import { Badge } from "@/components/admin/status-badge";
-import { Button, LinkButton, PageHeader, inputClass } from "@/components/admin/ui";
-import { SearchInput } from "@/components/admin/search-input";
+import { LinkButton, PageHeader } from "@/components/admin/ui";
+import { SubmitButton } from "@/components/admin/submit-button";
+import { ListFilters } from "@/components/admin/list-filters";
 import { Pagination } from "@/components/admin/pagination";
 import { PageSizeSelect } from "@/components/admin/page-size-select";
 import { ConfirmDialog } from "@/components/admin/confirm-dialog";
 import { Icon, ICON_PATHS, IconLink } from "@/components/admin/icons";
+import { FormSuccess } from "@/components/admin/form-success";
 
 const STATUS_LABELS: Record<CourseStatus, string> = { HIDDEN: "Ẩn", PUBLISHED: "Công khai" };
 const STATUS_TONE: Record<CourseStatus, "success" | "neutral"> = { HIDDEN: "neutral", PUBLISHED: "success" };
 
-export default async function CoursesPage({ searchParams }: { searchParams: Promise<{ q?: string; status?: CourseStatus; page?: string; pageSize?: string }> }) {
+export default async function CoursesPage({ searchParams }: { searchParams: Promise<{ q?: string; status?: CourseStatus; page?: string; pageSize?: string; created?: string }> }) {
   const search = await searchParams;
   const page = Number(search.page) || 1;
   const pageSize = Number(search.pageSize) || 20;
@@ -32,26 +34,22 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
     <>
       <PageHeader eyebrow="Đào tạo" title="Khóa học" actions={<LinkButton href="/admin/courses/new">+ Thêm khóa học</LinkButton>} />
 
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-        <form className="flex flex-wrap gap-2">
-          <div className="w-full max-w-xs"><SearchInput defaultValue={search.q} placeholder="Tìm tên khóa học" /></div>
-          <select name="status" defaultValue={search.status} className={`${inputClass} mt-0 w-auto`}>
-            <option value="">Tất cả trạng thái</option>
-            {Object.values(CourseStatus).map((status) => <option key={status} value={status}>{STATUS_LABELS[status]}</option>)}
-          </select>
-          <button className="rounded-md border border-slate-300 px-3.5 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">Lọc</button>
-        </form>
+      {search.created === "1" ? <div className="mb-4"><FormSuccess message="Đã thêm khóa học mới thành công." /></div> : null}
+
+      <div className="mb-4 flex flex-nowrap items-center justify-between gap-3 overflow-x-auto pb-1">
+        <ListFilters
+          searchPlaceholder="Tìm tên khóa học"
+          statusOptions={Object.values(CourseStatus).map((status) => ({ value: status, label: STATUS_LABELS[status] }))}
+        />
         <PageSizeSelect value={pageSize} options={PAGE_SIZE_OPTIONS} />
       </div>
 
-      <DataTable headers={["Khóa học", "Danh mục / Cấp độ", "Trạng thái", "Đăng ký", "Thao tác"]} isEmpty={!items.length} maxHeight="70vh">
+      <DataTable headers={["Khóa học", "Danh mục", "Cấp độ", "Trạng thái", "Đăng ký", "Thao tác"]} isEmpty={!items.length} maxHeight="70vh">
         {items.map((item) => (
           <tr key={item.id}>
             <td className="px-4 py-3"><b className="text-slate-900">{item.translations[0]?.title ?? `Khóa học ${item.id}`}</b></td>
-            <td className="px-4 py-3 text-sm">
-              {item.category.translations[0]?.name ?? "—"}
-              <small className="block text-slate-400">{item.level.translations[0]?.name ?? "—"}</small>
-            </td>
+            <td className="px-4 py-3 text-sm">{item.category.translations[0]?.name ?? "—"}</td>
+            <td className="px-4 py-3 text-sm">{item.level.translations[0]?.name ?? "—"}</td>
             <td className="px-4 py-3"><Badge tone={STATUS_TONE[item.status]}>{STATUS_LABELS[item.status]}</Badge></td>
             <td className="px-4 py-3">{item._count.enrollments}</td>
             <td className="px-4 py-3">
@@ -68,7 +66,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                   }
                 >
                   <form action={deleteCourse.bind(null, item.id)}>
-                    <Button type="submit" variant="danger">Xác nhận xóa</Button>
+                    <SubmitButton variant="danger" pendingText="Đang xóa...">Xác nhận xóa</SubmitButton>
                   </form>
                 </ConfirmDialog>
               </div>

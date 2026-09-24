@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 import "../globals.css";
+
+export const metadata: Metadata = {
+  title: siteConfig.name,
+};
 
 export default function AdminLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

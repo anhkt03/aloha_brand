@@ -22,7 +22,7 @@ export function PageSizeSelect({ value, options }: { value: number; options: rea
   }
 
   return (
-    <label className="flex items-center gap-2 text-sm text-slate-500">
+    <label className="flex shrink-0 items-center gap-2 whitespace-nowrap text-sm text-slate-500">
       Hiển thị
       <select value={value} onChange={(event) => handleChange(Number(event.target.value))} className={`${inputClass} mt-0 w-auto py-1.5`}>
         {options.map((option) => (

@@ -1,6 +1,7 @@
 "use client";
 
 import type { UserRole } from "@prisma/client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -42,10 +43,18 @@ export function AdminShell({ children, user }: { children: React.ReactNode; user
 
   const sidebar = (
     <>
-      <div className="flex h-16 items-center gap-2.5 px-5">
-        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-indigo-600 font-display text-base font-black text-white">A</span>
+      <Link
+        href="/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Về trang chủ"
+        className="flex h-16 items-center gap-2.5 px-5 transition hover:opacity-80"
+      >
+        <span className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full bg-white p-1">
+          <Image src="/images/brand/logo-icon.png" alt="ALOHA" width={36} height={36} className="h-full w-full object-contain" />
+        </span>
         <p className="font-display text-[13px] font-black leading-tight text-white">ALOHA Language School</p>
-      </div>
+      </Link>
       <nav className="grid gap-0.5 px-3 pb-4">
         {items.map((item) => {
           const showGroup = item.group && item.group !== lastGroup;
@@ -92,6 +101,16 @@ export function AdminShell({ children, user }: { children: React.ReactNode; user
           </button>
           <span className="hidden text-sm font-semibold text-slate-500 md:block">{items.find((item) => item.href === activeHref)?.label ?? "Tổng quan"}</span>
           <div className="ml-auto flex items-center gap-3">
+            <Link
+              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Về trang chủ"
+              aria-label="Về trang chủ"
+              className="grid h-9 w-9 place-items-center rounded-md border border-slate-200 text-slate-600 transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600"
+            >
+              <Icon path="M3 11.5 12 4l9 7.5M5 10v10h5v-6h4v6h5V10" />
+            </Link>
             <span className="flex items-center gap-2.5">
               <span className="grid h-8 w-8 place-items-center rounded-full bg-indigo-100 text-sm font-bold text-indigo-700">{user.name.charAt(0).toUpperCase()}</span>
               <span className="hidden text-sm font-semibold text-slate-800 sm:block">{user.name}</span>

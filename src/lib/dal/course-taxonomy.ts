@@ -9,23 +9,15 @@ function nameFilter(query: string) {
 export async function listCourseCategories(query = "") {
   return prisma.courseCategory.findMany({
     where: nameFilter(query),
-    include: { translations: { where: { locale: "vi" } }, _count: { select: { courses: true } } },
+    include: { translations: true, _count: { select: { courses: true } } },
     orderBy: { id: "asc" },
   });
-}
-
-export async function getCourseCategory(id: number) {
-  return prisma.courseCategory.findUnique({ include: { translations: true }, where: { id } });
 }
 
 export async function listCourseLevels(query = "") {
   return prisma.courseLevel.findMany({
     where: nameFilter(query),
-    include: { translations: { where: { locale: "vi" } }, _count: { select: { courses: true } } },
+    include: { translations: true, _count: { select: { courses: true } } },
     orderBy: { id: "asc" },
   });
-}
-
-export async function getCourseLevel(id: number) {
-  return prisma.courseLevel.findUnique({ include: { translations: true }, where: { id } });
 }

@@ -13,7 +13,7 @@ const invalidate = () => {
   revalidatePath("/vi/training");
 };
 
-export type CourseFormState = { message?: string };
+export type CourseFormState = { message?: string; success?: boolean };
 
 export async function saveCourse(_previous: CourseFormState, formData: FormData): Promise<CourseFormState> {
   const actor = await requireAdminUser();
@@ -33,8 +33,8 @@ export async function saveCourse(_previous: CourseFormState, formData: FormData)
     throw error;
   }
   invalidate();
-  if (!id) redirect("/admin/courses");
-  return {};
+  if (!id) redirect("/admin/courses?created=1");
+  return { success: true };
 }
 
 export async function setCourseStatus(id: number, status: CourseStatus) {

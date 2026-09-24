@@ -30,7 +30,7 @@ export function LocaleTabs({ locales, children }: { locales: readonly string[]; 
         ))}
       </div>
       {locales.map((locale) => (
-        <div key={locale} hidden={active !== locale} className="grid gap-3 pt-4">
+        <div key={locale} className={active === locale ? "grid gap-3 pt-4" : "hidden"}>
           {children(locale)}
         </div>
       ))}

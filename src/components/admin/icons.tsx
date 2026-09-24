@@ -12,6 +12,7 @@ export function Icon({ path, className = "h-[18px] w-[18px]" }: { path: string; 
 export const ICON_PATHS = {
   edit: "M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z",
   trash: "M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6h16z",
+  back: "M19 12H5m0 0 6 6m-6-6 6-6",
 } as const;
 
 const toneClass = {

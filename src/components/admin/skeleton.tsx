@@ -23,7 +23,7 @@ export function SkeletonHeader({ actions = 0 }: { actions?: number }) {
 }
 
 export function SkeletonPanel({ bordered = true, className, children }: { bordered?: boolean; className?: string; children: React.ReactNode }) {
-  return <div className={cn(bordered && "rounded-xl border border-slate-200 bg-white p-5", className)}>{children}</div>;
+  return <div className={cn(bordered && "rounded-xl border border-slate-200 bg-white p-5 shadow-sm", className)}>{children}</div>;
 }
 
 export function SkeletonFields({ count, columns = 1 }: { count: number; columns?: 1 | 2 }) {
