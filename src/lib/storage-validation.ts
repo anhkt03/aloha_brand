@@ -9,16 +9,14 @@ export const IMAGE_EXTENSIONS: Readonly<Record<string, string>> = {
 
 export function validateImageUpload(file: Pick<File, "type" | "size">, folder: string) {
   const extension = IMAGE_EXTENSIONS[file.type];
-  if (!extension) throw new Error("Định dạng ảnh không được hỗ trợ.");
-  if (file.size > MAX_IMAGE_SIZE) throw new Error("Ảnh vượt quá giới hạn 5MB.");
-  if (!/^news\/\d+\/(cover|gallery)$/.test(folder)) {
-    throw new Error("Đường dẫn upload không hợp lệ.");
-  }
+  if (!extension) throw new Error("Unsupported image format.");
+  if (file.size > MAX_IMAGE_SIZE) throw new Error("Image exceeds the 5MB limit.");
+  if (!/^news\/(?:\d+|new)\/(cover|gallery)$/.test(folder)) throw new Error("Invalid upload folder.");
   return extension;
 }
 
 export function validateStoragePath(path: string) {
-  if (path.includes("..") || path.startsWith("/") || !/^news\/\d+\//.test(path)) {
-    throw new Error("Đường dẫn ảnh không hợp lệ.");
+  if (path.includes("..") || path.startsWith("/") || !/^aloha\/[a-f0-9-]{36}$/i.test(path)) {
+    throw new Error("Invalid managed image path.");
   }
 }
