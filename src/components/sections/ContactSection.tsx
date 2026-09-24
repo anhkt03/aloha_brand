@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/common/Button";
 import { Section, SectionHead } from "@/components/common/Section";
 import { siteConfig } from "@/config/site";
+import { branches } from "@/data/branches";
 import { useEnrollmentForm } from "@/hooks/useEnrollmentForm";
 
 export function ContactSection() {
@@ -18,7 +19,7 @@ export function ContactSection() {
         title={t("cta.title")}
         sub={t("cta.sub")}
       />
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-8 md:grid-cols-2 md:items-stretch">
         <div className="rounded-lg border border-line bg-surface p-7 shadow">
           {submitted ? (
             <SuccessPanel message={t("form.success")} />
@@ -31,7 +32,7 @@ export function ContactSection() {
               <Field id="name" label={t("form.name")} required />
               <Field id="phone" label={t("form.phone")} type="tel" required />
               <Field id="email" label={t("form.email")} type="email" />
-              <label className="flex flex-col gap-2 font-display text-[13.5px] font-bold text-ink">{t("form.language")}<select name="courseId" required className="rounded-xl border-[1.5px] border-line-2 bg-surface-2 px-4 py-3"><option value="">Chọn khóa học</option>{courses.map(course => <option key={course.id} value={course.id}>{course.title}</option>)}</select></label>
+              <label className="flex flex-col gap-2 font-display text-[13.5px] font-bold text-ink">{t("form.language")}<select name="courseId" required className="w-full rounded-xl border-[1.5px] border-line-2 bg-surface-2 px-4 py-3"><option value="">Chọn khóa học</option>{courses.map(course => <option key={course.id} value={course.id}>{course.title}</option>)}</select></label>
               <div className="flex flex-col gap-2">
                 <label htmlFor="message" className="font-display text-[13.5px] font-bold text-ink">
                   {t("form.message")}
@@ -102,30 +103,38 @@ function ContactInfoPanel({ t }: { t: (key: string) => string }) {
   const items = [
     { icon: "phone", label: t("nav.hotline"), value: siteConfig.hotline, href: siteConfig.hotlineHref },
     { icon: "mail", label: "Email", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
-    { icon: "pin", label: t("nav.branches"), value: siteConfig.address },
-  ];
+  ] as const;
   return (
     <div className="rounded-lg border border-line bg-surface p-7">
-      {items.map((item, idx) => (
-        <div
-          key={item.label}
-          className={`flex items-start gap-4 py-4 ${idx < items.length - 1 ? "border-b border-line" : ""}`}
-        >
+      {items.map((item) => (
+        <div key={item.label} className="flex items-start gap-4 border-b border-line py-4">
           <div className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-[14px] bg-surface-2 text-brand">
-            <ContactIcon name={item.icon as "phone" | "mail" | "pin"} />
+            <ContactIcon name={item.icon} />
           </div>
           <div>
             <div className="text-[12.5px] font-semibold uppercase tracking-wide text-muted">{item.label}</div>
-            {item.href ? (
-              <a href={item.href} className="font-display text-[17px] font-extrabold text-ink hover:text-brand">
-                {item.value}
-              </a>
-            ) : (
-              <div className="font-display text-[17px] font-extrabold text-ink">{item.value}</div>
-            )}
+            <a href={item.href} className="font-display text-[17px] font-extrabold text-ink hover:text-brand">
+              {item.value}
+            </a>
           </div>
         </div>
       ))}
+      <div className="flex items-start gap-4 py-4">
+        <div className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-[14px] bg-surface-2 text-brand">
+          <ContactIcon name="pin" />
+        </div>
+        <div className="min-w-0">
+          <div className="text-[12.5px] font-semibold uppercase tracking-wide text-muted">{t("nav.branches")}</div>
+          <ul className="mt-2 flex flex-col gap-1.5">
+            {branches.map((branch) => (
+              <li key={branch.code} className="flex gap-1.5 text-[15px] leading-relaxed text-ink-soft">
+                <span className="flex-shrink-0 font-display font-bold text-brand">{branch.code}:</span>
+                <span className="min-w-0">{branch.address}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

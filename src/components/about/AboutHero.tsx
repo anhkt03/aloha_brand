@@ -24,7 +24,7 @@ export function AboutHero({ onOpenRegister }: AboutHeroProps) {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/about/ecosystem/aloha-section-1.png"
+          src="/images/about/ecosystem/aloha-section.png"
           alt="ALOHA class"
           fill
           priority

@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "首页",
-    "training": "语言培训",
+    "training": "外语",
     "global": "留学",
     "about": "关于ALOHA",
     "branches": "校区",
@@ -244,7 +244,9 @@
       "coursesList": {
         "title": "正在招生的课程",
         "empty": "暂无开放课程。",
-        "all": "全部"
+        "all": "全部",
+        "viewMore": "查看更多",
+        "register": "报名"
       },
       "goals": {
         "eyebrow": "按目标学习",

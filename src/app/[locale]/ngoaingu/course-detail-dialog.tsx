@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/common/Button";
 import { Markdown } from "@/components/common/Markdown";
 import { useRegisterModal } from "@/components/layout/register-context";
@@ -10,6 +11,7 @@ import { getCategoryFlag } from "@/lib/course-flags";
 type Course = Awaited<ReturnType<typeof import("@/lib/dal/public-data").getPublicCourses>>[number];
 
 export function CourseDetailDialog({ course, onClose }: { course: Course | null; onClose: () => void }) {
+  const t = useTranslations("pages.training.coursesList");
   const { open } = useRegisterModal();
 
   useEffect(() => {
@@ -29,7 +31,7 @@ export function CourseDetailDialog({ course, onClose }: { course: Course | null;
   }, [course, onClose]);
 
   if (!course) return null;
-  const flag = getCategoryFlag(course.category);
+  const flag = getCategoryFlag(course.categoryFlagKey);
 
   return (
     <div
@@ -50,16 +52,19 @@ export function CourseDetailDialog({ course, onClose }: { course: Course | null;
         </button>
 
         <div className="scrollbar-hide max-h-[85vh] overflow-auto rounded-lg bg-surface shadow-lg">
-          <div className={`relative overflow-hidden px-8 py-6 ${flag ? "" : "bg-brand-grad text-white"}`}>
+          <div className={`relative flex min-h-[120px] flex-col justify-end overflow-hidden px-8 py-6 ${flag ? "" : "bg-brand-grad text-white"}`}>
             {flag && (
               <>
                 <Image src={flag} alt="" aria-hidden fill sizes="560px" className="object-cover" />
                 <div aria-hidden className="absolute inset-0 bg-white/60" />
               </>
             )}
-            <div className={`relative ${flag ? "text-ink" : ""}`}>
-              <div className={`text-sm ${flag ? "text-ink/70" : "opacity-90"}`}>{course.category}</div>
-              <div className="mt-1 font-display text-2xl font-black">{course.level}</div>
+            <div className="relative">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-brand bg-surface px-3.5 py-1.5 font-display text-[13px] font-bold text-ink shadow-sm">
+                {course.category}
+                <span className="text-ink/40">-</span>
+                {course.level}
+              </span>
             </div>
           </div>
 
@@ -68,7 +73,7 @@ export function CourseDetailDialog({ course, onClose }: { course: Course | null;
             <p className="text-sm font-semibold text-brand">{course.duration}</p>
             <Markdown>{course.content}</Markdown>
             <Button variant="primary" className="mt-2 self-start" onClick={open}>
-              Đăng ký
+              {t("register")}
             </Button>
           </div>
         </div>
