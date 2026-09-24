@@ -42,7 +42,7 @@ export function AdminShell({ children, user }: { children: React.ReactNode; user
   let lastGroup: NavigationItem["group"];
 
   const sidebar = (
-    <>
+    <div className="flex h-full flex-col">
       <Link
         href="/"
         target="_blank"
@@ -55,7 +55,7 @@ export function AdminShell({ children, user }: { children: React.ReactNode; user
         </span>
         <p className="font-display text-[13px] font-black leading-tight text-white">ALOHA Language School</p>
       </Link>
-      <nav className="grid gap-0.5 px-3 pb-4">
+      <nav className="flex-1 grid gap-0.5 px-3 pb-4 content-start">
         {items.map((item) => {
           const showGroup = item.group && item.group !== lastGroup;
           lastGroup = item.group;
@@ -77,7 +77,14 @@ export function AdminShell({ children, user }: { children: React.ReactNode; user
           );
         })}
       </nav>
-    </>
+      <div className="border-t border-slate-700 px-5 py-4">
+        <p className="text-[11px] font-bold uppercase tracking-widest text-slate-500">Liên hệ nếu gặp vấn đề</p>
+        <a href="tel:0969405887" className="mt-1.5 flex items-center gap-2 text-sm text-slate-400 transition hover:text-white">
+          <Icon path="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+          0969 405 887
+        </a>
+      </div>
+    </div>
   );
 
   return (

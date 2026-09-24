@@ -1,12 +1,11 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { CourseStatus } from "@prisma/client";
+import { toast } from "sonner";
 import { LocaleTabs } from "@/components/admin/locale-tabs";
 import { Field, Panel, inputClass } from "@/components/admin/ui";
 import { SubmitButton } from "@/components/admin/submit-button";
-import { FormError } from "@/components/admin/form-error";
-import { FormSuccess } from "@/components/admin/form-success";
 import { taxonomyLocales } from "@/lib/validation/course-taxonomy";
 
 type Translation = { locale: string; title: string; duration: string; content: string };
@@ -27,14 +26,20 @@ export function CourseForm({
   levels: Named[];
 }) {
   const [state, formAction] = useActionState(action, {});
+  const prevState = useRef(state);
   const translations = Object.fromEntries((course?.translations ?? []).map((item) => [item.locale, item])) as Record<string, Translation>;
+
+  useEffect(() => {
+    if (state === prevState.current) return;
+    prevState.current = state;
+    if (state.success) toast.success("Đã lưu khóa học thành công.");
+    else if (state.message) toast.error(state.message);
+  }, [state]);
 
   return (
     <form action={formAction} className="grid gap-5">
       <input type="hidden" name="id" value={course?.id ?? ""} />
       {course ? <input type="hidden" name="status" value={course.status} /> : null}
-      <FormError message={state.message} />
-      <FormSuccess message={state.success ? "Đã lưu khóa học thành công." : undefined} />
 
       <Panel title="Thông tin chung">
         <div className="grid gap-4 md:grid-cols-2">
