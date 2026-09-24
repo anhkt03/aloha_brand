@@ -60,19 +60,11 @@ export function ArticleForm({
       </Panel>
 
       <Panel title="Ảnh bìa">
-        {article ? (
-          <ImageUploader name="coverImage" folder={`news/${article.id}/cover`} defaultValue={article.coverImage} required />
-        ) : (
-          <p className="text-sm text-slate-500">Lưu bài viết trước, sau đó mở lại để tải ảnh bìa lên.</p>
-        )}
+        <ImageUploader name="coverImage" folder={`news/${article?.id ?? "new"}/cover`} defaultValue={article?.coverImage} required />
       </Panel>
 
       <Panel title="Thư viện ảnh">
-        {article ? (
-          <GalleryUploader name="gallery" folder={`news/${article.id}/gallery`} defaultValue={article.gallery} />
-        ) : (
-          <p className="text-sm text-slate-500">Lưu bài viết trước, sau đó mở lại để thêm ảnh thư viện.</p>
-        )}
+        <GalleryUploader name="gallery" folder={`news/${article?.id ?? "new"}/gallery`} defaultValue={article?.gallery} />
       </Panel>
 
       <Panel title="Nội dung theo ngôn ngữ" description="Bắt buộc điền đủ cả 5 ngôn ngữ trước khi lưu.">
