@@ -819,7 +819,9 @@
     "news": {
       "eyebrow": "新闻 & 活动",
       "title": "ALOHA新闻",
-      "lead": "招生动态、学员故事和ALOHA的活动。"
+      "lead": "招生动态、学员故事和ALOHA的活动。",
+      "latest": "最新",
+      "gallery": "图片"
     },
     "contact": {
       "eyebrow": "联系我们",

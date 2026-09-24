@@ -819,7 +819,9 @@
     "news": {
       "eyebrow": "News & events",
       "title": "ALOHA News",
-      "lead": "Enrollment updates, student stories and events at ALOHA."
+      "lead": "Enrollment updates, student stories and events at ALOHA.",
+      "latest": "Latest",
+      "gallery": "Gallery"
     },
     "contact": {
       "eyebrow": "Contact",

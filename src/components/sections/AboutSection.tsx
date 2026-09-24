@@ -29,11 +29,16 @@ export function AboutSection() {
           alt=""
           aria-hidden
           fill
+          priority
           sizes="100vw"
           className="object-cover"
         />
       </div>
-      <div aria-hidden className="absolute inset-0 bg-surface-2/85 md:hidden" />
+      <div
+        aria-hidden
+        className="absolute inset-0 md:hidden"
+        style={{ background: "color-mix(in srgb, var(--surface-2) 92%, transparent)" }}
+      />
       <div
         aria-hidden
         className="absolute inset-0 hidden md:block"
