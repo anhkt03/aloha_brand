@@ -22,7 +22,7 @@ export function BranchesTeaserSection() {
   return (
     <Section>
       <SectionHead center eyebrow={t("eyebrow")} title={t("title")} sub={t("sub")} />
-      <div className="grid justify-center gap-8 md:grid-cols-[minmax(260px,360px)_minmax(240px,320px)] md:items-stretch">
+      <div className="grid grid-cols-1 justify-center gap-8 md:grid-cols-[minmax(260px,360px)_minmax(240px,320px)] md:items-stretch">
         <div>
           <VietnamMap selectedCode={activeCode} />
         </div>

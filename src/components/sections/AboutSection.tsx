@@ -4,12 +4,17 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/common/Button";
-import { Section } from "@/components/common/Section";
+import { Container } from "@/components/common/Container";
 
 /**
  * Section 2 — general introduction to ALOHA, built around 3 pillars:
  * Quality · Experience · Well-rounded growth. The pillars sit on the same
  * brand-coloured left border as the quote for a single visual block.
+ *
+ * The section photo is a full-bleed background rather than a boxed
+ * illustration. On mobile the text spans nearly the full width, so it sits
+ * on a flat scrim; from md the scrim becomes a left-to-right fade so more
+ * of the photo shows through on the right, matching `TrainingHero`.
  */
 export function AboutSection() {
   const t = useTranslations("about");
@@ -17,10 +22,28 @@ export function AboutSection() {
   const pillars: Array<"quality" | "experience" | "growth"> = ["quality", "experience", "growth"];
 
   return (
-    <Section tinted>
-      <div className="grid items-center gap-11 md:grid-cols-2">
-        <AboutIllustration />
-        <div>
+    <section className="section relative overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/homepage/home-about-us.jpeg"
+          alt=""
+          aria-hidden
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+      <div aria-hidden className="absolute inset-0 bg-surface-2/85 md:hidden" />
+      <div
+        aria-hidden
+        className="absolute inset-0 hidden md:block"
+        style={{
+          background:
+            "linear-gradient(270deg, var(--surface-2) 0%, var(--surface-2) 42%, color-mix(in srgb, var(--surface-2) 55%, transparent) 65%, transparent 88%)",
+        }}
+      />
+      <Container className="relative z-[1]">
+        <div className="ml-auto max-w-xl">
           <span className="eyebrow">{t("eyebrow")}</span>
           <h2 className="sec-title mt-3.5">{t("title")}</h2>
           {/* Quote + 3 pillars share a single brand border on the left. */}
@@ -48,22 +71,7 @@ export function AboutSection() {
             </svg>
           </Button>
         </div>
-      </div>
-    </Section>
-  );
-}
-
-function AboutIllustration() {
-  return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl shadow-lg">
-      <Image
-        src="/images/homepage/aloha.jpg"
-        alt="ALOHA Language School"
-        fill
-        sizes="(min-width:768px) 45vw, 90vw"
-        className="object-cover"
-        priority={false}
-      />
-    </div>
+      </Container>
+    </section>
   );
 }

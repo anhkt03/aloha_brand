@@ -21,15 +21,17 @@ export function RoadmapSection() {
         <div className="grid gap-5 sm:grid-cols-2 lg:flex lg:items-stretch lg:gap-3">
           {STEPS.map((key, idx) => (
             <div key={key} className="flex flex-1 items-stretch gap-3">
-              <article className="flex flex-1 flex-col gap-2 rounded-2xl border border-line bg-surface p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg lg:px-3.5">
+              <article className="flex flex-1 items-start gap-3 rounded-2xl border border-line bg-surface p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:flex-col sm:items-stretch lg:px-3.5">
                 <span
-                  className="grid h-10 w-10 place-items-center rounded-full font-display text-sm font-black text-white"
+                  className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-full font-display text-sm font-black text-white"
                   style={{ background: "var(--grad)" }}
                 >
                   {String(idx + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-1 whitespace-nowrap font-display text-[15px] font-black text-ink lg:text-[13px]">{t(`steps.${key}.title`)}</h3>
-                <p className="text-[13px] leading-relaxed text-ink-soft">{t(`steps.${key}.desc`)}</p>
+                <div className="min-w-0">
+                  <h3 className="font-display text-[15px] font-black text-ink sm:whitespace-nowrap lg:text-[13px]">{t(`steps.${key}.title`)}</h3>
+                  <p className="mt-1 text-[13px] leading-relaxed text-ink-soft">{t(`steps.${key}.desc`)}</p>
+                </div>
               </article>
               {idx < STEPS.length - 1 && (
                 <span aria-hidden className="hidden flex-shrink-0 self-center text-line-2 lg:block">
