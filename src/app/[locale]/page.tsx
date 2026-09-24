@@ -1,5 +1,18 @@
-import { getPublicNews } from "@/lib/dal/public-data";
-import { HomeContent } from "./home-content";
+"use client";
+
+import { HeroSection } from "@/components/sections/HeroSection";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { OfferingSection } from "@/components/sections/OfferingSection";
+import { StatsSection } from "@/components/sections/StatsSection";
+import { FeatureSection } from "@/components/sections/FeatureSection";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
+import { TestimonialSection } from "@/components/sections/TestimonialSection";
+import { JourneySection } from "@/components/sections/JourneySection";
+import { BranchesTeaserSection } from "@/components/sections/BranchesTeaserSection";
+import { NewsSection } from "@/components/sections/NewsSection";
+import { CtaSection } from "@/components/sections/CtaSection";
+import { useRegisterModal } from "@/components/layout/register-context";
+import { useRouter } from "next/navigation";
 
 /**
  * Homepage — 11 sections per the site outline:
@@ -29,7 +42,7 @@ export default function HomePage() {
       <JourneySection />
       <TestimonialSection />
       <BranchesTeaserSection />
-      <NewsSection />
+      <NewsSection news={[]} />
       <CtaSection onOpenRegister={open} />
     </>
   );
