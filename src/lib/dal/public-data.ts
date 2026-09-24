@@ -27,12 +27,26 @@ export async function getPublicCourses(locale: string) {
     const level = pick(x.level.translations, locale);
     return {
       id: x.id,
+      categoryId: x.categoryId,
       title: t?.title ?? "",
       duration: t?.duration ?? "",
       content: t?.content ?? "",
       category: category?.name ?? "",
       level: level?.name ?? "",
     };
+  });
+}
+
+export async function getPublicCourseCategories(locale: string) {
+  const rows = await unstable_cache(
+    () => prisma.courseCategory.findMany({ include: { translations: true }, orderBy: { id: "asc" } }),
+    ["public-course-categories"],
+    { tags: ["courses"], revalidate: 300 },
+  )();
+
+  return rows.map((x) => {
+    const t = pick(x.translations, locale);
+    return { id: x.id, name: t?.name ?? "" };
   });
 }
 

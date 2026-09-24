@@ -134,14 +134,97 @@
   },
   "pages": {
     "training": {
-      "eyebrow": "Chương trình đào tạo",
-      "title": "Đào tạo ngoại ngữ",
-      "lead": "Anh – Trung – Hàn – Nhật với hệ thống band/level rõ ràng. Danh sách khóa học cập nhật liên tục theo từng kỳ tuyển sinh.",
-      "tabs": { "all": "Tất cả", "en": "Tiếng Anh", "zh": "Tiếng Trung", "ko": "Tiếng Hàn", "ja": "Tiếng Nhật" },
-      "recruiting": "Tuyển sinh",
-      "register": "Đăng ký",
-      "durationLine": "Thời lượng: {months} tháng ({sessions} buổi)",
-      "outcomeLine": "Đầu ra: {outcome}"
+      "hero": {
+        "eyebrow": "Đào tạo ngoại ngữ tại ALOHA",
+        "title": "Học đúng lộ trình\nBứt phá ngoại ngữ\nRộng mở tương lai",
+        "lead": "Các chương trình Tiếng Trung, Tiếng Anh, Tiếng Hàn, Tiếng Nhật từ nền tảng đến chinh phục chứng chỉ và ứng dụng thực tế.",
+        "ctaPrimary": "Khám phá chương trình ngoại ngữ",
+        "ctaSecondary": "Đăng ký tư vấn",
+        "stats": {
+          "students": { "value": "10.000+", "label": "Học viên" },
+          "teachers": { "value": "500+", "label": "Giáo viên" },
+          "branches": { "value": "10+", "label": "Cơ sở toàn quốc" },
+          "programs": { "value": "40+", "label": "Chương trình đào tạo" }
+        }
+      },
+      "programs": {
+        "eyebrow": "Các chương trình đào tạo",
+        "title": "Chọn ngôn ngữ phù hợp\nvới mục tiêu của bạn",
+        "sub": "Dù bạn học để thi chứng chỉ, phục vụ học tập, công việc hay định hướng du học, ALOHA đều có lộ trình phù hợp.",
+        "cta": "Xem chương trình",
+        "items": {
+          "zh": { "name": "Tiếng Trung", "badge": "HSK ∙ Giao tiếp", "desc": "Lộ trình từ cơ bản đến HSK 6, kết hợp luyện thi và ứng dụng trong học tập, công việc." },
+          "en": { "name": "Tiếng Anh", "badge": "IELTS ∙ TOEIC", "desc": "Các chương trình từ nền tảng đến IELTS nâng cao/TOEIC, tập trung phát triển năng lực sử dụng Tiếng Anh." },
+          "ko": { "name": "Tiếng Hàn", "badge": "TOPIK ∙ Giao tiếp", "desc": "Lộ trình từ cơ bản đến TOPIK 5, kết hợp kiến thức và ứng dụng thực tế." },
+          "ja": { "name": "Tiếng Nhật", "badge": "JLPT ∙ Giao tiếp", "desc": "Lộ trình N5 đến N3, phát triển đồng thời năng lực JLPT và khả năng giao tiếp thực tế." }
+        }
+      },
+      "coursesList": {
+        "title": "Khóa học đang tuyển sinh",
+        "empty": "Chưa có khóa học đang mở.",
+        "all": "Tất cả"
+      },
+      "goals": {
+        "eyebrow": "Học theo mục tiêu",
+        "title": "Mục tiêu học ngoại ngữ của bạn?",
+        "items": {
+          "certificate": { "title": "Thi chứng chỉ", "badge": "HSK ∙ IELTS ∙ TOEIC ∙ TOPIK ∙ JLPT", "desc": "Đạt mục tiêu chứng chỉ với lộ trình rõ ràng" },
+          "study": { "title": "Phục vụ học tập", "desc": "Xây dựng nền tảng ngoại ngữ cho học tập và các mục tiêu giáo dục" },
+          "work": { "title": "Phục vụ công việc", "desc": "Giao tiếp, môi trường doanh nghiệp, KCN, thương mại và các tình huống nghề nghiệp" },
+          "abroad": { "title": "Du học", "desc": "Xây dựng năng lực ngoại ngữ và chứng chỉ phục vụ kế hoạch du học" }
+        }
+      },
+      "roadmap": {
+        "eyebrow": "Lộ trình học tập",
+        "title": "Từ nền tảng đến chinh phục mục tiêu",
+        "steps": {
+          "evaluate": { "title": "Đánh giá đầu vào", "desc": "Xác định trình độ và mục tiêu" },
+          "plan": { "title": "Xây dựng lộ trình", "desc": "Lựa chọn chương trình học phù hợp" },
+          "practice": { "title": "Học & Thực hành", "desc": "Học kiến thức kết hợp luyện tập và ứng dụng" },
+          "review": { "title": "Kiểm tra & đánh giá", "desc": "Theo dõi tiến độ" },
+          "achieve": { "title": "Chinh phục mục tiêu", "desc": "Chứng chỉ ∙ Học tập ∙ Công việc ∙ Du học" }
+        }
+      },
+      "method": {
+        "eyebrow": "Phương pháp học tại ALOHA",
+        "title": "Học để sử dụng được",
+        "items": {
+          "smallClass": { "title": "Lớp học quy mô nhỏ", "desc": "Tăng tương tác và được sửa lỗi trực tiếp" },
+          "practice": { "title": "Học – Thực hành – Ứng dụng", "desc": "Đưa kiến thức vào tình huống thực tế" },
+          "tracking": { "title": "Theo sát tiến độ", "desc": "Quản lý bài tập và kiểm tra định kỳ" },
+          "personalize": { "title": "Cá nhân hóa lộ trình", "desc": "Điều chỉnh theo trình độ và mục tiêu riêng" },
+          "commitment": { "title": "Cam kết đầu ra", "desc": "Cam kết theo chương trình và điều kiện đào tạo cụ thể" }
+        },
+        "quote": "Ngoại ngữ không chỉ là một môn học, mà là công cụ mở ra nhiều cơ hội hơn trong tương lai.",
+        "quoteAuthor": "ALOHA"
+      },
+      "formats": {
+        "eyebrow": "Hình thức học",
+        "title": "Chủ động lựa chọn hình thức học thuận tiện",
+        "items": {
+          "offline": { "title": "Offline", "desc": "Học trực tiếp tại hệ thống cơ sở ALOHA" },
+          "online": { "title": "Online", "desc": "Học trực tuyến qua nền tảng Zoom" },
+          "smallGroup": { "title": "Lớp nhỏ", "desc": "Tăng thời lượng tương tác và thực hành" },
+          "oneOnOne": { "title": "Lớp 1:1", "desc": "Lộ trình cá nhân hóa theo mục tiêu riêng" }
+        }
+      },
+      "teachers": {
+        "eyebrow": "Đội ngũ giảng viên",
+        "title": "Chuyên môn cao và tận tâm",
+        "desc": "Giáo viên ALOHA được lựa chọn theo yêu cầu khắt khe của từng chương trình, và theo sát quá trình học tập của học viên",
+        "viewAll": "Xem tất cả giảng viên",
+        "roles": { "zh": "Giáo viên Tiếng Trung", "en": "Giáo viên Tiếng Anh", "ko": "Giáo viên Tiếng Hàn", "ja": "Giáo viên Tiếng Nhật" }
+      },
+      "results": {
+        "eyebrow": "Kết quả học tập",
+        "title": "Học viên ALOHA đang ở đâu trên hành trình của mình?"
+      },
+      "studyAbroad": {
+        "eyebrow": "Ngoại ngữ và du học",
+        "title": "Ngoại ngữ là bước đầu để vươn mình ra môi trường quốc tế",
+        "desc": "Với định hướng du học, ALOHA kết nối chương trình đào tạo ngoại ngữ với chương trình du học phù hợp, từ tư vấn đến chuẩn bị hồ sơ...",
+        "cta": "Khám phá du học"
+      }
     },
     "global": {
       "eyebrow": "Du học cùng ALOHA",

@@ -419,6 +419,15 @@
     padding-block: clamp(40px, 6vw, 72px);
   }
 
+  /* Scrollable area with no visible scrollbar (e.g. dialogs) */
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
   /* Animation */
   @media (prefers-reduced-motion: no-preference) {
     .rise {

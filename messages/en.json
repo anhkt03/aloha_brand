@@ -134,14 +134,97 @@
   },
   "pages": {
     "training": {
-      "eyebrow": "Training programs",
-      "title": "Language training",
-      "lead": "English – Chinese – Korean – Japanese with a clear band/level system. The course list is refreshed every enrollment cycle.",
-      "tabs": { "all": "All", "en": "English", "zh": "Chinese", "ko": "Korean", "ja": "Japanese" },
-      "recruiting": "Enrolling",
-      "register": "Register",
-      "durationLine": "Duration: {months} months ({sessions} sessions)",
-      "outcomeLine": "Outcome: {outcome}"
+      "hero": {
+        "eyebrow": "Language Training at ALOHA",
+        "title": "Learn the Right Path\nBreak Through in Languages\nOpen Up Your Future",
+        "lead": "Chinese, English, Korean and Japanese programs — from the basics to certificates and real-world use.",
+        "ctaPrimary": "Explore language programs",
+        "ctaSecondary": "Get a consultation",
+        "stats": {
+          "students": { "value": "10,000+", "label": "Students" },
+          "teachers": { "value": "500+", "label": "Teachers" },
+          "branches": { "value": "10+", "label": "Branches nationwide" },
+          "programs": { "value": "40+", "label": "Training programs" }
+        }
+      },
+      "programs": {
+        "eyebrow": "Training Programs",
+        "title": "Choose the language\nthat fits your goal",
+        "sub": "Whether you're aiming for a certificate, study, work or studying abroad, ALOHA has a path for you.",
+        "cta": "View program",
+        "items": {
+          "zh": { "name": "Chinese", "badge": "HSK · Conversation", "desc": "From the basics to HSK 6, combining exam prep with real study and work use." },
+          "en": { "name": "English", "badge": "IELTS · TOEIC", "desc": "From foundation to advanced IELTS/TOEIC, focused on real English proficiency." },
+          "ko": { "name": "Korean", "badge": "TOPIK · Conversation", "desc": "From the basics to TOPIK 5, combining knowledge with real application." },
+          "ja": { "name": "Japanese", "badge": "JLPT · Conversation", "desc": "From N5 to N3, building JLPT skills alongside real conversation ability." }
+        }
+      },
+      "coursesList": {
+        "title": "Currently enrolling",
+        "empty": "No open courses yet.",
+        "all": "All"
+      },
+      "goals": {
+        "eyebrow": "Learn by Goal",
+        "title": "What's your goal for learning a language?",
+        "items": {
+          "certificate": { "title": "Certificate exams", "badge": "HSK · IELTS · TOEIC · TOPIK · JLPT", "desc": "Reach your certificate goal with a clear roadmap" },
+          "study": { "title": "For study", "desc": "Build a language foundation for school and academic goals" },
+          "work": { "title": "For work", "desc": "Communication, corporate environments, industrial parks, trade and workplace situations" },
+          "abroad": { "title": "Study abroad", "desc": "Build language proficiency and certificates for your study-abroad plan" }
+        }
+      },
+      "roadmap": {
+        "eyebrow": "Learning Roadmap",
+        "title": "From foundation to reaching your goal",
+        "steps": {
+          "evaluate": { "title": "Placement test", "desc": "Assess your level and goal" },
+          "plan": { "title": "Build your roadmap", "desc": "Choose the right program" },
+          "practice": { "title": "Learn & practice", "desc": "Combine knowledge with practice and application" },
+          "review": { "title": "Test & review", "desc": "Track your progress" },
+          "achieve": { "title": "Reach your goal", "desc": "Certificate · Study · Work · Study abroad" }
+        }
+      },
+      "method": {
+        "eyebrow": "ALOHA's Method",
+        "title": "Learn to actually use it",
+        "items": {
+          "smallClass": { "title": "Small class size", "desc": "More interaction and direct feedback" },
+          "practice": { "title": "Learn – Practice – Apply", "desc": "Put knowledge into real situations" },
+          "tracking": { "title": "Progress tracking", "desc": "Regular assignments and assessments" },
+          "personalize": { "title": "Personalized roadmap", "desc": "Adjusted to your level and goal" },
+          "commitment": { "title": "Outcome commitment", "desc": "Committed to the program and specific training conditions" }
+        },
+        "quote": "A language isn't just a subject — it's a tool that opens more opportunities for your future.",
+        "quoteAuthor": "ALOHA"
+      },
+      "formats": {
+        "eyebrow": "Learning Formats",
+        "title": "Choose the format that suits you",
+        "items": {
+          "offline": { "title": "Offline", "desc": "Learn in person at ALOHA branches" },
+          "online": { "title": "Online", "desc": "Learn live via Zoom" },
+          "smallGroup": { "title": "Small group", "desc": "More time to interact and practice" },
+          "oneOnOne": { "title": "1:1", "desc": "A roadmap personalized to your goal" }
+        }
+      },
+      "teachers": {
+        "eyebrow": "Our Teachers",
+        "title": "Highly skilled and dedicated",
+        "desc": "ALOHA teachers are selected to strict program requirements and closely follow each student's learning progress",
+        "viewAll": "View all teachers",
+        "roles": { "zh": "Chinese Teacher", "en": "English Teacher", "ko": "Korean Teacher", "ja": "Japanese Teacher" }
+      },
+      "results": {
+        "eyebrow": "Learning Outcomes",
+        "title": "Where are ALOHA students on their journey?"
+      },
+      "studyAbroad": {
+        "eyebrow": "Language & Study Abroad",
+        "title": "A language is the first step toward the world",
+        "desc": "With a study-abroad focus, ALOHA connects language training with the right study-abroad program — from consultation to preparing your application...",
+        "cta": "Explore study abroad"
+      }
     },
     "global": {
       "eyebrow": "Study abroad with ALOHA",
