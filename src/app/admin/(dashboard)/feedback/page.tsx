@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { prisma } from "@/lib/prisma";
+import { DataTable } from "@/components/admin/data-table";
+export default async function FeedbackPage() { const items = await prisma.feedback.findMany({ orderBy: { createdAt: "desc" } }); return <><div className="mb-6 flex justify-between"><h1 className="text-3xl font-black">Đánh giá</h1><Link className="btn btn-primary btn-sm" href="/admin/feedback/new">+ Thêm</Link></div><DataTable headers={["Tên", "Rating", "Nội dung", "Hiển thị", ""]} isEmpty={!items.length}>{items.map(x => <tr key={x.id}><td className="px-4 py-3">{x.name}</td><td className="px-4 py-3">{"★".repeat(x.rating)}</td><td className="max-w-md truncate px-4 py-3">{x.comment}</td><td className="px-4 py-3">{x.active ? "Có" : "Chưa"}</td><td className="px-4 py-3"><Link className="font-bold text-brand" href={`/admin/feedback/${x.id}`}>Sửa</Link></td></tr>)}</DataTable></>; }

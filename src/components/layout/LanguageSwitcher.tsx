@@ -6,7 +6,7 @@ import { LOCALES, type Locale } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 /**
- * Compact language switcher — shows the current locale code (VI/EN/JA/KO)
+ * Compact language switcher — shows the current locale code (VI/EN/ZH/KO/JA)
  * and opens a small dropdown with the full language names on click.
  * Doesn't rely on a native `<select>` so its width stays constant.
  */

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import NextLink from "next/link";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/routing";
@@ -72,6 +73,17 @@ export function Header({ onOpenRegister = () => {} }: HeaderProps) {
           <div className="ml-auto flex flex-shrink-0 items-center gap-2 xl:ml-0">
             <LanguageSwitcher />
             <ThemeToggle />
+            <NextLink
+              href="/admin/login"
+              aria-label="Admin login"
+              title="Admin login"
+              className="hidden h-[42px] w-[42px] place-items-center rounded-[12px] border-[1.5px] border-line-2 bg-surface text-ink transition hover:border-brand hover:text-brand sm:grid"
+            >
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="5" y="11" width="14" height="9" rx="2" />
+                <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+              </svg>
+            </NextLink>
             <Button
               variant="primary"
               size="sm"
