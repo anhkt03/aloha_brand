@@ -55,7 +55,7 @@ export function ApplicationTimeline() {
         <div className="flex flex-wrap items-start justify-center gap-x-1 gap-y-10 lg:flex-nowrap">
           {globalTimelineSteps.map((stepKey, idx) => (
             <Fragment key={stepKey}>
-              <div className="flex w-[min(220px,44vw)] flex-col items-center text-center lg:w-auto lg:flex-1">
+              <div className="flex w-[min(220px,44vw)] flex-col items-center rounded-2xl border border-brand bg-surface p-5 text-center shadow-sm lg:w-auto lg:flex-1">
                 <span
                   className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-2xl text-white shadow-sm"
                   style={{ background: "var(--grad)" }}
@@ -85,7 +85,7 @@ export function ApplicationTimeline() {
                 </p>
               </div>
               {idx < globalTimelineSteps.length - 1 && (
-                <span aria-hidden className="hidden flex-shrink-0 pt-3 text-line-2 lg:block">
+                <span aria-hidden className="hidden flex-shrink-0 pt-9 text-line-2 lg:block">
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
                     <path d="M5 12h14M13 6l6 6-6 6" />
                   </svg>

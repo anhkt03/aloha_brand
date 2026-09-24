@@ -34,16 +34,18 @@ export function MethodSection() {
               {ITEMS.map((key) => (
                 <article
                   key={key}
-                  className="flex w-full flex-col gap-3 rounded-2xl border border-line bg-surface p-5 shadow-sm sm:w-[calc((100%-40px)/3)]"
+                  className="flex w-full items-start gap-3 rounded-2xl border border-line bg-surface p-5 shadow-sm sm:w-[calc((100%-40px)/3)] sm:flex-col sm:items-stretch"
                 >
                   <span
-                    className="grid h-11 w-11 place-items-center rounded-xl text-brand"
+                    className="grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl text-brand"
                     style={{ background: "color-mix(in srgb, var(--brand) 12%, transparent)" }}
                   >
                     <MethodIcon index={ICON_INDEX[key]} />
                   </span>
-                  <h3 className="font-display text-[14.5px] font-black leading-snug text-ink">{t(`items.${key}.title`)}</h3>
-                  <p className="text-[12.5px] leading-relaxed text-ink-soft">{t(`items.${key}.desc`)}</p>
+                  <div className="min-w-0">
+                    <h3 className="font-display text-[14.5px] font-black leading-snug text-ink">{t(`items.${key}.title`)}</h3>
+                    <p className="mt-1 text-[12.5px] leading-relaxed text-ink-soft">{t(`items.${key}.desc`)}</p>
+                  </div>
                 </article>
               ))}
             </div>
