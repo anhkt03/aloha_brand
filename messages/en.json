@@ -214,7 +214,8 @@
       "lead": "A language and study-abroad school that walks with every learner on the road to a wider world.",
       "hero": {
         "tagline": "More Languages, A Brighter You",
-        "title": "Language training\n& study-abroad ecosystem",
+        "titleA": "Language training",
+        "titleB": "& study-abroad ecosystem",
         "lead": "ALOHA walks with learners from building language skills to reaching study and career opportunities both in Vietnam and abroad.",
         "ctaExplore": "Explore ALOHA",
         "ctaVideo": "Watch intro video",
@@ -303,7 +304,7 @@
         "steps": [
           { "num": "01", "title": "Language", "items": ["Chinese", "English", "Korean", "Japanese"] },
           { "num": "02", "title": "Certificate", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
-          { "num": "03", "title": "Study abroad", "items": ["China", "Korea", "Japan"] },
+          { "num": "03", "title": "Study abroad", "items": ["China", "Korea", "Japan", "Taiwan", "Singapore", "Europe"] },
           { "num": "04", "title": "Future", "items": ["International study", "Career growth", "Wider opportunities"] }
         ]
       }

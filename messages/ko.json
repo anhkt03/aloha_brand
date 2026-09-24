@@ -199,7 +199,8 @@
       "lead": "학습자를 더 큰 세계로 이끄는 어학·유학 스쿨.",
       "hero": {
         "tagline": "More Languages, A Brighter You",
-        "title": "어학 교육\n& 유학 생태계",
+        "titleA": "어학 교육",
+        "titleB": "& 유학 생태계",
         "lead": "ALOHA는 어학 역량부터 국내외 학습·커리어 기회까지 학습자를 함께합니다.",
         "ctaExplore": "ALOHA 살펴보기",
         "ctaVideo": "소개 영상 보기",
@@ -285,7 +286,7 @@
         "steps": [
           { "num": "01", "title": "언어", "items": ["중국어", "영어", "한국어", "일본어"] },
           { "num": "02", "title": "자격증", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
-          { "num": "03", "title": "유학", "items": ["중국", "한국", "일본"] },
+          { "num": "03", "title": "유학", "items": ["중국", "한국", "일본", "대만", "싱가포르", "유럽"] },
           { "num": "04", "title": "미래", "items": ["국제 학습", "커리어 성장", "더 넓은 기회"] }
         ]
       }

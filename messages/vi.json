@@ -214,7 +214,8 @@
       "lead": "Hệ thống đào tạo Ngoại ngữ & Du học đồng hành cùng người học trên hành trình phát triển toàn diện.",
       "hero": {
         "tagline": "More Languages, A Brighter You",
-        "title": "Hệ thống đào tạo\nNgoại ngữ & Du học",
+        "titleA": "Hệ thống đào tạo",
+        "titleB": "Ngoại ngữ & Du học",
         "lead": "ALOHA đồng hành cùng người học từ việc xây dựng năng lực ngôn ngữ đến chinh phục các cơ hội học tập và phát triển tại Việt Nam và quốc tế.",
         "ctaExplore": "Khám phá ALOHA",
         "ctaVideo": "Xem video giới thiệu",
@@ -303,7 +304,7 @@
         "steps": [
           { "num": "01", "title": "Ngoại ngữ", "items": ["Tiếng Trung", "Tiếng Anh", "Tiếng Hàn", "Tiếng Nhật"] },
           { "num": "02", "title": "Chứng chỉ", "items": ["HSK", "IELTS", "TOPIK", "JLPT"] },
-          { "num": "03", "title": "Du học", "items": ["Trung Quốc", "Hàn Quốc", "Nhật Bản"] },
+          { "num": "03", "title": "Du học", "items": ["Trung Quốc", "Hàn Quốc", "Nhật Bản", "Đài Loan", "Singapo", "Châu Âu"] },
           { "num": "04", "title": "Tương lai", "items": ["Học tập quốc tế", "Phát triển nghề nghiệp", "Mở rộng cơ hội"] }
         ]
       }
