@@ -119,14 +119,97 @@
   },
   "pages": {
     "training": {
-      "eyebrow": "語学コース",
-      "title": "語学教育",
-      "lead": "英語・中国語・韓国語・日本語 — レベル別の明確な体系。募集期ごとに更新。",
-      "tabs": { "all": "すべて", "en": "英語", "zh": "中国語", "ko": "韓国語", "ja": "日本語" },
-      "recruiting": "募集中",
-      "register": "申し込む",
-      "durationLine": "期間: {months}ヶ月 ({sessions}回)",
-      "outcomeLine": "到達目標: {outcome}"
+      "hero": {
+        "eyebrow": "ALOHAの語学教育",
+        "title": "正しいロードマップで学び\n語学力を飛躍させ\nより広い未来を切り開く",
+        "lead": "中国語・英語・韓国語・日本語 —— 基礎から資格取得、実践的な活用まで。",
+        "ctaPrimary": "語学コースを見る",
+        "ctaSecondary": "相談を申し込む",
+        "stats": {
+          "students": { "value": "10,000+", "label": "受講生" },
+          "teachers": { "value": "500+", "label": "講師" },
+          "branches": { "value": "10+", "label": "全国の校舎" },
+          "programs": { "value": "40+", "label": "教育プログラム" }
+        }
+      },
+      "programs": {
+        "eyebrow": "教育プログラム",
+        "title": "目標に合った言語を選ぶ",
+        "sub": "資格取得、学業、仕事、留学準備——どんな目標でもALOHAに合ったコースがあります。",
+        "cta": "コースを見る",
+        "items": {
+          "zh": { "name": "中国語", "badge": "HSK・会話", "desc": "基礎からHSK6まで、試験対策と学業・仕事での実践活用を両立します。" },
+          "en": { "name": "英語", "badge": "IELTS・TOEIC", "desc": "基礎から上級IELTS/TOEICまで、実践的な英語力の向上に重点を置きます。" },
+          "ko": { "name": "韓国語", "badge": "TOPIK・会話", "desc": "基礎からTOPIK5まで、知識習得と実践活用を両立します。" },
+          "ja": { "name": "日本語", "badge": "JLPT・会話", "desc": "N5からN3まで、JLPT対策力と実践的な会話力を同時に伸ばします。" }
+        }
+      },
+      "coursesList": {
+        "title": "募集中のコース",
+        "empty": "現在開講中のコースはありません。",
+        "all": "すべて"
+      },
+      "goals": {
+        "eyebrow": "目的別に学ぶ",
+        "title": "あなたの語学学習の目的は？",
+        "items": {
+          "certificate": { "title": "資格試験対策", "badge": "HSK・IELTS・TOEIC・TOPIK・JLPT", "desc": "明確なロードマップで資格取得を目指します" },
+          "study": { "title": "学業のため", "desc": "学業や教育目標のための語学基礎を築きます" },
+          "work": { "title": "仕事のため", "desc": "コミュニケーション、企業環境、工業団地、貿易など様々な職場状況に対応" },
+          "abroad": { "title": "留学", "desc": "留学計画のための語学力と資格を身につけます" }
+        }
+      },
+      "roadmap": {
+        "eyebrow": "学習ロードマップ",
+        "title": "基礎から目標達成まで",
+        "steps": {
+          "evaluate": { "title": "レベル診断", "desc": "レベルと目標を明確にします" },
+          "plan": { "title": "ロードマップ作成", "desc": "最適なコースを選びます" },
+          "practice": { "title": "学習 & 実践", "desc": "知識習得と練習・活用を組み合わせます" },
+          "review": { "title": "テスト & 評価", "desc": "進捗を確認します" },
+          "achieve": { "title": "目標達成", "desc": "資格・学業・仕事・留学" }
+        }
+      },
+      "method": {
+        "eyebrow": "ALOHAの学習メソッド",
+        "title": "使えるようになるために学ぶ",
+        "items": {
+          "smallClass": { "title": "少人数クラス", "desc": "インタラクションを増やし、直接フィードバックを受けられます" },
+          "practice": { "title": "学習 – 実践 – 活用", "desc": "知識を実際の場面に活かします" },
+          "tracking": { "title": "進捗管理", "desc": "定期的な課題とテストで進捗を確認します" },
+          "personalize": { "title": "パーソナライズされたロードマップ", "desc": "レベルと目標に合わせて調整します" },
+          "commitment": { "title": "到達目標の保証", "desc": "コースと具体的な条件に基づいて成果を約束します" }
+        },
+        "quote": "語学は単なる科目ではなく、未来により多くのチャンスを開く道具です。",
+        "quoteAuthor": "ALOHA"
+      },
+      "formats": {
+        "eyebrow": "学習形式",
+        "title": "自分に合った学習形式を選べます",
+        "items": {
+          "offline": { "title": "対面", "desc": "ALOHAの校舎で直接学びます" },
+          "online": { "title": "オンライン", "desc": "Zoomでリアルタイムに学びます" },
+          "smallGroup": { "title": "少人数グループ", "desc": "インタラクションと練習の時間を増やします" },
+          "oneOnOne": { "title": "1対1", "desc": "個人の目標に合わせたロードマップ" }
+        }
+      },
+      "teachers": {
+        "eyebrow": "講師陣",
+        "title": "高い専門性と熱心な指導",
+        "desc": "ALOHAの講師は各コースの厳しい基準で選ばれ、受講生の学習過程に最後まで寄り添います",
+        "viewAll": "講師一覧を見る",
+        "roles": { "zh": "中国語講師", "en": "英語講師", "ko": "韓国語講師", "ja": "日本語講師" }
+      },
+      "results": {
+        "eyebrow": "学習成果",
+        "title": "ALOHAの受講生は今どこまで到達しているか？"
+      },
+      "studyAbroad": {
+        "eyebrow": "語学と留学",
+        "title": "語学は国際舞台へ踏み出す第一歩",
+        "desc": "留学を見据え、ALOHAは語学教育プログラムと最適な留学プログラムをつなぎ、相談から出願書類の準備まで伴走します……",
+        "cta": "留学プログラムを見る"
+      }
     },
     "global": {
       "eyebrow": "ALOHAで留学",

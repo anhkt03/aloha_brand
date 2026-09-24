@@ -130,14 +130,97 @@
   },
   "pages": {
     "training": {
-      "eyebrow": "培训课程",
-      "title": "语言培训",
-      "lead": "英语 · 中文 · 韩语 · 日语 —— 拥有清晰的等级/水平体系。课程随每期招生持续更新。",
-      "tabs": { "all": "全部", "en": "英语", "zh": "中文", "ko": "韩语", "ja": "日语" },
-      "recruiting": "招生中",
-      "register": "报名",
-      "durationLine": "时长: {months} 个月 ({sessions} 节课)",
-      "outcomeLine": "达成: {outcome}"
+      "hero": {
+        "eyebrow": "ALOHA 语言培训",
+        "title": "遵循正确的学习路径\n突破语言能力\n开启更广阔的未来",
+        "lead": "中文、英语、韩语、日语课程 —— 从基础到考取证书及实际应用。",
+        "ctaPrimary": "探索语言培训课程",
+        "ctaSecondary": "预约咨询",
+        "stats": {
+          "students": { "value": "10,000+", "label": "学员" },
+          "teachers": { "value": "500+", "label": "教师" },
+          "branches": { "value": "10+", "label": "全国校区" },
+          "programs": { "value": "40+", "label": "培训课程" }
+        }
+      },
+      "programs": {
+        "eyebrow": "培训课程",
+        "title": "选择适合你目标的语言",
+        "sub": "无论你是为了考证、学习、工作还是留学，ALOHA 都有适合你的学习路径。",
+        "cta": "查看课程",
+        "items": {
+          "zh": { "name": "中文", "badge": "HSK · 口语", "desc": "从基础到 HSK6，结合应试训练与学习、工作中的实际应用。" },
+          "en": { "name": "英语", "badge": "雅思 · 托业", "desc": "从基础到雅思高分/托业课程，专注提升实际英语能力。" },
+          "ko": { "name": "韩语", "badge": "TOPIK · 口语", "desc": "从基础到 TOPIK5，结合知识学习与实际应用。" },
+          "ja": { "name": "日语", "badge": "JLPT · 口语", "desc": "从 N5 到 N3，同步提升 JLPT 能力与实际会话能力。" }
+        }
+      },
+      "coursesList": {
+        "title": "正在招生的课程",
+        "empty": "暂无开放课程。",
+        "all": "全部"
+      },
+      "goals": {
+        "eyebrow": "按目标学习",
+        "title": "你的语言学习目标是什么？",
+        "items": {
+          "certificate": { "title": "考取证书", "badge": "HSK · 雅思 · 托业 · TOPIK · JLPT", "desc": "通过清晰的学习路径达成证书目标" },
+          "study": { "title": "用于学习", "desc": "为学习和教育目标打好语言基础" },
+          "work": { "title": "用于工作", "desc": "沟通交流、企业环境、工业园区、贸易及各类职场场景" },
+          "abroad": { "title": "留学", "desc": "为留学计划打造语言能力与证书" }
+        }
+      },
+      "roadmap": {
+        "eyebrow": "学习路径",
+        "title": "从基础到实现目标",
+        "steps": {
+          "evaluate": { "title": "入学测评", "desc": "确定水平与目标" },
+          "plan": { "title": "制定学习路径", "desc": "选择合适的课程" },
+          "practice": { "title": "学习与实践", "desc": "知识学习结合练习与应用" },
+          "review": { "title": "测试与评估", "desc": "跟踪学习进度" },
+          "achieve": { "title": "实现目标", "desc": "证书 · 学习 · 工作 · 留学" }
+        }
+      },
+      "method": {
+        "eyebrow": "ALOHA 教学方法",
+        "title": "学以致用",
+        "items": {
+          "smallClass": { "title": "小班教学", "desc": "增加互动，及时纠错" },
+          "practice": { "title": "学习 – 实践 – 应用", "desc": "将知识运用到实际场景中" },
+          "tracking": { "title": "进度跟踪", "desc": "定期布置作业并检测评估" },
+          "personalize": { "title": "个性化学习路径", "desc": "根据个人水平与目标调整" },
+          "commitment": { "title": "效果承诺", "desc": "按具体课程与培训条件作出承诺" }
+        },
+        "quote": "语言不仅仅是一门学科，更是开启未来更多机会的工具。",
+        "quoteAuthor": "ALOHA"
+      },
+      "formats": {
+        "eyebrow": "学习形式",
+        "title": "自由选择合适的学习形式",
+        "items": {
+          "offline": { "title": "线下", "desc": "在 ALOHA 校区面授学习" },
+          "online": { "title": "线上", "desc": "通过 Zoom 平台在线学习" },
+          "smallGroup": { "title": "小组课", "desc": "增加互动与练习时间" },
+          "oneOnOne": { "title": "1对1", "desc": "根据个人目标定制学习路径" }
+        }
+      },
+      "teachers": {
+        "eyebrow": "师资团队",
+        "title": "专业素养高，用心教学",
+        "desc": "ALOHA 教师均按各课程的严格标准选拔，并全程跟踪学员的学习过程",
+        "viewAll": "查看全部教师",
+        "roles": { "zh": "中文教师", "en": "英语教师", "ko": "韩语教师", "ja": "日语教师" }
+      },
+      "results": {
+        "eyebrow": "学习成果",
+        "title": "ALOHA 学员的学习历程走到了哪里？"
+      },
+      "studyAbroad": {
+        "eyebrow": "语言与留学",
+        "title": "语言是迈向国际舞台的第一步",
+        "desc": "秉持留学发展方向，ALOHA 将语言培训课程与合适的留学项目相连接，从咨询到准备申请材料……",
+        "cta": "探索留学项目"
+      }
     },
     "global": {
       "eyebrow": "与ALOHA一起留学",
