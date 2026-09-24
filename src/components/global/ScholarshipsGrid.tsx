@@ -6,45 +6,51 @@ import { SectionHead } from "@/components/common/Section";
 import { scholarships } from "@/data/scholarships";
 
 /**
- * Section 4 — featured scholarships grid. Each card highlights value +
- * audience so users can shortlist quickly.
+ * Section 5 — featured scholarships. Photo banner + level/value badges +
+ * deadline so students can shortlist at a glance.
  */
 export function ScholarshipsGrid() {
   const t = useTranslations("pages.global.scholarships");
+  const tName = useTranslations("pages.global.destinations");
   return (
     <Container>
       <div className="section">
-        <SectionHead center eyebrow={t("eyebrow")} title={t("title")} sub={t("sub")} />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <SectionHead center eyebrow={t("eyebrow")} title={t("title")} />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {scholarships.map((s) => (
             <article
               key={s.key}
-              className="relative overflow-hidden rounded-lg border border-line bg-surface p-6 transition hover:-translate-y-1 hover:shadow"
+              className="group overflow-hidden rounded-xl border border-line bg-surface shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
             >
-              <span
-                aria-hidden
-                className="absolute inset-x-0 top-0 h-1.5"
+              <div
+                className="relative flex aspect-[16/10] items-start p-3"
                 style={{ background: s.gradient }}
-              />
-              <div className="flex items-start gap-3">
-                <span className="text-3xl leading-none">{s.countryFlag}</span>
-                <div className="min-w-0">
-                  <h3 className="font-display text-[16px] font-extrabold leading-tight">{s.name}</h3>
-                  <div className="mt-0.5 text-[12.5px] font-semibold text-muted">{s.country}</div>
-                </div>
+              >
+                <span className="flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 font-display text-[12px] font-bold text-ink">
+                  <span className="text-base leading-none">{s.countryFlag}</span>
+                  {tName(`${s.countryKey}.name`)}
+                </span>
               </div>
-              <div className="mt-5 space-y-3 text-[13.5px] text-ink-soft">
+              <div className="flex flex-col gap-3 p-5">
                 <div>
-                  <div className="text-[11.5px] font-semibold uppercase tracking-wide text-muted">
-                    {t("valueLabel")}
-                  </div>
-                  <div className="mt-0.5 font-semibold text-ink">{s.value}</div>
+                  <h3 className="font-display text-[16px] font-extrabold leading-tight text-ink">
+                    {t(`items.${s.key}.name`)}
+                  </h3>
+                  <div className="mt-0.5 text-[13px] font-semibold text-brand">{t(`items.${s.key}.school`)}</div>
                 </div>
-                <div>
-                  <div className="text-[11.5px] font-semibold uppercase tracking-wide text-muted">
-                    {t("audienceLabel")}
-                  </div>
-                  <div className="mt-0.5">{s.audience}</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="rounded-md bg-surface-2 px-2.5 py-1 text-[12px] font-semibold text-ink-soft">
+                    {t(`items.${s.key}.level`)}
+                  </span>
+                  <span
+                    className="rounded-md px-2.5 py-1 text-[12px] font-semibold"
+                    style={{ background: "color-mix(in srgb, var(--accent) 22%, transparent)", color: "#8a6d00" }}
+                  >
+                    {t(`badges.${s.badge}`)}
+                  </span>
+                </div>
+                <div className="text-[12.5px] text-muted">
+                  {t("deadline")}: <span className="font-semibold text-ink-soft">{s.deadline}</span>
                 </div>
               </div>
             </article>
