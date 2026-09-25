@@ -48,7 +48,7 @@ export function AboutEcosystem() {
                   alt=""
                   fill
                   sizes="(min-width:768px) 25vw, 100vw"
-                  className="object-cover opacity-15"
+                  className="object-cover opacity-30"
                 />
                 <div className="relative">
                   <div

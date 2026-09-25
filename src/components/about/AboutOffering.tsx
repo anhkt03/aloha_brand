@@ -28,7 +28,7 @@ export function AboutOffering() {
             title={t("training.title")}
             desc={t("training.desc")}
             cta={t("training.cta")}
-            image="/images/homepage/class.jpg"
+            image="/images/about/offering/language.jpg"
             onCta={() => router.push("/ngoaingu")}
           />
           <OfferPanel
@@ -36,7 +36,7 @@ export function AboutOffering() {
             title={t("global.title")}
             desc={t("global.desc")}
             cta={t("global.cta")}
-            image="/images/homepage/studyaboad.jpg"
+            image="/images/about/offering/study-abroad.png"
             onCta={() => router.push("/duhocquocte")}
           />
         </div>

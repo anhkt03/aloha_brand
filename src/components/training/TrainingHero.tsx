@@ -23,7 +23,7 @@ export function TrainingHero() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/homepage/class.jpg"
+          src="/images/training/train-aloha.png"
           alt=""
           aria-hidden
           fill
