@@ -4,7 +4,8 @@ import type { DestinationKey } from "./destinations";
  * Featured scholarships shown on /duhocquocte.
  * Name/school/level/badge copy is localized — see
  * `pages.global.scholarships.items.<key>` and `.badges` in `messages/*.json`.
- * This file only holds structural/visual data.
+ * This file only holds structural/visual data. `image` files (official
+ * program logos/graphics) live at `public/images/global/scholarships/<key>.jpg`.
  */
 export type ScholarshipBadge = "full" | "partial" | "tuition";
 
@@ -16,6 +17,7 @@ export interface Scholarship {
   /** Hạn đăng ký, hiển thị dạng dd/mm/yyyy */
   deadline: string;
   gradient: string;
+  image: string;
 }
 
 export const scholarships: Scholarship[] = [
@@ -26,6 +28,7 @@ export const scholarships: Scholarship[] = [
     badge: "full",
     deadline: "30/11/2026",
     gradient: "linear-gradient(135deg,#c6302b,#e1ba23)",
+    image: "/images/global/scholarships/taiwanUndergrad.jpg",
   },
   {
     key: "koreaGks",
@@ -34,6 +37,7 @@ export const scholarships: Scholarship[] = [
     badge: "partial",
     deadline: "15/12/2026",
     gradient: "linear-gradient(135deg,#2f6fd0,#28b4d2)",
+    image: "/images/global/scholarships/koreaGks.jpg",
   },
   {
     key: "erasmus",
@@ -42,5 +46,6 @@ export const scholarships: Scholarship[] = [
     badge: "tuition",
     deadline: "31/01/2027",
     gradient: "linear-gradient(135deg,#0033a0,#e1ba23)",
+    image: "/images/global/scholarships/erasmus.jpg",
   },
 ];
