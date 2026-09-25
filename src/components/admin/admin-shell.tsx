@@ -26,7 +26,6 @@ const navigation: NavigationItem[] = [
   { module: "news", label: "Bài viết", href: "/admin/news", group: "news", icon: <Icon path="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4zm4 4h9m-9 4h9m-9 4h5" /> },
   { module: "enrollments", label: "Đăng ký", href: "/admin/enrollments", icon: <Icon path="M9 12l2 2 4-4M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14l-4-3-3 3-3-3-3 3-4-3V6z" /> },
   { module: "feedback", label: "Đánh giá", href: "/admin/feedback", icon: <Icon path="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /> },
-  { module: "branches", label: "Cơ sở", href: "/admin/branches", icon: <Icon path="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m-1 4h1m4-4h1m-1 4h1M9 21v-4h6v4" /> },
   { module: "users", label: "Tài khoản", href: "/admin/users", icon: <Icon path="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm8 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /> },
 ];
 
