@@ -2,8 +2,8 @@ import type { Testimonial } from "@/types/product";
 
 /**
  * Real ALOHA students' score cards — images live at
- * `public/images/testimonials/{1..9}.png`.
- * Order matches the 9 attached score-card images.
+ * `public/images/testimonials/{1..11}.png`.
+ * Order matches the 11 attached score-card images.
  */
 export const testimonials: Testimonial[] = [
   {
@@ -155,6 +155,40 @@ export const testimonials: Testimonial[] = [
         { label: "Listening", score: 7.0 },
         { label: "Reading", score: 6.5 },
         { label: "Writing", score: 6.0 },
+        { label: "Speaking", score: 6.0 },
+      ],
+    },
+  },
+  {
+    id: "phung-phuong-thao",
+    name: "Phùng Phương Thảo",
+    course: "IELTS 6.5+",
+    image: "/images/testimonials/10.png",
+    quote:
+      "Trước em học tiếng Anh khá chật vật, nhưng vào ALOHA được hướng dẫn từng bước nên việc học nhẹ nhàng hơn nhiều.",
+    scores: {
+      overall: 7.0,
+      bands: [
+        { label: "Listening", score: 8.0 },
+        { label: "Reading", score: 7.5 },
+        { label: "Writing", score: 6.5 },
+        { label: "Speaking", score: 6.0 },
+      ],
+    },
+  },
+  {
+    id: "ho-huyen-linh",
+    name: "Hồ Huyền Linh",
+    course: "IELTS 6.5+",
+    image: "/images/testimonials/11.png",
+    quote:
+      "Thầy cô theo sát và sửa từng lỗi nên em biết mình yếu ở đâu để cải thiện. Sau một thời gian học, em tự tin hơn hẳn khi sử dụng tiếng Anh.",
+    scores: {
+      overall: 7.0,
+      bands: [
+        { label: "Listening", score: 7.5 },
+        { label: "Reading", score: 7.0 },
+        { label: "Writing", score: 7.5 },
         { label: "Speaking", score: 6.0 },
       ],
     },

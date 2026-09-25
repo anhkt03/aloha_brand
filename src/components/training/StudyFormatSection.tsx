@@ -18,7 +18,7 @@ export function StudyFormatSection() {
     <section className="section">
       <Container>
         <SectionHead center eyebrow={t("eyebrow")} title={t("title")} />
-        <div className="grid gap-8 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
+        <div className="grid gap-8 lg:grid-cols-[1.05fr_.95fr]">
           <div className="grid gap-5 sm:grid-cols-2">
             {FORMATS.map((key, idx) => (
               <article key={key} className="flex items-start gap-3 rounded-2xl border border-line bg-surface p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:flex-col sm:items-stretch">
@@ -35,10 +35,10 @@ export function StudyFormatSection() {
               </article>
             ))}
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg lg:aspect-auto lg:h-full">
             <Image
-              src="/images/homepage/aloha.jpg"
-              alt="Lớp học ALOHA"
+              src="/images/training/study-format-method.png"
+              alt="Học ngoại ngữ và cơ hội du học"
               fill
               sizes="(min-width:1024px) 45vw, 90vw"
               className="object-cover"

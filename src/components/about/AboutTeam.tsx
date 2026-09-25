@@ -13,7 +13,7 @@ export function AboutTeam() {
   const t = useTranslations("pages.about.team");
   return (
     <Container>
-      <div className="section grid items-center gap-10 md:grid-cols-[1fr_1.1fr]">
+      <div className="section grid items-center gap-10 md:grid-cols-[0.85fr_1.25fr]">
         <div>
           <span className="eyebrow">{t("eyebrow")}</span>
           <h2 className="sec-title mt-3.5">{t("title")}</h2>
@@ -25,13 +25,13 @@ export function AboutTeam() {
             </svg>
           </Button>
         </div>
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+        <div className="relative aspect-[4/3] md:aspect-[3/2]">
           <Image
-            src="/images/homepage/aloha.jpg"
+            src="/images/about/team.png"
             alt="ALOHA team"
             fill
-            sizes="(min-width:768px) 50vw, 100vw"
-            className="object-cover"
+            sizes="(min-width:768px) 60vw, 100vw"
+            className="rounded-2xl object-cover"
           />
         </div>
       </div>

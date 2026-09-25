@@ -10,8 +10,8 @@ export interface TeacherMember {
 }
 
 export const teachers: TeacherMember[] = [
-  { id: "nguyen-thi-mai", name: "Cô Nguyễn Thị Mai", roleKey: "zh", credential: "HSK 6" },
-  { id: "tran-minh-duc", name: "Thầy Trần Minh Đức", roleKey: "en", credential: "8.5 IELTS" },
-  { id: "park-ji-eun", name: "Cô Park Ji-eun", roleKey: "ko", credential: "TOPIK 6" },
-  { id: "tanaka-yumi", name: "Cô Tanaka Yumi", roleKey: "ja", credential: "JLPT N1" },
+  { id: "duong-minh-ngoc", name: "Cô Dương Minh Ngọc", roleKey: "zh", credential: "HSK 6", image: "/images/teachers/duong-minh-ngoc.png" },
+  { id: "nguyen-thuy-dung", name: "Cô Nguyễn Thùy Dung", roleKey: "en", credential: "IELTS 8.0", image: "/images/teachers/nguyen-thuy-dung.png" },
+  { id: "nguyen-thi-ngoc-bich", name: "Cô Nguyễn Thị Ngọc Bích", roleKey: "ko", credential: "TOPIK 5", image: "/images/teachers/nguyen-thi-ngoc-bich.png" },
+  { id: "nguyen-ngoc-han", name: "Cô Nguyễn Ngọc Hân", roleKey: "ja", credential: "JLPT N2", image: "/images/teachers/nguyen-ngoc-han.png" },
 ];

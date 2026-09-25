@@ -4,10 +4,10 @@
  * admin-entered strings, not a fixed language enum, hence the keyword match.
  */
 const FLAG_BY_KEYWORD: Array<[string, string]> = [
-  ["trung", "/images/flags/china.webp"],
-  ["anh", "/images/flags/uk.webp"],
-  ["hàn", "/images/flags/korea.webp"],
-  ["nhật", "/images/flags/japan.jpg"],
+  ["trung", "/images/flags/china.png"],
+  ["anh", "/images/flags/uk.png"],
+  ["hàn", "/images/flags/korea.png"],
+  ["nhật", "/images/flags/japan.png"],
 ];
 
 export function getCategoryFlag(category: string): string | null {

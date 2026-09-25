@@ -30,7 +30,7 @@ export function StudyAbroadSection() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
             <Image
-              src="/images/homepage/studyaboad.jpg"
+              src="/images/training/study-abroad.jpg"
               alt="Ngoại ngữ và du học cùng ALOHA"
               fill
               sizes="(min-width:768px) 50vw, 100vw"

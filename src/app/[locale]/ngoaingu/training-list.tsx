@@ -60,7 +60,7 @@ export function TrainingList({ courses, categories }: { courses: Course[]; categ
                   {flag && (
                     <>
                       <Image src={flag} alt="" aria-hidden fill sizes="400px" className="object-cover" />
-                      <div aria-hidden className="absolute inset-0 bg-white/60" />
+                      <div aria-hidden className="absolute inset-0 bg-white/25" />
                     </>
                   )}
                   <div className="relative">

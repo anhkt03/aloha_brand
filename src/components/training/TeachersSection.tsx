@@ -1,15 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Container } from "@/components/common/Container";
 import { teachers } from "@/data/teachers";
 
 /**
- * "Đội ngũ giảng viên" — real photos haven't been supplied yet, so each
- * card shows a placeholder avatar frame (initial on a brand gradient).
- * Swap in `<Image src={member.image} .../>` once photos land at
- * `public/images/teachers/<id>.jpg`.
+ * "Đội ngũ giảng viên" — shows each teacher's photo when `image` is set;
+ * falls back to a placeholder avatar frame (initial on a brand gradient)
+ * for any member added without a photo yet.
  */
 export function TeachersSection() {
   const t = useTranslations("pages.training.teachers");
@@ -37,12 +37,18 @@ export function TeachersSection() {
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {teachers.map((member) => (
             <article key={member.id} className="flex flex-col items-center gap-3 rounded-2xl border border-line bg-surface p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-              <span
-                className="grid aspect-square w-full max-w-[140px] place-items-center rounded-2xl font-display text-4xl font-black text-white"
-                style={{ background: "var(--grad)" }}
-              >
-                {member.name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase()}
-              </span>
+              {member.image ? (
+                <span className="relative aspect-[3/4] w-full max-w-[140px] overflow-hidden rounded-2xl">
+                  <Image src={member.image} alt={member.name} fill sizes="140px" className="rounded-2xl object-contain" />
+                </span>
+              ) : (
+                <span
+                  className="grid aspect-square w-full max-w-[140px] place-items-center rounded-2xl font-display text-4xl font-black text-white"
+                  style={{ background: "var(--grad)" }}
+                >
+                  {member.name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase()}
+                </span>
+              )}
               <h3 className="font-display text-[15px] font-black text-ink">{member.name}</h3>
               <p className="text-[13px] font-semibold text-brand">{t(`roles.${member.roleKey}`)}</p>
               <span className="pill">{member.credential}</span>

@@ -63,7 +63,7 @@ export function LanguageCrossSection() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
             <Image
-              src="/images/studyabroad/class.jpg"
+              src="/images/studyabroad/class-connect.png"
               alt="Lớp học ngoại ngữ ALOHA"
               fill
               sizes="(min-width:1024px) 42vw, 90vw"
