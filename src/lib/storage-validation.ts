@@ -7,16 +7,23 @@ export const IMAGE_EXTENSIONS: Readonly<Record<string, string>> = {
   "image/svg+xml": "svg",
 };
 
+export class ImageValidationError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "ImageValidationError";
+  }
+}
+
 export function validateImageUpload(file: Pick<File, "type" | "size">, folder: string) {
   const extension = IMAGE_EXTENSIONS[file.type];
-  if (!extension) throw new Error("Unsupported image format.");
-  if (file.size > MAX_IMAGE_SIZE) throw new Error("Image exceeds the 5MB limit.");
-  if (!/^news\/(?:\d+|new)\/(cover|gallery)$/.test(folder)) throw new Error("Invalid upload folder.");
+  if (!extension) throw new ImageValidationError("Unsupported image format.");
+  if (file.size > MAX_IMAGE_SIZE) throw new ImageValidationError("Image exceeds the 5MB limit.");
+  if (!/^news\/(?:\d+|new)\/(cover|gallery)$/.test(folder)) throw new ImageValidationError("Invalid upload folder.");
   return extension;
 }
 
 export function validateStoragePath(path: string) {
   if (path.includes("..") || path.startsWith("/") || !/^aloha\/[a-f0-9-]{36}$/i.test(path)) {
-    throw new Error("Invalid managed image path.");
+    throw new ImageValidationError("Invalid managed image path.");
   }
 }

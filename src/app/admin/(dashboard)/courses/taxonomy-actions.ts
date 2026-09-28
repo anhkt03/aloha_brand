@@ -1,15 +1,15 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath, updateTag } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { requireAdminUser } from "@/lib/auth";
 import { taxonomySchema, translationsFromForm } from "@/lib/validation/course-taxonomy";
 
 function invalidate() {
+  updateTag("courses");
   revalidatePath("/admin/courses");
   revalidatePath("/admin/courses/categories");
   revalidatePath("/admin/courses/levels");
-  revalidatePath("/vi/training");
 }
 
 export async function saveCourseCategory(formData: FormData) {

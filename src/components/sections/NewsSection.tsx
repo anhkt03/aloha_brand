@@ -10,20 +10,19 @@ import { formatDate } from "@/lib/utils";
 type NewsArticle = { id: number; slug: string; title: string; content: string; coverImage: string; publishedAt: string };
 
 /**
- * Section 9 — News. Shows the 3 most recent published articles as cards.
+ * News section. Renders the (already limited, newest-first) articles it is given.
  */
 export function NewsSection({ news }: { news: NewsArticle[] }) {
   const t = useTranslations("news");
   const locale = useLocale();
-  const items = news.slice(0, 3);
 
   return (
     <Container>
       <div className="section">
         <SectionHead center eyebrow={t("eyebrow")} title={t("title")} />
-        {items.length ? (
-          <div className="grid gap-6 md:grid-cols-3">
-            {items.map((article) => (
+        {news.length ? (
+          <div className="grid gap-6 md:grid-cols-2">
+            {news.map((article) => (
               <article key={article.id} className="flex flex-col overflow-hidden rounded-lg border border-line bg-surface transition hover:-translate-y-1 hover:shadow">
                 <Link href={`/news/${article.slug}`} className="block">
                   <div className="relative aspect-[16/10] bg-surface-2">
