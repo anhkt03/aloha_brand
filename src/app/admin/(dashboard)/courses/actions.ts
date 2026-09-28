@@ -1,7 +1,7 @@
 "use server";
 
 import { CourseStatus } from "@prisma/client";
-import { revalidatePath } from "next/cache";
+import { revalidatePath, updateTag } from "next/cache";
 import { redirect } from "next/navigation";
 import { writeAuditLog } from "@/lib/audit";
 import { requireAdminUser } from "@/lib/auth";
@@ -9,8 +9,10 @@ import { prisma } from "@/lib/prisma";
 import { courseFromForm, courseSchema } from "@/lib/validation/course";
 
 const invalidate = () => {
+  // Public pages read courses through `unstable_cache` (tag "courses"); path
+  // revalidation alone would not clear that data cache.
+  updateTag("courses");
   revalidatePath("/admin/courses");
-  revalidatePath("/vi/training");
 };
 
 export type CourseFormState = { message?: string; success?: boolean };
