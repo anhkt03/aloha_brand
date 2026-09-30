@@ -808,6 +808,43 @@
             ]
           }
         ]
+      },
+      "org": {
+        "eyebrow": "Organization structure",
+        "title": "Organization chart",
+        "updated": "Updated 09/2026",
+        "legend": {
+          "operations": "Operations division",
+          "sales": "Sales division",
+          "studyAbroad": "Study abroad division"
+        },
+        "roles": {
+          "director": "Director",
+          "operationsDirector": "Operations Director",
+          "salesDirector": "Sales Director",
+          "studyAbroadDirector": "Study Abroad Director",
+          "hrAdmin": "Head of HR & Administration",
+          "finance": "Head of Finance & Accounting",
+          "operations": "Head of Operations",
+          "branchManager": "Branch Manager",
+          "marketing": "Head of Marketing",
+          "recruiter": "Recruitment Specialist",
+          "compBen": "C&B Specialist",
+          "generalAccountant": "General Accountant",
+          "taxAccountant": "Tax Accountant",
+          "internalAccountant": "Internal Accountant",
+          "teacherManagement": "Teacher Management Officer",
+          "customerCare": "Customer Care Officer",
+          "advisor": "Advisor",
+          "classCare": "Classroom Care Officer",
+          "security": "Security Guard",
+          "janitor": "Cleaning Staff",
+          "designer": "Designer",
+          "content": "Content Creator",
+          "digital": "Digital Marketing Officer",
+          "studyAbroadSales": "Sales Officer",
+          "studyAbroadDocs": "Documentation Officer"
+        }
       }
     },
     "branches": {

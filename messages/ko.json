@@ -808,6 +808,43 @@
             ]
           }
         ]
+      },
+      "org": {
+        "eyebrow": "조직 구조",
+        "title": "조직도",
+        "updated": "2026년 9월 업데이트",
+        "legend": {
+          "operations": "운영 부문",
+          "sales": "영업 부문",
+          "studyAbroad": "유학 부문"
+        },
+        "roles": {
+          "director": "대표",
+          "operationsDirector": "운영 이사",
+          "salesDirector": "영업 이사",
+          "studyAbroadDirector": "유학 부문 이사",
+          "hrAdmin": "인사총무팀장",
+          "finance": "재무회계팀장",
+          "operations": "운영팀장",
+          "branchManager": "지점장",
+          "marketing": "마케팅팀장",
+          "recruiter": "채용 담당",
+          "compBen": "급여·복리후생 담당",
+          "generalAccountant": "종합회계 담당",
+          "taxAccountant": "세무회계 담당",
+          "internalAccountant": "내부회계 담당",
+          "teacherManagement": "강사 관리 담당",
+          "customerCare": "고객 관리 담당",
+          "advisor": "학습 상담사",
+          "classCare": "수업 관리 담당",
+          "security": "경비원",
+          "janitor": "미화 담당",
+          "designer": "디자이너",
+          "content": "콘텐츠 담당",
+          "digital": "디지털 마케팅 담당",
+          "studyAbroadSales": "영업 담당",
+          "studyAbroadDocs": "서류 담당"
+        }
       }
     },
     "branches": {

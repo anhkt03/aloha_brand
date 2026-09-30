@@ -8,6 +8,7 @@ import { AboutVisionMission } from "@/components/about/AboutVisionMission";
 import { AboutCoreValues } from "@/components/about/AboutCoreValues";
 import { AboutPrinciples } from "@/components/about/AboutPrinciples";
 import { AboutTeam } from "@/components/about/AboutTeam";
+import { AboutOrgChart } from "@/components/about/AboutOrgChart";
 import { AboutEcosystem } from "@/components/about/AboutEcosystem";
 import { StatsSection } from "@/components/sections/StatsSection";
 import { BranchesTeaserSection } from "@/components/sections/BranchesTeaserSection";
@@ -23,10 +24,11 @@ import { CtaSection } from "@/components/sections/CtaSection";
  *  5. AboutCoreValues   — 5 giá trị A·L·O·H·A
  *  6. AboutPrinciples   — Triết lý đào tạo + 3 nguyên tắc
  *  7. AboutTeam         — Đội ngũ
- *  8. AboutEcosystem    — Từ ngoại ngữ đến cơ hội quốc tế
- *  9. StatsSection      — Số liệu biết nói (reuse homepage)
- * 10. BranchesTeaser    — Hệ thống cơ sở
- * 11. CtaSection        — Cuối trang
+ *  8. AboutOrgChart     — Sơ đồ tổ chức
+ *  9. AboutEcosystem    — Từ ngoại ngữ đến cơ hội quốc tế
+ * 10. StatsSection      — Số liệu biết nói (reuse homepage)
+ * 11. BranchesTeaser    — Hệ thống cơ sở
+ * 12. CtaSection        — Cuối trang
  */
 export default function AboutPage() {
   const { open } = useRegisterModal();
@@ -39,6 +41,7 @@ export default function AboutPage() {
       <AboutCoreValues />
       <AboutPrinciples />
       <AboutTeam />
+      <AboutOrgChart />
       <AboutEcosystem />
       <StatsSection />
       <BranchesTeaserSection />

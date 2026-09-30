@@ -808,6 +808,43 @@
             ]
           }
         ]
+      },
+      "org": {
+        "eyebrow": "Cơ cấu tổ chức",
+        "title": "Sơ đồ tổ chức",
+        "updated": "Cập nhật 09/2026",
+        "legend": {
+          "operations": "Khối Vận hành",
+          "sales": "Khối Kinh doanh",
+          "studyAbroad": "Khối Du học"
+        },
+        "roles": {
+          "director": "Giám đốc",
+          "operationsDirector": "Giám đốc Vận hành",
+          "salesDirector": "Giám đốc Kinh doanh",
+          "studyAbroadDirector": "Giám đốc Khối Du học",
+          "hrAdmin": "TP Hành chính Nhân sự",
+          "finance": "TP Tài chính Kế toán",
+          "operations": "TP Vận hành",
+          "branchManager": "Quản lý Cơ sở",
+          "marketing": "TP Marketing",
+          "recruiter": "Nhân viên Tuyển dụng",
+          "compBen": "Nhân viên C&B",
+          "generalAccountant": "Nhân viên Kế toán Tổng hợp",
+          "taxAccountant": "Nhân viên Kế toán Thuế",
+          "internalAccountant": "Nhân viên Kế toán Nội bộ",
+          "teacherManagement": "Nhân viên Quản lý Giáo viên",
+          "customerCare": "Nhân viên Chăm sóc Khách hàng",
+          "advisor": "Tư vấn viên",
+          "classCare": "Nhân viên Chăm sóc Lớp học",
+          "security": "Bảo vệ",
+          "janitor": "Tạp vụ",
+          "designer": "Nhân viên Thiết kế",
+          "content": "Nhân viên Content",
+          "digital": "Nhân viên Digital",
+          "studyAbroadSales": "Nhân viên Kinh doanh",
+          "studyAbroadDocs": "Nhân viên Hồ sơ"
+        }
       }
     },
     "branches": {

@@ -808,6 +808,43 @@
             ]
           }
         ]
+      },
+      "org": {
+        "eyebrow": "组织架构",
+        "title": "组织架构图",
+        "updated": "2026年9月更新",
+        "legend": {
+          "operations": "运营板块",
+          "sales": "销售板块",
+          "studyAbroad": "留学板块"
+        },
+        "roles": {
+          "director": "总经理",
+          "operationsDirector": "运营总监",
+          "salesDirector": "销售总监",
+          "studyAbroadDirector": "留学板块总监",
+          "hrAdmin": "行政人事部经理",
+          "finance": "财务会计部经理",
+          "operations": "运营部经理",
+          "branchManager": "校区经理",
+          "marketing": "市场部经理",
+          "recruiter": "招聘专员",
+          "compBen": "薪酬福利专员",
+          "generalAccountant": "总账会计",
+          "taxAccountant": "税务会计",
+          "internalAccountant": "内部会计",
+          "teacherManagement": "教师管理专员",
+          "customerCare": "客户服务专员",
+          "advisor": "课程顾问",
+          "classCare": "班级服务专员",
+          "security": "保安",
+          "janitor": "保洁",
+          "designer": "设计专员",
+          "content": "内容专员",
+          "digital": "数字营销专员",
+          "studyAbroadSales": "销售专员",
+          "studyAbroadDocs": "材料专员"
+        }
       }
     },
     "branches": {
