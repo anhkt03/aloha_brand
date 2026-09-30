@@ -53,7 +53,7 @@ export function StudyAbroadKnowledge() {
         </div>
         <div className="mt-10 text-center">
           <Link
-            href="/news"
+            href="/tintuc"
             className="inline-flex items-center gap-2 font-display text-[15px] font-extrabold text-brand hover:underline"
           >
             {t("cta")}

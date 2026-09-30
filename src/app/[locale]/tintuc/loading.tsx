@@ -2,7 +2,7 @@ import { Container } from "@/components/common/Container";
 import { NewsListSkeleton } from "./news-list-skeleton";
 
 /**
- * Route-level fallback for `/news`. Prefetched by `<Link>`, so it shows
+ * Route-level fallback for `/tintuc`. Prefetched by `<Link>`, so it shows
  * instantly on click instead of the navigation stalling on the DB fetch —
  * the real page (with the news grid already Suspense-bound) swaps in once
  * ready.

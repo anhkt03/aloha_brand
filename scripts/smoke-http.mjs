@@ -33,7 +33,7 @@ try {
     localeResults[locale] = { home: homeResponse.status, training: response.status };
   }
 
-  const articleResponse = await fetch(`${baseUrl}/zh/news/smoke-aloha-international-course`);
+  const articleResponse = await fetch(`${baseUrl}/zh/tintuc/smoke-aloha-international-course`);
   assert(articleResponse.ok && (await articleResponse.text()).includes("ALOHA 国际交流课程开课"), "Chinese news detail must render database translation");
   const optionsResponse = await fetch(`${baseUrl}/api/enrollments`);
   assert(optionsResponse.ok && JSON.stringify(await optionsResponse.json()).includes(String(course.id)), "public course options must include smoke course");

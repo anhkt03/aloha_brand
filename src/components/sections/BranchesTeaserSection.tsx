@@ -10,7 +10,7 @@ import { branches, type Branch } from "@/data/branches";
 
 /**
  * Section 8 — nationwide branch teaser. Reuses the interactive Vietnam
- * map from `/branches` on the left, compact branch chips (code +
+ * map from `/coso` on the left, compact branch chips (code +
  * province) on the right, and a CTA to the full branch page.
  */
 export function BranchesTeaserSection() {
@@ -62,7 +62,7 @@ export function BranchesTeaserSection() {
               );
             })}
           </ul>
-          <Button variant="primary" className="mt-6 w-full" onClick={() => router.push("/branches")}>
+          <Button variant="primary" className="mt-6 w-full" onClick={() => router.push("/coso")}>
             {t("cta")}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
               <path d="M5 12h14M13 6l6 6-6 6" />

@@ -24,7 +24,7 @@ export function TeachersSection() {
             <p className="sec-sub">{t("desc")}</p>
           </div>
           <Link
-            href="/about"
+            href="/vealoha"
             className="inline-flex items-center gap-2 whitespace-nowrap font-display text-[14px] font-extrabold text-brand hover:underline"
           >
             {t("viewAll")}

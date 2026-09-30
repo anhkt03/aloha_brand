@@ -49,7 +49,7 @@ export function JourneySection() {
           </ol>
           <p className="mt-4 text-[14.5px] italic text-ink-soft">{t("closing")}</p>
           <div className="mt-6 text-center md:text-left">
-            <Button variant="primary" onClick={() => router.push("/about")}>
+            <Button variant="primary" onClick={() => router.push("/vealoha")}>
               {t("cta")}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
                 <path d="M5 12h14M13 6l6 6-6 6" />

@@ -12,11 +12,11 @@ export function Footer() {
   const globalLinks = globalLabels.map((label) => ({ label, href: "/duhocquocte" as const }));
 
   const aboutLinks = [
-    { key: "intro", href: "/about" as const },
-    { key: "team", href: "/about" as const },
-    { key: "branches", href: "/branches" as const },
-    { key: "news", href: "/news" as const },
-    { key: "contact", href: "/contact" as const },
+    { key: "intro", href: "/vealoha" as const },
+    { key: "team", href: "/vealoha" as const },
+    { key: "branches", href: "/coso" as const },
+    { key: "news", href: "/tintuc" as const },
+    { key: "contact", href: "/lienhe" as const },
   ];
 
   return (
@@ -100,7 +100,7 @@ export function Footer() {
 
 interface FooterListProps {
   title: string;
-  items: Array<{ label: string; href: "/" | "/ngoaingu" | "/duhocquocte" | "/about" | "/branches" | "/news" | "/contact" }>;
+  items: Array<{ label: string; href: "/" | "/ngoaingu" | "/duhocquocte" | "/vealoha" | "/coso" | "/tintuc" | "/lienhe" }>;
 }
 
 function FooterList({ title, items }: FooterListProps) {
