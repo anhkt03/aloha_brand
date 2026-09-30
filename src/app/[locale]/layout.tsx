@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import type { Locale } from "@/lib/constants";
 import { AppShell } from "@/components/layout/AppShell";
+import { ThemeInitScript } from "@/components/layout/ThemeInitScript";
 import { siteConfig } from "@/config/site";
 import "../globals.css";
 
@@ -47,12 +48,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "try{var t=localStorage.getItem('aloha-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(_){}",
-          }}
-        />
+        <ThemeInitScript />
       </head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>

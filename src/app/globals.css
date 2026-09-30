@@ -419,6 +419,227 @@
     padding-block: clamp(40px, 6vw, 72px);
   }
 
+  /* About — organization chart. Each block sets its own hue via `--h`. */
+  .org-hue {
+    --org-solid: oklch(0.48 0.11 var(--h));
+    --org-tint: oklch(0.94 0.03 var(--h));
+    --org-tint-ink: oklch(0.36 0.1 var(--h));
+    --org-line: oklch(0.82 0.05 var(--h));
+  }
+  :root[data-theme="dark"] .org-hue {
+    --org-solid: oklch(0.55 0.11 var(--h));
+    --org-tint: oklch(0.3 0.045 var(--h));
+    --org-tint-ink: oklch(0.88 0.06 var(--h));
+    --org-line: oklch(0.42 0.06 var(--h));
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .org-hue {
+      --org-solid: oklch(0.55 0.11 var(--h));
+      --org-tint: oklch(0.3 0.045 var(--h));
+      --org-tint-ink: oklch(0.88 0.06 var(--h));
+      --org-line: oklch(0.42 0.06 var(--h));
+    }
+  }
+  .org-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--org-solid);
+  }
+
+  /* Nodes — base sizes are the stacked (mobile / tablet) layout */
+  .org-node {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .org-node--root {
+    justify-content: center;
+    min-height: 60px;
+    border-radius: 14px;
+    background: var(--ink);
+    color: var(--surface);
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .org-node--head {
+    min-height: 56px;
+    padding-inline: 18px;
+    border-radius: 12px;
+    background: var(--org-solid);
+    color: #fff;
+    font-size: 17px;
+  }
+  .org-node--dept {
+    min-height: 46px;
+    background: var(--org-tint);
+    color: var(--org-tint-ink);
+  }
+  .org-node--staff {
+    min-height: 44px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* Stacked layout (below xl) */
+  .org-branch {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .org-branch-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-left: 14px;
+    padding-left: 14px;
+    border-left: 2px solid var(--org-line);
+  }
+  .org-branch-dept {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .org-branch-staff {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .org-branch-staff--indented {
+    padding-left: 14px;
+  }
+
+  /* Wide layout (xl+): horizontal tree with connectors */
+  .org-tree {
+    --org-stub: 28px;
+    --org-drop: 32px;
+    --org-conn: var(--line-2);
+  }
+  .org-tree .org-node--root {
+    min-height: 76px;
+    font-size: 22px;
+  }
+  .org-tree .org-node--head,
+  .org-tree .org-node--dept {
+    justify-content: center;
+    text-align: center;
+  }
+  .org-tree .org-node--head {
+    min-height: 76px;
+    padding-inline: 14px;
+    font-size: 16px;
+  }
+  .org-tree .org-node--dept {
+    min-height: 64px;
+    padding-inline: 12px;
+    font-size: 14.5px;
+  }
+  .org-tree .org-node--staff {
+    position: relative;
+    min-height: 52px;
+    padding-inline: 10px;
+    font-size: 13px;
+  }
+  .org-head-wrap {
+    max-width: 244px;
+    margin-inline: auto;
+  }
+  .org-tier {
+    display: grid;
+    grid-template-columns: var(--org-cols);
+    position: relative;
+    padding-top: var(--org-stub);
+  }
+  .org-tier::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: var(--org-stub);
+    border-left: 2px solid var(--org-conn);
+    transform: translateX(-1px);
+  }
+  .org-tier > li {
+    position: relative;
+    padding: var(--org-drop) 6px 0;
+  }
+  .org-tier > li::before,
+  .org-tier > li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: var(--org-drop);
+    border-top: 2px solid var(--org-conn);
+  }
+  .org-tier > li::before {
+    right: 50%;
+    width: 50%;
+  }
+  .org-tier > li::after {
+    left: 50%;
+    width: calc(50% + 1px);
+    margin-left: -1px;
+    border-left: 2px solid var(--org-conn);
+  }
+  .org-tier > li:first-child::before,
+  .org-tier > li:last-child::after {
+    border-top: 0;
+  }
+  .org-staff {
+    --org-indent: 26px;
+    --org-line-x: 10px;
+    padding-left: var(--org-indent);
+  }
+  .org-staff > li {
+    --org-gap: 10px;
+    padding-top: var(--org-gap);
+  }
+  .org-staff > li:first-child {
+    --org-gap: 28px;
+  }
+  .org-staff .org-node--staff::before,
+  .org-staff > li:not(:last-child) .org-node--staff::after {
+    content: "";
+    position: absolute;
+    right: calc(100% + 1px);
+    width: calc(var(--org-indent) - var(--org-line-x));
+    border-left: 2px solid var(--org-line);
+  }
+  .org-staff .org-node--staff::before {
+    top: calc(-1px - var(--org-gap));
+    height: calc(50% + 1px + var(--org-gap));
+    border-bottom: 2px solid var(--org-line);
+  }
+  .org-staff > li:not(:last-child) .org-node--staff::after {
+    top: 50%;
+    bottom: -1px;
+  }
+  /* Very wide screens: columns size to their content, labels never wrap, and the
+     tree breaks out of the page container (centred on the viewport). 1520px leaves
+     room for the widest locale (en, ~1420px) plus the scrollbar and page margins. */
+  @media (min-width: 1520px) {
+    .org-wide {
+      position: relative;
+      left: 50%;
+      width: max-content;
+      transform: translateX(-50%);
+    }
+    .org-tree .org-node {
+      white-space: nowrap;
+    }
+    .org-tier {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
+    }
+  }
+
   /* Scrollable area with no visible scrollbar (e.g. dialogs) */
   .scrollbar-hide {
     scrollbar-width: none;

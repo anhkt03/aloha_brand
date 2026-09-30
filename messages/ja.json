@@ -808,6 +808,43 @@
             ]
           }
         ]
+      },
+      "org": {
+        "eyebrow": "組織体制",
+        "title": "組織図",
+        "updated": "2026年9月更新",
+        "legend": {
+          "operations": "運営部門",
+          "sales": "営業部門",
+          "studyAbroad": "留学部門"
+        },
+        "roles": {
+          "director": "代表",
+          "operationsDirector": "運営ディレクター",
+          "salesDirector": "営業ディレクター",
+          "studyAbroadDirector": "留学部門ディレクター",
+          "hrAdmin": "人事総務部長",
+          "finance": "財務経理部長",
+          "operations": "運営部長",
+          "branchManager": "校舎マネージャー",
+          "marketing": "マーケティング部長",
+          "recruiter": "採用担当",
+          "compBen": "給与・福利厚生担当",
+          "generalAccountant": "総合経理担当",
+          "taxAccountant": "税務経理担当",
+          "internalAccountant": "社内経理担当",
+          "teacherManagement": "講師管理担当",
+          "customerCare": "カスタマーケア担当",
+          "advisor": "学習アドバイザー",
+          "classCare": "クラスサポート担当",
+          "security": "警備員",
+          "janitor": "清掃スタッフ",
+          "designer": "デザイナー",
+          "content": "コンテンツ担当",
+          "digital": "デジタルマーケティング担当",
+          "studyAbroadSales": "営業担当",
+          "studyAbroadDocs": "書類手続き担当"
+        }
       }
     },
     "branches": {
