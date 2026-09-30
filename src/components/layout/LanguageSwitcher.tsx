@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/routing";
 import { LOCALES, type Locale } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +14,8 @@ import { cn } from "@/lib/utils";
 export function LanguageSwitcher({ className }: { className?: string }) {
   const locale = useLocale() as Locale;
   const t = useTranslations("languages");
+  const router = useRouter();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -35,17 +38,11 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   const change = (next: Locale) => {
     setOpen(false);
     if (next === locale) return;
-    // Rewrite the first path segment (current locale) with the new one and
-    // navigate via a full reload — most reliable across dynamic routes and
-    // any locale-prefix strategy.
-    const { pathname, search, hash } = window.location;
-    const segments = pathname.split("/").filter(Boolean);
-    if ((LOCALES as readonly string[]).includes(segments[0])) {
-      segments[0] = next;
-    } else {
-      segments.unshift(next);
-    }
-    window.location.href = `/${segments.join("/")}${search}${hash}`;
+    // Client-side swap of the locale prefix (the `[locale]` param keeps the same
+    // root layout, so no document reload). `scroll: false` keeps the reader where
+    // they were instead of jumping to the top; query string and hash carry over.
+    const { search, hash } = window.location;
+    router.replace(`${pathname}${search}${hash}`, { locale: next, scroll: false });
   };
 
   return (
