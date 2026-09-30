@@ -1,7 +1,7 @@
 import { Container } from "@/components/common/Container";
 
 /**
- * Route-level fallback for `/news/[slug]`. Prefetched by `<Link>`, so it
+ * Route-level fallback for `/tintuc/[slug]`. Prefetched by `<Link>`, so it
  * shows instantly on click instead of the navigation stalling on the DB
  * fetch — the real article swaps in once ready.
  */

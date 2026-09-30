@@ -21,8 +21,8 @@ function invalidate(slug?: string) {
   updateTag("news");
   revalidatePath("/admin/news");
   for (const locale of LOCALES) {
-    revalidatePath(`/${locale}/news`);
-    if (slug) revalidatePath(`/${locale}/news/${slug}`);
+    revalidatePath(`/${locale}/tintuc`);
+    if (slug) revalidatePath(`/${locale}/tintuc/${slug}`);
   }
 }
 

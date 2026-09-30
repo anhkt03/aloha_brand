@@ -6,10 +6,10 @@ import type { NavItem } from "@/types/navigation";
  */
 export const primaryNav: NavItem[] = [
   { key: "home", href: "/" },
-  { key: "about", href: "/about" },
+  { key: "about", href: "/vealoha" },
   { key: "training", href: "/ngoaingu" },
   { key: "global", href: "/duhocquocte" },
-  { key: "branches", href: "/branches" },
-  { key: "news", href: "/news" },
-  { key: "contact", href: "/contact" },
+  { key: "branches", href: "/coso" },
+  { key: "news", href: "/tintuc" },
+  { key: "contact", href: "/lienhe" },
 ];

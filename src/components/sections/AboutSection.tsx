@@ -69,7 +69,7 @@ export function AboutSection() {
               b: (chunks) => <strong className="font-semibold text-ink">{chunks}</strong>,
             })}
           </p>
-          <Button variant="primary" className="mt-6" onClick={() => router.push("/about")}>
+          <Button variant="primary" className="mt-6" onClick={() => router.push("/vealoha")}>
             {t("cta")}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
               <path d="M5 12h14M13 6l6 6-6 6" />

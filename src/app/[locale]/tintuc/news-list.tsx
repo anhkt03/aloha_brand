@@ -39,14 +39,14 @@ export function NewsList({ news, locale, latestLabel }: { news: Article[]; local
                 className="flex gap-4 rounded-lg border border-line bg-surface p-3 transition hover:-translate-y-0.5 hover:shadow sm:gap-5 sm:p-4"
               >
                 <Link
-                  href={`/news/${article.slug}`}
+                  href={`/tintuc/${article.slug}`}
                   className="relative block aspect-[4/3] w-28 flex-shrink-0 overflow-hidden rounded-md bg-surface-2 sm:w-44 md:w-52"
                 >
                   <Image src={article.coverImage} alt={article.title} fill sizes="(min-width:768px) 208px, 112px" className="object-cover" />
                 </Link>
                 <div className="flex min-w-0 flex-1 flex-col justify-center gap-1.5 sm:gap-2">
                   <div className="text-xs font-semibold text-muted">{formatDate(new Date(article.publishedAt), locale)}</div>
-                  <Link href={`/news/${article.slug}`} className="font-display text-[15px] font-extrabold leading-snug hover:text-brand sm:text-lg">
+                  <Link href={`/tintuc/${article.slug}`} className="font-display text-[15px] font-extrabold leading-snug hover:text-brand sm:text-lg">
                     {article.title}
                   </Link>
                   <p className="line-clamp-2 text-sm text-ink-soft">{article.content}</p>
@@ -90,7 +90,7 @@ export function NewsList({ news, locale, latestLabel }: { news: Article[]; local
 function FeaturedArticle({ article, locale, latestLabel }: { article: Article; locale: string; latestLabel: string }) {
   return (
     <article className="group overflow-hidden rounded-xl border border-line bg-surface shadow-sm transition hover:shadow-lg">
-      <Link href={`/news/${article.slug}`} className="grid md:grid-cols-2 md:items-stretch">
+      <Link href={`/tintuc/${article.slug}`} className="grid md:grid-cols-2 md:items-stretch">
         <div className="relative aspect-[16/10] md:aspect-auto">
           <Image
             src={article.coverImage}

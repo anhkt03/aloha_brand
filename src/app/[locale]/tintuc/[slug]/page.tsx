@@ -19,7 +19,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
           <div className="flex gap-2 text-sm text-muted">
             <Link href="/">{t("nav.home")}</Link>
             <span>/</span>
-            <Link href="/news">{t("nav.news")}</Link>
+            <Link href="/tintuc">{t("nav.news")}</Link>
           </div>
           <h1 className="mt-4 max-w-[45ch] text-[clamp(28px,4.4vw,44px)] font-black">{article.title}</h1>
           <p className="mt-4 text-sm text-muted">{formatDate(new Date(article.publishedAt), locale)}</p>

@@ -58,12 +58,12 @@ src/
 ├── app/
 │   ├── [locale]/             # Site công khai, theo locale
 │   │   ├── page.tsx          # Trang chủ (server, lấy 2 tin mới nhất) → home-content.tsx
-│   │   ├── about/            # Về ALOHA
+│   │   ├── vealoha/          # Về ALOHA
 │   │   ├── ngoaingu/         # Đào tạo ngoại ngữ + danh sách khóa học (DB)
 │   │   ├── duhocquocte/      # Du học quốc tế
-│   │   ├── branches/         # Hệ thống cơ sở
-│   │   ├── news/[slug]/      # Tin tức + chi tiết (DB)
-│   │   └── contact/
+│   │   ├── coso/             # Hệ thống cơ sở
+│   │   ├── tintuc/[slug]/    # Tin tức + chi tiết (DB)
+│   │   └── lienhe/
 │   ├── admin/                # Trang quản trị (không có prefix locale)
 │   │   ├── login/
 │   │   └── (dashboard)/      # courses, news, enrollments, feedback, branches, users
