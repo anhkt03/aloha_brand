@@ -3,7 +3,7 @@
  * Name and highlight copy are localized — see `pages.global.destinations.<key>`
  * in `messages/*.json`. This file only holds structural/visual data.
  */
-export type DestinationKey = "taiwan" | "korea" | "japan" | "singapore" | "europe";
+export type DestinationKey = "taiwan" | "korea" | "japan" | "singapore" | "europe" | "germany";
 
 export interface Destination {
   key: DestinationKey;
@@ -15,6 +15,12 @@ export interface Destination {
 }
 
 export const destinations: Destination[] = [
+  {
+    key: "singapore",
+    flag: "🇸🇬",
+    image: "/images/global/singapore.jpg",
+    gradient: "linear-gradient(135deg,#c9002b,#f4b400)",
+  },
   {
     key: "taiwan",
     flag: "🇹🇼",
@@ -34,15 +40,15 @@ export const destinations: Destination[] = [
     gradient: "linear-gradient(135deg,#295326,#469142)",
   },
   {
-    key: "singapore",
-    flag: "🇸🇬",
-    image: "/images/global/singapore.jpg",
-    gradient: "linear-gradient(135deg,#c9002b,#f4b400)",
-  },
-  {
     key: "europe",
     flag: "🇪🇺",
     image: "/images/global/europe.jpg",
     gradient: "linear-gradient(135deg,#0033a0,#e1ba23)",
+  },
+  {
+    key: "germany",
+    flag: "🇩🇪",
+    image: "/images/global/germany.jpg",
+    gradient: "linear-gradient(135deg,#2b2b2b,#dd0000 60%,#ffce00)",
   },
 ];

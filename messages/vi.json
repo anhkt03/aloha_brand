@@ -191,7 +191,7 @@
       "hero": {
         "eyebrow": "Đào tạo ngoại ngữ tại ALOHA",
         "title": "Học đúng lộ trình\nBứt phá ngoại ngữ\nRộng mở tương lai",
-        "lead": "Các chương trình Tiếng Trung, Tiếng Anh, Tiếng Hàn, Tiếng Nhật từ nền tảng đến chinh phục chứng chỉ và ứng dụng thực tế.",
+        "lead": "Các chương trình Tiếng Trung, Tiếng Anh, Tiếng Hàn, Tiếng Nhật, Tiếng Đài Loan, Tiếng Đức từ nền tảng đến chinh phục chứng chỉ và ứng dụng thực tế.",
         "ctaPrimary": "Khám phá chương trình ngoại ngữ",
         "ctaSecondary": "Đăng ký tư vấn",
         "stats": {
@@ -238,6 +238,16 @@
             "name": "Tiếng Nhật",
             "badge": "JLPT ∙ Giao tiếp",
             "desc": "Lộ trình N5 đến N3, phát triển đồng thời năng lực JLPT và khả năng giao tiếp thực tế."
+          },
+          "tw": {
+            "name": "Tiếng Đài Loan",
+            "badge": "TOCFL ∙ Giao tiếp",
+            "desc": "Học chữ phồn thể và Hoa ngữ chuẩn Đài Loan, từ cơ bản đến TOCFL, phục vụ du học và làm việc tại Đài Loan."
+          },
+          "de": {
+            "name": "Tiếng Đức",
+            "badge": "Goethe ∙ Giao tiếp",
+            "desc": "Lộ trình A1 đến B2 theo khung CEFR, luyện thi chứng chỉ Goethe và chuẩn bị cho du học, làm việc tại Đức."
           }
         }
       },
@@ -379,7 +389,7 @@
         "ctaSecondary": "Đăng ký tư vấn",
         "stats": {
           "markets": {
-            "value": "05",
+            "value": "06",
             "label": "Thị trường du học"
           },
           "partners": {
@@ -398,9 +408,17 @@
       },
       "countries": {
         "eyebrow": "Điểm đến du học",
-        "title": "05 thị trường du học cùng ALOHA"
+        "title": "06 thị trường du học cùng ALOHA"
       },
       "destinations": {
+        "singapore": {
+          "name": "Singapore",
+          "highlights": [
+            "Chương trình quốc tế",
+            "Môi trường sử dụng Tiếng Anh",
+            "Kết nối toàn cầu"
+          ]
+        },
         "taiwan": {
           "name": "Đài Loan",
           "highlights": [
@@ -425,20 +443,20 @@
             "Môi trường học tập kỷ luật"
           ]
         },
-        "singapore": {
-          "name": "Singapore",
-          "highlights": [
-            "Chương trình quốc tế",
-            "Môi trường sử dụng Tiếng Anh",
-            "Kết nối toàn cầu"
-          ]
-        },
         "europe": {
           "name": "Châu Âu",
           "highlights": [
             "Đa dạng quốc gia",
             "Ngành học phong phú",
             "Cơ hội tiếp cận giáo dục quốc tế"
+          ]
+        },
+        "germany": {
+          "name": "Đức",
+          "highlights": [
+            "Học phí thấp tại trường công lập",
+            "Nền giáo dục chất lượng cao",
+            "Cơ hội việc làm sau tốt nghiệp"
           ]
         }
       },
@@ -891,11 +909,11 @@
       "Tiếng Nhật"
     ],
     "globalLinks": [
+      "Du học Singapore",
       "Du học Đài Loan",
       "Du học Hàn Quốc",
       "Du học Nhật Bản",
-      "Du học Châu Âu",
-      "Du học Singapore"
+      "Du học Châu Âu"
     ],
     "email": "Email",
     "address": "Địa chỉ",

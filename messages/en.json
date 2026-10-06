@@ -191,7 +191,7 @@
       "hero": {
         "eyebrow": "Language Training at ALOHA",
         "title": "Learn the Right Path\nBreak Through in Languages\nOpen Up Your Future",
-        "lead": "Chinese, English, Korean and Japanese programs — from the basics to certificates and real-world use.",
+        "lead": "Chinese, English, Korean, Japanese, Taiwanese Mandarin and German programs — from the basics to certificates and real-world use.",
         "ctaPrimary": "Explore language programs",
         "ctaSecondary": "Get a consultation",
         "stats": {
@@ -238,6 +238,16 @@
             "name": "Japanese",
             "badge": "JLPT · Conversation",
             "desc": "From N5 to N3, building JLPT skills alongside real conversation ability."
+          },
+          "tw": {
+            "name": "Taiwanese Mandarin",
+            "badge": "TOCFL · Conversation",
+            "desc": "Traditional characters and Taiwan-style Mandarin, from the basics to TOCFL, for study and work in Taiwan."
+          },
+          "de": {
+            "name": "German",
+            "badge": "Goethe · Conversation",
+            "desc": "From A1 to B2 under the CEFR framework, with Goethe exam prep and groundwork for study and work in Germany."
           }
         }
       },
@@ -379,7 +389,7 @@
         "ctaSecondary": "Book a consult",
         "stats": {
           "markets": {
-            "value": "05",
+            "value": "06",
             "label": "Study destinations"
           },
           "partners": {
@@ -398,9 +408,17 @@
       },
       "countries": {
         "eyebrow": "Study destinations",
-        "title": "05 destinations with ALOHA"
+        "title": "06 destinations with ALOHA"
       },
       "destinations": {
+        "singapore": {
+          "name": "Singapore",
+          "highlights": [
+            "International curricula",
+            "English-speaking environment",
+            "Global connections"
+          ]
+        },
         "taiwan": {
           "name": "Taiwan",
           "highlights": [
@@ -425,20 +443,20 @@
             "Disciplined learning environment"
           ]
         },
-        "singapore": {
-          "name": "Singapore",
-          "highlights": [
-            "International curricula",
-            "English-speaking environment",
-            "Global connections"
-          ]
-        },
         "europe": {
           "name": "Europe",
           "highlights": [
             "Diverse countries",
             "Rich range of majors",
             "Access to world-class education"
+          ]
+        },
+        "germany": {
+          "name": "Germany",
+          "highlights": [
+            "Low tuition at public universities",
+            "High-quality education",
+            "Career opportunities after graduation"
           ]
         }
       },
@@ -891,11 +909,11 @@
       "Japanese"
     ],
     "globalLinks": [
+      "Study in Singapore",
       "Study in Taiwan",
       "Study in Korea",
       "Study in Japan",
-      "Study in Europe",
-      "Study in Singapore"
+      "Study in Europe"
     ],
     "email": "Email",
     "address": "Address",

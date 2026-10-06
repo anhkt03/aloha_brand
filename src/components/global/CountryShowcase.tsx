@@ -7,7 +7,7 @@ import { SectionHead } from "@/components/common/Section";
 import { destinations, type Destination } from "@/data/destinations";
 
 /**
- * Section 2 — showcase of the 5 destinations. Photo band with flag + name,
+ * Section 2 — showcase of the 6 destinations. Photo band with flag + name,
  * 3 highlight bullets and an explore affordance underneath.
  */
 export const CountryShowcase = forwardRef<HTMLElement>(function CountryShowcase(_, ref) {
@@ -17,7 +17,7 @@ export const CountryShowcase = forwardRef<HTMLElement>(function CountryShowcase(
     <section ref={ref} className="section">
       <Container>
         <SectionHead eyebrow={t("eyebrow")} title={t("title")} />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {destinations.map((d) => (
             <CountryCard
               key={d.key}
