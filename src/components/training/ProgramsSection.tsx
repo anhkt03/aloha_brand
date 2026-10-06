@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/common/Container";
 import { SectionHead } from "@/components/common/Section";
 
-type LangKey = "zh" | "en" | "ko" | "ja";
+type LangKey = "zh" | "en" | "ko" | "ja" | "tw" | "de";
 
 interface LangStyle {
   key: LangKey;
@@ -17,10 +17,12 @@ const LANGS: LangStyle[] = [
   { key: "en", glyph: "EN", gradient: "linear-gradient(145deg,#469142 0%,#295326 100%)" },
   { key: "ko", glyph: "한", gradient: "linear-gradient(145deg,#2f6fd0 0%,#1b4a8f 100%)" },
   { key: "ja", glyph: "日", gradient: "linear-gradient(145deg,#28b4d2 0%,#1b6d80 100%)" },
+  { key: "tw", glyph: "台", gradient: "linear-gradient(145deg,#e0a21b 0%,#b36f06 100%)" },
+  { key: "de", glyph: "DE", gradient: "linear-gradient(145deg,#4b5563 0%,#1f2937 100%)" },
 ];
 
 /**
- * "Các chương trình đào tạo" — 4 language cards. The CTA on each card
+ * "Các chương trình đào tạo" — 6 language cards. The CTA on each card
  * scrolls down to the live course list further down the page rather than
  * linking out, since courses aren't split into per-language routes yet.
  */
@@ -31,7 +33,7 @@ export function ProgramsSection() {
     <section id="chuong-trinh" className="section scroll-mt-24">
       <Container>
         <SectionHead center eyebrow={t("eyebrow")} title={t("title")} sub={t("sub")} />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {LANGS.map((lang) => (
             <article
               key={lang.key}
